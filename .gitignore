@@ -28,3 +28,9 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Brainstorming companion
+.superpowers/
+
+# Local docs / planning artifacts
+docs/
