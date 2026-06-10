@@ -32,7 +32,7 @@ export interface Countdown {
   isLive: Ref<boolean>
 }
 
-/** Reactive countdown that ticks every second from mount until unmount. */
+/** Reactive countdown that ticks every second from mount until the event goes live. */
 export function useCountdown(targetIso: string): Countdown {
   const targetMs = new Date(targetIso).getTime()
   const days = ref(0)
@@ -49,11 +49,17 @@ export function useCountdown(targetIso: string): Countdown {
     minutes.value = state.minutes
     seconds.value = state.seconds
     isLive.value = state.isLive
+    if (state.isLive && timer) {
+      clearInterval(timer)
+      timer = undefined
+    }
   }
 
   onMounted(() => {
     tick()
-    timer = setInterval(tick, 1000)
+    if (!isLive.value) {
+      timer = setInterval(tick, 1000)
+    }
   })
 
   onUnmounted(() => {
