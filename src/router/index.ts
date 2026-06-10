@@ -9,12 +9,6 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    {
-      path: '/about',
-      name: 'about',
-      // Lazy-loaded route — split into a separate chunk on demand.
-      component: () => import('@/views/AboutView.vue'),
-    },
   ],
 })
 
