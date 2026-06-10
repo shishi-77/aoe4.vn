@@ -11,7 +11,7 @@ const items = [
 </script>
 
 <template>
-  <section class="mx-auto max-w-5xl px-4 py-16">
+  <section class="mx-auto max-w-5xl px-4 py-20">
     <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
       <div
         v-for="item in items"

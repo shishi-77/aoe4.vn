@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="mx-auto max-w-5xl px-4 py-16">
+  <section class="mx-auto max-w-5xl px-4 py-20">
     <SectionTitle eyebrow="Luật & Lưu ý" title="Luật cơ bản" />
     <div class="grid gap-6 md:grid-cols-3">
       <div class="rounded-xl border border-gold-dim/20 bg-surface p-6">

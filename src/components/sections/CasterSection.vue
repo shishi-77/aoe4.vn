@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="bg-surface/40 py-16">
+  <section class="bg-surface/40 py-20">
     <div class="mx-auto max-w-3xl px-4 text-center">
       <SectionTitle eyebrow="Caster & Bình luận" title="Theo dõi trực tiếp" />
       <p class="text-cream/90">Giải đấu được bình luận bởi Clearman AOE4.</p>

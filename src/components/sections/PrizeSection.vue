@@ -7,7 +7,7 @@ const rest = tournament.prizes.slice(3)
 </script>
 
 <template>
-  <section class="bg-surface/40 py-16">
+  <section class="bg-surface/40 py-20">
     <div class="mx-auto max-w-5xl px-4">
       <SectionTitle :eyebrow="`Tổng giải thưởng ${tournament.prizePoolTotal}`" title="Giải thưởng" />
 

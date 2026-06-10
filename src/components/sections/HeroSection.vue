@@ -22,14 +22,14 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
       <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-gold">
         {{ tournament.organizer }}
       </p>
-      <h1 class="text-5xl font-black uppercase leading-none text-cream sm:text-7xl">
+      <h1 class="text-5xl font-black uppercase leading-tight text-cream sm:text-7xl">
         {{ tournament.name }}
       </h1>
       <div class="mt-4 flex items-center justify-center">
         <span
           class="rounded border border-gold px-4 py-1 text-sm font-bold tracking-widest text-gold"
         >
-          {{ tournament.format }} · BO3
+          {{ tournament.format }}
         </span>
       </div>
 

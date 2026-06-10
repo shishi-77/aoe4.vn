@@ -4,7 +4,7 @@ import CtaButton from '@/components/CtaButton.vue'
 </script>
 
 <template>
-  <footer class="border-t border-gold-dim/20 bg-ink py-16 text-center">
+  <footer class="border-t border-gold-dim/20 bg-ink py-20 text-center">
     <div class="mx-auto max-w-2xl px-4">
       <h2 class="text-3xl font-black uppercase text-cream">Sẵn sàng tham chiến?</h2>
       <p class="mt-3 text-cream/80">Đăng ký miễn phí — BTC sẽ ghép đội cho bạn.</p>

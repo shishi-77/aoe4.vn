@@ -4,16 +4,15 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="py-16">
+  <section class="py-20">
     <div class="mx-auto max-w-5xl px-4">
       <SectionTitle eyebrow="Thể thức thi đấu" title="4vs4 có Ban / Pick" />
       <div class="grid gap-6 md:grid-cols-2">
         <div class="rounded-xl border border-gold-dim/20 bg-ink p-6">
           <h3 class="text-xl font-bold text-gold">Luật thi đấu</h3>
           <ul class="mt-3 space-y-2 text-cream/90">
-            <li>• Thể thức {{ tournament.format }} có ban/pick</li>
-            <li>• Format: BO3 (loại trực tiếp)</li>
-            <li>• {{ tournament.registrationType }}</li>
+            <li>• {{ tournament.format }} có ban/pick civ &amp; bản đồ</li>
+            <li>• Format BO3 — loại trực tiếp</li>
           </ul>
         </div>
         <div

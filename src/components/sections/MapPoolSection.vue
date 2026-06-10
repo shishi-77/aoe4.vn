@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="bg-surface/40 py-16">
+  <section class="bg-surface/40 py-20">
     <div class="mx-auto max-w-5xl px-4">
       <SectionTitle :eyebrow="`${tournament.maps.length} bản đồ`" title="Map Pool" />
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
