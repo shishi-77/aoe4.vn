@@ -31,3 +31,6 @@ coverage
 
 # Brainstorming companion
 .superpowers/
+
+# Local docs / planning artifacts
+docs/
