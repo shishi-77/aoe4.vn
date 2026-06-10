@@ -35,11 +35,12 @@ export interface Countdown {
 /** Reactive countdown that ticks every second from mount until the event goes live. */
 export function useCountdown(targetIso: string): Countdown {
   const targetMs = new Date(targetIso).getTime()
-  const days = ref(0)
-  const hours = ref(0)
-  const minutes = ref(0)
-  const seconds = ref(0)
-  const isLive = ref(false)
+  const initial = computeCountdown(targetMs, Date.now())
+  const days = ref(initial.days)
+  const hours = ref(initial.hours)
+  const minutes = ref(initial.minutes)
+  const seconds = ref(initial.seconds)
+  const isLive = ref(initial.isLive)
   let timer: ReturnType<typeof setInterval> | undefined
 
   function tick() {

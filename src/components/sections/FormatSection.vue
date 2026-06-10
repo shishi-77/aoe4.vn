@@ -4,7 +4,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
 </script>
 
 <template>
-  <section class="bg-surface/40 py-16">
+  <section class="py-16">
     <div class="mx-auto max-w-5xl px-4">
       <SectionTitle eyebrow="Thể thức thi đấu" title="4vs4 có Ban / Pick" />
       <div class="grid gap-6 md:grid-cols-2">

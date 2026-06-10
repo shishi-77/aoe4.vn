@@ -36,8 +36,14 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
       <p class="mt-6 text-base text-cream/90 sm:text-lg">
         🗓️ {{ tournament.dateLabel }} — 📍 {{ tournament.venue.name }}
       </p>
+      <p class="mt-1 text-sm text-cream/70">{{ tournament.venue.address }}</p>
 
-      <div v-if="!isLive" class="mt-8 flex items-center justify-center gap-3 sm:gap-5">
+      <div
+        v-if="!isLive"
+        class="mt-8 flex items-center justify-center gap-3 sm:gap-5"
+        aria-live="polite"
+        aria-atomic="true"
+      >
         <div
           v-for="unit in [
             { value: days, label: 'Ngày' },
@@ -47,6 +53,7 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
           ]"
           :key="unit.label"
           class="min-w-[64px] rounded-lg bg-surface/80 px-3 py-2"
+          :aria-label="`${unit.value} ${unit.label}`"
         >
           <div class="text-3xl font-black text-gold sm:text-4xl">
             {{ String(unit.value).padStart(2, '0') }}
