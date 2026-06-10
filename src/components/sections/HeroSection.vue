@@ -34,7 +34,7 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
       </div>
 
       <p class="mt-6 text-base text-cream/90 sm:text-lg">
-        🗓️ Chủ Nhật, 14/06/2026 · 13h30 — 📍 {{ tournament.venue.name }}
+        🗓️ {{ tournament.dateLabel }} — 📍 {{ tournament.venue.name }}
       </p>
 
       <div v-if="!isLive" class="mt-8 flex items-center justify-center gap-3 sm:gap-5">

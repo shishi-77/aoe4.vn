@@ -37,4 +37,8 @@ describe('tournament data', () => {
     expect(tournament.links.mapPool).toBe('https://aoe2cm.net/preset/MivJN')
     expect(tournament.links.youtube).toBe('https://www.youtube.com/@clearmanaoe4')
   })
+
+  it('has a human-readable date label', () => {
+    expect(tournament.dateLabel).toBe('Chủ Nhật, 14/06/2026 · 13h30')
+  })
 })

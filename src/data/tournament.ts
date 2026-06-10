@@ -28,6 +28,8 @@ export interface Tournament {
   venue: Venue
   /** ISO 8601 with explicit +07:00 offset (Vietnam time). */
   startsAt: string
+  /** Human-readable Vietnamese date/time label for display (kept in sync with startsAt). */
+  dateLabel: string
   prizePoolTotal: string
   prizes: Prize[]
   maps: string[]
@@ -49,6 +51,7 @@ export const tournament: Tournament = {
     address: '73 Ung Văn Khiêm, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh',
   },
   startsAt: '2026-06-14T13:30:00+07:00',
+  dateLabel: 'Chủ Nhật, 14/06/2026 · 13h30',
   prizePoolTotal: '3.000.000đ',
   prizes: [
     { rank: 1, label: 'Vô địch', amount: '1.000.000đ', medal: '🥇', note: '+ cúp' },
