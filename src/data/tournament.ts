@@ -73,7 +73,7 @@ export const tournament: Tournament = {
     'Sunkenland',
   ],
   links: {
-    discord: 'https://discord.gg/Tzc8rnRk',
+    discord: 'https://discord.gg/Bshbqw7nHN',
     banPick: 'https://aoe2cm.net/preset/QHani',
     mapPool: 'https://aoe2cm.net/preset/MivJN',
     youtube: 'https://www.youtube.com/@clearmanaoe4',

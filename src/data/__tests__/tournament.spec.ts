@@ -32,7 +32,7 @@ describe('tournament data', () => {
   })
 
   it('has the correct external links', () => {
-    expect(tournament.links.discord).toBe('https://discord.gg/Tzc8rnRk')
+    expect(tournament.links.discord).toBe('https://discord.gg/Bshbqw7nHN')
     expect(tournament.links.banPick).toBe('https://aoe2cm.net/preset/QHani')
     expect(tournament.links.mapPool).toBe('https://aoe2cm.net/preset/MivJN')
     expect(tournament.links.youtube).toBe('https://www.youtube.com/@clearmanaoe4')
