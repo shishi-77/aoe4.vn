@@ -34,7 +34,7 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
       </div>
 
       <p class="mt-6 text-base text-cream/90 sm:text-lg">
-        🗓️ {{ tournament.dateLabel }} — 📍 {{ tournament.venue.name }}
+        🗓️ {{ tournament.dateLabel }} - 📍 {{ tournament.venue.name }}
       </p>
       <p class="mt-1 text-sm text-cream/70">{{ tournament.venue.address }}</p>
 

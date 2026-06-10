@@ -12,7 +12,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
           <h3 class="text-xl font-bold text-gold">Luật thi đấu</h3>
           <ul class="mt-3 space-y-2 text-cream/90">
             <li>• {{ tournament.format }} có ban/pick civ &amp; bản đồ</li>
-            <li>• Format BO3 — loại trực tiếp</li>
+            <li>• Format BO3 - loại trực tiếp</li>
           </ul>
         </div>
         <div
