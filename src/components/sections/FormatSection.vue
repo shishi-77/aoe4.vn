@@ -26,14 +26,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
           >
             🔗 Link Ban / Pick
           </a>
-          <a
-            :href="tournament.links.mapPool"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-md border border-gold px-4 py-3 text-center font-bold text-gold transition hover:bg-gold hover:text-ink"
-          >
-            🗺️ Link Map Pool
-          </a>
+          <p class="text-center text-sm text-muted">Map pool chi tiết xem ở mục bên dưới</p>
         </div>
       </div>
     </div>
