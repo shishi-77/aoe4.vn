@@ -11,6 +11,18 @@ describe('tournament data', () => {
     expect(tournament.startsAt).toBe('2026-06-14T13:30:00+07:00')
   })
 
+  it('has a consistent timeline: registration closes before start, start before end', () => {
+    const closes = new Date(tournament.registrationClosesAt).getTime()
+    const starts = new Date(tournament.startsAt).getTime()
+    const ends = new Date(tournament.endsAt).getTime()
+    expect(closes).toBeLessThan(starts)
+    expect(starts).toBeLessThan(ends)
+  })
+
+  it('links the venue to Google Maps', () => {
+    expect(tournament.venue.mapsUrl).toMatch(/^https:\/\/www\.google\.com\/maps\//)
+  })
+
   it('lists exactly 6 prizes with correct amounts', () => {
     expect(tournament.prizes).toHaveLength(6)
     expect(tournament.prizes.map((p) => p.amount)).toEqual([

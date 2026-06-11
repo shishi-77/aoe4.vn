@@ -2,9 +2,12 @@
 import { tournament } from '@/data/tournament'
 import { useCountdown } from '@/composables/useCountdown'
 import CtaButton from '@/components/CtaButton.vue'
-import banner from '@/assets/imgs/Lac_Hong_Cup_Banner.jpg'
+import banner from '@/assets/imgs/lac-hong-cup-banner.webp'
 
 const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.startsAt)
+
+const isOver = Date.now() >= new Date(tournament.endsAt).getTime()
+const registrationClosed = Date.now() >= new Date(tournament.registrationClosesAt).getTime()
 </script>
 
 <template>
@@ -34,15 +37,21 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
       </div>
 
       <p class="mt-6 text-base text-cream/90 sm:text-lg">
-        🗓️ {{ tournament.dateLabel }} - 📍 {{ tournament.venue.name }}
+        🗓️ {{ tournament.dateLabel }} · 📍
+        <a
+          :href="tournament.venue.mapsUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline decoration-cream/40 underline-offset-4 transition hover:text-gold"
+          >{{ tournament.venue.name }}</a
+        >
       </p>
       <p class="mt-1 text-sm text-cream/70">{{ tournament.venue.address }}</p>
 
       <div
         v-if="!isLive"
         class="mt-8 flex items-center justify-center gap-3 sm:gap-5"
-        aria-live="polite"
-        aria-atomic="true"
+        role="timer"
       >
         <div
           v-for="unit in [
@@ -52,22 +61,35 @@ const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.starts
             { value: seconds, label: 'Giây' },
           ]"
           :key="unit.label"
-          class="min-w-[64px] rounded-lg bg-surface/80 px-3 py-2"
+          class="w-[72px] rounded-lg bg-surface/80 px-2 py-2 sm:w-[88px]"
           :aria-label="`${unit.value} ${unit.label}`"
         >
-          <div class="text-3xl font-black text-gold sm:text-4xl">
+          <div class="text-3xl font-black tabular-nums text-gold sm:text-4xl">
             {{ String(unit.value).padStart(2, '0') }}
           </div>
           <div class="text-xs uppercase tracking-wide text-muted">{{ unit.label }}</div>
         </div>
       </div>
+      <p v-else-if="isOver" class="mt-8 text-2xl font-black uppercase text-gold">
+        🏆 Giải đấu đã kết thúc
+      </p>
       <p v-else class="mt-8 text-2xl font-black uppercase text-gold">
         🔴 Giải đấu đang diễn ra
       </p>
 
       <div class="mt-10">
-        <CtaButton :href="tournament.links.discord">▶ Đăng ký ngay</CtaButton>
+        <CtaButton v-if="isOver" :href="tournament.links.youtube">🎬 Xem lại trên YouTube</CtaButton>
+        <CtaButton v-else-if="isLive" :href="tournament.links.youtube">
+          🔴 Xem trực tiếp
+        </CtaButton>
+        <CtaButton v-else-if="registrationClosed" :href="tournament.links.discord">
+          💬 Tham gia Discord
+        </CtaButton>
+        <CtaButton v-else :href="tournament.links.discord">▶ Đăng ký ngay</CtaButton>
       </div>
+      <p v-if="registrationClosed && !isLive" class="mt-3 text-sm text-cream/70">
+        Đã hết hạn đăng ký · theo dõi giải đấu qua Discord
+      </p>
     </div>
   </section>
 </template>

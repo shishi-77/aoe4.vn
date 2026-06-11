@@ -9,9 +9,13 @@ import SectionTitle from '@/components/SectionTitle.vue'
       <SectionTitle :eyebrow="`${tournament.maps.length} bản đồ`" title="Map Pool" />
       <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
         <div
-          v-for="map in tournament.maps"
+          v-for="(map, i) in tournament.maps"
           :key="map"
           class="rounded-lg border border-gold-dim/20 bg-surface px-4 py-4 text-center font-bold text-cream"
+          :class="{
+            'col-span-2 sm:col-span-1':
+              i === tournament.maps.length - 1 && tournament.maps.length % 2 === 1,
+          }"
         >
           {{ map }}
         </div>
