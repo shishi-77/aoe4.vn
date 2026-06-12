@@ -14,7 +14,7 @@ describe('MapPoolSection', () => {
 
   it('links to the map pool preset', () => {
     const wrapper = mount(MapPoolSection)
-    const link = wrapper.find('a[href="https://aoe2cm.net/preset/MivJN"]')
+    const link = wrapper.find('a[href="https://aoe2cm.net/preset/IZcEi"]')
     expect(link.exists()).toBe(true)
     expect(link.attributes('target')).toBe('_blank')
   })
