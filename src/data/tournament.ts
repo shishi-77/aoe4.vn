@@ -77,7 +77,7 @@ export const tournament: Tournament = {
     'Gorge',
     'MegaRandom',
     'Rocky River',
-    'Holy Island',
+    'Continental',
     'Forts',
     'West Lake',
     'Sunkenland',
@@ -85,7 +85,7 @@ export const tournament: Tournament = {
   links: {
     discord: 'https://discord.gg/Bshbqw7nHN',
     banPick: 'https://aoe2cm.net/preset/QHani',
-    mapPool: 'https://aoe2cm.net/preset/MivJN',
+    mapPool: 'https://aoe2cm.net/preset/IZcEi',
     youtube: 'https://www.youtube.com/@clearmanaoe4',
   },
   rules: [
