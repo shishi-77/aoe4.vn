@@ -38,30 +38,10 @@ useHead({
     </RouterLink>
   </section>
 
-  <section class="mx-auto max-w-5xl px-4 py-16">
-    <h2 class="mb-6 text-2xl font-black uppercase text-gold">Công cụ</h2>
-    <div class="grid gap-4 sm:grid-cols-2">
-      <RouterLink
-        to="/tools/civ-draft"
-        class="rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
-      >
-        <h3 class="text-lg font-bold text-cream">Civ Draft / Ban-Pick</h3>
-        <p class="mt-1 text-sm text-muted">Mô phỏng vòng cấm-chọn civ, chia sẻ qua link.</p>
-      </RouterLink>
-      <RouterLink
-        to="/tools/random"
-        class="rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
-      >
-        <h3 class="text-lg font-bold text-cream">Random Civ / Map</h3>
-        <p class="mt-1 text-sm text-muted">Quay ngẫu nhiên civ hoặc map từ pool.</p>
-      </RouterLink>
-    </div>
-  </section>
-
   <section class="mx-auto max-w-3xl px-4 py-16 text-center">
     <h2 class="mb-4 text-2xl font-black uppercase text-gold">Cộng đồng AoE4 Việt Nam</h2>
     <p class="text-cream/85">
-      Nơi quy tụ người chơi Age of Empires IV tại Việt Nam - giải đấu, công cụ và tin tức.
+      Nơi quy tụ người chơi Age of Empires IV tại Việt Nam - giải đấu và tin tức.
     </p>
     <div class="mt-6 flex justify-center gap-4">
       <a :href="site.links.discord" target="_blank" rel="noopener noreferrer" class="rounded-md bg-gold px-6 py-3 font-bold text-ink hover:bg-gold-dim">Discord</a>

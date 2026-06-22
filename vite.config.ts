@@ -35,7 +35,7 @@ export default defineConfig({
     },
     onFinished() {
       const base = 'https://aoe4.vn'
-      const urls = ['/', '/tournaments', '/tournaments/lac-hong', '/tools/civ-draft', '/tools/random']
+      const urls = ['/', '/tournaments', '/tournaments/lac-hong']
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
         urls.map((u) => `  <url><loc>${base}${u}</loc></url>`).join('\n') +

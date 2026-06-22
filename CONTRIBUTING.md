@@ -7,9 +7,8 @@ Chào mừng bạn đóng góp cho **AoE4 VN**! Tài liệu này hướng dẫn 
 ## Mục lục
 
 1. [Thêm một giải đấu](#1-thêm-một-giải-đấu)
-2. [Cập nhật danh sách civ / map](#2-cập-nhật-danh-sách-civ--map)
-3. [Cập nhật ngày phát hành DLC](#3-cập-nhật-ngày-phát-hành-dlc)
-4. [Kiểm tra trước khi gửi PR](#4-kiểm-tra-trước-khi-gửi-pr)
+2. [Cập nhật ngày phát hành DLC](#2-cập-nhật-ngày-phát-hành-dlc)
+3. [Kiểm tra trước khi gửi PR](#3-kiểm-tra-trước-khi-gửi-pr)
 
 ---
 
@@ -93,8 +92,6 @@ ssgOptions: {
       '/tournaments',
       '/tournaments/lac-hong',
       '/tournaments/ten-giai',   // thêm dòng này
-      '/tools/civ-draft',
-      '/tools/random',
     ]
     // ...
   },
@@ -105,40 +102,7 @@ ssgOptions: {
 
 ---
 
-## 2. Cập nhật danh sách civ / map
-
-### Civ mới
-
-Mở `src/data/civs.ts` và thêm vào mảng `civs`:
-
-```ts
-{
-  id: 'vikings',        // bắt buộc duy nhất, chỉ chữ thường + gạch dưới
-  name: 'Vikings',
-  upcoming: true,       // true = civ chưa phát hành (hiển thị badge "Sắp ra")
-}
-```
-
-- `id` phải **duy nhất** trong toàn bộ mảng — trùng id sẽ gây lỗi logic ở ban-pick.
-- Đặt `upcoming: true` cho mọi civ chưa được phát hành chính thức.
-- Xóa `upcoming` (hoặc đặt `false`) khi civ đã ra mắt.
-
-### Map mới
-
-Mở `src/data/maps.ts` và thêm vào mảng `maps`:
-
-```ts
-{
-  id: 'dry_arabia',     // bắt buộc duy nhất
-  name: 'Dry Arabia',
-}
-```
-
-- `id` phải **duy nhất** trong toàn bộ mảng.
-
----
-
-## 3. Cập nhật ngày phát hành DLC
+## 2. Cập nhật ngày phát hành DLC
 
 Khi Microsoft công bố ngày phát hành chính xác cho DLC, hãy cập nhật `src/data/dlc.ts`:
 
@@ -162,7 +126,7 @@ export const dlc = {
 
 ---
 
-## 4. Kiểm tra trước khi gửi PR
+## 3. Kiểm tra trước khi gửi PR
 
 Chạy ba lệnh sau và đảm bảo tất cả **PASS** trước khi mở Pull Request:
 

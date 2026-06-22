@@ -15,16 +15,6 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/views/TournamentDetailView.vue'),
   },
   {
-    path: '/tools/civ-draft',
-    name: 'civ-draft',
-    component: () => import('@/views/CivDraftView.vue'),
-  },
-  {
-    path: '/tools/random',
-    name: 'random-picker',
-    component: () => import('@/views/RandomPickerView.vue'),
-  },
-  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('@/views/NotFoundView.vue'),

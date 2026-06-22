@@ -1,6 +1,6 @@
 # AoE4 VN
 
-**Hub cộng đồng Age of Empires IV Việt Nam** — tra cứu giải đấu, công cụ hỗ trợ (ban-pick, random civ/map) và đếm ngược DLC mới nhất.
+**Hub cộng đồng Age of Empires IV Việt Nam** — tra cứu giải đấu và đếm ngược DLC mới nhất.
 
 Blog tin tức của cộng đồng: [aoe4vietnam.org](https://aoe4vietnam.org)
 
@@ -33,11 +33,9 @@ npm install
 
 | Đường dẫn                  | Trang                                          |
 | -------------------------- | ---------------------------------------------- |
-| `/`                        | Hub: đếm ngược DLC + giải đấu nổi bật + công cụ + cộng đồng |
+| `/`                        | Hub: đếm ngược DLC + giải đấu nổi bật + cộng đồng |
 | `/tournaments`             | Danh sách giải đấu                             |
 | `/tournaments/:slug`       | Chi tiết giải đấu (ví dụ: `/tournaments/lac-hong`) |
-| `/tools/civ-draft`         | Ban-pick simulator (chia sẻ qua `?d=` URL)     |
-| `/tools/random`            | Random civ / map picker                        |
 
 ## Cấu trúc thư mục
 
@@ -45,7 +43,7 @@ npm install
 src/
 ├── assets/         # CSS, hình ảnh (Tailwind nạp tại main.css)
 ├── components/     # Component tái sử dụng (+ __tests__)
-├── data/           # Dữ liệu tĩnh (civs, maps, dlc, site, tournaments/)
+├── data/           # Dữ liệu tĩnh (dlc, site, tournaments/)
 │   └── tournaments/
 │       ├── _template.ts   # Mẫu thêm giải đấu mới
 │       ├── index.ts       # Mảng tournaments + getTournamentBySlug

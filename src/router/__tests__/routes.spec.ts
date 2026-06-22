@@ -9,8 +9,6 @@ describe('routes', () => {
         'home',
         'tournaments',
         'tournament-detail',
-        'civ-draft',
-        'random-picker',
         'not-found',
       ]),
     )
