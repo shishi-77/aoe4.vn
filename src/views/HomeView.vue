@@ -1,10 +1,61 @@
 <script setup lang="ts">
-import { lacHong } from '@/data/tournaments/lac-hong'
-import HeroSection from '@/components/sections/HeroSection.vue'
+import { RouterLink } from 'vue-router'
+import { dlc } from '@/data/dlc'
+import { tournaments } from '@/data/tournaments'
+import { site } from '@/data/site'
+import DlcSection from '@/components/sections/DlcSection.vue'
 import FooterSection from '@/components/sections/FooterSection.vue'
+
+const featured = tournaments[0]
 </script>
 
 <template>
-  <HeroSection :tournament="lacHong" />
-  <FooterSection :tournament="lacHong" />
+  <DlcSection :dlc="dlc" />
+
+  <section class="mx-auto max-w-5xl px-4 py-16">
+    <h2 class="mb-6 text-2xl font-black uppercase text-gold">Giải đấu nổi bật</h2>
+    <RouterLink
+      :to="`/tournaments/${featured.slug}`"
+      class="block rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
+    >
+      <h3 class="text-xl font-bold text-cream">{{ featured.name }}</h3>
+      <p class="mt-1 text-sm text-muted">{{ featured.dateLabel }}</p>
+    </RouterLink>
+    <RouterLink to="/tournaments" class="mt-4 inline-block text-cream underline">
+      Xem tất cả giải
+    </RouterLink>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-4 py-16">
+    <h2 class="mb-6 text-2xl font-black uppercase text-gold">Công cụ</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <RouterLink
+        to="/tools/civ-draft"
+        class="rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
+      >
+        <h3 class="text-lg font-bold text-cream">Civ Draft / Ban-Pick</h3>
+        <p class="mt-1 text-sm text-muted">Mô phỏng vòng cấm-chọn civ, chia sẻ qua link.</p>
+      </RouterLink>
+      <RouterLink
+        to="/tools/random"
+        class="rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
+      >
+        <h3 class="text-lg font-bold text-cream">Random Civ / Map</h3>
+        <p class="mt-1 text-sm text-muted">Quay ngẫu nhiên civ hoặc map từ pool.</p>
+      </RouterLink>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-4 py-16 text-center">
+    <h2 class="mb-4 text-2xl font-black uppercase text-gold">Cộng đồng AoE4 Việt Nam</h2>
+    <p class="text-cream/85">
+      Nơi quy tụ người chơi Age of Empires IV tại Việt Nam - giải đấu, công cụ và tin tức.
+    </p>
+    <div class="mt-6 flex justify-center gap-4">
+      <a :href="site.links.discord" target="_blank" rel="noopener noreferrer" class="rounded-md bg-gold px-6 py-3 font-bold text-ink hover:bg-gold-dim">Discord</a>
+      <a :href="site.links.blog" target="_blank" rel="noopener noreferrer" class="rounded-md border border-gold px-6 py-3 font-bold text-gold hover:bg-gold hover:text-ink">Blog</a>
+    </div>
+  </section>
+
+  <FooterSection :tournament="featured" />
 </template>
