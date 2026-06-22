@@ -5,7 +5,6 @@ import { dlc } from '@/data/dlc'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import DlcSection from '@/components/sections/DlcSection.vue'
-import FooterSection from '@/components/sections/FooterSection.vue'
 
 const featured = tournaments[0]
 
@@ -48,6 +47,4 @@ useHead({
       <a :href="site.links.blog" target="_blank" rel="noopener noreferrer" class="rounded-md border border-gold px-6 py-3 font-bold text-gold hover:bg-gold hover:text-ink">Blog</a>
     </div>
   </section>
-
-  <FooterSection :tournament="featured" />
 </template>

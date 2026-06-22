@@ -1,15 +1,17 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { Tournament } from '@/data/tournaments'
 import CtaButton from '@/components/CtaButton.vue'
-import { site } from '@/data/site'
 
 const props = defineProps<{ tournament: Tournament }>()
 
-const registrationClosed = Date.now() >= new Date(props.tournament.registrationClosesAt).getTime()
+const registrationClosed = computed(
+  () => Date.now() >= new Date(props.tournament.registrationClosesAt).getTime(),
+)
 </script>
 
 <template>
-  <footer class="border-t border-gold-dim/20 bg-ink py-20 text-center">
+  <section class="border-t border-gold-dim/20 bg-ink py-20 text-center">
     <div class="mx-auto max-w-2xl px-4">
       <h2 class="text-3xl font-black uppercase text-cream">Sẵn sàng tham chiến?</h2>
       <p v-if="registrationClosed" class="mt-3 text-cream/80">
@@ -40,13 +42,7 @@ const registrationClosed = Date.now() >= new Date(props.tournament.registrationC
           >Chỉ đường tới {{ props.tournament.venue.name }}</a
         >
       </p>
-      <p class="mt-2 text-xs text-muted">
-        © 2026 {{ props.tournament.organizer }} · {{ props.tournament.name }}
-      </p>
-      <p class="mt-4 text-center text-xs text-muted">
-        Trang được xây bởi cộng đồng - powered by
-        <a :href="site.ahaslides.url" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">AhaSlides</a>
-      </p>
+      <p class="mt-2 text-xs text-muted">{{ props.tournament.name }} · {{ props.tournament.organizer }}</p>
     </div>
-  </footer>
+  </section>
 </template>
