@@ -45,7 +45,7 @@ export const tenGiai: Tournament = {
   registrationClosesAt: '2026-05-25T23:59:00+07:00',
   dateLabel: '01/06/2026',
   prizePoolTotal: '500,000 VND',
-  prizes: [{ place: 1, label: 'Nhất', amount: '300,000 VND' }],
+  prizes: [{ rank: 1, label: 'Vô địch', amount: '1.000.000đ', medal: '🥇' }],
   maps: [],
   links: { discord: '', banPick: '', mapPool: '', youtube: '' },
   rules: [],
