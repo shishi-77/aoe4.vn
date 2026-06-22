@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import AppLayout from '@/components/AppLayout.vue'
 </script>
 
 <template>
   <div class="min-h-screen bg-ink font-display text-cream antialiased">
-    <RouterView />
+    <AppLayout />
   </div>
 </template>
