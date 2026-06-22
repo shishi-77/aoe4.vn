@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { Tournament } from '@/data/tournaments'
 import CtaButton from '@/components/CtaButton.vue'
+import { site } from '@/data/site'
 
 const props = defineProps<{ tournament: Tournament }>()
 
@@ -41,6 +42,10 @@ const registrationClosed = Date.now() >= new Date(props.tournament.registrationC
       </p>
       <p class="mt-2 text-xs text-muted">
         © 2026 {{ props.tournament.organizer }} · {{ props.tournament.name }}
+      </p>
+      <p class="mt-4 text-center text-xs text-muted">
+        Trang được xây bởi cộng đồng - powered by
+        <a :href="site.ahaslides.url" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">AhaSlides</a>
       </p>
     </div>
   </footer>
