@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { tournament } from '@/data/tournament'
+import type { Tournament } from '@/data/tournaments'
 import { useCountdown } from '@/composables/useCountdown'
 import CtaButton from '@/components/CtaButton.vue'
 import banner from '@/assets/imgs/lac-hong-cup-banner.webp'
 
-const { days, hours, minutes, seconds, isLive } = useCountdown(tournament.startsAt)
+const props = defineProps<{ tournament: Tournament }>()
 
-const isOver = Date.now() >= new Date(tournament.endsAt).getTime()
-const registrationClosed = Date.now() >= new Date(tournament.registrationClosesAt).getTime()
+const { days, hours, minutes, seconds, isLive } = useCountdown(props.tournament.startsAt)
+
+const isOver = Date.now() >= new Date(props.tournament.endsAt).getTime()
+const registrationClosed = Date.now() >= new Date(props.tournament.registrationClosesAt).getTime()
 </script>
 
 <template>
@@ -16,37 +18,37 @@ const registrationClosed = Date.now() >= new Date(tournament.registrationClosesA
   >
     <img
       :src="banner"
-      :alt="`Banner ${tournament.name}`"
+      :alt="`Banner ${props.tournament.name}`"
       class="absolute inset-0 h-full w-full object-cover"
     />
     <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/80 to-ink"></div>
 
     <div class="relative z-10 mx-auto max-w-3xl py-20">
       <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-gold">
-        {{ tournament.organizer }}
+        {{ props.tournament.organizer }}
       </p>
       <h1 class="text-5xl font-black uppercase leading-tight text-cream sm:text-7xl">
-        {{ tournament.name }}
+        {{ props.tournament.name }}
       </h1>
       <div class="mt-4 flex items-center justify-center">
         <span
           class="rounded border border-gold px-4 py-1 text-sm font-bold tracking-widest text-gold"
         >
-          {{ tournament.format }}
+          {{ props.tournament.format }}
         </span>
       </div>
 
       <p class="mt-6 text-base text-cream/90 sm:text-lg">
-        🗓️ {{ tournament.dateLabel }} · 📍
+        🗓️ {{ props.tournament.dateLabel }} · 📍
         <a
-          :href="tournament.venue.mapsUrl"
+          :href="props.tournament.venue.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="underline decoration-cream/40 underline-offset-4 transition hover:text-gold"
-          >{{ tournament.venue.name }}</a
+          >{{ props.tournament.venue.name }}</a
         >
       </p>
-      <p class="mt-1 text-sm text-cream/70">{{ tournament.venue.address }}</p>
+      <p class="mt-1 text-sm text-cream/70">{{ props.tournament.venue.address }}</p>
 
       <div
         v-if="!isLive"
@@ -78,14 +80,14 @@ const registrationClosed = Date.now() >= new Date(tournament.registrationClosesA
       </p>
 
       <div class="mt-10">
-        <CtaButton v-if="isOver" :href="tournament.links.youtube">🎬 Xem lại trên YouTube</CtaButton>
-        <CtaButton v-else-if="isLive" :href="tournament.links.youtube">
+        <CtaButton v-if="isOver" :href="props.tournament.links.youtube">🎬 Xem lại trên YouTube</CtaButton>
+        <CtaButton v-else-if="isLive" :href="props.tournament.links.youtube">
           🔴 Xem trực tiếp
         </CtaButton>
-        <CtaButton v-else-if="registrationClosed" :href="tournament.links.discord">
+        <CtaButton v-else-if="registrationClosed" :href="props.tournament.links.discord">
           💬 Tham gia Discord
         </CtaButton>
-        <CtaButton v-else :href="tournament.links.discord">▶ Đăng ký ngay</CtaButton>
+        <CtaButton v-else :href="props.tournament.links.discord">▶ Đăng ký ngay</CtaButton>
       </div>
       <p v-if="registrationClosed && !isLive" class="mt-3 text-sm text-cream/70">
         Đã hết hạn đăng ký · theo dõi giải đấu qua Discord

@@ -21,6 +21,7 @@ export interface Venue {
 }
 
 export interface Tournament {
+  slug: string
   name: string
   game: string
   format: string
@@ -43,9 +44,11 @@ export interface Tournament {
   rules: string[]
   notes: string[]
   registrationDeadline: string
+  ogImage?: string
 }
 
-export const tournament: Tournament = {
+export const lacHong: Tournament = {
+  slug: 'lac-hong',
   name: 'Lạc Hồng Cup',
   game: 'Age of Empires IV',
   format: '4vs4',
@@ -99,4 +102,5 @@ export const tournament: Tournament = {
     'Tôn trọng quyết định của Ban tổ chức',
   ],
   registrationDeadline: 'Trước 23h59 Chủ Nhật, 07/06/2026 (1 tuần trước giải)',
+  ogImage: '/og.jpg',
 }

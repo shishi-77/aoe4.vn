@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { tournament } from '@/data/tournament'
+import type { Tournament } from '@/data/tournaments'
+
+const props = defineProps<{ tournament: Tournament }>()
 
 const items = [
-  { icon: '🎮', label: 'Game', value: tournament.game },
-  { icon: '⚔️', label: 'Thể thức', value: tournament.format },
-  { icon: '📋', label: 'Hình thức', value: tournament.registrationType },
-  { icon: '🎟️', label: 'Phí tham gia', value: tournament.entryFee },
-  { icon: '🏛️', label: 'Đơn vị tổ chức', value: tournament.organizer },
+  { icon: '🎮', label: 'Game', value: props.tournament.game },
+  { icon: '⚔️', label: 'Thể thức', value: props.tournament.format },
+  { icon: '📋', label: 'Hình thức', value: props.tournament.registrationType },
+  { icon: '🎟️', label: 'Phí tham gia', value: props.tournament.entryFee },
+  { icon: '🏛️', label: 'Đơn vị tổ chức', value: props.tournament.organizer },
 ]
 </script>
 
