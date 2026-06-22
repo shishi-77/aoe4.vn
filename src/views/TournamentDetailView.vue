@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import { getTournamentBySlug } from '@/data/tournaments'
 import { site } from '@/data/site'
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -14,6 +15,27 @@ import FooterSection from '@/components/sections/FooterSection.vue'
 
 const route = useRoute()
 const tournament = computed(() => getTournamentBySlug(String(route.params.slug)))
+
+useHead(() => ({
+  title: tournament.value
+    ? `${tournament.value.name} - ${site.name}`
+    : `Không tìm thấy - ${site.name}`,
+  meta: tournament.value
+    ? [
+        {
+          name: 'description',
+          content: `${tournament.value.name} - ${tournament.value.format} - ${tournament.value.dateLabel}`,
+        },
+        { property: 'og:title', content: tournament.value.name },
+        { property: 'og:description', content: `${tournament.value.name} - ${tournament.value.format} - ${tournament.value.dateLabel}` },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:image',
+          content: `${site.url}${tournament.value.ogImage ?? '/og.jpg'}`,
+        },
+      ]
+    : [],
+}))
 </script>
 
 <template>

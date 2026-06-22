@@ -1,8 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
 import { civs } from '@/data/civs'
 import { maps } from '@/data/maps'
 import { pickRandom } from '@/composables/useRandomPicker'
+import { site } from '@/data/site'
+
+useHead({
+  title: `Random Civ / Map - ${site.name}`,
+  meta: [
+    { name: 'description', content: 'Quay ngẫu nhiên civ hoặc map từ pool trong Age of Empires IV.' },
+    { property: 'og:title', content: `Random Civ / Map - ${site.name}` },
+    { property: 'og:description', content: 'Quay ngẫu nhiên civ hoặc map từ pool trong Age of Empires IV.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+})
 
 const mode = ref<'civ' | 'map'>('civ')
 const playerCount = ref(1)

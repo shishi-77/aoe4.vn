@@ -1,6 +1,19 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import { tournaments } from '@/data/tournaments'
+import { site } from '@/data/site'
 import TournamentCard from '@/components/TournamentCard.vue'
+
+useHead({
+  title: `Giải đấu - ${site.name}`,
+  meta: [
+    { name: 'description', content: 'Danh sách giải đấu Age of Empires IV tại Việt Nam.' },
+    { property: 'og:title', content: `Giải đấu - ${site.name}` },
+    { property: 'og:description', content: 'Danh sách giải đấu Age of Empires IV tại Việt Nam.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+})
 </script>
 
 <template>

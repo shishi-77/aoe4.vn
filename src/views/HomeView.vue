@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import { dlc } from '@/data/dlc'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
@@ -7,6 +8,17 @@ import DlcSection from '@/components/sections/DlcSection.vue'
 import FooterSection from '@/components/sections/FooterSection.vue'
 
 const featured = tournaments[0]
+
+useHead({
+  title: `${site.name} - Cộng đồng Age of Empires IV Việt Nam`,
+  meta: [
+    { name: 'description', content: site.description },
+    { property: 'og:title', content: site.name },
+    { property: 'og:description', content: site.description },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+})
 </script>
 
 <template>

@@ -22,5 +22,15 @@ export default defineConfig({
         '/tournaments/lac-hong',
       ]
     },
+    async onPageRendered(_route, html, appCtx) {
+      // Apply per-route useHead() tags to the pre-rendered HTML.
+      // vite-ssg's renderDOMHead() skips on the unhead v3 SSR head (no `dirty` flag),
+      // so we manually drive the SSR render pipeline via transformHtmlTemplate.
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const { head } = appCtx as { head?: any }
+      if (!head) return html
+      const { transformHtmlTemplate } = await import('unhead/server')
+      return transformHtmlTemplate(head, html)
+    },
   },
 })

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import { civs } from '@/data/civs'
 import {
   useCivDraft,
@@ -8,6 +9,7 @@ import {
   LAC_HONG_PRESET,
   type DraftState,
 } from '@/composables/useCivDraft'
+import { site } from '@/data/site'
 
 const route = useRoute()
 const playable = civs.filter((c) => !c.upcoming)
@@ -24,6 +26,17 @@ function initialState(): DraftState {
 
 const { config, choices, currentStep, isComplete, used, choose, reset, shareUrl } =
   useCivDraft(initialState())
+
+useHead({
+  title: `Civ Draft / Ban-Pick - ${site.name}`,
+  meta: [
+    { name: 'description', content: 'Mô phỏng vòng cấm-chọn civ trong Age of Empires IV, chia sẻ qua link.' },
+    { property: 'og:title', content: `Civ Draft / Ban-Pick - ${site.name}` },
+    { property: 'og:description', content: 'Mô phỏng vòng cấm-chọn civ trong Age of Empires IV, chia sẻ qua link.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+})
 
 const copied = ref(false)
 async function copyShare() {
