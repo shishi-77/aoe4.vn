@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { tournament } from '@/data/tournament'
+import type { Tournament } from '@/data/tournaments'
 import SectionTitle from '@/components/SectionTitle.vue'
 
-const podium = tournament.prizes.slice(0, 3)
-const rest = tournament.prizes.slice(3)
+const props = defineProps<{ tournament: Tournament }>()
+
+const podium = props.tournament.prizes.slice(0, 3)
+const rest = props.tournament.prizes.slice(3)
 </script>
 
 <template>
   <section class="bg-surface/40 py-20">
     <div class="mx-auto max-w-5xl px-4">
-      <SectionTitle :eyebrow="`Tổng giải thưởng ${tournament.prizePoolTotal}`" title="Giải thưởng" />
+      <SectionTitle :eyebrow="`Tổng giải thưởng ${props.tournament.prizePoolTotal}`" title="Giải thưởng" />
 
       <div class="grid gap-4 sm:grid-cols-3">
         <div

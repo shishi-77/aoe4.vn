@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { tournament } from '@/data/tournament'
+import type { Tournament } from '@/data/tournaments'
 import SectionTitle from '@/components/SectionTitle.vue'
+
+const props = defineProps<{ tournament: Tournament }>()
 </script>
 
 <template>
@@ -9,7 +11,7 @@ import SectionTitle from '@/components/SectionTitle.vue'
       <SectionTitle eyebrow="Caster & Bình luận" title="Theo dõi trực tiếp" />
       <p class="text-cream/90">Giải đấu được bình luận bởi Clearman AOE4.</p>
       <a
-        :href="tournament.links.youtube"
+        :href="props.tournament.links.youtube"
         target="_blank"
         rel="noopener noreferrer"
         class="mt-6 inline-flex items-center gap-2 rounded-md bg-wine px-6 py-3 font-bold text-cream transition hover:opacity-90"

@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { tournament } from '@/data/tournament'
+import type { Tournament } from '@/data/tournaments'
 import CtaButton from '@/components/CtaButton.vue'
 
-const registrationClosed = Date.now() >= new Date(tournament.registrationClosesAt).getTime()
+const props = defineProps<{ tournament: Tournament }>()
+
+const registrationClosed = Date.now() >= new Date(props.tournament.registrationClosesAt).getTime()
 </script>
 
 <template>
@@ -14,15 +16,15 @@ const registrationClosed = Date.now() >= new Date(tournament.registrationClosesA
       </p>
       <p v-else class="mt-3 text-cream/80">Đăng ký miễn phí · BTC sẽ ghép đội cho bạn.</p>
       <div class="mt-6">
-        <CtaButton v-if="registrationClosed" :href="tournament.links.discord">
+        <CtaButton v-if="registrationClosed" :href="props.tournament.links.discord">
           💬 Tham gia Discord
         </CtaButton>
-        <CtaButton v-else :href="tournament.links.discord">▶ Đăng ký qua Discord</CtaButton>
+        <CtaButton v-else :href="props.tournament.links.discord">▶ Đăng ký qua Discord</CtaButton>
       </div>
       <p class="mt-10 text-sm text-muted">
         Liên hệ BTC:
         <a
-          :href="tournament.links.discord"
+          :href="props.tournament.links.discord"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gold hover:underline"
@@ -30,15 +32,15 @@ const registrationClosed = Date.now() >= new Date(tournament.registrationClosesA
         >
         ·
         <a
-          :href="tournament.venue.mapsUrl"
+          :href="props.tournament.venue.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="text-gold hover:underline"
-          >Chỉ đường tới {{ tournament.venue.name }}</a
+          >Chỉ đường tới {{ props.tournament.venue.name }}</a
         >
       </p>
       <p class="mt-2 text-xs text-muted">
-        © 2026 {{ tournament.organizer }} · {{ tournament.name }}
+        © 2026 {{ props.tournament.organizer }} · {{ props.tournament.name }}
       </p>
     </div>
   </footer>
