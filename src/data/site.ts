@@ -6,6 +6,7 @@ export const site = {
     discord: 'https://discord.gg/Bshbqw7nHN',
     blog: 'https://aoe4vietnam.org',
     youtube: 'https://www.youtube.com/@clearmanaoe4',
+    github: 'https://github.com/shishi-77/aoe4.vn',
   },
   ahaslides: {
     url: 'https://ahaslides.com',
