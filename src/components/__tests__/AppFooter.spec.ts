@@ -19,7 +19,7 @@ describe('AppFooter', () => {
     const link = wrapper.find(`a[href="${site.links.github}"]`)
     expect(link.exists()).toBe(true)
     expect(link.attributes('target')).toBe('_blank')
-    expect(link.attributes('rel')).toContain('noopener')
+    expect(link.attributes('rel')).toBe('noopener noreferrer')
     expect(link.text()).toContain('Mã nguồn mở')
   })
 })
