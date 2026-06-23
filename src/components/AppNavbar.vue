@@ -9,8 +9,9 @@ const open = ref(false)
 <template>
   <header class="sticky top-0 z-50 border-b border-gold-dim/20 bg-ink/90 backdrop-blur">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <RouterLink to="/" class="text-xl font-black uppercase tracking-wider text-gold">
-        AoE4 VN
+      <RouterLink to="/" class="flex items-center gap-2">
+        <img src="/favicon.webp" alt="" class="h-8 w-8" width="32" height="32" />
+        <span class="text-xl font-black uppercase tracking-wider text-gold">AoE4 VN</span>
       </RouterLink>
 
       <button
