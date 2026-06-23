@@ -24,6 +24,7 @@ const props = defineProps<{ tournament: Tournament }>()
       </div>
       <div class="mt-8 text-center">
         <a
+          v-if="props.tournament.links.mapPool"
           :href="props.tournament.links.mapPool"
           target="_blank"
           rel="noopener noreferrer"

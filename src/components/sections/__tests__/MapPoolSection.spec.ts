@@ -19,4 +19,10 @@ describe('MapPoolSection', () => {
     expect(link.exists()).toBe(true)
     expect(link.attributes('target')).toBe('_blank')
   })
+
+  it('ẩn nút map pool khi không có link', () => {
+    const noLink = { ...lacHong, links: { ...lacHong.links, mapPool: '' } }
+    const wrapper = mount(MapPoolSection, { props: { tournament: noLink } })
+    expect(wrapper.text()).not.toContain('Xem Map Pool')
+  })
 })
