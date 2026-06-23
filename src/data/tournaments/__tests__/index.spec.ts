@@ -25,4 +25,9 @@ describe('tournaments collection', () => {
     expect(getTournamentBySlug('lac-hong')?.name).toBe('Lạc Hồng Cup')
     expect(getTournamentBySlug('khong-ton-tai')).toBeUndefined()
   })
+
+  it('có cả Lạc Hồng và Hà Nội Open 1', () => {
+    expect(getTournamentBySlug('lac-hong')?.name).toBe('Lạc Hồng Cup')
+    expect(getTournamentBySlug('ha-noi-open-1')?.name).toBe('Hà Nội Open 1')
+  })
 })
