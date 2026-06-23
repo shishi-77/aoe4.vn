@@ -12,9 +12,9 @@ describe('haNoiOpen1', () => {
     expect(haNoiOpen1.prizePoolTotal).toBe('5.000.000đ')
   })
 
-  it('không có preset ban/pick và map pool', () => {
-    expect(haNoiOpen1.links.banPick).toBe('')
-    expect(haNoiOpen1.links.mapPool).toBe('')
+  it('có preset ban/pick và map pool trên aoe2cm', () => {
+    expect(haNoiOpen1.links.banPick).toBe('https://aoe2cm.net/preset/YaBIh')
+    expect(haNoiOpen1.links.mapPool).toBe('https://aoe2cm.net/preset/xfrpM')
   })
 
   it('thời gian dùng offset +07:00', () => {

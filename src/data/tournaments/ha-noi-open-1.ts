@@ -35,8 +35,8 @@ export const haNoiOpen1: Tournament = {
   maps: ['Dry Arabia', 'Lipany', 'Wetlands', 'Rocky River', 'Gorge', 'Hill and Dale', 'MegaRandom'],
   links: {
     discord: 'https://discord.gg/Tzc8rnRk',
-    banPick: '',
-    mapPool: '',
+    banPick: 'https://aoe2cm.net/preset/YaBIh',
+    mapPool: 'https://aoe2cm.net/preset/xfrpM',
     youtube: 'https://www.youtube.com/@clearmanaoe4',
   },
   rules: [
