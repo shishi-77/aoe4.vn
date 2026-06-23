@@ -1,10 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Chạy khi push lên main (ví dụ sau khi merge PR)
+  # Chỉ deploy khi push tag release (vd v.release-20260623)
   push:
-    branches: [main]
-  # Cho phép chạy thủ công từ tab Actions
+    tags: ['v.release-*']
+  # Cho phép chạy thủ công từ tab Actions (dùng để rollback về tag cũ)
   workflow_dispatch:
 
 # Quyền cần thiết để deploy lên GitHub Pages
