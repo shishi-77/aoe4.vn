@@ -1,3 +1,5 @@
+import lacHongBanner from '@/assets/imgs/lac-hong-cup-banner.webp'
+
 export interface Prize {
   rank: number
   label: string
@@ -25,6 +27,8 @@ export interface Tournament {
   name: string
   game: string
   format: string
+  /** Bundled banner image (import from @/assets/imgs/...). */
+  banner: string
   organizer: string
   entryFee: string
   registrationType: string
@@ -38,6 +42,8 @@ export interface Tournament {
   /** Human-readable Vietnamese date/time label for display (kept in sync with startsAt). */
   dateLabel: string
   prizePoolTotal: string
+  /** Bracket/series description shown in FormatSection, e.g. "BO3 - loại trực tiếp". */
+  bracketFormat: string
   prizes: Prize[]
   maps: string[]
   links: TournamentLinks
@@ -52,6 +58,7 @@ export const lacHong: Tournament = {
   name: 'Lạc Hồng Cup',
   game: 'Age of Empires IV',
   format: '4vs4',
+  banner: lacHongBanner,
   organizer: 'Cộng Đồng AOE IV Việt Nam',
   entryFee: 'Miễn phí',
   registrationType: 'Đăng ký tự do, BTC ghép đội',
@@ -66,6 +73,7 @@ export const lacHong: Tournament = {
   registrationClosesAt: '2026-06-07T23:59:00+07:00',
   dateLabel: 'Chủ Nhật, 14/06/2026 · 13h30',
   prizePoolTotal: '3.000.000đ',
+  bracketFormat: 'BO3 - loại trực tiếp',
   prizes: [
     { rank: 1, label: 'Vô địch', amount: '1.000.000đ', medal: '🥇', note: '+ cúp' },
     { rank: 2, label: 'Hạng nhì', amount: '700.000đ', medal: '🥈' },

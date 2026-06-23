@@ -2,7 +2,6 @@
 import type { Tournament } from '@/data/tournaments'
 import { useCountdown } from '@/composables/useCountdown'
 import CtaButton from '@/components/CtaButton.vue'
-import banner from '@/assets/imgs/lac-hong-cup-banner.webp'
 
 const props = defineProps<{ tournament: Tournament }>()
 
@@ -17,7 +16,7 @@ const registrationClosed = Date.now() >= new Date(props.tournament.registrationC
     class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center"
   >
     <img
-      :src="banner"
+      :src="props.tournament.banner"
       :alt="`Banner ${props.tournament.name}`"
       class="absolute inset-0 h-full w-full object-cover"
     />
