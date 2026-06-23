@@ -11,16 +11,6 @@ const year = new Date().getFullYear()
         © {{ year }} {{ site.name }} - Cộng đồng Age of Empires IV Việt Nam
       </p>
       <p class="mt-2 text-xs text-muted">
-        Trang được xây bởi cộng đồng - powered by
-        <a
-          :href="site.ahaslides.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-gold hover:underline"
-          >AhaSlides</a
-        >
-      </p>
-      <p class="mt-2 text-xs text-muted">
         <a
           :href="site.links.github"
           target="_blank"
