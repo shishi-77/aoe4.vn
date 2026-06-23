@@ -5,8 +5,7 @@ import { dlc } from '@/data/dlc'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import DlcSection from '@/components/sections/DlcSection.vue'
-
-const featured = tournaments[0]
+import TournamentCard from '@/components/TournamentCard.vue'
 
 useHead({
   title: `${site.name} - Cộng đồng Age of Empires IV Việt Nam`,
@@ -24,15 +23,11 @@ useHead({
   <DlcSection :dlc="dlc" />
 
   <section class="mx-auto max-w-5xl px-4 py-16">
-    <h2 class="mb-6 text-2xl font-black uppercase text-gold">Giải đấu nổi bật</h2>
-    <RouterLink
-      :to="`/tournaments/${featured.slug}`"
-      class="block rounded-lg border border-gold-dim/20 bg-surface p-6 hover:border-gold"
-    >
-      <h3 class="text-xl font-bold text-cream">{{ featured.name }}</h3>
-      <p class="mt-1 text-sm text-muted">{{ featured.dateLabel }}</p>
-    </RouterLink>
-    <RouterLink to="/tournaments" class="mt-4 inline-block text-cream underline">
+    <h2 class="mb-6 text-2xl font-black uppercase text-gold">Giải đấu</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <TournamentCard v-for="t in tournaments" :key="t.slug" :tournament="t" />
+    </div>
+    <RouterLink to="/tournaments" class="mt-6 inline-block text-cream underline">
       Xem tất cả giải
     </RouterLink>
   </section>
