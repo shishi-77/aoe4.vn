@@ -64,6 +64,29 @@ npm run build   # output: dist/
 
 > Khi thêm route giải đấu mới, nhớ cập nhật `includedRoutes` và `urls` trong `vite.config.ts`. Xem hướng dẫn chi tiết trong [CONTRIBUTING.md](CONTRIBUTING.md).
 
+### Quy trình release (deploy qua tag)
+
+Deploy lên https://aoe4.vn **chỉ chạy khi push tag** khớp `v.release-*`. Merge vào `main` KHÔNG tự deploy.
+
+```sh
+# 1. Từ main đã merge xong các PR cần release
+git checkout main && git pull
+
+# 2. Tạo branch release đóng băng snapshot
+git checkout -b release-20260623
+git push -u origin release-20260623
+
+# 3. Tag và push tag (bước này trigger deploy)
+git tag v.release-20260623
+git push origin v.release-20260623
+```
+
+> Release lần 2 trong cùng ngày: thêm hậu tố, vd `v.release-20260623-2`.
+
+Sau khi Actions deploy xong, vào **Releases → Draft a new release**, chọn tag vừa tạo và viết release note thủ công.
+
+**Rollback:** tab **Actions → Deploy to GitHub Pages → Run workflow**, chọn ref là tag `v.release-*` cũ. Không cần tạo tag mới.
+
 ## Công nghệ
 
 - **Vue 3** (`<script setup>`), **TypeScript**
