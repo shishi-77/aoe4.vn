@@ -97,7 +97,7 @@ export const lacHong: Tournament = {
     discord: 'https://discord.gg/Bshbqw7nHN',
     banPick: 'https://aoe2cm.net/preset/QHani',
     mapPool: 'https://aoe2cm.net/preset/IZcEi',
-    youtube: 'https://www.youtube.com/@clearmanaoe4',
+    youtube: 'https://youtu.be/vRdFhHsSuQ8?t=2776',
   },
   rules: [
     'Không sử dụng hack/cheat dưới mọi hình thức',

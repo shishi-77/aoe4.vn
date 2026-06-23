@@ -37,7 +37,7 @@ export const haNoiOpen1: Tournament = {
     discord: 'https://discord.gg/Tzc8rnRk',
     banPick: 'https://aoe2cm.net/preset/YaBIh',
     mapPool: 'https://aoe2cm.net/preset/xfrpM',
-    youtube: 'https://www.youtube.com/@clearmanaoe4',
+    youtube: 'https://youtu.be/kG4qOParQJs?t=184',
   },
   rules: [
     'Không sử dụng hack/cheat dưới mọi hình thức',
