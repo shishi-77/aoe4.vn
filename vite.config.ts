@@ -21,6 +21,7 @@ export default defineConfig({
       return [
         ...paths.filter((p) => !p.includes(':')),
         '/tournaments/lac-hong',
+        '/tournaments/ha-noi-open-1',
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -35,7 +36,7 @@ export default defineConfig({
     },
     onFinished() {
       const base = 'https://aoe4.vn'
-      const urls = ['/', '/tournaments', '/tournaments/lac-hong']
+      const urls = ['/', '/tournaments', '/tournaments/lac-hong', '/tournaments/ha-noi-open-1']
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
         urls.map((u) => `  <url><loc>${base}${u}</loc></url>`).join('\n') +
