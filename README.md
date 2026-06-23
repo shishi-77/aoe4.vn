@@ -73,3 +73,7 @@ npm run build   # output: dist/
 - **@unhead/vue** (SEO meta tags)
 - **ESLint 9** (flat config) + **Prettier**
 - **Vitest** + **@vue/test-utils** + **jsdom**
+
+## Giấy phép
+
+Dự án phát hành theo giấy phép [MIT](LICENSE) — tự do sử dụng, chỉnh sửa và phân phối.
