@@ -32,6 +32,6 @@ export const faqItems: FaqItem[] = [
   {
     question: 'Đế chế 4 có cộng đồng người Việt không?',
     answer:
-      'Có. Cộng đồng AoE4 Việt Nam sinh hoạt sôi nổi trên Facebook Group và Discord — nơi giao lưu, tìm đồng đội, hỏi đáp và cập nhật giải đấu. Đây là chỗ tốt nhất để bắt đầu nếu bạn từ Đế chế chuyển sang.',
+      'Có. Cộng đồng AoE4 Việt Nam sinh hoạt sôi nổi trên Facebook Group và Discord - nơi giao lưu, tìm đồng đội, hỏi đáp và cập nhật giải đấu. Đây là chỗ tốt nhất để bắt đầu nếu bạn từ Đế chế chuyển sang.',
   },
 ]

@@ -6,7 +6,7 @@ import { faqItems } from '@/data/faq'
 const pageUrl = `${site.url}/faq/`
 const title = 'Đế chế 4 (Age of Empires IV) là gì? Câu hỏi thường gặp'
 const description =
-  'Giải đáp nhanh cho người chơi Đế chế: Đế chế 4 là gì, có giống Đế chế không, giá, cấu hình và cách bắt đầu — kèm cộng đồng AoE4 Việt Nam.'
+  'Giải đáp nhanh cho người chơi Đế chế: Đế chế 4 là gì, có giống Đế chế không, giá, cấu hình và cách bắt đầu - kèm cộng đồng AoE4 Việt Nam.'
 
 const faqJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
