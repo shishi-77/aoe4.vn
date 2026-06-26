@@ -84,11 +84,11 @@ const { el: heroEl } = useParallax()
       Dự kiến {{ dlc.releaseLabel }}
     </p>
 
-    <ul class="mt-8 flex flex-wrap items-center justify-center gap-3">
+    <ul class="mt-8 flex max-w-full flex-wrap items-center justify-center gap-3">
       <li
         v-for="h in dlc.highlights"
         :key="h"
-        class="rounded-lg border border-steel/25 bg-surface/60 px-4 py-2 text-sm text-cream/90 backdrop-blur-sm"
+        class="min-w-0 break-words rounded-lg border border-steel/25 bg-surface/60 px-4 py-2 text-sm text-cream/90 backdrop-blur-sm"
       >
         {{ h }}
       </li>
