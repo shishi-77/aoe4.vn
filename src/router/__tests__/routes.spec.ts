@@ -19,4 +19,9 @@ describe('routes', () => {
     expect(r.name).toBe('tournament-detail')
     expect(r.params.slug).toBe('lac-hong')
   })
+
+  it('resolve được /faq', () => {
+    const r = router.resolve('/faq')
+    expect(r.name).toBe('faq')
+  })
 })

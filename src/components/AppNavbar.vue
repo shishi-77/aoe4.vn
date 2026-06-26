@@ -28,6 +28,9 @@ const open = ref(false)
         :class="open ? 'flex' : 'hidden'"
       >
         <RouterLink to="/" class="font-bold text-cream hover:text-gold">Trang chủ</RouterLink>
+        <RouterLink to="/faq" class="font-bold text-cream hover:text-gold">
+          Đế chế 4
+        </RouterLink>
         <RouterLink to="/tournaments" class="font-bold text-cream hover:text-gold">
           Giải đấu
         </RouterLink>

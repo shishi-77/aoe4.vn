@@ -5,6 +5,11 @@ import HomeView from '@/views/HomeView.vue'
 export const routes: RouteRecordRaw[] = [
   { path: '/', name: 'home', component: HomeView },
   {
+    path: '/faq',
+    name: 'faq',
+    component: () => import('@/views/FAQView.vue'),
+  },
+  {
     path: '/tournaments',
     name: 'tournaments',
     component: () => import('@/views/TournamentsView.vue'),
