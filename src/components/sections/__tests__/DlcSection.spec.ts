@@ -62,4 +62,25 @@ describe('DlcSection', () => {
     const wrapper = mount(DlcSection, { props: { dlc: makeDlc() } })
     expect(wrapper.find('a[href^="https://store.steampowered.com"]').exists()).toBe(true)
   })
+
+  it('nhuốm màu chip theo phe: Vikings=gold, Scots=steel', () => {
+    const wrapper = mount(DlcSection, { props: { dlc: makeDlc() } })
+    const chips = wrapper.findAll('[data-testid="civ-chip"]')
+    expect(chips[0].attributes('data-tone')).toBe('viking')
+    expect(chips[1].attributes('data-tone')).toBe('scot')
+  })
+
+  it('render ornament NorseDivider trong hero', () => {
+    const wrapper = mount(DlcSection, { props: { dlc: makeDlc() } })
+    expect(wrapper.find('svg.norse-divider').exists()).toBe(true)
+  })
+
+  it('countdown dùng container grid để wrap trên mobile', () => {
+    const wrapper = mount(DlcSection, {
+      props: { dlc: makeDlc({ predictedReleaseDate: '2099-01-01T00:00:00+07:00' }) },
+    })
+    const timer = wrapper.find('[role="timer"]')
+    expect(timer.classes()).toContain('grid')
+    expect(timer.classes()).toContain('grid-cols-2')
+  })
 })

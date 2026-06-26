@@ -127,6 +127,54 @@ body {
   will-change: transform;
 }
 
+/* Entrance: các phần tử hero trồi lên so le khi tải. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-enter > :not([class*='absolute']) {
+  animation: hero-rise 0.6s ease-out both;
+}
+.hero-enter > :nth-child(2) {
+  animation-delay: 0.08s;
+}
+.hero-enter > :nth-child(3) {
+  animation-delay: 0.16s;
+}
+.hero-enter > :nth-child(4) {
+  animation-delay: 0.24s;
+}
+.hero-enter > :nth-child(5) {
+  animation-delay: 0.32s;
+}
+.hero-enter > :nth-child(n + 6) {
+  animation-delay: 0.4s;
+}
+
+/* Ánh lửa quét qua CTA khi hover. */
+.cta-ember {
+  position: relative;
+  overflow: hidden;
+}
+.cta-ember::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(245, 236, 216, 0.5) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+.cta-ember:hover::after {
+  transform: translateX(120%);
+}
+
 /* Sóng biển: tile SVG lặp ngang, trôi liên tục bằng mask-position. */
 @keyframes wave-drift {
   to {
@@ -202,5 +250,13 @@ body {
   }
   .ship-bob {
     transform: translateX(-50%);
+  }
+  .hero-enter > * {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .cta-ember::after {
+    display: none;
   }
 }
