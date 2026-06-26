@@ -5,6 +5,7 @@ import { dlc } from '@/data/dlc'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import DlcSection from '@/components/sections/DlcSection.vue'
+import NorseDivider from '@/components/NorseDivider.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import TournamentCard from '@/components/TournamentCard.vue'
 import { useReveal } from '@/composables/useReveal'
@@ -42,9 +43,11 @@ const { el: communityEl } = useReveal()
     </div>
   </section>
 
+  <NorseDivider class="mx-auto my-2 text-steel/40" />
+
   <section
     ref="communityEl"
-    class="reveal border-t border-gold-dim/10 bg-surface/40 px-4 py-16"
+    class="reveal border-t border-steel/15 bg-surface/40 px-4 py-16"
   >
     <div class="mx-auto max-w-3xl text-center">
       <SectionTitle eyebrow="Tham gia" title="Cộng đồng AoE4 Việt Nam" />
