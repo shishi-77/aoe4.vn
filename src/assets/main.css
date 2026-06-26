@@ -76,13 +76,75 @@ body {
   animation: reveal-up 0.6s ease-out forwards;
 }
 
+/* Sóng biển: tile SVG lặp ngang, trôi liên tục bằng mask-position. */
+@keyframes wave-drift {
+  to {
+    -webkit-mask-position-x: -1440px;
+    mask-position-x: -1440px;
+  }
+}
+
+@keyframes wave-drift-rev {
+  to {
+    -webkit-mask-position-x: 1440px;
+    mask-position-x: 1440px;
+  }
+}
+
+/* Thuyền longship nhấp nhô. */
+@keyframes ship-bob {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-9px) rotate(1.5deg);
+  }
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-mask: url('./imgs/wave.svg') repeat-x bottom left / 1440px 100%;
+  mask: url('./imgs/wave.svg') repeat-x bottom left / 1440px 100%;
+}
+
+.wave-back {
+  height: 190px;
+  background-color: var(--color-wine);
+  opacity: 0.22;
+  animation: wave-drift 24s linear infinite;
+}
+
+.wave-front {
+  height: 140px;
+  background-color: var(--color-surface);
+  opacity: 0.6;
+  animation: wave-drift-rev 15s linear infinite;
+}
+
+/* ship-bob giữ luôn translateX(-50%) để không phá căn giữa của thuyền. */
+.ship-bob {
+  animation: ship-bob 6s ease-in-out infinite;
+  transform-origin: 50% 80%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .kenburns,
   .snow,
-  .reveal.is-visible {
+  .reveal.is-visible,
+  .wave-back,
+  .wave-front,
+  .ship-bob {
     animation: none;
   }
   .reveal {
     opacity: 1;
+  }
+  /* giữ thuyền căn giữa khi tắt animation */
+  .ship-bob {
+    transform: translateX(-50%);
   }
 }

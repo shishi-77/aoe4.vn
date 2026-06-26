@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useCountdown } from '@/composables/useCountdown'
 import type { dlc as DlcType } from '@/data/dlc'
-import heroArt from '@/assets/imgs/raiders-of-the-north-hero.jpg'
+import HeroBackdrop from '@/components/sections/HeroBackdrop.vue'
 
 const props = defineProps<{ dlc: typeof DlcType }>()
 
@@ -24,17 +24,7 @@ const units = computed(() => [
   <section
     class="relative flex min-h-[88vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center"
   >
-    <!-- Lớp nền không khí: chính ảnh key art, làm mờ + zoom chậm (Ken Burns) -->
-    <img
-      :src="heroArt"
-      alt=""
-      aria-hidden="true"
-      class="kenburns pointer-events-none absolute inset-0 -z-20 h-full w-full scale-105 object-cover opacity-40 blur-2xl"
-    />
-    <!-- Gradient phủ làm tối nền cho dễ đọc -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/40 via-ink/75 to-ink"></div>
-    <!-- Lớp tuyết trôi -->
-    <div class="snow pointer-events-none absolute inset-0 -z-10"></div>
+    <HeroBackdrop />
 
     <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-gold">DLC sắp ra mắt</p>
     <h1 class="text-4xl font-black uppercase text-cream drop-shadow-lg sm:text-6xl">
