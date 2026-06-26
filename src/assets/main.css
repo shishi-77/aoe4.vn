@@ -2,12 +2,14 @@
 
 @theme {
   --color-ink: #0c0b09;
-  --color-surface: #1a1814;
+  --color-surface: #14161b;
   --color-gold: #e7b955;
   --color-gold-dim: #c79a4b;
   --color-cream: #f5ecd8;
   --color-muted: #9c948a;
   --color-wine: #7a1f1f;
+  --color-steel: #5b8aa6;
+  --color-ice: #9fc3d6;
   --font-display: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -113,8 +115,8 @@ body {
 
 .wave-back {
   height: 190px;
-  background-color: var(--color-wine);
-  opacity: 0.22;
+  background-color: var(--color-steel);
+  opacity: 0.28;
   animation: wave-drift 24s linear infinite;
 }
 
