@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { faqItems } from '../faq'
+import { faqItems } from '@/data/faq'
 
 describe('faqItems', () => {
   it('giữ số lượng giới hạn (4-8 mục)', () => {

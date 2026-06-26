@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import router from '../index'
+import router from '@/router'
 
 describe('routes', () => {
   it('có các route chính', () => {

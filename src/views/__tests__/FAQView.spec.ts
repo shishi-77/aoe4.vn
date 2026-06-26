@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect, vi } from 'vitest'
-import FAQView from '../FAQView.vue'
+import FAQView from '@/views/FAQView.vue'
 import { faqItems } from '@/data/faq'
 import { site } from '@/data/site'
 
