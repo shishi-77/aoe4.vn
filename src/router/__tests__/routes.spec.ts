@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import router from '../index'
+import router from '@/router'
 
 describe('routes', () => {
   it('có các route chính', () => {
@@ -18,5 +18,10 @@ describe('routes', () => {
     const r = router.resolve('/tournaments/lac-hong')
     expect(r.name).toBe('tournament-detail')
     expect(r.params.slug).toBe('lac-hong')
+  })
+
+  it('resolve được /faq', () => {
+    const r = router.resolve('/faq')
+    expect(r.name).toBe('faq')
   })
 })

@@ -4,6 +4,7 @@ export const site = {
   url: 'https://aoe4.vn',
   links: {
     discord: 'https://discord.gg/Bshbqw7nHN',
+    facebook: 'https://www.facebook.com/groups/aoe4vietnam/',
     blog: 'https://aoe4vietnam.org',
     youtube: 'https://www.youtube.com/@clearmanaoe4',
     github: 'https://github.com/shishi-77/aoe4.vn',
