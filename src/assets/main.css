@@ -20,6 +20,7 @@ body {
 }
 
 /* ---- Hiệu ứng trang chủ ---- */
+/* Dành cho lớp ảnh key art hero khi có (hiện hero dùng fallback gradient + tuyết). */
 @keyframes kenburns {
   from {
     transform: scale(1);

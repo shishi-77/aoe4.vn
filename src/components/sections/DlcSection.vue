@@ -7,7 +7,7 @@ const props = defineProps<{ dlc: typeof DlcType }>()
 
 const targetDate = computed(() => props.dlc.releaseDate ?? props.dlc.predictedReleaseDate)
 const isPredicted = computed(() => !props.dlc.releaseDate && !!props.dlc.predictedReleaseDate)
-// useCountdown an toàn với chuỗi rỗng (isLive=true ngay); chỉ render timer khi có ngày.
+// showTimer chặn khi không có ngày, nên useCountdown không bao giờ render với chuỗi rỗng/NaN.
 const { days, hours, minutes, seconds, isLive } = useCountdown(targetDate.value ?? '')
 const showTimer = computed(() => !!targetDate.value && !isLive.value)
 
