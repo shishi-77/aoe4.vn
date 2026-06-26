@@ -20,11 +20,18 @@ useHead(() => ({
   title: tournament.value
     ? `${tournament.value.name} - ${site.name}`
     : `Không tìm thấy - ${site.name}`,
+  link: tournament.value
+    ? [{ rel: 'canonical', href: `${site.url}/tournaments/${tournament.value.slug}/` }]
+    : [],
   meta: tournament.value
     ? [
         {
           name: 'description',
           content: `${tournament.value.name} - ${tournament.value.format} - ${tournament.value.dateLabel}`,
+        },
+        {
+          property: 'og:url',
+          content: `${site.url}/tournaments/${tournament.value.slug}/`,
         },
         { property: 'og:title', content: tournament.value.name },
         { property: 'og:description', content: `${tournament.value.name} - ${tournament.value.format} - ${tournament.value.dateLabel}` },

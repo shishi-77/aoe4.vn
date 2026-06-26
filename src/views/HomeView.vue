@@ -12,8 +12,10 @@ import { useReveal } from '@/composables/useReveal'
 
 useHead({
   title: `${site.name} - Cộng đồng Age of Empires IV Việt Nam`,
+  link: [{ rel: 'canonical', href: `${site.url}/` }],
   meta: [
     { name: 'description', content: site.description },
+    { property: 'og:url', content: `${site.url}/` },
     { property: 'og:title', content: site.name },
     { property: 'og:description', content: site.description },
     { property: 'og:type', content: 'website' },
