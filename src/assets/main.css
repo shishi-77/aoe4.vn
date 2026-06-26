@@ -20,7 +20,7 @@ body {
 }
 
 /* ---- Hiệu ứng trang chủ ---- */
-/* Dành cho lớp ảnh key art hero khi có (hiện hero dùng fallback gradient + tuyết). */
+/* Lớp ảnh key art nền của hero zoom chậm (Ken Burns). */
 @keyframes kenburns {
   from {
     transform: scale(1);
