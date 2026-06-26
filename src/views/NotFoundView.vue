@@ -5,6 +5,7 @@ import { site } from '@/data/site'
 useHead({
   title: `Không tìm thấy - ${site.name}`,
   meta: [
+    { name: 'robots', content: 'noindex' },
     { name: 'description', content: 'Trang bạn tìm không tồn tại.' },
     { property: 'og:title', content: `Không tìm thấy - ${site.name}` },
     { property: 'og:description', content: 'Trang bạn tìm không tồn tại.' },

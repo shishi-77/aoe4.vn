@@ -6,8 +6,10 @@ import TournamentCard from '@/components/TournamentCard.vue'
 
 useHead({
   title: `Giải đấu - ${site.name}`,
+  link: [{ rel: 'canonical', href: `${site.url}/tournaments/` }],
   meta: [
     { name: 'description', content: 'Danh sách giải đấu Age of Empires IV tại Việt Nam.' },
+    { property: 'og:url', content: `${site.url}/tournaments/` },
     { property: 'og:title', content: `Giải đấu - ${site.name}` },
     { property: 'og:description', content: 'Danh sách giải đấu Age of Empires IV tại Việt Nam.' },
     { property: 'og:type', content: 'website' },
