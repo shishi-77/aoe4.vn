@@ -18,3 +18,70 @@ html {
 body {
   font-family: var(--font-display);
 }
+
+/* ---- Hiệu ứng trang chủ ---- */
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes snowfall {
+  from {
+    background-position:
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 680px,
+      0 980px;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.kenburns {
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+
+.snow {
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, rgba(245, 236, 216, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 70% 60%, rgba(245, 236, 216, 0.35), transparent);
+  background-size:
+    340px 340px,
+    220px 220px;
+  animation: snowfall 14s linear infinite;
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kenburns,
+  .snow,
+  .reveal.is-visible {
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+  }
+}
