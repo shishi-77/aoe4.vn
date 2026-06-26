@@ -16,7 +16,7 @@ const status = computed(() => {
 <template>
   <RouterLink
     :to="`/tournaments/${tournament.slug}`"
-    class="block rounded-lg border border-gold-dim/20 bg-surface p-6 transition hover:border-gold"
+    class="block rounded-lg border border-gold-dim/20 bg-surface p-6 transition duration-200 hover:-translate-y-1 hover:border-gold hover:shadow-lg hover:shadow-gold/5 motion-reduce:transform-none motion-reduce:transition-none"
   >
     <span class="text-xs font-bold uppercase tracking-wide text-gold">{{ status }}</span>
     <h2 class="mt-1 text-xl font-bold text-cream">{{ tournament.name }}</h2>
