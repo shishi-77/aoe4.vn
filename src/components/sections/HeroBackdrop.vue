@@ -22,7 +22,7 @@ import heroArt from '@/assets/imgs/raiders-of-the-north-hero.jpg'
 
     <!-- Thuyền longship Viking nhấp nhô trên sóng -->
     <svg
-      class="ship-bob absolute bottom-[110px] left-1/2 w-[210px] -translate-x-1/2 text-gold-dim/30 sm:bottom-[130px] sm:w-[300px]"
+      class="ship-bob absolute bottom-[64px] left-1/2 w-[200px] -translate-x-1/2 text-gold-dim/35 sm:bottom-[84px] sm:w-[280px]"
       viewBox="0 0 260 160"
       fill="none"
     >

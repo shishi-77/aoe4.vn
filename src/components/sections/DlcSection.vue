@@ -22,7 +22,7 @@ const units = computed(() => [
 
 <template>
   <section
-    class="relative flex min-h-[88vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center"
+    class="relative isolate flex min-h-[88vh] flex-col items-center justify-center overflow-hidden px-4 pb-48 pt-24 text-center"
   >
     <HeroBackdrop />
 
