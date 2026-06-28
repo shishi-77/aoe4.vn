@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { RouterLink } from 'vue-router'
 import { site } from '@/data/site'
 import { faqItems } from '@/data/faq'
 import CommunityCta from '@/components/CommunityCta.vue'
@@ -51,7 +52,16 @@ useHead({
     <div class="mt-12 space-y-8">
       <section v-for="item in faqItems" :key="item.question">
         <h2 class="text-xl font-bold text-gold">{{ item.question }}</h2>
-        <p class="mt-2 leading-relaxed text-cream/90">{{ item.answer }}</p>
+        <p class="mt-2 leading-relaxed text-cream/90">
+          {{ item.answer }}
+          <RouterLink
+            v-if="item.guide"
+            :to="`/guides/${item.guide.slug}`"
+            class="whitespace-nowrap text-sm font-semibold text-gold hover:underline"
+          >
+            {{ item.guide.label }} →
+          </RouterLink>
+        </p>
       </section>
     </div>
 

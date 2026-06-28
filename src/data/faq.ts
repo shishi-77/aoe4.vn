@@ -1,6 +1,15 @@
+export interface FaqGuideLink {
+  /** Slug of the matching guide under /guides/:slug. */
+  slug: string
+  /** Inline anchor text shown after the answer. */
+  label: string
+}
+
 export interface FaqItem {
   question: string
   answer: string
+  /** Optional link to the in-depth guide that covers this question. */
+  guide?: FaqGuideLink
 }
 
 export const faqItems: FaqItem[] = [
@@ -18,20 +27,24 @@ export const faqItems: FaqItem[] = [
     question: 'Đế chế 4 có miễn phí không? Giá bao nhiêu, mua ở đâu?',
     answer:
       'AoE4 là game trả phí, bán trên Steam và có sẵn trong gói PC/Xbox Game Pass. Giá thay đổi theo từng đợt giảm; nếu đang có Game Pass thì chơi được luôn mà không phải mua riêng. Nên xem giá mới nhất trực tiếp trên Steam.',
+    guide: { slug: 'cach-tai-aoe4', label: 'Xem cách tải & mua' },
   },
   {
     question: 'Cấu hình chơi Đế chế 4? Máy yếu có chơi được không?',
     answer:
       'AoE4 nhẹ hơn nhiều game 3D cùng thời. Cấu hình tối thiểu khoảng CPU Intel i5 / Ryzen tương đương, 8GB RAM và card đồ họa đời mới là chơi được ở thiết lập thấp. Máy tầm trung chạy mượt ở mức trung-cao.',
+    guide: { slug: 'cau-hinh-may-aoe4', label: 'Xem chi tiết cấu hình' },
   },
   {
     question: 'Người mới nên bắt đầu chơi Đế chế 4 thế nào?',
     answer:
       'Hãy chơi phần Chiến dịch (Campaign) và các bài hướng dẫn Art of War để làm quen điều khiển, sau đó học một build order cơ bản rồi đánh với máy (AI) trước khi lên mạng. Chọn một nền văn minh dễ để nắm nền tảng sẽ đỡ ngợp hơn.',
+    guide: { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Xem hướng dẫn người mới' },
   },
   {
     question: 'Đế chế 4 có cộng đồng người Việt không?',
     answer:
       'Có. Cộng đồng AoE4 Việt Nam sinh hoạt sôi nổi trên Facebook Group và Discord - nơi giao lưu, tìm đồng đội, hỏi đáp và cập nhật giải đấu. Đây là chỗ tốt nhất để bắt đầu nếu bạn từ Đế chế chuyển sang.',
+    guide: { slug: 'tim-nguoi-viet-choi-aoe4', label: 'Xem cách tìm người Việt chơi cùng' },
   },
 ]
