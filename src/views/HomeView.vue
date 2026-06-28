@@ -4,22 +4,29 @@ import { useHead } from '@unhead/vue'
 import { dlc } from '@/data/dlc'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
+import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 import DlcSection from '@/components/sections/DlcSection.vue'
 import NorseDivider from '@/components/NorseDivider.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import TournamentCard from '@/components/TournamentCard.vue'
 import { useReveal } from '@/composables/useReveal'
 
+const pageTitle = `${site.name} - Cộng đồng Age of Empires IV Việt Nam`
+
 useHead({
-  title: `${site.name} - Cộng đồng Age of Empires IV Việt Nam`,
+  title: pageTitle,
   link: [{ rel: 'canonical', href: `${site.url}/` }],
   meta: [
     { name: 'description', content: site.description },
     { property: 'og:url', content: `${site.url}/` },
-    { property: 'og:title', content: site.name },
+    { property: 'og:title', content: pageTitle },
     { property: 'og:description', content: site.description },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+  script: [
+    { type: 'application/ld+json', innerHTML: JSON.stringify(organizationJsonLd(site)) },
+    { type: 'application/ld+json', innerHTML: JSON.stringify(websiteJsonLd(site)) },
   ],
 })
 

@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getTournamentBySlug } from '@/data/tournaments'
 import { site } from '@/data/site'
+import { tournamentEventJsonLd } from '@/lib/structuredData'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import QuickInfoSection from '@/components/sections/QuickInfoSection.vue'
 import PrizeSection from '@/components/sections/PrizeSection.vue'
@@ -39,6 +40,14 @@ useHead(() => ({
         {
           property: 'og:image',
           content: `${site.url}${tournament.value.ogImage ?? '/og.jpg'}`,
+        },
+      ]
+    : [],
+  script: tournament.value
+    ? [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(tournamentEventJsonLd(tournament.value, site)),
         },
       ]
     : [],
