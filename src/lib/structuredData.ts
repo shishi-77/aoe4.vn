@@ -19,7 +19,7 @@ export function tournamentEventJsonLd(
   site: Site,
 ): Record<string, unknown> {
   const url = absoluteUrl(site.url, `/tournaments/${tournament.slug}/`)
-  const image = absoluteUrl(site.url, tournament.ogImage ?? '/og.jpg')
+  const image = absoluteUrl(site.url, tournament.ogImage ?? tournament.banner)
   const isFree = /miễn phí/i.test(tournament.entryFee)
 
   const description =

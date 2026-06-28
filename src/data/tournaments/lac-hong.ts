@@ -110,5 +110,5 @@ export const lacHong: Tournament = {
     'Tôn trọng quyết định của Ban tổ chức',
   ],
   registrationDeadline: 'Trước 23h59 Chủ Nhật, 07/06/2026 (1 tuần trước giải)',
-  ogImage: '/og.jpg',
+  ogImage: '/og-lac-hong.jpg',
 }

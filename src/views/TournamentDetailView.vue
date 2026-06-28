@@ -39,8 +39,16 @@ useHead(() => ({
         { property: 'og:type', content: 'website' },
         {
           property: 'og:image',
-          content: `${site.url}${tournament.value.ogImage ?? '/og.jpg'}`,
+          content: `${site.url}${tournament.value.ogImage ?? tournament.value.banner}`,
         },
+        { property: 'og:image:alt', content: `Banner ${tournament.value.name}` },
+        // Dedicated OG images are 1200x630; the banner fallback has unknown dimensions.
+        ...(tournament.value.ogImage
+          ? [
+              { property: 'og:image:width', content: '1200' },
+              { property: 'og:image:height', content: '630' },
+            ]
+          : []),
       ]
     : [],
   script: tournament.value

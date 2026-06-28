@@ -26,6 +26,17 @@ describe('tournamentEventJsonLd', () => {
     expect(String(ld.image)).toContain(site.url)
   })
 
+  it('image dùng ogImage riêng của giải (không phải og.jpg mặc định)', () => {
+    expect(ld.image).toBe(`${site.url}${lacHong.ogImage}`)
+    expect(String(ld.image)).not.toMatch(/\/og\.jpg$/)
+  })
+
+  it('image fallback về banner khi giải không có ogImage', () => {
+    const noOg = { ...lacHong, ogImage: undefined }
+    const fallback = tournamentEventJsonLd(noOg, site)
+    expect(fallback.image).toBe(`${site.url}${lacHong.banner}`)
+  })
+
   it('location là Place với tên và địa chỉ venue', () => {
     const loc = ld.location as Record<string, unknown>
     expect(loc['@type']).toBe('Place')

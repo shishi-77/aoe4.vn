@@ -50,4 +50,5 @@ export const haNoiOpen1: Tournament = {
     'Lịch trình: check-in 11h–13h · thi đấu 13h–18h · giao lưu 18h30',
   ],
   registrationDeadline: 'Trước 20h00 Thứ Năm, 13/05/2026',
+  ogImage: '/og-ha-noi-open-1.jpg',
 }
