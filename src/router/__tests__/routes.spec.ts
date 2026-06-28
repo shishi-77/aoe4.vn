@@ -24,4 +24,9 @@ describe('routes', () => {
     const r = router.resolve('/faq')
     expect(r.name).toBe('faq')
   })
+
+  it('resolve được /guides', () => {
+    const r = router.resolve('/guides')
+    expect(r.name).toBe('guides')
+  })
 })
