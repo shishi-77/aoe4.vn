@@ -1,19 +1,16 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Chỉ deploy khi push tag release (vd v.release-20260623)
-  push:
-    tags: ['v.release-*']
-  # Cho phép chạy thủ công từ tab Actions (dùng để rollback về tag cũ)
+  # Deploy only when triggered manually from the Actions tab (pick a branch/tag to deploy)
   workflow_dispatch:
 
-# Quyền cần thiết để deploy lên GitHub Pages
+# Permissions required to deploy to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Chỉ chạy 1 lần deploy tại một thời điểm
+# Allow only one deploy to run at a time
 concurrency:
   group: pages
   cancel-in-progress: true
