@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const cacNenVanMinhAoe4: Guide = {
+export const civilizationsGuide: Guide = {
   slug: 'cac-nen-van-minh-aoe4',
   title: 'Các nền văn minh trong Age of Empires IV và nên chọn phe nào',
   description:
     'Đế chế 4 có những nền văn minh nào và người mới nên chọn phe nào? Giới thiệu các nền văn minh trong Age of Empires IV và gợi ý phe dễ chơi để bắt đầu.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

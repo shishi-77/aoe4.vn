@@ -6,7 +6,7 @@ import {
   guideArticleJsonLd,
 } from '@/lib/structuredData'
 import { lacHong } from '@/data/tournaments/lac-hong'
-import { cachTaiAoe4 } from '@/data/guides/cach-tai-aoe4'
+import { downloadGuide } from '@/data/guides/cach-tai-aoe4'
 import { site } from '@/data/site'
 
 describe('tournamentEventJsonLd', () => {
@@ -107,10 +107,10 @@ describe('websiteJsonLd', () => {
 
 describe('guideArticleJsonLd', () => {
   it('tạo schema Article hợp lệ với canonical có dấu / cuối', () => {
-    const ld = guideArticleJsonLd(cachTaiAoe4, site) as Record<string, unknown>
+    const ld = guideArticleJsonLd(downloadGuide, site) as Record<string, unknown>
     expect(ld['@type']).toBe('Article')
-    expect(ld.headline).toBe(cachTaiAoe4.title)
-    expect(ld.mainEntityOfPage).toBe(`${site.url}/guides/${cachTaiAoe4.slug}/`)
-    expect(ld.datePublished).toBe(cachTaiAoe4.updatedAt)
+    expect(ld.headline).toBe(downloadGuide.title)
+    expect(ld.mainEntityOfPage).toBe(`${site.url}/guides/${downloadGuide.slug}/`)
+    expect(ld.datePublished).toBe(downloadGuide.updatedAt)
   })
 })

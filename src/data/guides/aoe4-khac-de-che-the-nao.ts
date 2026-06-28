@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const aoe4KhacDeCheTheNao: Guide = {
+export const aoe4VsAoe1Guide: Guide = {
   slug: 'aoe4-khac-de-che-the-nao',
   title: 'Age of Empires IV khác Đế chế (AoE1) thế nào?',
   description:
     'Người chơi Đế chế tò mò AoE4 có giống game cũ không? So sánh nhanh điểm giống và khác giữa Đế chế (AoE1) và Age of Empires IV để bạn dễ chuyển sang.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const cacCheDoChoiAoe4: Guide = {
+export const gameModesGuide: Guide = {
   slug: 'cac-che-do-choi-aoe4',
   title: 'Các chế độ chơi trong Age of Empires IV',
   description:
     'Đế chế 4 có những chế độ chơi nào? Giải thích nhanh Chiến dịch, Art of War, đấu với máy, tìm trận nhanh, đấu xếp hạng và phòng tùy chỉnh để bạn chọn đúng chỗ bắt đầu.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

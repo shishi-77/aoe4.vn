@@ -1,13 +1,13 @@
-import { cachTaiAoe4 } from './cach-tai-aoe4'
-import { cauHinhMayAoe4 } from './cau-hinh-may-aoe4'
-import { aoe4KhacDeCheTheNao } from './aoe4-khac-de-che-the-nao'
-import { huongDanAoe4NguoiMoi } from './huong-dan-aoe4-nguoi-moi'
-import { timNguoiVietChoiAoe4 } from './tim-nguoi-viet-choi-aoe4'
-import { deCheXuaVaNayLinhCoBan } from './de-che-xua-va-nay-linh-co-ban'
-import { deCheXuaVaNayLenDoi } from './de-che-xua-va-nay-len-doi'
-import { deCheXuaVaNayCongThanh } from './de-che-xua-va-nay-cong-thanh'
-import { cacNenVanMinhAoe4 } from './cac-nen-van-minh-aoe4'
-import { cacCheDoChoiAoe4 } from './cac-che-do-choi-aoe4'
+import { downloadGuide } from './cach-tai-aoe4'
+import { systemRequirementsGuide } from './cau-hinh-may-aoe4'
+import { aoe4VsAoe1Guide } from './aoe4-khac-de-che-the-nao'
+import { beginnerGuide } from './huong-dan-aoe4-nguoi-moi'
+import { findPlayersGuide } from './tim-nguoi-viet-choi-aoe4'
+import { compareUnitsGuide } from './de-che-xua-va-nay-linh-co-ban'
+import { compareAgingGuide } from './de-che-xua-va-nay-len-doi'
+import { compareSiegeGuide } from './de-che-xua-va-nay-cong-thanh'
+import { civilizationsGuide } from './cac-nen-van-minh-aoe4'
+import { gameModesGuide } from './cac-che-do-choi-aoe4'
 
 export interface GuideSection {
   heading: string
@@ -26,16 +26,16 @@ export interface Guide {
 }
 
 export const guides: Guide[] = [
-  cachTaiAoe4,
-  cauHinhMayAoe4,
-  aoe4KhacDeCheTheNao,
-  huongDanAoe4NguoiMoi,
-  timNguoiVietChoiAoe4,
-  deCheXuaVaNayLinhCoBan,
-  deCheXuaVaNayLenDoi,
-  deCheXuaVaNayCongThanh,
-  cacNenVanMinhAoe4,
-  cacCheDoChoiAoe4,
+  downloadGuide,
+  systemRequirementsGuide,
+  aoe4VsAoe1Guide,
+  beginnerGuide,
+  findPlayersGuide,
+  compareUnitsGuide,
+  compareAgingGuide,
+  compareSiegeGuide,
+  civilizationsGuide,
+  gameModesGuide,
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {

@@ -94,8 +94,8 @@ export function websiteJsonLd(site: Site): Record<string, unknown> {
 /**
  * Schema.org Article for a guide detail page.
  *
- * Includes standard Article fields: headline, description, datePublished,
- * dateModified, author, and publisher.
+ * Includes standard Article fields: headline, description, image,
+ * datePublished, dateModified, author, and publisher.
  */
 export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unknown> {
   const url = absoluteUrl(site.url, `/guides/${guide.slug}/`)
@@ -104,6 +104,7 @@ export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unk
     '@type': 'Article',
     headline: guide.title,
     description: guide.description,
+    image: absoluteUrl(site.url, '/og.jpg'),
     datePublished: guide.updatedAt,
     dateModified: guide.updatedAt,
     mainEntityOfPage: url,

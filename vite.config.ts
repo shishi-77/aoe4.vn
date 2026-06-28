@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import 'vite-ssg'
+import { guides } from './src/data/guides'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -22,16 +23,7 @@ export default defineConfig({
         ...paths.filter((p) => !p.includes(':')),
         '/tournaments/lac-hong',
         '/tournaments/ha-noi-open-1',
-        '/guides/cach-tai-aoe4',
-        '/guides/cau-hinh-may-aoe4',
-        '/guides/aoe4-khac-de-che-the-nao',
-        '/guides/huong-dan-aoe4-nguoi-moi',
-        '/guides/tim-nguoi-viet-choi-aoe4',
-        '/guides/de-che-xua-va-nay-linh-co-ban',
-        '/guides/de-che-xua-va-nay-len-doi',
-        '/guides/de-che-xua-va-nay-cong-thanh',
-        '/guides/cac-nen-van-minh-aoe4',
-        '/guides/cac-che-do-choi-aoe4',
+        ...guides.map((g) => `/guides/${g.slug}`),
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -53,16 +45,7 @@ export default defineConfig({
         '/tournaments/lac-hong/',
         '/tournaments/ha-noi-open-1/',
         '/guides/',
-        '/guides/cach-tai-aoe4/',
-        '/guides/cau-hinh-may-aoe4/',
-        '/guides/aoe4-khac-de-che-the-nao/',
-        '/guides/huong-dan-aoe4-nguoi-moi/',
-        '/guides/tim-nguoi-viet-choi-aoe4/',
-        '/guides/de-che-xua-va-nay-linh-co-ban/',
-        '/guides/de-che-xua-va-nay-len-doi/',
-        '/guides/de-che-xua-va-nay-cong-thanh/',
-        '/guides/cac-nen-van-minh-aoe4/',
-        '/guides/cac-che-do-choi-aoe4/',
+        ...guides.map((g) => `/guides/${g.slug}/`),
       ]
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

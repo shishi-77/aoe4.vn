@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const deCheXuaVaNayLinhCoBan: Guide = {
+export const compareUnitsGuide: Guide = {
   slug: 'de-che-xua-va-nay-linh-co-ban',
   title: 'Đế chế xưa & nay: Lính cơ bản và cách dàn quân',
   description:
     'So sánh lính và cách dàn quân giữa Đế chế (AoE1) và Age of Empires IV: từ thời spam một loại quân đến hệ khắc chế kéo - búa - bao trong AoE4.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

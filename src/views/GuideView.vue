@@ -5,13 +5,18 @@ import { useHead } from '@unhead/vue'
 import { getGuideBySlug } from '@/data/guides'
 import { site } from '@/data/site'
 import { guideArticleJsonLd } from '@/lib/structuredData'
+import CommunityCta from '@/components/CommunityCta.vue'
 
 const route = useRoute()
 const guide = computed(() => getGuideBySlug(String(route.params.slug)))
 
 useHead(() => {
   const g = guide.value
-  if (!g) return { title: `Không tìm thấy - ${site.name}` }
+  if (!g)
+    return {
+      title: `Không tìm thấy - ${site.name}`,
+      meta: [{ name: 'robots', content: 'noindex' }],
+    }
   const url = `${site.url}/guides/${g.slug}/`
   return {
     title: `${g.title} - ${site.name}`,
@@ -47,34 +52,7 @@ useHead(() => {
       </section>
     </div>
 
-    <div
-      v-if="guide.cta"
-      class="mt-12 rounded-xl border border-gold-dim/20 bg-surface px-6 py-10 text-center"
-    >
-      <h2 class="text-2xl font-black uppercase text-cream">Tham gia cộng đồng AoE4 Việt Nam</h2>
-      <p class="mx-auto mt-3 max-w-xl text-muted">
-        Giao lưu, tìm đồng đội và hỏi đáp cùng người chơi Đế chế 4 trong nước.
-      </p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
-        <a
-          v-if="site.links.facebook"
-          :href="site.links.facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-base font-extrabold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition hover:bg-cream"
-        >
-          Facebook Group
-        </a>
-        <a
-          :href="site.links.discord"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-base font-extrabold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition hover:bg-cream"
-        >
-          Discord
-        </a>
-      </div>
-    </div>
+    <CommunityCta v-if="guide.cta" />
   </article>
 
   <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">

@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const cauHinhMayAoe4: Guide = {
+export const systemRequirementsGuide: Guide = {
   slug: 'cau-hinh-may-aoe4',
   title: 'Cấu hình máy chơi Age of Empires IV (Đế chế 4)',
   description:
     'Máy yếu có chơi được Đế chế 4 không? Tổng hợp cấu hình tối thiểu và đề nghị của Age of Empires IV, kèm mẹo chỉnh thiết lập cho máy cấu hình thấp.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

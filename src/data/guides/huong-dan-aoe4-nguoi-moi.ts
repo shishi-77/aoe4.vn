@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const huongDanAoe4NguoiMoi: Guide = {
+export const beginnerGuide: Guide = {
   slug: 'huong-dan-aoe4-nguoi-moi',
   title: 'Hướng dẫn chơi Age of Empires IV cho người mới',
   description:
     'Mới chơi Đế chế 4 nên bắt đầu từ đâu? Lộ trình cho người mới: học qua Chiến dịch và Art of War, nắm build order cơ bản, đánh với máy rồi mới lên mạng.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

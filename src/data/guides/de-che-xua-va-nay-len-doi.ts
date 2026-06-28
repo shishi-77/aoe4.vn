@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const deCheXuaVaNayLenDoi: Guide = {
+export const compareAgingGuide: Guide = {
   slug: 'de-che-xua-va-nay-len-doi',
   title: 'Đế chế xưa & nay: Lên đời và kinh tế',
   description:
     'So sánh cách lên đời và xây kinh tế giữa Đế chế (AoE1) và Age of Empires IV: từ bốn nấc đá - đồ đá - đồng - sắt đến hệ thời đại cùng công trình mốc của AoE4.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {

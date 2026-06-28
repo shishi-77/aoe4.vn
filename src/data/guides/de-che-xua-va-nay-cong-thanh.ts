@@ -1,11 +1,11 @@
 import type { Guide } from './index'
 
-export const deCheXuaVaNayCongThanh: Guide = {
+export const compareSiegeGuide: Guide = {
   slug: 'de-che-xua-va-nay-cong-thanh',
   title: 'Đế chế xưa & nay: Công thành và phòng thủ',
   description:
     'So sánh công thành và phòng thủ giữa Đế chế (AoE1) và Age of Empires IV: tường, tháp và vũ khí vây thành đã trở thành một lớp chiến thuật quan trọng thế nào.',
-  updatedAt: '2026-07-01',
+  updatedAt: '2026-06-28',
   cta: true,
   sections: [
     {
