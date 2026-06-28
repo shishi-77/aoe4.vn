@@ -34,6 +34,9 @@ const open = ref(false)
         <RouterLink to="/tournaments" class="font-bold text-cream hover:text-gold">
           Giải đấu
         </RouterLink>
+        <RouterLink to="/guides" class="font-bold text-cream hover:text-gold">
+          Hướng dẫn
+        </RouterLink>
         <a
           :href="site.links.blog"
           target="_blank"

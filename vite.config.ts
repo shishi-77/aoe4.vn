@@ -22,6 +22,7 @@ export default defineConfig({
         ...paths.filter((p) => !p.includes(':')),
         '/tournaments/lac-hong',
         '/tournaments/ha-noi-open-1',
+        '/guides/cach-tai-aoe4',
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -42,6 +43,8 @@ export default defineConfig({
         '/tournaments/',
         '/tournaments/lac-hong/',
         '/tournaments/ha-noi-open-1/',
+        '/guides/',
+        '/guides/cach-tai-aoe4/',
       ]
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
