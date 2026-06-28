@@ -29,7 +29,7 @@ const open = ref(false)
       >
         <RouterLink to="/" class="font-bold text-cream hover:text-gold">Trang chủ</RouterLink>
         <RouterLink to="/faq" class="font-bold text-cream hover:text-gold">
-          Đế chế 4
+          Hỏi đáp
         </RouterLink>
         <RouterLink to="/tournaments" class="font-bold text-cream hover:text-gold">
           Giải đấu
