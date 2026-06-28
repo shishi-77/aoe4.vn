@@ -18,7 +18,7 @@ export const civilizationsGuide: Guide = {
     {
       heading: 'Mỗi phe một lối chơi riêng',
       paragraphs: [
-        'Khác với Đế chế đời đầu (các phe chủ yếu khác nhau ở vài chỉ số), trong AoE4 mỗi nền văn minh có bản sắc rõ rệt: quân đặc trưng, cách lên đời, công trình mốc và cả cơ chế độc quyền.',
+        'Trong AoE4, mỗi nền văn minh có bản sắc rất rõ rệt: quân đặc trưng, cách lên đời, công trình mốc và cả cơ chế độc quyền riêng.',
         'Ví dụ có phe mạnh về kỵ binh đánh sớm, có phe thủ chắc và kinh tế ổn, lại có phe chơi rất khác biệt như du mục có thể nhổ trại di chuyển. Chính sự khác biệt này tạo nên chiều sâu khi chọn phe.',
       ],
     },
