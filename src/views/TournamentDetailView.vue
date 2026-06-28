@@ -39,8 +39,9 @@ useHead(() => ({
         { property: 'og:type', content: 'website' },
         {
           property: 'og:image',
-          content: `${site.url}${tournament.value.ogImage ?? '/og.jpg'}`,
+          content: `${site.url}${tournament.value.ogImage ?? tournament.value.banner}`,
         },
+        { property: 'og:image:alt', content: `Banner ${tournament.value.name}` },
       ]
     : [],
   script: tournament.value

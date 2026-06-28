@@ -26,6 +26,11 @@ describe('tournamentEventJsonLd', () => {
     expect(String(ld.image)).toContain(site.url)
   })
 
+  it('image dùng banner riêng của giải (không phải og.jpg mặc định)', () => {
+    expect(ld.image).toBe(`${site.url}${lacHong.banner}`)
+    expect(String(ld.image)).not.toMatch(/\/og\.jpg$/)
+  })
+
   it('location là Place với tên và địa chỉ venue', () => {
     const loc = ld.location as Record<string, unknown>
     expect(loc['@type']).toBe('Place')

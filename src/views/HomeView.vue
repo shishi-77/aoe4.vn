@@ -23,6 +23,9 @@ useHead({
     { property: 'og:description', content: site.description },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: `${site.url}/og.jpg` },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:image:alt', content: pageTitle },
   ],
   script: [
     { type: 'application/ld+json', innerHTML: JSON.stringify(organizationJsonLd(site)) },
