@@ -7,8 +7,9 @@ Chào mừng bạn đóng góp cho **AoE4 VN**! Tài liệu này hướng dẫn 
 ## Mục lục
 
 1. [Thêm một giải đấu](#1-thêm-một-giải-đấu)
-2. [Cập nhật ngày phát hành DLC](#2-cập-nhật-ngày-phát-hành-dlc)
-3. [Kiểm tra trước khi gửi PR](#3-kiểm-tra-trước-khi-gửi-pr)
+2. [Thêm một bài hướng dẫn](#2-thêm-một-bài-hướng-dẫn)
+3. [Cập nhật ngày phát hành DLC](#3-cập-nhật-ngày-phát-hành-dlc)
+4. [Kiểm tra trước khi gửi PR](#4-kiểm-tra-trước-khi-gửi-pr)
 
 ---
 
@@ -102,7 +103,84 @@ ssgOptions: {
 
 ---
 
-## 2. Cập nhật ngày phát hành DLC
+## 2. Thêm một bài hướng dẫn
+
+Thêm bài hướng dẫn mới cần cập nhật **bốn nơi**. Thiếu bước thứ ba hoặc thứ tư là lỗi thường gặp nhất — route sẽ không được pre-render và không xuất hiện trong sitemap.
+
+### Bước 1 — Tạo file dữ liệu bài hướng dẫn
+
+Copy file mẫu `src/data/guides/_template.ts` thành file mới, đặt tên theo slug của bài (chỉ dùng chữ thường, số và dấu gạch ngang):
+
+```sh
+cp src/data/guides/_template.ts src/data/guides/ten-bai.ts
+```
+
+Mở file vừa tạo và điền đầy đủ thông tin:
+
+```ts
+// src/data/guides/ten-bai.ts
+import type { Guide } from './index'
+
+export const tenBai: Guide = {
+  slug: 'ten-bai',           // phải khớp với tên file và URL route
+  title: 'Tiêu đề bài hướng dẫn',
+  description: 'Mô tả ngắn gọn cho meta description và danh sách hướng dẫn.',
+  updatedAt: '2026-06-28',
+  cta: true,
+  sections: [
+    {
+      heading: 'Tiêu đề phần',
+      paragraphs: ['Nội dung phần 1.', 'Nội dung phần 2.'],
+    },
+  ],
+}
+```
+
+> Xem file `src/data/guides/cach-tai-aoe4.ts` để tham khảo ví dụ đầy đủ.
+
+### Bước 2 — Import vào index.ts
+
+Mở `src/data/guides/index.ts` và thêm import + phần tử vào mảng `guides`:
+
+```ts
+// src/data/guides/index.ts
+import { cachTaiAoe4 } from './cach-tai-aoe4'
+import { tenBai } from './ten-bai'      // thêm dòng này
+
+export const guides = [cachTaiAoe4, tenBai]  // thêm vào mảng
+```
+
+### Bước 3 — Thêm route vào vite.config.ts (QUAN TRỌNG)
+
+Mở `vite.config.ts` và thêm slug vào **cả hai chỗ**: `includedRoutes` và mảng `urls` (sitemap):
+
+```ts
+// vite.config.ts
+ssgOptions: {
+  includedRoutes(paths: string[]) {
+    return [
+      ...paths.filter((p) => !p.includes(':')),
+      '/guides/cach-tai-aoe4',
+      '/guides/ten-bai',   // thêm dòng này vào includedRoutes
+    ]
+  },
+  onFinished() {
+    const urls = [
+      '/',
+      '/guides',
+      '/guides/cach-tai-aoe4/',
+      '/guides/ten-bai/',   // thêm dòng này vào sitemap (lưu ý dấu / cuối)
+    ]
+    // ...
+  },
+},
+```
+
+> **Tại sao cần bước này?** vite-ssg chỉ pre-render các route được liệt kê rõ ràng trong `includedRoutes`. Route `/guides/:slug` là dynamic — nếu không khai báo slug cụ thể, trang sẽ không được tạo ra lúc build và không có trong sitemap. Đây là lỗi thường gặp nhất khi thêm bài hướng dẫn mới.
+
+---
+
+## 3. Cập nhật ngày phát hành DLC
 
 Khi Microsoft công bố ngày phát hành chính xác cho DLC, hãy cập nhật `src/data/dlc.ts`:
 
@@ -126,7 +204,7 @@ export const dlc = {
 
 ---
 
-## 3. Kiểm tra trước khi gửi PR
+## 4. Kiểm tra trước khi gửi PR
 
 Chạy ba lệnh sau và đảm bảo tất cả **PASS** trước khi mở Pull Request:
 

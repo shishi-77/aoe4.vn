@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import 'vite-ssg'
+import { guides } from './src/data/guides'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -22,6 +23,7 @@ export default defineConfig({
         ...paths.filter((p) => !p.includes(':')),
         '/tournaments/lac-hong',
         '/tournaments/ha-noi-open-1',
+        ...guides.map((g) => `/guides/${g.slug}`),
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -42,6 +44,8 @@ export default defineConfig({
         '/tournaments/',
         '/tournaments/lac-hong/',
         '/tournaments/ha-noi-open-1/',
+        '/guides/',
+        ...guides.map((g) => `/guides/${g.slug}/`),
       ]
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +

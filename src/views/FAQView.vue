@@ -2,6 +2,7 @@
 import { useHead } from '@unhead/vue'
 import { site } from '@/data/site'
 import { faqItems } from '@/data/faq'
+import CommunityCta from '@/components/CommunityCta.vue'
 
 const pageUrl = `${site.url}/faq/`
 const title = 'Đế chế 4 (Age of Empires IV) là gì? Câu hỏi thường gặp'
@@ -66,30 +67,6 @@ useHead({
       </a>
     </p>
 
-    <div class="mt-12 rounded-xl border border-gold-dim/20 bg-surface px-6 py-10 text-center">
-      <h2 class="text-2xl font-black uppercase text-cream">Tham gia cộng đồng AoE4 Việt Nam</h2>
-      <p class="mx-auto mt-3 max-w-xl text-muted">
-        Giao lưu, tìm đồng đội và hỏi đáp cùng người chơi Đế chế 4 trong nước.
-      </p>
-      <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
-        <a
-          v-if="site.links.facebook"
-          :href="site.links.facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-base font-extrabold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition hover:bg-cream hover:shadow-gold/40"
-        >
-          Facebook Group
-        </a>
-        <a
-          :href="site.links.discord"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 text-base font-extrabold uppercase tracking-wide text-ink shadow-lg shadow-gold/20 transition hover:bg-cream hover:shadow-gold/40"
-        >
-          Discord
-        </a>
-      </div>
-    </div>
+    <CommunityCta />
   </article>
 </template>

@@ -1,4 +1,5 @@
 import type { Tournament } from '@/data/tournaments'
+import type { Guide } from '@/data/guides'
 import type { site as siteData } from '@/data/site'
 
 type Site = typeof siteData
@@ -87,5 +88,27 @@ export function websiteJsonLd(site: Site): Record<string, unknown> {
     url: absoluteUrl(site.url, '/'),
     description: site.description,
     inLanguage: 'vi-VN',
+  }
+}
+
+/**
+ * Schema.org Article for a guide detail page.
+ *
+ * Includes standard Article fields: headline, description, image,
+ * datePublished, dateModified, author, and publisher.
+ */
+export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unknown> {
+  const url = absoluteUrl(site.url, `/guides/${guide.slug}/`)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: guide.title,
+    description: guide.description,
+    image: absoluteUrl(site.url, '/og.jpg'),
+    datePublished: guide.updatedAt,
+    dateModified: guide.updatedAt,
+    mainEntityOfPage: url,
+    author: { '@type': 'Organization', name: site.name },
+    publisher: { '@type': 'Organization', name: site.name },
   }
 }

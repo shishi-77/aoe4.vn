@@ -3,8 +3,10 @@ import {
   tournamentEventJsonLd,
   organizationJsonLd,
   websiteJsonLd,
+  guideArticleJsonLd,
 } from '@/lib/structuredData'
 import { lacHong } from '@/data/tournaments/lac-hong'
+import { downloadGuide } from '@/data/guides/cach-tai-aoe4'
 import { site } from '@/data/site'
 
 describe('tournamentEventJsonLd', () => {
@@ -100,5 +102,15 @@ describe('websiteJsonLd', () => {
     expect(ld['@type']).toBe('WebSite')
     expect(ld.name).toBe(site.name)
     expect(ld.url).toBe(`${site.url}/`)
+  })
+})
+
+describe('guideArticleJsonLd', () => {
+  it('tạo schema Article hợp lệ với canonical có dấu / cuối', () => {
+    const ld = guideArticleJsonLd(downloadGuide, site) as Record<string, unknown>
+    expect(ld['@type']).toBe('Article')
+    expect(ld.headline).toBe(downloadGuide.title)
+    expect(ld.mainEntityOfPage).toBe(`${site.url}/guides/${downloadGuide.slug}/`)
+    expect(ld.datePublished).toBe(downloadGuide.updatedAt)
   })
 })

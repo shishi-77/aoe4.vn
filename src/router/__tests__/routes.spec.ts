@@ -24,4 +24,15 @@ describe('routes', () => {
     const r = router.resolve('/faq')
     expect(r.name).toBe('faq')
   })
+
+  it('resolve được /guides', () => {
+    const r = router.resolve('/guides')
+    expect(r.name).toBe('guides')
+  })
+
+  it('resolve được /guides/cach-tai-aoe4', () => {
+    const r = router.resolve('/guides/cach-tai-aoe4')
+    expect(r.name).toBe('guide-detail')
+    expect(r.params.slug).toBe('cach-tai-aoe4')
+  })
 })
