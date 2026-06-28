@@ -98,7 +98,7 @@ export function websiteJsonLd(site: Site): Record<string, unknown> {
  * dateModified, author, and publisher.
  */
 export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unknown> {
-  const url = `${site.url}/guides/${guide.slug}/`
+  const url = absoluteUrl(site.url, `/guides/${guide.slug}/`)
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',

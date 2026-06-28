@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getGuideBySlug } from '@/data/guides'
 import { site } from '@/data/site'
@@ -68,7 +68,10 @@ useHead(() => {
     </div>
   </article>
 
-  <section v-else class="mx-auto max-w-3xl px-4 py-24 text-center">
-    <h1 class="text-2xl font-black text-cream">Không tìm thấy bài hướng dẫn</h1>
-  </section>
+  <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">
+    <h1 class="text-3xl font-black text-gold">Không tìm thấy bài hướng dẫn</h1>
+    <RouterLink to="/guides" class="mt-6 inline-block text-cream underline">
+      Xem tất cả hướng dẫn
+    </RouterLink>
+  </div>
 </template>

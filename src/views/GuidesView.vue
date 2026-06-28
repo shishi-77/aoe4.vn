@@ -7,7 +7,7 @@ import { guides } from '@/data/guides'
 const pageUrl = `${site.url}/guides/`
 const title = 'Hướng dẫn Age of Empires IV (Đế chế 4) cho người Việt'
 const description =
-  'Tổng hợp hướng dẫn AoE4 tiếng Việt: cách tải và mua game, cấu hình máy, khác biệt so với Đế chế và mẹo cho người mới.'
+  'Tổng hợp hướng dẫn Age of Empires IV (Đế chế 4) bằng tiếng Việt cho người chơi Đế chế: cách tải, mua, cài đặt và làm quen với game.'
 
 useHead({
   title: `${title} - ${site.name}`,
