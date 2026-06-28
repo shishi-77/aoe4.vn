@@ -43,7 +43,6 @@ const history =
 
 const router = createRouter({
   history,
-  scrollBehavior: () => ({ top: 0 }),
   routes,
 })
 
