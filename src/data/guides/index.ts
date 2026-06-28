@@ -6,6 +6,8 @@ import { timNguoiVietChoiAoe4 } from './tim-nguoi-viet-choi-aoe4'
 import { deCheXuaVaNayLinhCoBan } from './de-che-xua-va-nay-linh-co-ban'
 import { deCheXuaVaNayLenDoi } from './de-che-xua-va-nay-len-doi'
 import { deCheXuaVaNayCongThanh } from './de-che-xua-va-nay-cong-thanh'
+import { cacNenVanMinhAoe4 } from './cac-nen-van-minh-aoe4'
+import { cacCheDoChoiAoe4 } from './cac-che-do-choi-aoe4'
 
 export interface GuideSection {
   heading: string
@@ -32,6 +34,8 @@ export const guides: Guide[] = [
   deCheXuaVaNayLinhCoBan,
   deCheXuaVaNayLenDoi,
   deCheXuaVaNayCongThanh,
+  cacNenVanMinhAoe4,
+  cacCheDoChoiAoe4,
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {

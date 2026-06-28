@@ -1,0 +1,33 @@
+import type { Guide } from './index'
+
+export const cacNenVanMinhAoe4: Guide = {
+  slug: 'cac-nen-van-minh-aoe4',
+  title: 'Các nền văn minh trong Age of Empires IV và nên chọn phe nào',
+  description:
+    'Đế chế 4 có những nền văn minh nào và người mới nên chọn phe nào? Giới thiệu các nền văn minh trong Age of Empires IV và gợi ý phe dễ chơi để bắt đầu.',
+  updatedAt: '2026-07-01',
+  cta: true,
+  sections: [
+    {
+      heading: 'Đế chế 4 có những nền văn minh nào?',
+      paragraphs: [
+        'Age of Empires IV ra mắt năm 2021 với 8 nền văn minh: Anh, Pháp, Đế quốc La Mã Thần thánh, Rus, Mông Cổ, Trung Hoa, Vương quốc Hồi giáo Delhi và Triều đại Abbasid.',
+        'Sau đó các bản mở rộng (DLC) bổ sung thêm nhiều nền văn minh mới, nên danh sách ngày càng dài. Bạn xem được toàn bộ phe hiện có ngay trong game khi tạo trận.',
+      ],
+    },
+    {
+      heading: 'Mỗi phe một lối chơi riêng',
+      paragraphs: [
+        'Khác với Đế chế đời đầu (các phe chủ yếu khác nhau ở vài chỉ số), trong AoE4 mỗi nền văn minh có bản sắc rõ rệt: quân đặc trưng, cách lên đời, công trình mốc và cả cơ chế độc quyền.',
+        'Ví dụ có phe mạnh về kỵ binh đánh sớm, có phe thủ chắc và kinh tế ổn, lại có phe chơi rất khác biệt như du mục có thể nhổ trại di chuyển. Chính sự khác biệt này tạo nên chiều sâu khi chọn phe.',
+      ],
+    },
+    {
+      heading: 'Người mới nên chọn phe nào?',
+      paragraphs: [
+        'Người mới thường được khuyên chọn các phe có lối chơi thẳng và dễ kiểm soát để tập trung học nền tảng. Anh và Đế quốc La Mã Thần thánh thiên về kinh tế ổn định và phòng thủ tốt; Pháp có lối đánh kỵ binh sớm rõ ràng, dễ hiểu.',
+        'Các phe có cơ chế đặc biệt như Mông Cổ hay Trung Hoa rất thú vị nhưng nên để dành khi đã quen tay. Lời khuyên chung: thử vài phe trong vài trận đánh với máy, rồi chọn phe hợp gu mình nhất.',
+      ],
+    },
+  ],
+}
