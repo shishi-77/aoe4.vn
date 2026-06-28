@@ -1,4 +1,8 @@
 import { cachTaiAoe4 } from './cach-tai-aoe4'
+import { cauHinhMayAoe4 } from './cau-hinh-may-aoe4'
+import { aoe4KhacDeCheTheNao } from './aoe4-khac-de-che-the-nao'
+import { huongDanAoe4NguoiMoi } from './huong-dan-aoe4-nguoi-moi'
+import { timNguoiVietChoiAoe4 } from './tim-nguoi-viet-choi-aoe4'
 
 export interface GuideSection {
   heading: string
@@ -16,7 +20,13 @@ export interface Guide {
   cta?: boolean
 }
 
-export const guides: Guide[] = [cachTaiAoe4]
+export const guides: Guide[] = [
+  cachTaiAoe4,
+  cauHinhMayAoe4,
+  aoe4KhacDeCheTheNao,
+  huongDanAoe4NguoiMoi,
+  timNguoiVietChoiAoe4,
+]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug)
