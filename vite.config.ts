@@ -27,6 +27,9 @@ export default defineConfig({
         '/guides/aoe4-khac-de-che-the-nao',
         '/guides/huong-dan-aoe4-nguoi-moi',
         '/guides/tim-nguoi-viet-choi-aoe4',
+        '/guides/de-che-xua-va-nay-linh-co-ban',
+        '/guides/de-che-xua-va-nay-len-doi',
+        '/guides/de-che-xua-va-nay-cong-thanh',
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -53,6 +56,9 @@ export default defineConfig({
         '/guides/aoe4-khac-de-che-the-nao/',
         '/guides/huong-dan-aoe4-nguoi-moi/',
         '/guides/tim-nguoi-viet-choi-aoe4/',
+        '/guides/de-che-xua-va-nay-linh-co-ban/',
+        '/guides/de-che-xua-va-nay-len-doi/',
+        '/guides/de-che-xua-va-nay-cong-thanh/',
       ]
       const xml =
         `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
