@@ -30,4 +30,8 @@ export const gameModesGuide: Guide = {
       ],
     },
   ],
+  related: [
+    { slug: 'tim-nguoi-viet-choi-aoe4', label: 'Tìm người Việt chơi cùng' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi cho người mới' },
+  ],
 }

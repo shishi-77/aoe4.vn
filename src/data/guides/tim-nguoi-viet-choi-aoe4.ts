@@ -16,12 +16,12 @@ export const findPlayersGuide: Guide = {
       ],
     },
     {
-      heading: 'Các chế độ tìm trận trong game',
+      heading: 'Chơi cùng nhau bằng phòng tùy chỉnh',
       paragraphs: [
-        'Tìm trận nhanh (Quick Match): ghép bạn với người có trình độ tương đương, hợp để chơi giải trí.',
-        'Đấu xếp hạng (Ranked): chơi để leo hạng, đo trình độ của mình qua từng mùa.',
-        'Phòng tùy chỉnh (Custom): tự tạo phòng và mời bạn bè vào chơi chung - đây là cách hợp nhất để chơi với hội bạn người Việt.',
+        'AoE4 có các chế độ tìm trận nhanh và đấu xếp hạng, nhưng để chơi với đúng hội bạn người Việt thì Phòng tùy chỉnh (Custom) là hợp nhất: bạn tự tạo phòng, chọn bản đồ và luật, rồi mời mọi người vào chơi chung.',
+        'Cách này tiện cho việc lập đội 2v2, 3v3, 4v4 hoặc cùng nhau đánh máy để luyện tay trước khi lên xếp hạng.',
       ],
+      link: { slug: 'cac-che-do-choi-aoe4', label: 'Xem chi tiết các chế độ chơi' },
     },
     {
       heading: 'Kết nối cộng đồng AoE4 Việt Nam',
@@ -30,5 +30,9 @@ export const findPlayersGuide: Guide = {
         'Khi mới vào, cứ mạnh dạn giới thiệu mình là người từ Đế chế mới chuyển sang - cộng đồng rất sẵn lòng chỉ dẫn và rủ chơi cùng.',
       ],
     },
+  ],
+  related: [
+    { slug: 'cac-che-do-choi-aoe4', label: 'Các chế độ chơi trong AoE4' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi cho người mới' },
   ],
 }

@@ -5,9 +5,18 @@ import { findPlayersGuide } from './tim-nguoi-viet-choi-aoe4'
 import { civilizationsGuide } from './cac-nen-van-minh-aoe4'
 import { gameModesGuide } from './cac-che-do-choi-aoe4'
 
+export interface GuideLink {
+  /** Slug of the target guide under /guides/:slug. */
+  slug: string
+  /** Anchor text shown to the reader. */
+  label: string
+}
+
 export interface GuideSection {
   heading: string
   paragraphs: string[]
+  /** Optional contextual link rendered after this section's paragraphs. */
+  link?: GuideLink
 }
 
 export interface Guide {
@@ -19,6 +28,8 @@ export interface Guide {
   sections: GuideSection[]
   /** Hiện khối CTA cộng đồng ở cuối bài. */
   cta?: boolean
+  /** Khối "Bài liên quan" cuối bài. */
+  related?: GuideLink[]
 }
 
 export const guides: Guide[] = [

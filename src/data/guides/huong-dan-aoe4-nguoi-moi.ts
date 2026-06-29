@@ -14,6 +14,7 @@ export const beginnerGuide: Guide = {
         'Đừng vội vào đánh mạng. Hãy chơi phần Chiến dịch (Campaign) để làm quen điều khiển và nhịp game trong môi trường dễ thở.',
         'Sau đó vào các bài Art of War - đây là loạt bài tập ngắn dạy những kỹ năng nền như thu tài nguyên, lên đời nhanh và ra quân hiệu quả. Hoàn thành chúng là bạn đã hơn rất nhiều người mới.',
       ],
+      link: { slug: 'cac-che-do-choi-aoe4', label: 'Xem chi tiết các chế độ chơi' },
     },
     {
       heading: 'Học một build order cơ bản',
@@ -43,5 +44,9 @@ export const beginnerGuide: Guide = {
         'Tham gia cộng đồng người Việt để hỏi build order, nhờ chỉ lỗi và tìm bạn cùng tập. Có người chỉ, bạn sẽ tiến bộ nhanh hơn nhiều so với tự mò.',
       ],
     },
+  ],
+  related: [
+    { slug: 'cac-che-do-choi-aoe4', label: 'Các chế độ chơi trong AoE4' },
+    { slug: 'cac-nen-van-minh-aoe4', label: 'Chọn nền văn minh nào?' },
   ],
 }
