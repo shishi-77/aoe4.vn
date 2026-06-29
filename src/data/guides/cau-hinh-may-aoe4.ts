@@ -21,7 +21,7 @@ export const systemRequirementsGuide: Guide = {
         'Hệ điều hành: Windows 10 bản 64-bit.',
         'CPU: Intel Core i5 đời thứ 6 trở lên hoặc AMD Ryzen tương đương.',
         'RAM: 8GB.',
-        'Card đồ họa: dòng phổ thông đời mới có hỗ trợ DirectX 12 (ví dụ Nvidia GTX 660, AMD R7 250 hoặc card tích hợp Intel đời mới).',
+        'Card đồ họa: dòng phổ thông đời mới có hỗ trợ DirectX 12 (ví dụ Nvidia GTX 660, AMD Radeon HD 7660 hoặc card tích hợp Intel đời mới).',
         'Ổ cứng: khoảng 50GB trống, nên dùng ổ SSD để game vào nhanh hơn.',
       ],
     },
