@@ -30,4 +30,7 @@ export const civilizationsGuide: Guide = {
       ],
     },
   ],
+  related: [
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi cho người mới' },
+  ],
 }

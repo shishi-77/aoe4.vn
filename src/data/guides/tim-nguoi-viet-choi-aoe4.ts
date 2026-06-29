@@ -31,4 +31,8 @@ export const findPlayersGuide: Guide = {
       ],
     },
   ],
+  related: [
+    { slug: 'cac-che-do-choi-aoe4', label: 'Các chế độ chơi trong AoE4' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi cho người mới' },
+  ],
 }

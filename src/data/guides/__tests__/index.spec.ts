@@ -1,6 +1,31 @@
 import { describe, it, expect } from 'vitest'
 import { guides, getGuideBySlug } from '@/data/guides'
 
+describe('guide internal links', () => {
+  const allLinks = guides.flatMap((g) => [
+    ...(g.related ?? []).map((l) => ({ from: g.slug, l })),
+    ...g.sections.flatMap((s) => (s.link ? [{ from: g.slug, l: s.link }] : [])),
+  ])
+
+  it('mọi link nội bộ trỏ tới guide có thật và có nhãn', () => {
+    expect(allLinks.length).toBeGreaterThan(0)
+    for (const { l } of allLinks) {
+      expect(l.label.trim()).toBeTruthy()
+      expect(getGuideBySlug(l.slug)).toBeDefined()
+    }
+  })
+
+  it('không guide nào tự link tới chính nó', () => {
+    for (const { from, l } of allLinks) {
+      expect(l.slug).not.toBe(from)
+    }
+  })
+
+  it('bài chế độ chơi có khối bài liên quan', () => {
+    expect(getGuideBySlug('cac-che-do-choi-aoe4')?.related?.length).toBeGreaterThan(0)
+  })
+})
+
 describe('guides collection', () => {
   it('có ít nhất một guide', () => {
     expect(guides.length).toBeGreaterThan(0)

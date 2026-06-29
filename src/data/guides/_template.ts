@@ -10,6 +10,8 @@ export const templateGuide: Guide = {
     {
       heading: 'Tiêu đề mục',
       paragraphs: ['Đoạn văn thứ nhất.', 'Đoạn văn thứ hai.'],
+      link: { slug: 'slug-bai-lien-quan', label: 'Xem chi tiết ở bài kia' },
     },
   ],
+  related: [{ slug: 'slug-bai-lien-quan', label: 'Tên bài liên quan' }],
 }

@@ -44,4 +44,7 @@ export const systemRequirementsGuide: Guide = {
       ],
     },
   ],
+  related: [
+    { slug: 'cach-tai-aoe4', label: 'Cách tải và mua AoE4' },
+  ],
 }

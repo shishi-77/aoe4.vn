@@ -31,4 +31,7 @@ export const downloadGuide: Guide = {
       ],
     },
   ],
+  related: [
+    { slug: 'cau-hinh-may-aoe4', label: 'Cấu hình máy chơi AoE4' },
+  ],
 }
