@@ -24,6 +24,14 @@ describe('guide internal links', () => {
   it('bài chế độ chơi có khối bài liên quan', () => {
     expect(getGuideBySlug('cac-che-do-choi-aoe4')?.related?.length).toBeGreaterThan(0)
   })
+
+  it('bài tìm người Việt trỏ tới bài chế độ chơi và không lặp lại Quick/Ranked', () => {
+    const g = getGuideBySlug('tim-nguoi-viet-choi-aoe4')!
+    const linked = g.sections.some((s) => s.link?.slug === 'cac-che-do-choi-aoe4')
+    expect(linked).toBe(true)
+    const body = g.sections.flatMap((s) => s.paragraphs).join(' ')
+    expect(body).not.toContain('Đấu xếp hạng (Ranked)')
+  })
 })
 
 describe('guides collection', () => {
