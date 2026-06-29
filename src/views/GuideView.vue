@@ -49,8 +49,30 @@ useHead(() => {
         <p v-for="(p, i) in s.paragraphs" :key="i" class="mt-2 leading-relaxed text-cream/90">
           {{ p }}
         </p>
+        <RouterLink
+          v-if="s.link"
+          :to="`/guides/${s.link.slug}`"
+          class="mt-3 inline-block text-sm font-semibold text-gold hover:underline"
+        >
+          {{ s.link.label }} →
+        </RouterLink>
       </section>
     </div>
+
+    <nav
+      v-if="guide.related?.length"
+      aria-label="Bài liên quan"
+      class="mt-12 border-t border-gold/20 pt-6"
+    >
+      <h2 class="text-sm font-bold uppercase tracking-wide text-gold-dim">Bài liên quan</h2>
+      <ul class="mt-3 space-y-2">
+        <li v-for="r in guide.related" :key="r.slug">
+          <RouterLink :to="`/guides/${r.slug}`" class="text-cream hover:text-gold hover:underline">
+            {{ r.label }} →
+          </RouterLink>
+        </li>
+      </ul>
+    </nav>
 
     <CommunityCta v-if="guide.cta" />
   </article>
