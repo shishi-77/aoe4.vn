@@ -11,16 +11,16 @@ export const aoe4VsAoe1Guide: Guide = {
     {
       heading: 'Vẫn là AoE, nhưng luật thì khác',
       paragraphs: [
-        'Bạn đánh Đế chế 23 dân, đời 3 không thành? Sang Đế chế 4 không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời, kéo quân. Mấy thứ đó mang sang dùng được ngay.',
+        'Bạn đánh Đế chế 23 dân, đời 3 không thành? Sang Đế chế 4 không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời, đẩy quân. Mấy thứ đó mang sang dùng được ngay.',
         'Cái cần học là: các luật quen thuộc của làng Đế chế - đời 3 không thành - không còn áp dụng ở đây. Lý do sinh ra các luật đó đã được Đế chế 4 giải quyết. Bài này đi qua từng điểm.',
       ],
     },
     {
       heading: 'Nhịp trận chậm hơn, nhưng tay không được nghỉ',
       paragraphs: [
-        'Vào trận là thấy ngay: Đế chế 4 chậm hơn Đế chế. Xếp theo độ nhanh thì AoE3 nhanh nhất, rồi tới Đế chế, tới Đế chế 4, chậm nhất là AoE2.',
+        'Đế chế 4 chậm hơn Đế chế. Nếu xếp theo tốc độ: AoE3 > AoE1 > AoE4 > AoE2.',
         'Đế chế 4 có nhiều cơ chế tự động mà Đế chế hoàn toàn không có: đặt điểm tập kết cho dân được sinh ra đi thẳng vào bãi gỗ, rally quân ra giữa map, giao dân đóng xong nhà thì tự đi ăn vàng. Ai quen tự tay làm từng thứ trong Đế chế sẽ thấy nhàn khó tin.',
-        'Nhưng AoE vẫn là AoE: chẳng bao giờ thiếu việc để làm. Thời gian đỡ được từ việc vặt thì dồn vào dò map, canh quân đối thủ, quản kinh tế. Lơ là một chút là bất lợi ngay.',
+        'Nhưng AoE vẫn là AoE: chẳng bao giờ thiếu việc để làm. Thời gian đỡ được từ việc vặt thì dồn vào dò map, canh quân đối thủ, quản kinh tế. Tay làm hàm nhai, tay quai miệng trễ :))',
       ],
     },
     {
@@ -50,7 +50,7 @@ export const aoe4VsAoe1Guide: Guide = {
       heading: 'Kỹ năng Đế chế nào mang sang được nguyên vẹn',
       paragraphs: [
         'Ba thứ làm nên trình ở Đế chế vẫn đúng y nguyên ở Đế chế 4: nhà chính ra dân liên tục, không để dân chơi, thuộc một build order mở trận. Giữ được ba thói quen này là đã hơn phần lớn người mới.',
-        'Vậy nên đừng ngại: nghề Đế chế của bạn là lợi thế. Cài game, chọn một phe, đánh vài trận với máy là quen tay.',
+        'AoE là một sự kế thừa: người chơi Đế chế chuyển sang Đế chế 4 sẽ quen rất nhanh. Cài game, chọn một phe, đánh vài trận với máy là quen tay.',
       ],
     },
   ],
