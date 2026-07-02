@@ -4,6 +4,7 @@ import { beginnerGuide } from './huong-dan-aoe4-nguoi-moi'
 import { findPlayersGuide } from './tim-nguoi-viet-choi-aoe4'
 import { civilizationsGuide } from './cac-nen-van-minh-aoe4'
 import { gameModesGuide } from './cac-che-do-choi-aoe4'
+import { buildOrderGuide } from './build-order-co-ban-aoe4'
 
 export interface GuideLink {
   /** Slug of the target guide under /guides/:slug. */
@@ -39,6 +40,7 @@ export const guides: Guide[] = [
   findPlayersGuide,
   civilizationsGuide,
   gameModesGuide,
+  buildOrderGuide,
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
