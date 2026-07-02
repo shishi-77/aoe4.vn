@@ -9,48 +9,48 @@ export const aoe4VsAoe1Guide: Guide = {
   cta: true,
   sections: [
     {
-      heading: 'Vẫn là AoE, nhưng luật ngầm thì khác',
+      heading: 'Vẫn là AoE, nhưng luật thì khác',
       paragraphs: [
-        'Nếu bạn đã quen đánh Đế chế 22 dân, đời 3, không thành, thì sang Đế chế 4 bạn không phải học lại từ đầu: vẫn là ra dân, thu tài nguyên, lên đời, kéo quân. Bản năng đó mang sang được nguyên vẹn.',
-        'Cái thật sự cần học là những luật ngầm quen thuộc của cộng đồng Đế chế - đời 3, không thành - không còn áp dụng ở đây. Không phải vì Đế chế 4 chơi kiểu khác cho vui, mà vì những lý do khiến các luật đó ra đời đã được game này giải quyết. Bài này đi qua từng điểm một.',
+        'Bạn đánh Đế chế 23 dân, đời 3 không thành? Sang Đế chế 4 không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời, kéo quân. Mấy thứ đó mang sang dùng được ngay.',
+        'Cái cần học là: các luật quen thuộc của làng Đế chế - đời 3 không thành - không còn áp dụng ở đây. Lý do sinh ra các luật đó đã được Đế chế 4 giải quyết. Bài này đi qua từng điểm.',
       ],
     },
     {
       heading: 'Nhịp trận chậm hơn, nhưng tay không được nghỉ',
       paragraphs: [
-        'Điều đầu tiên bạn nhận ra: nhịp trận Đế chế 4 chậm hơn Đế chế. Nếu xếp các dòng AoE theo độ nhanh thì AoE3 nhanh nhất, rồi tới Đế chế, tới Đế chế 4, và chậm nhất là AoE2.',
-        'Đế chế 4 cũng có nhiều cơ chế tự động mà Đế chế hoàn toàn không có: đặt điểm tập kết cho dân ra là đi thẳng vào bãi gỗ, rally quân ra giữa map, hay giao con dân đóng xong nhà thì tự đi ăn vàng. Mới đầu bạn sẽ thấy mọi thứ nhàn đến khó tin so với việc tự tay làm từng thứ trong Đế chế.',
-        'Nhưng AoE vẫn là AoE: bạn chẳng bao giờ phải lo thiếu việc để làm. Thời gian tiết kiệm được từ thao tác lặt vặt là để dò map, canh quân đối thủ và quản kinh tế - lơ là một chút là trận đấu gặp bất lợi ngay.',
+        'Vào trận là thấy ngay: Đế chế 4 chậm hơn Đế chế. Xếp theo độ nhanh thì AoE3 nhanh nhất, rồi tới Đế chế, tới Đế chế 4, chậm nhất là AoE2.',
+        'Đế chế 4 có nhiều cơ chế tự động mà Đế chế hoàn toàn không có: đặt điểm tập kết cho dân được sinh ra đi thẳng vào bãi gỗ, rally quân ra giữa map, giao dân đóng xong nhà thì tự đi ăn vàng. Ai quen tự tay làm từng thứ trong Đế chế sẽ thấy nhàn khó tin.',
+        'Nhưng AoE vẫn là AoE: chẳng bao giờ thiếu việc để làm. Thời gian đỡ được từ việc vặt thì dồn vào dò map, canh quân đối thủ, quản kinh tế. Lơ là một chút là bất lợi ngay.',
       ],
     },
     {
       heading: 'Vì sao "không thành" không còn là luật',
       paragraphs: [
-        'Cộng đồng Đế chế không chơi thành chòi có lý do hẳn hoi: thành chòi làm chậm nhịp trận, trong khi vũ khí công thành gần như chỉ có bắn đá - vừa quá đắt vừa thiếu đa dạng. Luật cấm thành là cách tối ưu trải nghiệm mà anh em đã đúc kết qua nhiều năm.',
-        'Đế chế 4 giải quyết đúng hai vấn đề đó: vũ khí công thành đa dạng hơn hẳn và chi phí dễ chịu hơn, nên tường thành hay chòi canh không phá nát nhịp trận. Gặp đối thủ rùa trong thành, bạn có đủ đồ để mở khóa.',
-        'Có một điểm ngược đời nữa: Đế chế 4 không cho bo nhà bằng công trình như thói quen ở Đế chế. Muốn che chắn khu nhà thì tường thành là lựa chọn duy nhất. Nói cách khác, ở đây đánh thành không phải lối chơi cù nhầy - nó là một phần chính thức của cuộc chơi.',
+        'Đế chế cấm thành chòi có lý do: thành chòi làm chậm trận đấu, trong khi vũ khí công thành gần như chỉ có bắn đá - vừa đắt vừa ít lựa chọn. Luật cấm thành là thứ anh em đúc kết qua nhiều năm để trận đấu hay hơn.',
+        'Đế chế 4 xử đúng hai vấn đề đó: vũ khí công thành nhiều loại hơn, giá dễ chịu hơn. Đối thủ rùa trong thành thì bạn có đủ đồ để phá.',
+        'Một điểm ngược nữa: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế. Muốn bo nhà thì chỉ có xây tường. Ở đây chơi thành không phải cù nhầy - nó là một phần của game.',
       ],
     },
     {
       heading: 'Vì sao không cần luật "đời 3"',
       paragraphs: [
-        'Luật dừng ở đời 3 của Đế chế cũng sinh ra từ trải nghiệm: đời 1 và đời 2 có quá ít loại quân, đánh nhau xoay quanh rìu bổ với quẩy đá, lặp lại mãi thành nhàm. Cộng đồng đã đi qua thời kỳ đó trước khi chốt luật đời 3 cho trận đấu hấp dẫn hơn.',
-        'Đế chế 4 thì khác: quân đội đa dạng ngay từ sớm, nên dù đánh từ đời 1 trận đấu vẫn hấp dẫn theo cách riêng, không cần luật nào giới hạn cả. Game có 4 đời, và chơi hết cả 4 đời là chuyện bình thường.',
-        'Cách lên đời cũng khác hẳn: không bấm nút ở nhà chính mà phải xây một công trình biểu tượng (Landmark). Mỗi lần lên đời bạn chọn 1 trong 2 landmark, mỗi lựa chọn mở ra một lối chơi khác nhau. Tốc độ lên đời của mỗi phe cũng khác nhau, nên nhịp mở trận không phe nào giống phe nào.',
+        'Luật đời 3 cũng vậy. Đời 1 và đời 2 quá ít loại quân, đánh nhau quanh đi quẩn lại rìu bổ với quẩy đá, chơi mãi thành nhàm. Làng Đế chế đi qua thời đó rồi mới chốt luật đời 3.',
+        'Đế chế 4 thì khác: quân đa dạng từ sớm, đánh từ đời 1 vẫn hay theo kiểu riêng, không cần luật nào giới hạn. Game có 4 đời, chơi hết 4 đời là chuyện bình thường.',
+        'Cách lên đời cũng khác: không bấm nút ở nhà chính mà phải xây một công trình biểu tượng (Landmark). Mỗi lần lên đời chọn 1 trong 2 landmark, mỗi cái mở một hướng chơi. Tốc độ lên đời mỗi phe mỗi khác, nên nhịp mở trận cũng khác nhau.',
       ],
     },
     {
       heading: 'Khắc chế sâu hơn "lạc đà khắc chém"',
       paragraphs: [
-        'Ở Đế chế, khắc chế binh chủng gói gọn trong vài cặp quen thuộc kiểu lạc đà khắc chém. Đế chế 4 đẩy tính khắc chế lên cao hơn hẳn và xếp thành vòng tròn rõ ràng: giáo khắc kỵ, kỵ khắc cung, cung khắc giáo.',
-        'Cùng với dàn quân đa dạng hơn nhiều, điều này nghĩa là bạn phải nhìn quân đối thủ để ra quân, chứ không thể một binh chủng đánh cả trận. Đổi lại, đọc được bài đối thủ và ra đúng quân khắc chế thì lợi thế rất rõ rệt.',
+        'Ở Đế chế, khắc chế gói gọn trong vài cặp kiểu lạc đà khắc chém. Đế chế 4 khắc chế mạnh hơn hẳn và xếp thành vòng rõ ràng: giáo khắc kỵ, kỵ khắc cung, cung khắc giáo.',
+        'Quân lại đa dạng hơn nhiều, nên phải nhìn quân đối thủ mà ra quân, không thể một loại lính đánh cả trận. Đổi lại, ra đúng quân khắc chế là thấy lợi ngay.',
       ],
     },
     {
       heading: 'Kỹ năng Đế chế nào mang sang được nguyên vẹn',
       paragraphs: [
-        'Ba thứ làm nên trình độ ở Đế chế vẫn đúng y nguyên ở Đế chế 4: nhà chính ra dân liên tục, không để dân chơi, và thuộc lòng một build order mở trận. Ai giữ được ba thói quen này đã vượt phần lớn người mới.',
-        'Vậy nên đừng ngại: bản năng Đế chế của bạn là lợi thế, không phải gánh nặng. Cài game, chọn một phe, đánh vài trận với máy là tay quen ngay.',
+        'Ba thứ làm nên trình ở Đế chế vẫn đúng y nguyên ở Đế chế 4: nhà chính ra dân liên tục, không để dân chơi, thuộc một build order mở trận. Giữ được ba thói quen này là đã hơn phần lớn người mới.',
+        'Vậy nên đừng ngại: nghề Đế chế của bạn là lợi thế. Cài game, chọn một phe, đánh vài trận với máy là quen tay.',
       ],
     },
   ],
