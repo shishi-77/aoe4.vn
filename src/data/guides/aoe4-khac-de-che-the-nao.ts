@@ -11,8 +11,8 @@ export const aoe4VsAoe1Guide: Guide = {
     {
       heading: 'Vẫn là AoE, nhưng luật thì khác',
       paragraphs: [
-        'Bạn đánh Đế chế 23 dân, đời 3 không thành? Sang Đế chế 4 không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời, đẩy quân. Mấy thứ đó mang sang dùng được ngay.',
-        'Cái cần học là: các luật quen thuộc của làng Đế chế - đời 3 không thành - không còn áp dụng ở đây. Lý do sinh ra các luật đó đã được Đế chế 4 giải quyết. Bài này đi qua từng điểm.',
+        'Anh em đánh Đế chế 23 dân, đời 3 không thành? Sang Đế chế 4 không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời, đẩy quân. Mấy thứ đó mang sang dùng được ngay.',
+        'Cái cần học là: các luật quen thuộc của làng Đế chế - đời 3 không thành - sang đây bỏ hết được. Đế chế 4 xử xong mấy cái lý do đẻ ra luật đó rồi. Đi từng cái một nhé.',
       ],
     },
     {
@@ -27,8 +27,8 @@ export const aoe4VsAoe1Guide: Guide = {
       heading: 'Vì sao "không thành" không còn là luật',
       paragraphs: [
         'Đế chế cấm thành chòi có lý do: thành chòi làm chậm trận đấu, trong khi vũ khí công thành gần như chỉ có bắn đá - vừa đắt vừa ít lựa chọn. Luật cấm thành là thứ anh em đúc kết qua nhiều năm để trận đấu hay hơn.',
-        'Đế chế 4 xử đúng hai vấn đề đó: vũ khí công thành nhiều loại hơn, giá dễ chịu hơn. Đối thủ rùa trong thành thì bạn có đủ đồ để phá.',
-        'Một điểm ngược nữa: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế. Muốn bo nhà thì chỉ có xây tường. Ở đây chơi thành không phải cù nhầy - nó là một phần của game.',
+        'Đế chế 4 xử đúng hai vấn đề đó: vũ khí công thành nhiều loại hơn, giá dễ chịu hơn. Đối thủ rùa trong thành thì anh em có đủ đồ để phá.',
+        'Có một cái ngược đời: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế. Muốn bo nhà thì chỉ có xây tường. Ở đây chơi thành không phải cù nhầy - nó là một phần của game.',
       ],
     },
     {
@@ -50,7 +50,7 @@ export const aoe4VsAoe1Guide: Guide = {
       heading: 'Kỹ năng Đế chế nào mang sang được nguyên vẹn',
       paragraphs: [
         'Ba thứ làm nên trình ở Đế chế vẫn đúng y nguyên ở Đế chế 4: nhà chính ra dân liên tục, không để dân chơi, thuộc một build order mở trận. Giữ được ba thói quen này là đã hơn phần lớn người mới.',
-        'AoE là một sự kế thừa: người chơi Đế chế chuyển sang Đế chế 4 sẽ quen rất nhanh. Cài game, chọn một phe, đánh vài trận với máy là quen tay.',
+        'Suy cho cùng vẫn là AoE cả: người chơi Đế chế sang Đế chế 4 quen rất nhanh. Cài game, chọn một loại quân, đánh vài trận với máy là quen tay.',
       ],
     },
   ],
