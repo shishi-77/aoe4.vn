@@ -30,6 +30,7 @@ export const aoe4VsAoe1Guide: Guide = {
         'Đế chế 4 xử đúng hai vấn đề đó: vũ khí công thành nhiều loại hơn, giá dễ chịu hơn. Đối thủ rùa trong thành thì anh em có đủ đồ để phá.',
         'Có một cái ngược đời: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế. Muốn bo nhà thì chỉ có xây tường. Ở đây chơi thành không phải cù nhầy - nó là một phần của game.',
       ],
+      link: { slug: 'tuong-thanh-phong-thu-aoe4', label: 'Đọc thêm: Tường thành và phòng thủ trong Đế chế 4' },
     },
     {
       heading: 'Vì sao không cần luật "đời 3"',
@@ -57,5 +58,6 @@ export const aoe4VsAoe1Guide: Guide = {
   related: [
     { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi AoE4 cho người mới' },
     { slug: 'build-order-co-ban-aoe4', label: 'Build order cơ bản cho người mới' },
+    { slug: 'tuong-thanh-phong-thu-aoe4', label: 'Tường thành và phòng thủ trong Đế chế 4' },
   ],
 }
