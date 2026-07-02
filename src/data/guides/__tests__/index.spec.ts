@@ -63,3 +63,29 @@ describe('guides collection', () => {
     expect(getGuideBySlug('khong-ton-tai')).toBeUndefined()
   })
 })
+
+describe('bài trụ aoe4-khac-de-che-the-nao', () => {
+  it('tồn tại và có đủ 6 mục', () => {
+    const g = getGuideBySlug('aoe4-khac-de-che-the-nao')
+    expect(g).toBeDefined()
+    expect(g!.sections.length).toBe(6)
+  })
+
+  it('bài liên quan trỏ về guide người mới và build order', () => {
+    const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    const slugs = (g.related ?? []).map((l) => l.slug)
+    expect(slugs).toContain('huong-dan-aoe4-nguoi-moi')
+    expect(slugs).toContain('build-order-co-ban-aoe4')
+  })
+
+  it('chưa gắn link satellite trong section (satellite chưa tồn tại)', () => {
+    const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    expect(g.sections.every((s) => s.link === undefined)).toBe(true)
+  })
+
+  it('không dùng em-dash trong nội dung', () => {
+    const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    const body = [g.title, g.description, ...g.sections.flatMap((s) => [s.heading, ...s.paragraphs])].join(' ')
+    expect(body).not.toContain('—')
+  })
+})
