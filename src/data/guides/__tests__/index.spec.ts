@@ -78,13 +78,41 @@ describe('bài trụ aoe4-khac-de-che-the-nao', () => {
     expect(slugs).toContain('build-order-co-ban-aoe4')
   })
 
-  it('chưa gắn link satellite trong section (satellite chưa tồn tại)', () => {
+  it('mục "không thành" gắn link tới bài satellite tường thành', () => {
     const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
-    expect(g.sections.every((s) => s.link === undefined)).toBe(true)
+    const section = g.sections.find((s) => s.heading.includes('không thành'))
+    expect(section?.link?.slug).toBe('tuong-thanh-phong-thu-aoe4')
   })
 
   it('không dùng em-dash trong nội dung', () => {
     const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    const body = [g.title, g.description, ...g.sections.flatMap((s) => [s.heading, ...s.paragraphs])].join(' ')
+    expect(body).not.toContain('—')
+  })
+})
+
+describe('bài satellite tuong-thanh-phong-thu-aoe4', () => {
+  it('tồn tại và có đủ 6 mục', () => {
+    const g = getGuideBySlug('tuong-thanh-phong-thu-aoe4')
+    expect(g).toBeDefined()
+    expect(g!.sections.length).toBe(6)
+  })
+
+  it('link về bài trụ trong section mở đầu và trong bài liên quan', () => {
+    const g = getGuideBySlug('tuong-thanh-phong-thu-aoe4')!
+    expect(g.sections[0].link?.slug).toBe('aoe4-khac-de-che-the-nao')
+    const slugs = (g.related ?? []).map((l) => l.slug)
+    expect(slugs).toContain('aoe4-khac-de-che-the-nao')
+  })
+
+  it('bài trụ link ngược về bài satellite', () => {
+    const pillar = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    const slugs = (pillar.related ?? []).map((l) => l.slug)
+    expect(slugs).toContain('tuong-thanh-phong-thu-aoe4')
+  })
+
+  it('không dùng em-dash trong nội dung', () => {
+    const g = getGuideBySlug('tuong-thanh-phong-thu-aoe4')!
     const body = [g.title, g.description, ...g.sections.flatMap((s) => [s.heading, ...s.paragraphs])].join(' ')
     expect(body).not.toContain('—')
   })
