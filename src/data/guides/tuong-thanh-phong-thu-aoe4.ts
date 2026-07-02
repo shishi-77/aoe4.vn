@@ -28,7 +28,7 @@ export const wallsAndDefenseGuide: Guide = {
       paragraphs: [
         'Tường gỗ có từ đời 1, rẻ, đóng nhanh, đủ chặn ngựa dò với mấy đợt rush sớm. Tường đá mở từ đời 2, và có món Đế chế không bao giờ có: cho cung leo lên mặt tường đứng bắn xuống. Tường không chỉ để chặn - nó là chỗ đứng đánh nhau.',
         'Chòi canh (Outpost) dựng từ đời 1, chủ yếu để canh map; muốn nó bắn tên phải nâng cấp thêm. Nhà chính thì tự bắn tên sẵn, cho dân vào trú là bắn dày thêm. Ai từng nhìn nhà chính Đế chế đứng im cho đối thủ phá sẽ thấy sướng.',
-        'Đời 3 mở Keep - cái "thành" đúng nghĩa: máu dày, bắn tên đau, gắn thêm được máy bắn lên nóc. Bị cấm xây thành cả chục năm, giờ được xây thoải mái :))',
+        'Đời 3 mở Keep - cái "thành" đúng nghĩa: máu dày, bắn tên đau, làm điểm tựa để ôm tài nguyên hoặc tràn bản đồ.',
       ],
     },
     {
