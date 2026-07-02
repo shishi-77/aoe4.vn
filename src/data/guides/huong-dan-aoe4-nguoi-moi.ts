@@ -20,7 +20,7 @@ export const beginnerGuide: Guide = {
       heading: 'Học một build order cơ bản',
       paragraphs: [
         'Build order là trình tự xây dựng đầu trận: làm gì trước, làm gì sau để kinh tế chạy trơn tru và lên đời đúng lúc. Người mới chỉ cần thuộc một build order đơn giản cho nền văn minh mình chọn.',
-        'Nguyên tắc vàng xuyên suốt: luôn để nhà chính sản xuất dân, đừng để dân rảnh tay, và phân bổ dân hợp lý giữa các loại tài nguyên.',
+        'Nguyên tắc vàng xuyên suốt: luôn để nhà chính sản xuất dân, đừng để dân chơi, và phân bổ dân hợp lý giữa các loại tài nguyên.',
       ],
       link: { slug: 'build-order-co-ban-aoe4', label: 'Xem build order cơ bản cho người mới' },
     },
