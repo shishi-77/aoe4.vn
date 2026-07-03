@@ -20,7 +20,7 @@ export const mobilityUnitsGuide: Guide = {
       heading: 'Cung R: sang Đế chế 4 là kỵ cung',
       paragraphs: [
         'Bên Đế chế 1, mấy quân tuyển như Hit, Assy gần như mặc định lên cung R, chơi bài hit and run kinh điển.',
-        'Bên Đế chế 4, thứ giữ đúng cảm giác đó không phải cung bộ mà là kỵ cung. Mangudai của Mông Cổ ra từ đời 2, vừa phi ngựa vừa bắn - hợp lối raid tỉa, đánh du kích. Nga có Horse Archer từ đời 3, gom số đông thành cung chủ lực dàn trận. Nhật có Onna-Musha, kỵ cung chuyên xuyên giáp nặng.',
+        'Bên Đế chế 4, thứ giữ đúng cảm giác đó không phải cung bộ mà là kỵ cung. Mangudai của Mông Cổ ra từ đời 2, vừa chạy vừa bắn - hợp lối raid tỉa, đánh du kích. Nga có Horse Archer từ đời 3, gom số đông thành cung chủ lực dàn trận. Nhật có Onna-Musha, kỵ cung chuyên xuyên giáp nặng.',
         'Tuy nhiên, chẳng có gì miễn phí. Một con Mangudai đắt gần gấp đôi cung thường, mất vài con là hụt hẳn thế trận. Và kỵ cung không khắc tất như cung R - kỵ nhẹ áp sát vẫn phải chạy, chạy không kịp là bay màu.',
       ],
     },
