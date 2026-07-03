@@ -147,7 +147,7 @@ describe('bài satellite cung-r-ngua-chem-aoe4', () => {
     const g = getGuideBySlug('cung-r-ngua-chem-aoe4')!
     const body = [g.title, g.description, ...g.sections.flatMap((s) => [s.heading, ...s.paragraphs])].join(' ')
     expect(body).not.toContain('—')
-    for (const banned of ['bốc', 'vào trớn', 'bãi cung']) {
+    for (const banned of ['bốc', 'vào trớn', 'bãi cung', 'kéo quân']) {
       expect(body).not.toContain(banned)
     }
   })
