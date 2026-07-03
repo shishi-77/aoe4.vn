@@ -11,8 +11,8 @@ export const mobilityUnitsGuide: Guide = {
     {
       heading: 'Kỵ binh thống trị chiến trường',
       paragraphs: [
-        'Đế chế đánh random, ra quân nào đánh theo bài quân đó. Nhưng có một thứ không đổi: quân nào cũng mở màn bằng ngựa dò, rồi mới tới chém, lạc đà, cung R. Trận nào cũng dùng kỵ, nên nhịp trận thường rất nhanh.',
-        'Đế chế 4 nhịp chậm hơn - chuyện đó bài so sánh hai game nói rồi. Nhưng trong game vẫn có nguyên một nhóm quân giữ được cái nhịp cũ, gồm kỵ cung, kỵ nhẹ, kỵ nặng và lạc đà. Bài này chỉ chỗ cho anh em mê đánh nhanh.',
+        'Đế chế đánh random, ra quân nào đánh theo bài quân đó. Nhưng có một thứ không đổi: quân nào cũng mở màn bằng ngựa dò, rồi mới tới cung R, ngựa chém, lạc đà. Trận nào cũng dùng kỵ, nên nhịp trận thường rất nhanh.',
+        'Đế chế 4 nhịp chậm hơn - chuyện đó bài so sánh hai game nói rồi. Nhưng trong game vẫn có nguyên một nhóm quân giữ được cái nhịp cũ, gồm kỵ cung, kỵ nặng và lạc đà. Bài này chỉ chỗ cho anh em mê đánh nhanh.',
       ],
       link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế thế nào?' },
     },
@@ -43,8 +43,8 @@ export const mobilityUnitsGuide: Guide = {
     {
       heading: 'Anh em thuộc hệ nào',
       paragraphs: [
-        'Chơi Đế chế mấy chục năm, ai cũng có một hệ ruột: quen tay đảo chém, thích cung chủ lực, hay boom kinh tế tràn bản đồ. Sang Đế chế 4 cứ theo đúng hệ đó mà đánh.',
-        'Thích đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, thích boom kinh tế thì cầm Abbasid.',
+        'Chơi Đế chế mấy chục năm, ai cũng có một hệ ruột: quen tay đảo chém, thích cung chủ lực, hay mê lạc đà và boom kinh tế. Sang Đế chế 4 cứ theo đúng hệ đó mà đánh.',
+        'Thích đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, mê lạc đà và boom kinh tế thì cầm Abbasid.',
         'Hệ ruột là thứ mang sang nhanh nhất. Vào một trận với máy, ra đúng dòng lính quen tay, rồi từ từ học phần còn lại của game sau.',
       ],
     },
