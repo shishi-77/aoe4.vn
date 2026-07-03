@@ -19,7 +19,7 @@ export const mobilityUnitsGuide: Guide = {
     {
       heading: 'Cung R: sang Đế chế 4 là kỵ cung',
       paragraphs: [
-        'Vào Assy, Hit là mặc định đánh cung R. Ra được đội cung R là trận đấu bắt đầu từ đó - vừa tỉa vừa lùi, đối thủ đuổi thì mất dân, không đuổi thì mất lính.',
+        'Vào Assy, Hit là mặc định đánh cung R. Ra được đội cung R là trận đấu bắt đầu từ đó - hit and run, đối thủ đuổi thì mất dân, không đuổi thì mất lính.',
         'Bên Đế chế 4, thứ giữ đúng cảm giác đó không phải cung bộ mà là kỵ cung. Mangudai của Mông Cổ ra từ đời 2, vừa phi ngựa vừa bắn, đuổi không kịp mà bỏ thì bị tỉa - đúng bài cung R ngày xưa. Nga có Horse Archer từ đời 3. Nhật có Onna-Musha, kỵ cung chuyên xuyên giáp nặng.',
         'Bẫy ở chỗ giá. Một con Mangudai đắt gần gấp đôi cung thường, mất vài con là xót. Và kỵ cung không khắc tất như cung R - kỵ nhẹ áp sát vẫn phải chạy, chạy không kịp là bay màu.',
       ],
@@ -28,8 +28,8 @@ export const mobilityUnitsGuide: Guide = {
       heading: 'Ngựa chém: xe tăng của thời trung cổ',
       paragraphs: [
         'Ngựa chém thì quân nào cũng đánh được. Đàn ngựa đảo vòng ra sau bãi dân là món cả làng Đế chế đều từng ăn, và từng đi ăn của người khác.',
-        'Kỵ nặng bên Đế chế 4 đúng nghĩa xe tăng thời trung cổ - cơ động, sát thương cao, lao vào trúng đội hình còn được cộng thêm sát thương. Mê món này thì vào Pháp - Royal Knight có từ đời 2, sớm hơn thiên hạ, đấm đầu trận rất rát. Phản xạ thả ngựa vào bãi dân mang sang được nguyên vẹn, vì kỵ bên này cũng là quân mở màn đi phá.',
-        'Bù lại chi phí đắt đỏ, và thứ khắc nó là combo rẻ hơn hẳn - giáo cộng nỏ. Bên Đế chế ngựa chém sợ mỗi lạc đà, bên này con giáo rẻ tiền đứng chờ sẵn là mất cả đàn ngựa. Trước khi thả ngựa, đếm giáo của đối thủ trước.',
+        'Kỵ nặng bên Đế chế 4 đúng nghĩa xe tăng thời trung cổ - cơ động, sát thương cao, lao vào trúng đội hình còn được cộng thêm sát thương. Mê món này thì vào Pháp - Royal Knight có từ đời 2, sớm hơn thiên hạ, đấm đầu trận rất rát. Phản xạ thả kỵ vào bãi dân mang sang được nguyên vẹn, vì kỵ bên này cũng là quân mở màn đi phá.',
+        'Bù lại chi phí đắt đỏ, và thứ khắc nó là combo rẻ hơn hẳn - giáo cộng nỏ. Bên Đế chế ngựa chém sợ mỗi lạc đà, bên này con giáo rẻ tiền đứng chờ sẵn là mất cả đàn ngựa. Trước khi thả kỵ, đếm giáo của đối thủ trước.',
       ],
     },
     {
@@ -44,7 +44,7 @@ export const mobilityUnitsGuide: Guide = {
       heading: 'Loại hình ruột của anh em là gì, chọn phe đó mà vào',
       paragraphs: [
         'Chơi Đế chế mấy chục năm, ai cũng có loại hình ruột. Sang Đế chế 4 cứ tìm đúng phe giữ loại hình đó mà vào.',
-        'Mê cung R thì vào Mông Cổ - cả phe sống trên lưng ngựa, Mangudai là con bài chủ lực, khỏi xây tường luôn :)). Mê ngựa chém thì vào Pháp. Mê lạc đà thì vào Abbasid.',
+        'Mê cung R thì vào Mông Cổ - cả phe sống trên lưng ngựa, Mangudai là con bài chủ lực, khỏi xây tường luôn. Mê ngựa chém thì vào Pháp. Mê lạc đà thì vào Abbasid.',
         'Loại hình ruột là thứ mang sang nhanh nhất. Vào một trận với máy, ra đúng dòng lính quen tay, rồi từ từ học phần còn lại của game sau.',
       ],
     },
