@@ -46,7 +46,7 @@ export const aoe4VsAoe1Guide: Guide = {
         'Ở Đế chế, khắc chế gói gọn trong vài cặp kiểu lạc đà khắc chém. Đế chế 4 khắc chế mạnh hơn hẳn và xếp thành vòng rõ ràng: giáo khắc kỵ, kỵ khắc cung, cung khắc giáo.',
         'Quân lại đa dạng hơn nhiều, nên phải nhìn quân đối thủ mà ra quân, không thể một loại lính đánh cả trận. Đổi lại, ra đúng quân khắc chế là thấy lợi ngay.',
       ],
-      link: { slug: 'cung-ky-voi-phalanx-aoe4', label: 'Đọc thêm: Cung, kỵ, voi, Phalanx sang Đế chế 4 là lính gì?' },
+      link: { slug: 'cung-r-ngua-chem-aoe4', label: 'Đọc thêm: Cung R, ngựa chém, lạc đà sang Đế chế 4 là lính gì?' },
     },
     {
       heading: 'Kỹ năng Đế chế nào mang sang được nguyên vẹn',

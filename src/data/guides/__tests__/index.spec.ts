@@ -117,3 +117,38 @@ describe('bài satellite tuong-thanh-phong-thu-aoe4', () => {
     expect(body).not.toContain('—')
   })
 })
+
+describe('bài satellite cung-r-ngua-chem-aoe4', () => {
+  it('tồn tại và có đủ 5 mục', () => {
+    const g = getGuideBySlug('cung-r-ngua-chem-aoe4')
+    expect(g).toBeDefined()
+    expect(g!.sections.length).toBe(5)
+  })
+
+  it('thay hẳn bài cũ cung-ky-voi-phalanx-aoe4', () => {
+    expect(getGuideBySlug('cung-ky-voi-phalanx-aoe4')).toBeUndefined()
+  })
+
+  it('link về bài trụ trong section mở đầu và trong bài liên quan', () => {
+    const g = getGuideBySlug('cung-r-ngua-chem-aoe4')!
+    expect(g.sections[0].link?.slug).toBe('aoe4-khac-de-che-the-nao')
+    const slugs = (g.related ?? []).map((l) => l.slug)
+    expect(slugs).toContain('aoe4-khac-de-che-the-nao')
+  })
+
+  it('bài trụ link tới bài satellite mới thay cho slug cũ', () => {
+    const pillar = getGuideBySlug('aoe4-khac-de-che-the-nao')!
+    const sectionLinks = pillar.sections.flatMap((s) => (s.link ? [s.link.slug] : []))
+    expect(sectionLinks).toContain('cung-r-ngua-chem-aoe4')
+    expect(sectionLinks).not.toContain('cung-ky-voi-phalanx-aoe4')
+  })
+
+  it('không dùng em-dash và từ vựng bị loại', () => {
+    const g = getGuideBySlug('cung-r-ngua-chem-aoe4')!
+    const body = [g.title, g.description, ...g.sections.flatMap((s) => [s.heading, ...s.paragraphs])].join(' ')
+    expect(body).not.toContain('—')
+    for (const banned of ['bốc', 'vào trớn', 'bãi cung']) {
+      expect(body).not.toContain(banned)
+    }
+  })
+})

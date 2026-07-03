@@ -7,7 +7,7 @@ import { gameModesGuide } from './cac-che-do-choi-aoe4'
 import { buildOrderGuide } from './build-order-co-ban-aoe4'
 import { aoe4VsAoe1Guide } from './aoe4-khac-de-che-the-nao'
 import { wallsAndDefenseGuide } from './tuong-thanh-phong-thu-aoe4'
-import { unitsComparisonGuide } from './cung-ky-voi-phalanx-aoe4'
+import { mobilityUnitsGuide } from './cung-r-ngua-chem-aoe4'
 
 export interface GuideLink {
   /** Slug of the target guide under /guides/:slug. */
@@ -46,7 +46,7 @@ export const guides: Guide[] = [
   buildOrderGuide,
   aoe4VsAoe1Guide,
   wallsAndDefenseGuide,
-  unitsComparisonGuide,
+  mobilityUnitsGuide,
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {
