@@ -2,7 +2,7 @@ import type { Guide } from './index'
 
 export const mobilityUnitsGuide: Guide = {
   slug: 'cung-r-ngua-chem-aoe4',
-  title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ thì chơi lính gì ở Đế chế 4?',
+  title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
   description:
     'Cung R, ngựa chém hay lạc đà của Đế chế sang Đế chế 4 là lính nào? Kỵ cung Mangudai, Horse Archer, Onna-Musha, kỵ nặng Pháp và lạc đà Abbasid - bản đồ lính cho dân Đế chế mê đánh nhanh.',
   updatedAt: '2026-07-03',
