@@ -1,86 +1,95 @@
 ---
 name: guide-evaluator
-description: Use when scoring or polishing a guide in src/data/guides before publish, or when running a write→score→fix loop. Scores one guide against a 5-dimension rubric (SEO, structure, voice, value, conversion), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
+description: Use when scoring or polishing a guide in src/data/guides before publish, or when running a write→score→fix loop. Grades one guide with a pinned strict rubric (SEO hygiene gate + structure/voice/conversion via median-of-3 judges + accuracy fact-checked against committed AoE facts files), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
 ---
 
-# Guide Evaluator
+# Guide Evaluator (v2)
 
-Chấm MỘT guide trong `src/data/guides/*.ts` (đã đăng ký trong `index.ts`) theo rubric
-5 chiều. Đây là **quan tòa thuần**: chỉ chấm và ghi góp ý, KHÔNG tự viết lại bài.
+Chấm MỘT guide trong `src/data/guides/*.ts` (đã đăng ký trong `index.ts`). Judge thuần:
+chỉ chấm + ghi góp ý, KHÔNG tự viết lại bài. v2 làm verdict phụ thuộc CHẤT LƯỢNG bài,
+không phụ thuộc giọng prompt: prompt được GHIM cứng, có mỏ neo, lấy trung vị 3 lần, và
+sự thật được đối chiếu với facts file thay vì để model tự đoán.
 
 ## Đầu vào
-
-Một `<slug>` đã có trong `@/data/guides`. Nếu chưa đăng ký trong `src/data/guides/index.ts`,
-báo lỗi và dừng - SEO runner cần guide nằm trong index.
+Một `<slug>` đã có trong `@/data/guides`.
 
 ## Giao thức chấm (mỗi lần chạy)
 
-1. **Chiều #1 - SEO (số liệu cứng).** Chạy:
-   `npx vite-node scripts/score-guide-seo.ts <slug>`
-   Đọc `dimensionScore` (0-10) và từng `rule`. KHÔNG tự đếm ký tự bằng mắt - dùng số của script.
+### Bước 1 - Cổng vệ sinh SEO (tất định)
+Chạy: `npx vite-node scripts/score-guide-seo.ts <slug>`
+Đọc `hygiene`. Nếu `hygiene.pass === false` -> guide bị loại ngay, ghi scorecard FAIL với
+`hygiene.failures`, KHÔNG chấm tiếp. SEO KHÔNG cho điểm chất lượng nữa (nó cho ~10 với mọi
+bài thật nên vô dụng làm tín hiệu chất lượng).
 
-2. **Chiều #2-#5 - định tính, chấm bằng subagent fresh-eyes.** Dispatch một subagent
-   (general-purpose) đọc guide và chấm 4 chiều dưới. Fresh-eyes để không tự bào chữa câu
-   mình vừa viết. Yêu cầu subagent trả JSON:
-   `{ structure: {score, notes[]}, voice: {...}, value: {...}, conversion: {...}, fixes: [{dimension, quote, suggestion}] }`
-   với mỗi `score` là 0-10, và mỗi `fix` phải trích ĐÚNG câu/đoạn có vấn đề + câu thay đề xuất.
+### Bước 2 - Chấm định tính bằng median-of-3 (structure / voice / conversion)
+Dispatch **3 subagent fresh-eyes ĐỘC LẬP**, mỗi cái chấm cùng một bài bằng ĐÚNG prompt ghim
+dưới đây. Điểm mỗi chiều = **TRUNG VỊ** của 3 lần (bỏ dao động ±1). Không tự nới tay: dùng
+nguyên văn prompt, không thêm bớt giọng.
 
-3. **Tổng hợp scorecard** theo mẫu ở dưới và ghi ra `docs/reviews/<slug>-scorecard.md`.
-
-## Rubric (mỗi chiều 0-10)
-
-| # | Chiều | Chấm gì | Sàn cứng |
-|---|-------|---------|:---:|
-| 1 | SEO kỹ thuật | từ script (title/desc length, internal link, slug, cta, keyword) | ✅ ≥ 7 |
-| 2 | Cấu trúc & dễ đọc | section hợp lý, heading rõ, đoạn không quá dài, câu ngắn gãy gọn | ❌ |
-| 3 | Văn phong & giọng | giọng trò chuyện dân Đế chế, KHÔNG "văn AI", không em-dash, đúng từ vựng cộng đồng | ✅ ≥ 7 |
-| 4 | Giá trị & chính xác | thông tin game đúng, insight thật cho dân AoE1, không lan man | ✅ ≥ 7 |
-| 5 | Chuyển đổi | mở bài hook, mạch dẫn tới CTA, CTA rõ, related giữ chân | ✅ ≥ 7 |
-
-### Luật giọng (chiều #3) - dấu hiệu "văn AI" phải trừ điểm
-
-- Có em-dash `—` bất kỳ đâu → tự động dưới sàn (repo cấm tuyệt đối).
-- Sáo rỗng ("trong thế giới game đầy màu sắc", "không thể phủ nhận rằng"), liệt kê máy
-  móc, câu dài lê thê, giọng trung lập vô hồn.
-- Viết cho dân Đế chế AoE1 (đa số người chơi miền Bắc): câu gãy gọn, dùng đúng tiếng
-  cộng đồng - ví dụ "ngựa dò" (Scout), "đóng nhà dân", "23 dân đời 3 không thành",
-  "build 7 thực 3 vàng". Sai/thiếu chất này → trừ mạnh.
-
-## Logic PASS
-
-- **PASS** khi: SEO ≥ 7 VÀ voice ≥ 7 VÀ value ≥ 7 VÀ conversion ≥ 7 VÀ tổng 5 chiều ≥ 40/50.
-- Bất kỳ chiều sàn nào < 7 → **FAIL** ngay, bất kể tổng.
-- (Thang/sàn/ngưỡng chỉnh ở đây nếu calibration lệch.)
-
-## Mẫu scorecard (`docs/reviews/<slug>-scorecard.md`)
-
+PROMPT GHIM (dán y nguyên cho mỗi subagent, thay `<slug>`):
 ```
-# Scorecard: <slug>
+Chấm bài src/data/guides/<slug>.ts cho dân kỳ cựu Đế chế 1 (AoE1) đọc AoE4. Chấm THẲNG TAY,
+không nới. Mỗi chiều 0-10 số nguyên:
+- structure: bố cục, heading rõ, đoạn không dài, câu ngắn gãy gọn.
+- voice: giọng trò chuyện dân Đế chế, tiếng lóng cộng đồng đúng, KHÔNG "văn AI". Có em-dash
+  bất kỳ đâu -> voice <= 3.
+- conversion: mở bài có hook, mạch dẫn tới CTA/cộng đồng cuối bài.
+Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
+- voice ~1: "Trong thế giới game chiến thuật đầy màu sắc, không thể phủ nhận rằng..." (sáo AI)
+- voice ~8: "Đế chế đánh random, ra quân nào đánh theo bài quân đó." (giọng dân Đế chế, gãy gọn)
+- conversion ~1: "Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất." (không hook)
+Trả JSON: {"structure":X,"voice":X,"conversion":X,"fixes":[{"dimension":"...","quote":"câu trích đúng","suggestion":"câu thay"}]}
+```
 
-| Chiều | Điểm | Sàn | Đạt sàn |
-|-------|:----:|:---:|:-------:|
-| 1 SEO         | X/10 | 7 | ✅/❌ |
-| 2 Cấu trúc    | X/10 | - | -    |
-| 3 Văn phong   | X/10 | 7 | ✅/❌ |
-| 4 Giá trị     | X/10 | 7 | ✅/❌ |
-| 5 Chuyển đổi  | X/10 | 7 | ✅/❌ |
-| TỔNG          | XX/50 | 40 | ✅/❌ |
+### Bước 3 - Fact-check accuracy (đối chiếu facts file, KHÔNG tự đoán)
+Dispatch 1 subagent đọc:
+- `.claude/skills/guide-evaluator/facts/aoe1-facts.md`
+- `.claude/skills/guide-evaluator/facts/aoe4-facts.md`
+Nhiệm vụ: trích MỌI claim sự thật trong bài, rồi phân loại theo facts file:
+- Claim MÂU THUẪN facts -> `contradictions[]` (mỗi cái: câu trích + fact bị vi phạm).
+- Claim facts XÁC NHẬN đúng -> bỏ qua.
+- Claim KHÔNG có trong facts -> `claimsToVerify[]` (chờ người duyệt). TUYỆT ĐỐI không tự
+  khẳng định sai với thứ ngoài facts (tránh nghi oan - lỗi đã thấy ở calibration).
+Trả JSON: {"contradictions":[...],"claimsToVerify":[...]}
+Ví dụ mâu thuẫn phải bắt: câu ngụ ý "cung R khắc tất" -> facts nói cung R (Chariot Archer) và
+cung A (Composite Bowman) KHÔNG khắc chế class nào -> contradiction.
+
+### Bước 4 - Verdict tất định
+Điểm cuối mỗi chiều = trung vị 3 lần ở Bước 2. Tính:
+`guideVerdict(hygiene.pass, {structure,voice,conversion}, {contradictions: contradictions.length, unresolvedFlags: claimsToVerify.length})`
+từ `@/lib/guideVerdict` (sàn `QUALITY_FLOOR`=7, tổng `QUALITY_TOTAL`=21, tối đa 30).
+PASS chỉ khi hàm trả `pass: true`. `claimsToVerify` chưa được người duyệt -> coi là unresolved
+-> chưa PASS được (người duyệt chốt từng claim rồi mới hạ về 0).
+
+### Bước 5 - Ghi scorecard
+Ghi ra `docs/reviews/<slug>-scorecard.md` theo mẫu:
+```
+# Scorecard v2: <slug>
+
+SEO hygiene: PASS/FAIL (nếu FAIL: liệt kê failures)
+
+| Chiều | Điểm (median 3) | Sàn 7 | Đạt |
+|-------|:---:|:---:|:---:|
+| structure  | X | 7 | ✅/❌ |
+| voice      | X | 7 | ✅/❌ |
+| conversion | X | 7 | ✅/❌ |
+| TỔNG       | XX/30 | 21 | ✅/❌ |
+
+Accuracy:
+- Mâu thuẫn sự thật (FAIL cứng): <liệt kê câu + fact bị vi phạm, hoặc "không có">
+- Claim cần người duyệt: <liệt kê, hoặc "không có">
 
 VERDICT: <ghi đúng một từ: PASS hoặc FAIL>
+Reasons (nếu FAIL): <copy reasons từ guideVerdict>
 
-## Cần sửa (nếu FAIL)
-- [chiều] "trích câu có vấn đề" → đề xuất câu thay
-- ...
+## Cần sửa
+- [chiều] "câu có vấn đề" -> câu thay
 ```
-
-Dòng `VERDICT: PASS` / `VERDICT: FAIL` là mốc để harness loop bám vào - phải xuất hiện đúng dạng.
+Dòng `VERDICT: PASS` / `VERDICT: FAIL` là mốc harness bám vào - phải đúng dạng, đúng một từ.
 
 ## Chạy trong loop với ralph-loop
-
-Prompt mẫu (thay `<slug>`):
-
 ```
-/ralph-loop "Trau chuốt guide <slug> trong src/data/guides. Mỗi vòng: (1) dùng skill guide-evaluator chấm <slug>; (2) đọc docs/reviews/<slug>-scorecard.md; (3) nếu VERDICT là FAIL, sửa file guide đúng theo mục 'Cần sửa' - chỉ sửa văn/nội dung, giữ slug và cấu trúc dữ liệu; (4) chấm lại. CHỈ in <promise>GUIDE-PASSED</promise> khi scorecard mới nhất ghi VERDICT: PASS. Nếu sau nhiều vòng vẫn kẹt một chiều, ghi rõ chiều kẹt + đã thử gì vào scorecard rồi dừng, KHÔNG in promise giả." --completion-promise "GUIDE-PASSED" --max-iterations 12
+/ralph-loop "Trau chuốt guide <slug> trong src/data/guides. Mỗi vòng: (1) dùng skill guide-evaluator chấm <slug>; (2) đọc docs/reviews/<slug>-scorecard.md; (3) nếu VERDICT FAIL, sửa file guide đúng theo 'Cần sửa' và các mâu thuẫn sự thật - chỉ sửa văn/nội dung, giữ slug + cấu trúc dữ liệu; (4) chấm lại. CHỈ in <promise>GUIDE-PASSED</promise> khi scorecard mới nhất VERDICT: PASS. Mâu thuẫn sự thật và claim chưa duyệt PHẢI về 0 mới được PASS - KHÔNG in promise giả." --completion-promise "GUIDE-PASSED" --max-iterations 12
 ```
-
-Luôn đặt `--max-iterations` làm phanh. Không in `GUIDE-PASSED` khi scorecard chưa PASS.
+Lưu ý: claim ngoài facts (`claimsToVerify`) cần người thật chốt hoặc bổ sung vào facts file
+trước khi bài đó PASS được - loop không tự quyết đúng/sai với thứ ngoài facts.
