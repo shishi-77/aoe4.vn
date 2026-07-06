@@ -51,7 +51,7 @@ useHead(() => {
         </p>
         <RouterLink
           v-if="s.link"
-          :to="`/guides/${s.link.slug}`"
+          :to="`/guides/${s.link.slug}/`"
           class="mt-3 inline-block text-sm font-semibold text-gold hover:underline"
         >
           {{ s.link.label }} →
@@ -67,7 +67,7 @@ useHead(() => {
       <h2 class="text-sm font-bold uppercase tracking-wide text-gold-dim">Bài liên quan</h2>
       <ul class="mt-3 space-y-2">
         <li v-for="r in guide.related" :key="r.slug">
-          <RouterLink :to="`/guides/${r.slug}`" class="text-cream hover:text-gold hover:underline">
+          <RouterLink :to="`/guides/${r.slug}/`" class="text-cream hover:text-gold hover:underline">
             {{ r.label }} →
           </RouterLink>
         </li>
@@ -79,7 +79,7 @@ useHead(() => {
 
   <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">
     <h1 class="text-3xl font-black text-gold">Không tìm thấy bài hướng dẫn</h1>
-    <RouterLink to="/guides" class="mt-6 inline-block text-cream underline">
+    <RouterLink to="/guides/" class="mt-6 inline-block text-cream underline">
       Xem tất cả hướng dẫn
     </RouterLink>
   </div>

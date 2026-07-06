@@ -47,7 +47,7 @@ const { el: communityEl } = useReveal()
     </div>
     <div class="mt-8 text-center">
       <RouterLink
-        to="/tournaments"
+        to="/tournaments/"
         class="inline-block rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
       >
         Xem tất cả giải
