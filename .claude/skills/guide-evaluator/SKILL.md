@@ -57,7 +57,8 @@ cung A (Composite Bowman) KHÔNG khắc chế class nào -> contradiction.
 ### Bước 4 - Verdict tất định
 Điểm cuối mỗi chiều = trung vị 3 lần ở Bước 2. Tính:
 `guideVerdict(hygiene.pass, {structure,voice,conversion}, {contradictions: contradictions.length})`
-từ `@/lib/guideVerdict` (sàn `QUALITY_FLOOR`=7, tổng `QUALITY_TOTAL`=21, tối đa 30).
+từ `@/lib/guideVerdict` (sàn riêng từng chiều: `STRUCTURE_FLOOR`=7, `VOICE_FLOOR`=7,
+`CONVERSION_FLOOR`=6. Không có ngưỡng tổng).
 PASS chỉ khi hàm trả `pass: true`. `claimsToVerify` KHÔNG chặn PASS - đây là danh sách advisory,
 người duyệt xem lại SAU KHI bài đã PASS, không phải điều kiện để loop tiếp tục chạy.
 
@@ -68,12 +69,12 @@ Ghi ra `docs/reviews/<slug>-scorecard.md` theo mẫu:
 
 SEO hygiene: PASS/FAIL (nếu FAIL: liệt kê failures)
 
-| Chiều | Điểm (median 3) | Sàn 7 | Đạt |
+| Chiều | Điểm (median 3) | Sàn | Đạt |
 |-------|:---:|:---:|:---:|
 | structure  | X | 7 | ✅/❌ |
 | voice      | X | 7 | ✅/❌ |
-| conversion | X | 7 | ✅/❌ |
-| TỔNG       | XX/30 | 21 | ✅/❌ |
+| conversion | X | 6 | ✅/❌ |
+| TỔNG (thông tin, không phải gate) | XX/30 | - | - |
 
 Accuracy:
 - Mâu thuẫn sự thật (FAIL cứng): <liệt kê câu + fact bị vi phạm, hoặc "không có">

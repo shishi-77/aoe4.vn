@@ -1,7 +1,6 @@
-/** Sàn mỗi chiều định tính (0-10). Provisional - cân lại ở bước calibration. */
-export const QUALITY_FLOOR = 7
-/** Ngưỡng tổng 3 chiều (structure+voice+conversion, tối đa 30). Provisional. */
-export const QUALITY_TOTAL = 21
+export const STRUCTURE_FLOOR = 7
+export const VOICE_FLOOR = 7
+export const CONVERSION_FLOOR = 6
 
 export interface QualityScores {
   structure: number
@@ -14,6 +13,18 @@ export interface AccuracyResult {
   contradictions: number
 }
 
+export interface QualityFloors {
+  structure: number
+  voice: number
+  conversion: number
+}
+
+export const DEFAULT_FLOORS: QualityFloors = {
+  structure: STRUCTURE_FLOOR,
+  voice: VOICE_FLOOR,
+  conversion: CONVERSION_FLOOR,
+}
+
 export interface Verdict {
   pass: boolean
   reasons: string[]
@@ -21,24 +32,21 @@ export interface Verdict {
 
 /**
  * Cổng PASS/FAIL tất định cho một guide. Không có LLM cộng điểm bằng tay ở đây.
- * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật
- * VÀ mọi chiều >= floor VÀ tổng 3 chiều >= total.
+ * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ mỗi chiều >= sàn riêng của nó
+ * (structure/voice >= 7, conversion >= 6). Không có ngưỡng tổng.
  */
 export function guideVerdict(
   hygienePass: boolean,
   scores: QualityScores,
   accuracy: AccuracyResult,
-  floor: number = QUALITY_FLOOR,
-  total: number = QUALITY_TOTAL,
+  floors: QualityFloors = DEFAULT_FLOORS,
 ): Verdict {
   const reasons: string[] = []
   if (!hygienePass) reasons.push('SEO hygiene failed')
   if (accuracy.contradictions > 0)
     reasons.push(`accuracy: ${accuracy.contradictions} contradiction(s) with facts`)
   for (const dim of ['structure', 'voice', 'conversion'] as const) {
-    if (scores[dim] < floor) reasons.push(`${dim} ${scores[dim]} below floor ${floor}`)
+    if (scores[dim] < floors[dim]) reasons.push(`${dim} ${scores[dim]} below floor ${floors[dim]}`)
   }
-  const sum = scores.structure + scores.voice + scores.conversion
-  if (sum < total) reasons.push(`total ${sum} below threshold ${total}`)
   return { pass: reasons.length === 0, reasons }
 }
