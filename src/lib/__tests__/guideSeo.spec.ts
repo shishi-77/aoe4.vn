@@ -59,4 +59,40 @@ describe('scoreGuideSeo', () => {
       expect(s).toBeLessThanOrEqual(10)
     }
   })
+
+  it('title ở dải chấp nhận (không phải dải ideal) chỉ được nửa điểm', () => {
+    const tolerantTitleGuide: Guide = {
+      ...badGuide,
+      slug: 'aoe4-khac-de-che-the-nao',
+      // Độ dài 90 ký tự: nằm trong dải chấp nhận [20,100] nhưng ngoài dải ideal [30,80].
+      title: 'A'.repeat(90),
+    }
+    expect(tolerantTitleGuide.title.length).toBe(90)
+    const r = scoreGuideSeo(tolerantTitleGuide)
+    expect(r.rules.find((x) => x.id === 'title-length')!.points).toBe(1)
+  })
+
+  it('description ở dải chấp nhận chỉ được nửa điểm', () => {
+    const tolerantDescGuide: Guide = {
+      ...badGuide,
+      slug: 'aoe4-khac-de-che-the-nao',
+      // Độ dài 60 ký tự: nằm trong dải chấp nhận [50,260] nhưng ngoài dải ideal [70,210].
+      description: 'B'.repeat(60),
+    }
+    expect(tolerantDescGuide.description.length).toBe(60)
+    const r = scoreGuideSeo(tolerantDescGuide)
+    expect(r.rules.find((x) => x.id === 'description-length')!.points).toBe(1)
+  })
+
+  it('title chỉ khớp một phần từ khóa slug thì được điểm phân số', () => {
+    const partialCoverageGuide: Guide = {
+      ...badGuide,
+      slug: 'cung-ngua-lacda-aoe4',
+      title: 'Cung R và ngựa chém mạnh nhất bản đồ',
+      description: 'ngắn',
+    }
+    const r = scoreGuideSeo(partialCoverageGuide)
+    // token 'lacda' không xuất hiện trong title => coverage 2/3, làm tròn còn 0.7.
+    expect(r.rules.find((x) => x.id === 'keyword-in-title')!.points).toBe(0.7)
+  })
 })

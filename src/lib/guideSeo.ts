@@ -32,6 +32,8 @@ function bandPoints(value: number, ideal: [number, number], tolerant: [number, n
   return 0
 }
 
+// Tokens are assumed to be clean ASCII kebab-case (enforced by the `slug-clean` rule),
+// so they are matched against `normalizeVi(text)` as-is without normalizing them themselves.
 function slugTokens(slug: string): string[] {
   return slug.split('-').filter((t) => t.length >= 2 && t !== 'aoe4')
 }

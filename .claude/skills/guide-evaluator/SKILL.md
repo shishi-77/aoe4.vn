@@ -66,7 +66,7 @@ báo lỗi và dừng - SEO runner cần guide nằm trong index.
 | 5 Chuyển đổi  | X/10 | 7 | ✅/❌ |
 | TỔNG          | XX/50 | 40 | ✅/❌ |
 
-VERDICT: PASS   (hoặc: VERDICT: FAIL)
+VERDICT: <ghi đúng một từ: PASS hoặc FAIL>
 
 ## Cần sửa (nếu FAIL)
 - [chiều] "trích câu có vấn đề" → đề xuất câu thay
