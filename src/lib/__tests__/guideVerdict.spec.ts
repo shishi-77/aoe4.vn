@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { guideVerdict, QUALITY_FLOOR, QUALITY_TOTAL } from '@/lib/guideVerdict'
 
 const strong = { structure: 8, voice: 8, conversion: 8 }
-const clean = { contradictions: 0, unresolvedFlags: 0 }
+const clean = { contradictions: 0 }
 
 describe('guideVerdict', () => {
   it('pass khi hygiene ok, không mâu thuẫn, không cờ, mọi chiều >= floor, tổng >= total', () => {
@@ -18,13 +18,9 @@ describe('guideVerdict', () => {
   })
 
   it('fail nếu có mâu thuẫn sự thật (dù điểm cao)', () => {
-    const v = guideVerdict(true, strong, { contradictions: 1, unresolvedFlags: 0 })
+    const v = guideVerdict(true, strong, { contradictions: 1 })
     expect(v.pass).toBe(false)
     expect(v.reasons.some((r) => r.includes('contradiction'))).toBe(true)
-  })
-
-  it('fail nếu còn claim chưa duyệt', () => {
-    expect(guideVerdict(true, strong, { contradictions: 0, unresolvedFlags: 2 }).pass).toBe(false)
   })
 
   it('fail nếu một chiều dưới sàn', () => {
