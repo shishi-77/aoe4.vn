@@ -34,6 +34,10 @@ export interface Verdict {
  * Cổng PASS/FAIL tất định cho một guide. Không có LLM cộng điểm bằng tay ở đây.
  * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ mỗi chiều >= sàn riêng của nó
  * (structure/voice >= 7, conversion >= 6). Không có ngưỡng tổng.
+ *
+ * Trust boundary: `scores` are trusted to already be integers in the 0-10 range,
+ * as produced by the median-of-3 judge upstream. This gate does not re-validate
+ * bounds or types on the incoming scores.
  */
 export function guideVerdict(
   hygienePass: boolean,
