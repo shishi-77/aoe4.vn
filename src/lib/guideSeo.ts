@@ -44,10 +44,14 @@ function keywordCoverage(tokens: string[], text: string): number {
   return tokens.filter((t) => norm.includes(t)).length / tokens.length
 }
 
+/** True nếu guide có ít nhất một internal link (ở related hoặc trong một section). */
+export function hasInternalLink(guide: Guide): boolean {
+  return (guide.related?.length ?? 0) > 0 || guide.sections.some((s) => s.link !== undefined)
+}
+
 export function scoreGuideSeo(guide: Guide): SeoResult {
   const tokens = slugTokens(guide.slug)
-  const hasLink =
-    (guide.related?.length ?? 0) > 0 || guide.sections.some((s) => s.link !== undefined)
+  const hasLink = hasInternalLink(guide)
   const titleCov = keywordCoverage(tokens, guide.title)
   const descCov = keywordCoverage(tokens, guide.description)
 
@@ -114,4 +118,25 @@ export function scoreGuideSeo(guide: Guide): SeoResult {
   const dimensionScore = Math.min(10, Math.max(0, Math.round(raw * 10) / 10))
 
   return { slug: guide.slug, rules, dimensionScore }
+}
+
+export interface SeoHygiene {
+  pass: boolean
+  failures: string[]
+}
+
+/**
+ * Bộ lọc vệ sinh SEO: chỉ các luật CỨNG. Không cho điểm - chỉ pass/fail để chặn
+ * bài metadata hỏng trước khi chấm định tính. (v2: SEO không còn tính vào điểm chất lượng.)
+ */
+export function seoHygiene(guide: Guide): SeoHygiene {
+  const failures: string[] = []
+  if (!hasInternalLink(guide)) failures.push('no internal link (need >=1 in related or a section)')
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(guide.slug)) failures.push(`slug not clean: ${guide.slug}`)
+  if (guide.cta !== true) failures.push('cta not set to true')
+  if (guide.title.length < 20 || guide.title.length > 100)
+    failures.push(`title length ${guide.title.length} out of [20,100]`)
+  if (guide.description.length < 50)
+    failures.push(`description length ${guide.description.length} < 50`)
+  return { pass: failures.length === 0, failures }
 }

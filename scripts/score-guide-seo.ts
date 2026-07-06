@@ -1,5 +1,5 @@
 import { getGuideBySlug } from '@/data/guides'
-import { scoreGuideSeo } from '@/lib/guideSeo'
+import { scoreGuideSeo, seoHygiene } from '@/lib/guideSeo'
 
 const slug = process.argv[2]
 
@@ -15,4 +15,4 @@ if (!guide) {
   process.exit(1)
 }
 
-console.log(JSON.stringify(scoreGuideSeo(guide), null, 2))
+console.log(JSON.stringify({ ...scoreGuideSeo(guide), hygiene: seoHygiene(guide) }, null, 2))

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { Guide } from '@/data/guides'
-import { scoreGuideSeo, normalizeVi } from '@/lib/guideSeo'
+import { scoreGuideSeo, normalizeVi, seoHygiene } from '@/lib/guideSeo'
 
 const goodGuide: Guide = {
   slug: 'cung-r-ngua-chem-aoe4',
@@ -94,5 +94,45 @@ describe('scoreGuideSeo', () => {
     const r = scoreGuideSeo(partialCoverageGuide)
     // token 'lacda' không xuất hiện trong title => coverage 2/3, làm tròn còn 0.7.
     expect(r.rules.find((x) => x.id === 'keyword-in-title')!.points).toBe(0.7)
+  })
+})
+
+describe('seoHygiene', () => {
+  const healthy: Guide = {
+    slug: 'cung-r-ngua-chem-aoe4',
+    title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4?',
+    description:
+      'Bản đồ lính cho dân Đế chế mê đánh nhanh sang AoE4, đủ dài để mô tả cho tốt và rõ ràng.',
+    updatedAt: '2026-07-03',
+    cta: true,
+    sections: [{ heading: 'H', paragraphs: ['p'], link: { slug: 'x', label: 'y' } }],
+    related: [{ slug: 'x', label: 'y' }],
+  }
+
+  it('bài đủ vệ sinh thì pass, không có failure', () => {
+    const r = seoHygiene(healthy)
+    expect(r.pass).toBe(true)
+    expect(r.failures).toEqual([])
+  })
+
+  it('thiếu link, cta, title quá ngắn -> fail và liệt kê từng lỗi', () => {
+    const broken: Guide = {
+      slug: 'x',
+      title: 'x',
+      description: 'Mô tả dài hơn năm mươi ký tự để không dính lỗi độ dài mô tả nhé.',
+      updatedAt: '2026-07-06',
+      cta: false,
+      sections: [{ heading: 'H', paragraphs: ['p'] }],
+    }
+    const r = seoHygiene(broken)
+    expect(r.pass).toBe(false)
+    expect(r.failures.length).toBeGreaterThanOrEqual(3)
+    expect(r.failures.some((f) => f.includes('internal link'))).toBe(true)
+    expect(r.failures.some((f) => f.includes('cta'))).toBe(true)
+    expect(r.failures.some((f) => f.includes('title'))).toBe(true)
+  })
+
+  it('mô tả quá ngắn bị bắt', () => {
+    expect(seoHygiene({ ...healthy, description: 'ngắn' }).pass).toBe(false)
   })
 })
