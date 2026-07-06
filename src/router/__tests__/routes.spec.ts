@@ -35,4 +35,24 @@ describe('routes', () => {
     expect(r.name).toBe('guide-detail')
     expect(r.params.slug).toBe('cach-tai-aoe4')
   })
+
+  it('resolve được /faq/ có trailing slash', () => {
+    expect(router.resolve('/faq/').name).toBe('faq')
+  })
+
+  it('resolve được /guides/ có trailing slash', () => {
+    expect(router.resolve('/guides/').name).toBe('guides')
+  })
+
+  it('resolve được /guides/cach-tai-aoe4/ có trailing slash', () => {
+    const r = router.resolve('/guides/cach-tai-aoe4/')
+    expect(r.name).toBe('guide-detail')
+    expect(r.params.slug).toBe('cach-tai-aoe4')
+  })
+
+  it('resolve được /tournaments/lac-hong/ có trailing slash', () => {
+    const r = router.resolve('/tournaments/lac-hong/')
+    expect(r.name).toBe('tournament-detail')
+    expect(r.params.slug).toBe('lac-hong')
+  })
 })

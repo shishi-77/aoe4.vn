@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { dlc } from '@/data/dlc'
+import { guides } from '@/data/guides'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
@@ -34,6 +35,7 @@ useHead({
 })
 
 const { el: tournamentsEl } = useReveal()
+const { el: guidesEl } = useReveal()
 const { el: communityEl } = useReveal()
 </script>
 
@@ -47,10 +49,34 @@ const { el: communityEl } = useReveal()
     </div>
     <div class="mt-8 text-center">
       <RouterLink
-        to="/tournaments"
+        to="/tournaments/"
         class="inline-block rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
       >
         Xem tất cả giải
+      </RouterLink>
+    </div>
+  </section>
+
+  <NorseDivider class="mx-auto my-2 text-steel/40" />
+
+  <section ref="guidesEl" class="reveal mx-auto max-w-5xl px-4 py-16">
+    <SectionTitle eyebrow="Bắt đầu" title="Hướng dẫn" />
+    <ul class="grid gap-3 sm:grid-cols-2">
+      <li v-for="g in guides" :key="g.slug">
+        <RouterLink
+          :to="`/guides/${g.slug}/`"
+          class="block rounded-md border border-steel/15 bg-surface/40 px-4 py-3 font-bold text-cream transition hover:border-gold hover:text-gold"
+        >
+          {{ g.title }}
+        </RouterLink>
+      </li>
+    </ul>
+    <div class="mt-8 text-center">
+      <RouterLink
+        to="/guides/"
+        class="inline-block rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
+      >
+        Xem tất cả hướng dẫn
       </RouterLink>
     </div>
   </section>

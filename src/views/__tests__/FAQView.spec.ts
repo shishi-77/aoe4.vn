@@ -32,7 +32,7 @@ describe('FAQView', () => {
     const wrapper = mount(FAQView, mountOptions)
     for (const item of faqItems) {
       if (!item.guide) continue
-      const link = wrapper.find(`a[href="/guides/${item.guide.slug}"]`)
+      const link = wrapper.find(`a[href="/guides/${item.guide.slug}/"]`)
       expect(link.exists()).toBe(true)
       expect(link.text()).toContain(item.guide.label)
     }

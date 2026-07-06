@@ -56,7 +56,7 @@ useHead({
           {{ item.answer }}
           <RouterLink
             v-if="item.guide"
-            :to="`/guides/${item.guide.slug}`"
+            :to="`/guides/${item.guide.slug}/`"
             class="whitespace-nowrap text-sm font-semibold text-gold hover:underline"
           >
             {{ item.guide.label }} →

@@ -34,7 +34,7 @@ useHead({
     <ul class="mt-12 space-y-4">
       <li v-for="g in guides" :key="g.slug">
         <RouterLink
-          :to="`/guides/${g.slug}`"
+          :to="`/guides/${g.slug}/`"
           class="block rounded-xl border border-gold-dim/20 bg-surface px-6 py-5 transition hover:border-gold"
         >
           <h2 class="text-xl font-bold text-gold">{{ g.title }}</h2>

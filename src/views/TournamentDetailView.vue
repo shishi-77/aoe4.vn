@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getTournamentBySlug } from '@/data/tournaments'
 import { site } from '@/data/site'
@@ -82,7 +82,7 @@ useHead(() => ({
   </template>
   <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">
     <h1 class="text-3xl font-black text-gold">Không tìm thấy giải đấu</h1>
-    <RouterLink to="/tournaments" class="mt-6 inline-block text-cream underline">
+    <RouterLink to="/tournaments/" class="mt-6 inline-block text-cream underline">
       Xem tất cả giải
     </RouterLink>
   </div>
