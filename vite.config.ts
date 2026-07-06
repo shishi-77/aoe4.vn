@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import 'vite-ssg'
 import { guides } from './src/data/guides'
+import { buildSitemapXml } from './src/lib/sitemap'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -37,21 +38,7 @@ export default defineConfig({
       return transformHtmlTemplate(head, html)
     },
     onFinished() {
-      const base = 'https://aoe4.vn'
-      const urls = [
-        '/',
-        '/faq/',
-        '/tournaments/',
-        '/tournaments/lac-hong/',
-        '/tournaments/ha-noi-open-1/',
-        '/guides/',
-        ...guides.map((g) => `/guides/${g.slug}/`),
-      ]
-      const xml =
-        `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-        urls.map((u) => `  <url><loc>${base}${u}</loc></url>`).join('\n') +
-        `\n</urlset>\n`
-      writeFileSync('dist/sitemap.xml', xml)
+      writeFileSync('dist/sitemap.xml', buildSitemapXml('https://aoe4.vn', guides))
     },
   },
 })
