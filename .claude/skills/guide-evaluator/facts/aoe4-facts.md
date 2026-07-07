@@ -15,8 +15,8 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   source: https://aoe4world.com/explorer/civs/mongols/units/mangudai , https://ageofempires.fandom.com/wiki/Mangudai_(Age_of_Empires_IV)
 - Mangudai can shoot while moving (unique trait among ranged units); cited as "nearly twice the cost of a regular Archer." Example cited cost: 90 food / 60 gold, ~28s train time. ⚠️ CẦN NGƯỜI DUYỆT (exact cost numbers are patch-sensitive; "roughly 2x an Archer" is the durable claim, don't cite the raw numbers as fixed).
   source: https://forums.ageofempires.com/t/mongols-need-mangudai-cost-reduction-to-match-is-worth/230199
-- Mongols are the nomadic/"du mục" civ: can pack up buildings and relocate (Ger/mobile base mechanic), and famously cannot build stone walls. This matches guide claims.
-  source: general AoE4 civ knowledge, corroborated across search results on Mongols civ page.
+- Mongols are the nomadic/"du mục" civ: can pack up buildings and relocate (Ger/mobile base mechanic). They CANNOT build ANY walls - neither wood/palisade nor stone (not just stone walls). Confirmed by the site owner (AoE1/AoE4 insider), 2026-07-07. So "Mông Cổ không xây được tường luôn, cả game không một viên đá bo nhà" is CORRECT.
+  source: general AoE4 civ knowledge + site owner confirmation 2026-07-07.
 
 ### Rus
 - Horse Archer: light ranged cavalry, unique to Rus. Trained at the Archery Range starting in **Castle Age (Age III)** (search results describe it as "Castle Age onwards").
@@ -91,7 +91,9 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
 ## Fortifications (context for "tuong-thanh-phong-thu-aoe4" guide, spot-checked, not deeply researched this pass)
 
 - Stone Walls in AoE4 cannot be destroyed by melee units' torches - they can only be damaged by dedicated siege weapons. This is a well-documented AoE4 mechanic (distinct from AoE2 where towers/walls have HP damageable by most unit types with reduced effectiveness).
-  ⚠️ CẦN NGƯỜI DUYỆT: this pass did not independently re-verify wall/keep/ram mechanics in depth (out of the "specific claims to verify" list) - flagged for a follow-up research pass if the walls guide needs deep fact-checking.
+- Outpost (chòi canh) in AoE4 does NOT shoot arrows by default - it must be upgraded (Arrow Slits) before it can fire. Confirmed by the site owner (insider), 2026-07-07. So the guide claim "muốn nó bắn tên phải nâng cấp thêm" is CORRECT. (Town Center, by contrast, fires arrows by default and fires more when garrisoned.)
+  source: site owner confirmation 2026-07-07.
+  ⚠️ CẦN NGƯỜI DUYỆT: age tiers of walls/Keep/ram/Mangonel/Trebuchet/bombard and "torch damage strongest on cavalry" are still not independently verified this pass.
 
 ---
 
