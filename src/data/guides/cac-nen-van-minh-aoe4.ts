@@ -18,15 +18,15 @@ export const civilizationsGuide: Guide = {
     {
       heading: 'Mỗi phe một lối chơi riêng',
       paragraphs: [
-        'Trong AoE4, mỗi nền văn minh có bản sắc rất rõ rệt: quân đặc trưng, cách lên đời, công trình mốc và cả cơ chế độc quyền riêng.',
-        'Ví dụ có phe mạnh về kỵ binh đánh sớm, có phe thủ chắc và kinh tế ổn, lại có phe chơi rất khác biệt như du mục có thể nhổ trại di chuyển. Chính sự khác biệt này tạo nên chiều sâu khi chọn phe.',
+        'Ở AoE4 mỗi phe một chất riêng: quân đặc trưng, cách lên đời riêng, công trình mốc riêng, có phe còn cơ chế không phe nào có.',
+        'Ví dụ có phe mạnh kỵ binh đánh sớm, có phe thủ chắc kinh tế ổn, lại có phe du mục nhổ cả trại đi chỗ khác được. Chọn phe là chọn luôn lối đánh.',
       ],
     },
     {
       heading: 'Người mới nên chọn phe nào?',
       paragraphs: [
-        'Người mới thường được khuyên chọn các phe có lối chơi thẳng và dễ kiểm soát để tập trung học nền tảng. Anh và Đế quốc La Mã Thần thánh thiên về kinh tế ổn định và phòng thủ tốt; Pháp có lối đánh kỵ binh sớm rõ ràng, dễ hiểu.',
-        'Các phe có cơ chế đặc biệt như Mông Cổ hay Trung Quốc rất thú vị nhưng nên để dành khi đã quen tay. Lời khuyên chung: thử vài phe trong vài trận đánh với máy, rồi chọn phe hợp gu mình nhất.',
+        'Mới vào thì chọn phe đánh thẳng, dễ cầm, để lo học nền đã. Anh và Đế quốc La Mã Thần thánh thiên về kinh tế ổn định, thủ tốt. Pháp có kỵ binh sớm rõ ràng, dễ hiểu.',
+        'Mấy phe cơ chế lạ như Mông Cổ hay Trung Quốc hay thật, nhưng để quen tay rồi hẵng đụng. Cứ mở vài trận đánh máy thử dăm ba phe, thấy phe nào vào tay là theo phe đó.',
       ],
     },
   ],
