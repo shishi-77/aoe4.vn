@@ -15,4 +15,10 @@ if (!guide) {
   process.exit(1)
 }
 
-console.log(JSON.stringify({ ...scoreGuideSeo(guide), hygiene: seoHygiene(guide) }, null, 2))
+console.log(
+  JSON.stringify(
+    { kind: guide.kind ?? 'strategy', ...scoreGuideSeo(guide), hygiene: seoHygiene(guide) },
+    null,
+    2,
+  ),
+)

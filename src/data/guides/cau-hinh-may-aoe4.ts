@@ -2,6 +2,7 @@ import type { Guide } from './index'
 
 export const systemRequirementsGuide: Guide = {
   slug: 'cau-hinh-may-aoe4',
+  kind: 'utility',
   title: 'Cấu hình máy chơi Age of Empires IV (Đế chế 4)',
   description:
     'Máy yếu có chơi được Đế chế 4 không? Tổng hợp cấu hình tối thiểu và đề nghị của Age of Empires IV, kèm mẹo chỉnh thiết lập cho máy cấu hình thấp.',

@@ -27,6 +27,13 @@ export interface Guide {
   slug: string
   title: string
   description: string
+  /**
+   * Loại bài, quyết định bộ sàn chất lượng khi chấm bằng guide-evaluator.
+   * 'utility' (tra cứu/hướng dẫn thao tác: tải game, cấu hình, tìm người chơi) chấm
+   * nặng về clarity, không ép hook/slang. 'strategy' (build order, phân tích, quan
+   * điểm) chấm chặt cả voice/conversion. Bỏ trống -> coi như 'strategy'.
+   */
+  kind?: 'utility' | 'strategy'
   /** Ngày cập nhật dạng YYYY-MM-DD. */
   updatedAt: string
   sections: GuideSection[]
