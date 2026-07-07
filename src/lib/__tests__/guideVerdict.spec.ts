@@ -31,6 +31,17 @@ describe('guideVerdict', () => {
     expect(v.reasons.some((r) => r.includes('contradiction'))).toBe(true)
   })
 
+  it('fail nếu dìm Đế chế 1 (dù điểm cao, không mâu thuẫn)', () => {
+    const v = guideVerdict(true, strong, { contradictions: 0, aoe1Disparagement: 1 })
+    expect(v.pass).toBe(false)
+    expect(v.reasons.some((r) => r.includes('dìm Đế chế 1'))).toBe(true)
+  })
+
+  it('aoe1Disparagement bỏ trống hoặc 0 thì không chặn PASS', () => {
+    expect(guideVerdict(true, strong, { contradictions: 0 }).pass).toBe(true)
+    expect(guideVerdict(true, strong, { contradictions: 0, aoe1Disparagement: 0 }).pass).toBe(true)
+  })
+
   it('fail nếu voice dưới sàn riêng', () => {
     const v = guideVerdict(true, { structure: 8, voice: 6, conversion: 8 }, clean)
     expect(v.pass).toBe(false)

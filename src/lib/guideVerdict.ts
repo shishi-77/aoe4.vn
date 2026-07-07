@@ -11,6 +11,13 @@ export interface QualityScores {
 export interface AccuracyResult {
   /** Số câu mâu thuẫn với facts file (mỗi cái là lỗi sự thật cứng). */
   contradictions: number
+  /**
+   * Số câu DÌM/HẠ THẤP Đế chế 1 (AoE1) hoặc cộng đồng AoE1 (vd "các phe AoE1 na ná
+   * nhau", "AoE1 nhàm/cũ kỹ"). Cộng đồng AoE1 là gốc và lớn nhất - TUYỆT ĐỐI không dìm.
+   * Vi phạm cứng, chặn PASS y như một mâu thuẫn sự thật. So sánh AoE1<->AoE4 để làm rõ
+   * thì được, chê AoE1 dở thì KHÔNG. Bỏ trống -> coi như 0.
+   */
+  aoe1Disparagement?: number
 }
 
 export interface QualityFloors {
@@ -68,8 +75,9 @@ export interface Verdict {
 
 /**
  * Cổng PASS/FAIL tất định cho một guide. Không có LLM cộng điểm bằng tay ở đây.
- * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ không thụt lùi so với bản
- * trước VÀ mỗi chiều >= sàn riêng của nó (theo loại bài). Không có ngưỡng tổng.
+ * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ không dìm Đế chế 1 VÀ không
+ * thụt lùi so với bản trước VÀ mỗi chiều >= sàn riêng của nó (theo loại bài). Không
+ * có ngưỡng tổng.
  *
  * Trust boundary: `scores` are trusted to already be integers in the 0-10 range,
  * as produced by the median-of-3 judge upstream. This gate does not re-validate
@@ -86,6 +94,8 @@ export function guideVerdict(
   if (!hygienePass) reasons.push('SEO hygiene failed')
   if (accuracy.contradictions > 0)
     reasons.push(`accuracy: ${accuracy.contradictions} contradiction(s) with facts`)
+  if ((accuracy.aoe1Disparagement ?? 0) > 0)
+    reasons.push(`respect: ${accuracy.aoe1Disparagement} câu dìm Đế chế 1 (AoE1) - cấm`)
   if (regression?.regressedVsPrevious)
     reasons.push('regressed: bản mới bị đánh giá dở hơn bản trước - giữ bản cũ')
   for (const dim of ['structure', 'voice', 'conversion'] as const) {
