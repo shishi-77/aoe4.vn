@@ -13,7 +13,7 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
 ### Mongols
 - Mangudai: light ranged cavalry (horse archer), unique to Mongols. Trained at the Archery Range starting in **Feudal Age (Age II)**. Same age as regular Archer.
   source: https://aoe4world.com/explorer/civs/mongols/units/mangudai , https://ageofempires.fandom.com/wiki/Mangudai_(Age_of_Empires_IV)
-- Mangudai can shoot while moving (unique trait among ranged units); cited as "nearly twice the cost of a regular Archer." Example cited cost: 90 food / 60 gold, ~28s train time. ⚠️ CẦN NGƯỜI DUYỆT (exact cost numbers are patch-sensitive; "roughly 2x an Archer" is the durable claim, don't cite the raw numbers as fixed).
+- Mangudai can shoot while moving (a signature Mongol trait, but NOT unique to it - other mounted archers like the Abbasid Camel Archer also fire on the move; corrected 2026-07-07, earlier "unique among ranged units" wording was an overclaim); cited as "nearly twice the cost of a regular Archer." Example cited cost: 90 food / 60 gold, ~28s train time. ⚠️ CẦN NGƯỜI DUYỆT (exact cost numbers are patch-sensitive; "roughly 2x an Archer" is the durable claim, don't cite the raw numbers as fixed).
   source: https://forums.ageofempires.com/t/mongols-need-mangudai-cost-reduction-to-match-is-worth/230199
 - Mongols are the nomadic/"du mục" civ: can pack up buildings and relocate (Ger/mobile base mechanic). They CANNOT build ANY walls - neither wood/palisade nor stone (not just stone walls). Confirmed by the site owner (AoE1/AoE4 insider), 2026-07-07. So "Mông Cổ không xây được tường luôn, cả game không một viên đá bo nhà" is CORRECT.
   source: general AoE4 civ knowledge + site owner confirmation 2026-07-07.
@@ -96,6 +96,14 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   ⚠️ CẦN NGƯỜI DUYỆT: age tiers of walls/Keep/ram/Mangonel/Trebuchet/bombard and "torch damage strongest on cavalry" are still not independently verified this pass.
 
 ---
+
+## Counters & civ economy (insider-confirmed 2026-07-07, "cung-r-ngua-chem" guide)
+
+- Light cavalry (kỵ nhẹ) counters ALL archer/ranged units in AoE4 (not only horse archers). So "kỵ cung chưa đủ đông thì bị kỵ nhẹ săn" is CORRECT.
+- Heavy cavalry (kỵ nặng) is countered by BOTH Spearman (giáo) AND Crossbowman (nỏ). So "giáo cộng nỏ khắc kỵ nặng" is CORRECT.
+- Onna-Musha (Japanese) deals bonus damage vs heavy units; calling this "xuyên giáp nặng" is acceptable phrasing (it is bonus damage, not a literal armor-penetration mechanic).
+- Abbasid Dynasty has the STRONGEST economy of all AoE4 civs. So "Abbasid vốn mạnh kinh tế / boom kinh tế" is CORRECT.
+  source: site owner (AoE1/AoE4 domain expert), 2026-07-07.
 
 ## Open questions for the human reviewer
 
