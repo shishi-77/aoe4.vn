@@ -2,6 +2,7 @@ import type { Guide } from './index'
 
 export const findPlayersGuide: Guide = {
   slug: 'tim-nguoi-viet-choi-aoe4',
+  kind: 'utility',
   title: 'Tìm người Việt chơi Age of Empires IV cùng',
   description:
     'Muốn chơi Đế chế 4 cùng người Việt, ghép kèo và tìm đồng đội? Hướng dẫn cách kết nối cộng đồng AoE4 Việt Nam qua Discord, Facebook và các chế độ tìm trận trong game.',

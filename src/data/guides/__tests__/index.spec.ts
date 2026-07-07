@@ -78,9 +78,9 @@ describe('bài trụ aoe4-khac-de-che-the-nao', () => {
     expect(slugs).toContain('build-order-co-ban-aoe4')
   })
 
-  it('mục "không thành" gắn link tới bài satellite tường thành', () => {
+  it('mục thành chòi gắn link tới bài satellite tường thành', () => {
     const g = getGuideBySlug('aoe4-khac-de-che-the-nao')!
-    const section = g.sections.find((s) => s.heading.includes('không thành'))
+    const section = g.sections.find((s) => s.heading.toLowerCase().includes('thành chòi'))
     expect(section?.link?.slug).toBe('tuong-thanh-phong-thu-aoe4')
   })
 

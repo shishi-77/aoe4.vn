@@ -20,14 +20,14 @@ export const wallsAndDefenseGuide: Guide = {
       heading: 'Lính nào cũng đốt được nhà, trừ tường đá',
       paragraphs: [
         'Trong Đế chế 4, lính cận chiến đánh công trình bằng đuốc, không phải bằng vũ khí trên tay. Gặp lính rút kiếm, gặp nhà rút đuốc. Kỵ cầm đuốc khỏe nhất nên hay được thả vào đốt phá kinh tế.',
-        'Riêng tường đá thì đuốc chịu chết. Không đốt được, không chém được - muốn phá chỉ có đồ công thành. Ngược hẳn với Đế chế: bên kia thành chòi sập nhanh trước bắn đá, bên này tường đá đứng trơ trơ nếu đối thủ không mang đồ công.',
+        'Riêng tường đá thì đuốc chịu chết. Không đốt được, không chém được - muốn phá chỉ có đồ công thành. Đối thủ không mang đồ công thì tường đá đứng trơ trơ.',
       ],
     },
     {
       heading: 'Đồ thủ có gì: từ tường gỗ tới Keep',
       paragraphs: [
-        'Tường gỗ có từ đời 1, rẻ, đóng nhanh, đủ chặn ngựa dò với mấy đợt rush sớm. Tường đá mở từ đời 2, và có món Đế chế không bao giờ có: cho cung leo lên mặt tường đứng bắn xuống. Tường không chỉ để chặn - nó là chỗ đứng đánh nhau.',
-        'Chòi canh (Outpost) dựng từ đời 1, chủ yếu để canh map; muốn nó bắn tên phải nâng cấp thêm. Nhà chính thì tự bắn tên sẵn, cho dân vào trú là bắn dày thêm. Ai từng nhìn nhà chính Đế chế đứng im cho đối thủ phá sẽ thấy sướng.',
+        'Tường gỗ có từ đời 1, rẻ, đóng nhanh, đủ chặn ngựa dò với mấy đợt rush sớm. Tường đá mở từ đời 2, cho cung leo lên mặt tường đứng bắn xuống. Tường không chỉ để chặn - nó là chỗ đứng đánh nhau.',
+        'Chòi canh (Outpost) dựng từ đời 1, chủ yếu để canh map; muốn nó bắn tên phải nâng cấp thêm. Nhà chính thì tự bắn tên sẵn, cho dân vào trú là bắn dày thêm, thành chốt thủ tốt đầu trận.',
         'Đời 3 mở Keep - cái "thành" đúng nghĩa: máu dày, bắn tên đau, làm điểm tựa để ôm tài nguyên hoặc tràn bản đồ.',
       ],
     },
@@ -50,7 +50,7 @@ export const wallsAndDefenseGuide: Guide = {
       heading: 'Thích rùa hay thích "không thành" đều có phe để chơi',
       paragraphs: [
         'Thích xây thành thì chọn Anh: lính đứng gần công trình thấy địch là đánh nhanh hơn, cả phe chơi quanh Keep với nhà chính rất lì đòn.',
-        'Còn ai nhớ luật không thành thì có Mông Cổ: phe du mục, không xây được tường luôn. Cả game không một viên đá bo nhà, sống bằng ngựa và đi cướp - đúng chất "không thành" từ trong máu :))',
+        'Còn ai nhớ luật không thành thì có Mông Cổ: phe du mục, không xây được tường luôn. Cả game không một viên đá bo nhà, sống bằng ngựa và đi cướp - đúng chất "không thành" từ trong máu.',
         'Sang Đế chế 4, thành không phải thứ để cấm mà là thứ để học. Biết lúc nào xây, biết cách phá là đi trước phần lớn người mới rồi. Vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào.',
       ],
     },

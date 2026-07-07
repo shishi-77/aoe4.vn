@@ -11,6 +11,13 @@ export interface QualityScores {
 export interface AccuracyResult {
   /** Số câu mâu thuẫn với facts file (mỗi cái là lỗi sự thật cứng). */
   contradictions: number
+  /**
+   * Số câu DÌM/HẠ THẤP Đế chế 1 (AoE1) hoặc cộng đồng AoE1 (vd "các phe AoE1 na ná
+   * nhau", "AoE1 nhàm/cũ kỹ"). Cộng đồng AoE1 là gốc và lớn nhất - TUYỆT ĐỐI không dìm.
+   * Vi phạm cứng, chặn PASS y như một mâu thuẫn sự thật. So sánh AoE1<->AoE4 để làm rõ
+   * thì được, chê AoE1 dở thì KHÔNG. Bỏ trống -> coi như 0.
+   */
+  aoe1Disparagement?: number
 }
 
 export interface QualityFloors {
@@ -19,10 +26,46 @@ export interface QualityFloors {
   conversion: number
 }
 
-export const DEFAULT_FLOORS: QualityFloors = {
+/** Loại bài quyết định sàn nào áp lên. Mặc định 'strategy' (chặt hơn). */
+export type GuideKind = 'utility' | 'strategy'
+
+/**
+ * Bài chiến thuật/quan điểm (build order, phân tích civ, so sánh). Hưởng lợi từ
+ * giọng cộng đồng + hook nên sàn voice/conversion cao.
+ */
+export const STRATEGY_FLOORS: QualityFloors = {
   structure: STRUCTURE_FLOOR,
   voice: VOICE_FLOOR,
   conversion: CONVERSION_FLOOR,
+}
+
+/**
+ * Bài tiện ích/tra cứu (tải game, cấu hình máy, tìm người chơi). Người đọc muốn
+ * rõ + nhanh gọn, KHÔNG cần hook hay slang cộng đồng. Ép engagement-bait vào đây
+ * làm bài dở đi (đúng lỗi Goodhart đã thấy ở cach-tai-aoe4). Nên hạ sàn
+ * voice/conversion, giữ nguyên sàn structure vì clarity mới là thứ quan trọng nhất.
+ */
+export const UTILITY_FLOORS: QualityFloors = {
+  structure: STRUCTURE_FLOOR,
+  voice: 5,
+  conversion: 3,
+}
+
+/** Backward-compat alias: sàn mặc định là bộ 'strategy'. */
+export const DEFAULT_FLOORS: QualityFloors = STRATEGY_FLOORS
+
+/** Chọn bộ sàn theo loại bài. `undefined` -> coi như 'strategy'. */
+export function floorsForKind(kind: GuideKind | undefined): QualityFloors {
+  return kind === 'utility' ? UTILITY_FLOORS : STRATEGY_FLOORS
+}
+
+export interface RegressionResult {
+  /**
+   * True khi ĐÃ có bản trước để so VÀ một judge head-to-head thấy bản mới ĐỌC DỞ
+   * HƠN bản cũ. Cổng chống thụt lùi: chặn loop "tối ưu chỉ số" đẩy bài đã tốt qua
+   * đỉnh đường cong chất lượng (forced hook, slang gượng, CTA nhét bừa).
+   */
+  regressedVsPrevious: boolean
 }
 
 export interface Verdict {
@@ -32,8 +75,9 @@ export interface Verdict {
 
 /**
  * Cổng PASS/FAIL tất định cho một guide. Không có LLM cộng điểm bằng tay ở đây.
- * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ mỗi chiều >= sàn riêng của nó
- * (structure/voice >= 7, conversion >= 6). Không có ngưỡng tổng.
+ * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ không dìm Đế chế 1 VÀ không
+ * thụt lùi so với bản trước VÀ mỗi chiều >= sàn riêng của nó (theo loại bài). Không
+ * có ngưỡng tổng.
  *
  * Trust boundary: `scores` are trusted to already be integers in the 0-10 range,
  * as produced by the median-of-3 judge upstream. This gate does not re-validate
@@ -43,12 +87,17 @@ export function guideVerdict(
   hygienePass: boolean,
   scores: QualityScores,
   accuracy: AccuracyResult,
-  floors: QualityFloors = DEFAULT_FLOORS,
+  floors: QualityFloors = STRATEGY_FLOORS,
+  regression?: RegressionResult,
 ): Verdict {
   const reasons: string[] = []
   if (!hygienePass) reasons.push('SEO hygiene failed')
   if (accuracy.contradictions > 0)
     reasons.push(`accuracy: ${accuracy.contradictions} contradiction(s) with facts`)
+  if ((accuracy.aoe1Disparagement ?? 0) > 0)
+    reasons.push(`respect: ${accuracy.aoe1Disparagement} câu dìm Đế chế 1 (AoE1) - cấm`)
+  if (regression?.regressedVsPrevious)
+    reasons.push('regressed: bản mới bị đánh giá dở hơn bản trước - giữ bản cũ')
   for (const dim of ['structure', 'voice', 'conversion'] as const) {
     if (scores[dim] < floors[dim]) reasons.push(`${dim} ${scores[dim]} below floor ${floors[dim]}`)
   }

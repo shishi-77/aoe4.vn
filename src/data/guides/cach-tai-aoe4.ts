@@ -2,6 +2,7 @@ import type { Guide } from './index'
 
 export const downloadGuide: Guide = {
   slug: 'cach-tai-aoe4',
+  kind: 'utility',
   title: 'Cách tải và mua Age of Empires IV (Đế chế 4)',
   description:
     'Hướng dẫn người chơi Đế chế cách mua, tải và cài Age of Empires IV trên Steam hoặc Game Pass, kèm lưu ý về giá và tài khoản.',
