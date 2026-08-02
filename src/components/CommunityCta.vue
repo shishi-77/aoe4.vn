@@ -1,6 +1,19 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
 import { site } from '@/data/site'
 import CtaButton from '@/components/CtaButton.vue'
+import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
+
+const props = withDefaults(
+  defineProps<{ placement?: OutboundClickEvent['placement'] }>(),
+  { placement: 'article_footer' },
+)
+
+const route = useRoute()
+
+function onJoin(channel: OutboundClickEvent['channel']) {
+  trackOutboundClick({ channel, placement: props.placement, path: route.path })
+}
 </script>
 
 <template>
@@ -10,8 +23,14 @@ import CtaButton from '@/components/CtaButton.vue'
       Giao lưu, tìm đồng đội và hỏi đáp cùng người chơi Đế chế 4 trong nước.
     </p>
     <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
-      <CtaButton v-if="site.links.facebook" :href="site.links.facebook">Facebook Group</CtaButton>
-      <CtaButton :href="site.links.discord">Discord</CtaButton>
+      <CtaButton
+        v-if="site.links.facebook"
+        :href="site.links.facebook"
+        @click="onJoin('facebook')"
+      >
+        Facebook Group
+      </CtaButton>
+      <CtaButton :href="site.links.discord" @click="onJoin('discord')">Discord</CtaButton>
     </div>
   </div>
 </template>

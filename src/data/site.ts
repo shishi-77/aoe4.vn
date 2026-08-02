@@ -14,4 +14,8 @@ export const site = {
     /** Bật/tắt gợi ý AhaSlides ở trang giải đấu. */
     showTournamentHint: true,
   },
+  analytics: {
+    /** GA4 measurement id (G-XXXXXXXXXX). Empty string = analytics off. */
+    ga4Id: '',
+  },
 }
