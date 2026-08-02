@@ -189,4 +189,4 @@ các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
 5. **Bước 4**: dùng `floorsForArticleKind('news')` từ `@/lib/guideVerdict` (structure 7,
    voice 5, conversion 3).
 6. **Bước 5**: scorecard ghi `Loại bài (kind): news` và thêm dòng
-   `Truy vết nguồn: <"mọi claim có nguồn" | "VI PHẠM: <claim thiếu nguồn>"`.
+   `Truy vết nguồn: <"mọi claim có nguồn" | "VI PHẠM: <claim thiếu nguồn>">`.
