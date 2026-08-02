@@ -103,6 +103,7 @@ export function findOpportunities(rows: QueryRow[], pages: PageMeta[]): Opportun
   const opps: Opportunity[] = []
   for (const row of rows) {
     const tokens = queryTokens(row.query)
+    if (tokens.length === 0) continue
     let best = 0
     let bestPath: string | undefined
     for (const page of pages) {

@@ -62,4 +62,9 @@ describe('findOpportunities', () => {
     const opps = findOpportunities(rows, pages)
     expect(opps.find((o) => o.query === 'cách tải aoe4')).toBeUndefined()
   })
+
+  it('query không có token dùng được (chỉ 1 ký tự) bị bỏ qua thay vì đoán', () => {
+    const rows = [{ query: '4 a', clicks: 0, impressions: 500, ctr: 0, position: 15 }]
+    expect(findOpportunities(rows, pages)).toEqual([])
+  })
 })
