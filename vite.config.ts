@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import 'vite-ssg'
 import { guides } from './src/data/guides'
+import { newsPosts } from './src/data/news'
 import { buildSitemapXml } from './src/lib/sitemap'
 
 // https://vite.dev/config/
@@ -25,6 +26,7 @@ export default defineConfig({
         '/tournaments/lac-hong',
         '/tournaments/ha-noi-open-1',
         ...guides.map((g) => `/guides/${g.slug}`),
+        ...newsPosts.map((p) => `/news/${p.slug}`),
       ]
     },
     async onPageRendered(_route, html, appCtx) {
@@ -38,7 +40,7 @@ export default defineConfig({
       return transformHtmlTemplate(head, html)
     },
     onFinished() {
-      writeFileSync('dist/sitemap.xml', buildSitemapXml('https://aoe4.vn', guides))
+      writeFileSync('dist/sitemap.xml', buildSitemapXml('https://aoe4.vn', guides, newsPosts))
     },
   },
 })

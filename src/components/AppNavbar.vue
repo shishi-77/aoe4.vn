@@ -43,6 +43,9 @@ function onJoin(channel: OutboundClickEvent['channel']) {
         <RouterLink to="/guides/" class="font-bold text-cream hover:text-gold">
           Hướng dẫn
         </RouterLink>
+        <RouterLink to="/news/" class="font-bold text-cream hover:text-gold">
+          Tin tức
+        </RouterLink>
         <a
           :href="site.links.blog"
           target="_blank"
