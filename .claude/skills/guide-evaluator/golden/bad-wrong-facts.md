@@ -3,7 +3,7 @@ Nhắm cổng: cổng cứng accuracy. Kỳ vọng: contradictions >= 1.
 
 ```ts
 export const guide = {
-  slug: 'golden-bad-wrong-facts',
+  slug: 'chon-cung-thu-de-che',
   title: 'Chọn cung thủ trong Đế chế: R hay A',
   description: 'Phân tích hai lựa chọn cung thủ quen thuộc của Đế chế 1 cho người mới quay lại: cung R và cung A.',
   kind: 'strategy',

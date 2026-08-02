@@ -3,7 +3,7 @@ Nhắm cổng: voice phía "thừa". Kỳ vọng: voice <= 4.
 
 ```ts
 export const guide = {
-  slug: 'golden-bad-forced-slang',
+  slug: 'vao-aoe4-cung-anh-em',
   title: 'AoE4 chơi liền tay kẻo lỡ anh em ơi',
   description: 'Vào ngay kèo AoE4 cho nóng anh em, đọc xong bài này là auto biết chơi, không phải dạng vừa đâu.',
   kind: 'strategy',

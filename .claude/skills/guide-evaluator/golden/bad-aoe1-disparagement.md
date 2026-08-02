@@ -3,7 +3,7 @@ Nhắm cổng: cổng cứng AoE1. Kỳ vọng: aoe1Disparagement >= 1.
 
 ```ts
 export const guide = {
-  slug: 'golden-bad-aoe1-disparagement',
+  slug: 'tu-de-che-1-sang-aoe4',
   title: 'Từ Đế chế 1 sang AoE4: khác gì nhau',
   description: 'So sánh nhanh cho người chơi Đế chế 1 muốn thử AoE4: khác biệt lớn nhất nằm ở hệ thống phe và cơ chế lên đời.',
   kind: 'strategy',

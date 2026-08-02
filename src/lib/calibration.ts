@@ -47,9 +47,20 @@ export function checkCalibration(
   results: CalibrationResult[],
 ): CaseVerdict[] {
   const verdicts: CaseVerdict[] = []
+
+  const caseCounts = new Map<string, number>()
+  for (const r of results) caseCounts.set(r.case, (caseCounts.get(r.case) ?? 0) + 1)
+  const duplicateCases = new Set(
+    [...caseCounts.entries()].filter(([, count]) => count > 1).map(([name]) => name),
+  )
+  for (const name of duplicateCases) {
+    verdicts.push({ case: name, pass: false, problems: ['duplicate result entries for this case'] })
+  }
+
   const byCase = new Map(results.map((r) => [r.case, r]))
 
   for (const [name, { kind, expect: e }] of Object.entries(expected)) {
+    if (duplicateCases.has(name)) continue
     const r = byCase.get(name)
     if (!r) {
       verdicts.push({ case: name, pass: false, problems: ['no result for this case'] })
@@ -86,7 +97,7 @@ export function checkCalibration(
   }
 
   for (const r of results) {
-    if (!(r.case in expected))
+    if (!(r.case in expected) && !duplicateCases.has(r.case))
       verdicts.push({ case: r.case, pass: false, problems: ['result has no matching expectation'] })
   }
   return verdicts

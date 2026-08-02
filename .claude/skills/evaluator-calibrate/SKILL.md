@@ -22,8 +22,9 @@ pipeline, không tự sửa prompt; owner đọc báo cáo và quyết.
    QUAN TRỌNG - CHẤM MÙ: KHÔNG đưa judge/fact-check đường dẫn file fixture gốc.
    Trước khi dispatch, trích PHẦN TRONG CODE FENCE của fixture (bỏ toàn bộ dòng
    header FIXTURE/nhãn/kỳ vọng) ra file tạm trong thư mục scratchpad của phiên,
-   ví dụ <scratchpad>/golden-<case>.ts, và đưa subagent đường dẫn file tạm đó.
-   Judge thấy kỳ vọng là calibration vô nghĩa.
+   ví dụ <scratchpad>/bai-cham-<n>.ts, và đưa subagent đường dẫn file tạm đó.
+   Tên file tạm KHÔNG được chứa tên case hay chữ bad/good/frozen - judge nhìn
+   thấy tên là lộ đáp án. Judge thấy kỳ vọng là calibration vô nghĩa.
 
    - Kỳ vọng có `allDimsAtLeastFloor` / `voiceMax` / `conversionMax`: dispatch
      3 subagent độc lập với prompt ghim Bước 2, dùng đường dẫn file tạm (chứa

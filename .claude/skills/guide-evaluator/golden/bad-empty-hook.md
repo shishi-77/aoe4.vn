@@ -3,7 +3,7 @@ Nhắm cổng: conversion. Kỳ vọng: conversion <= 4.
 
 ```ts
 export const guide = {
-  slug: 'golden-bad-empty-hook',
+  slug: 'bi-quyet-leo-rank-aoe4',
   title: 'Bạn đã biết bí mật này của AoE4 chưa?',
   description: 'Bạn đã bao giờ tự hỏi làm sao để chơi giỏi AoE4? Đọc tiếp để khám phá bí mật mà ít ai chịu tiết lộ!',
   kind: 'utility',

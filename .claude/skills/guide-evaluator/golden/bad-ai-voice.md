@@ -3,7 +3,7 @@ Nhắm cổng: voice phía "thiếu". Kỳ vọng: voice <= 4.
 
 ```ts
 export const guide = {
-  slug: 'golden-bad-ai-voice',
+  slug: 'tong-quan-aoe4-cho-nguoi-moi',
   title: 'Khám phá thế giới chiến thuật đầy màu sắc của AoE4',
   description: 'Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất về tựa game chiến thuật hấp dẫn này.',
   kind: 'strategy',

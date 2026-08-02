@@ -3,7 +3,7 @@ Nhắm cổng: cặp thử cổng thụt lùi - bản MỚI cố tình lố hơn
 
 ```ts
 export const guide = {
-  slug: 'golden-regression-pair',
+  slug: 'cach-chan-rush-ky-binh-dau-tran',
   title: 'Cách chặn rush kỵ binh đầu trận (bản không thể bỏ lỡ)',
   description: 'Anh em đã bao giờ ức chế vì thua rush kỵ chưa? Bí kíp chặn rush đỉnh cao đang chờ anh em khám phá đây!',
   kind: 'strategy',

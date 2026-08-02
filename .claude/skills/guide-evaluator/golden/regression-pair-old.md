@@ -3,7 +3,7 @@ Nhắm cổng: cặp thử cổng thụt lùi - bản CŨ. Kỳ vọng: head-to-
 
 ```ts
 export const guide = {
-  slug: 'golden-regression-pair',
+  slug: 'cach-chan-rush-ky-binh-dau-tran',
   title: 'Cách chặn rush kỵ binh đầu trận',
   description: 'Ba việc cần làm trong 5 phút đầu để không thua sớm vì rush kỵ binh: tường gỗ, giáo, và bố trí dân.',
   kind: 'strategy',

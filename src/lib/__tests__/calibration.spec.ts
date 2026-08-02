@@ -110,6 +110,16 @@ describe('checkCalibration', () => {
     expect(verdicts.find((v) => v.case === 'case-a')?.pass).toBe(false)
     expect(verdicts.find((v) => v.case === 'case-b')?.pass).toBe(false)
   })
+
+  it('case bị lặp trong results -> trượt kèm lý do duplicate', () => {
+    const verdicts = checkCalibration(
+      { 'case-a': exp() },
+      [res({ case: 'case-a' }), res({ case: 'case-a' })],
+    )
+    expect(verdicts).toHaveLength(1)
+    expect(verdicts[0].pass).toBe(false)
+    expect(verdicts[0].problems.some((p) => p.includes('duplicate'))).toBe(true)
+  })
 })
 
 describe('golden/expected.json đã commit', () => {
@@ -136,7 +146,7 @@ describe('cách ly golden/', () => {
         return statSync(full).isDirectory() ? walk(full) : [full]
       })
     const files = walk(join(process.cwd(), 'src')).filter((f) => /\.(ts|vue)$/.test(f))
-    const importRe = /from\s+['"][^'"]*guide-evaluator\/golden/
+    const importRe = /(from\s+|import\()['"][^'"]*guide-evaluator\/golden/
     const offenders = files.filter((f) => importRe.test(readFileSync(f, 'utf8')))
     expect(offenders).toEqual([])
   })
