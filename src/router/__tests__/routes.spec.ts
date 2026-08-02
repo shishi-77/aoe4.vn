@@ -9,6 +9,8 @@ describe('routes', () => {
         'home',
         'tournaments',
         'tournament-detail',
+        'news',
+        'news-post',
         'not-found',
       ]),
     )
@@ -54,5 +56,16 @@ describe('routes', () => {
     const r = router.resolve('/tournaments/lac-hong/')
     expect(r.name).toBe('tournament-detail')
     expect(r.params.slug).toBe('lac-hong')
+  })
+
+  it('resolve được /news và /news/ có trailing slash', () => {
+    expect(router.resolve('/news').name).toBe('news')
+    expect(router.resolve('/news/').name).toBe('news')
+  })
+
+  it('resolve được /news/ra-mat-chuyen-muc-tin-tuc/', () => {
+    const r = router.resolve('/news/ra-mat-chuyen-muc-tin-tuc/')
+    expect(r.name).toBe('news-post')
+    expect(r.params.slug).toBe('ra-mat-chuyen-muc-tin-tuc')
   })
 })

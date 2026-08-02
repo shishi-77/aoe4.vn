@@ -1,5 +1,6 @@
 import type { Tournament } from '@/data/tournaments'
 import type { Guide } from '@/data/guides'
+import type { NewsPost } from '@/data/news'
 import type { site as siteData } from '@/data/site'
 
 type Site = typeof siteData
@@ -107,6 +108,25 @@ export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unk
     image: absoluteUrl(site.url, '/og.jpg'),
     datePublished: guide.updatedAt,
     dateModified: guide.updatedAt,
+    mainEntityOfPage: url,
+    author: { '@type': 'Organization', name: site.name },
+    publisher: { '@type': 'Organization', name: site.name },
+  }
+}
+
+/**
+ * Schema.org NewsArticle for a news post page.
+ */
+export function newsArticleJsonLd(post: NewsPost, site: Site): Record<string, unknown> {
+  const url = absoluteUrl(site.url, `/news/${post.slug}/`)
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: post.title,
+    description: post.description,
+    image: absoluteUrl(site.url, '/og.jpg'),
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt ?? post.publishedAt,
     mainEntityOfPage: url,
     author: { '@type': 'Organization', name: site.name },
     publisher: { '@type': 'Organization', name: site.name },

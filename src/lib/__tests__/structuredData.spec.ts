@@ -4,10 +4,12 @@ import {
   organizationJsonLd,
   websiteJsonLd,
   guideArticleJsonLd,
+  newsArticleJsonLd,
 } from '@/lib/structuredData'
 import { lacHong } from '@/data/tournaments/lac-hong'
 import { downloadGuide } from '@/data/guides/cach-tai-aoe4'
 import { site } from '@/data/site'
+import type { NewsPost } from '@/data/news'
 
 describe('tournamentEventJsonLd', () => {
   const ld = tournamentEventJsonLd(lacHong, site)
@@ -112,5 +114,31 @@ describe('guideArticleJsonLd', () => {
     expect(ld.headline).toBe(downloadGuide.title)
     expect(ld.mainEntityOfPage).toBe(`${site.url}/guides/${downloadGuide.slug}/`)
     expect(ld.datePublished).toBe(downloadGuide.updatedAt)
+  })
+})
+
+describe('newsArticleJsonLd', () => {
+  const post: NewsPost = {
+    slug: 'vi-du',
+    title: 'Tiêu đề tin',
+    description: 'Mô tả tin tức dài hơn hai mươi ký tự.',
+    publishedAt: '2026-08-01',
+    updatedAt: '2026-08-02',
+    sources: [{ label: 'Nguồn', url: 'https://example.com/' }],
+    sections: [{ heading: 'H', paragraphs: ['P'] }],
+  }
+
+  it('sinh NewsArticle với ngày đăng và ngày sửa', () => {
+    const ld = newsArticleJsonLd(post, site)
+    expect(ld['@type']).toBe('NewsArticle')
+    expect(ld.headline).toBe('Tiêu đề tin')
+    expect(ld.datePublished).toBe('2026-08-01')
+    expect(ld.dateModified).toBe('2026-08-02')
+    expect(ld.mainEntityOfPage).toBe('https://aoe4.vn/news/vi-du/')
+  })
+
+  it('dateModified rơi về publishedAt khi không có updatedAt', () => {
+    const ld = newsArticleJsonLd({ ...post, updatedAt: undefined }, site)
+    expect(ld.dateModified).toBe('2026-08-01')
   })
 })
