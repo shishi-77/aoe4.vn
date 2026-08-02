@@ -16,6 +16,6 @@ export const site = {
   },
   analytics: {
     /** GA4 measurement id (G-XXXXXXXXXX). Empty string = analytics off. */
-    ga4Id: '',
+    ga4Id: 'G-NX88DCF7FM',
   },
 }
