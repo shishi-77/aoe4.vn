@@ -7,6 +7,8 @@ import {
   CONVERSION_FLOOR,
   STRATEGY_FLOORS,
   UTILITY_FLOORS,
+  NEWS_FLOORS,
+  floorsForArticleKind,
 } from '@/lib/guideVerdict'
 
 const strong = { structure: 8, voice: 8, conversion: 8 }
@@ -95,5 +97,18 @@ describe('guideVerdict', () => {
     })
     expect(v.pass).toBe(true)
     expect(v.reasons).toEqual([])
+  })
+})
+
+describe('floorsForArticleKind', () => {
+  it('news dùng sàn riêng: structure 7, voice 5, conversion 3', () => {
+    expect(floorsForArticleKind('news')).toEqual(NEWS_FLOORS)
+    expect(NEWS_FLOORS).toEqual({ structure: 7, voice: 5, conversion: 3 })
+  })
+
+  it('guide kinds giữ nguyên hành vi cũ', () => {
+    expect(floorsForArticleKind('strategy')).toEqual(STRATEGY_FLOORS)
+    expect(floorsForArticleKind('utility')).toEqual(UTILITY_FLOORS)
+    expect(floorsForArticleKind(undefined)).toEqual(STRATEGY_FLOORS)
   })
 })

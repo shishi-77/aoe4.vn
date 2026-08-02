@@ -51,12 +51,31 @@ export const UTILITY_FLOORS: QualityFloors = {
   conversion: 3,
 }
 
+/**
+ * News posts: clarity-first like utility (news readers want the information,
+ * not community slang), so voice/conversion floors match UTILITY_FLOORS.
+ */
+export const NEWS_FLOORS: QualityFloors = {
+  structure: STRUCTURE_FLOOR,
+  voice: 5,
+  conversion: 3,
+}
+
 /** Backward-compat alias: sàn mặc định là bộ 'strategy'. */
 export const DEFAULT_FLOORS: QualityFloors = STRATEGY_FLOORS
 
 /** Chọn bộ sàn theo loại bài. `undefined` -> coi như 'strategy'. */
 export function floorsForKind(kind: GuideKind | undefined): QualityFloors {
   return kind === 'utility' ? UTILITY_FLOORS : STRATEGY_FLOORS
+}
+
+/** Article kind across both content types. */
+export type ArticleKind = GuideKind | 'news'
+
+/** Floors for any article kind; guide kinds keep floorsForKind behavior. */
+export function floorsForArticleKind(kind: ArticleKind | undefined): QualityFloors {
+  if (kind === 'news') return NEWS_FLOORS
+  return floorsForKind(kind)
 }
 
 export interface RegressionResult {
