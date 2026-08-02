@@ -43,6 +43,12 @@ describe('validateQueue', () => {
   it('QUEUE_STATUSES có đủ 8 trạng thái vòng đời', () => {
     expect(QUEUE_STATUSES).toHaveLength(8)
   })
+
+  it('entry null/kiểu sai -> trả lỗi thay vì ném exception', () => {
+    expect(() => validateQueue([null])).not.toThrow()
+    expect(validateQueue([null]).length).toBeGreaterThan(0)
+    expect(validateQueue([42]).length).toBeGreaterThan(0)
+  })
 })
 
 describe('src/data/content-queue.json', () => {

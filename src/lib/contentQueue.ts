@@ -40,6 +40,10 @@ export function validateQueue(data: unknown): string[] {
   const problems: string[] = []
   const seen = new Set<string>()
   data.forEach((raw, i) => {
+    if (typeof raw !== 'object' || raw === null) {
+      problems.push(`item ${i}: not an object`)
+      return
+    }
     const it = raw as Partial<QueueItem>
     const label = `item ${i} (${String(it.slug ?? '?')})`
     if (typeof it.slug !== 'string' || !SLUG_RE.test(it.slug)) problems.push(`${label}: bad slug`)
