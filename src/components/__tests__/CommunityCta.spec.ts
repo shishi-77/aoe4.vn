@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import CommunityCta from '../CommunityCta.vue'
+import CommunityCta from '@/components/CommunityCta.vue'
 import { site } from '@/data/site'
 
 vi.mock('vue-router', () => ({
