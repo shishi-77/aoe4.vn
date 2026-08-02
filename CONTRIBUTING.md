@@ -219,3 +219,18 @@ npm run lint:check && npm run type-check && npm run test:run
 | `npm run test:run`   | Vitest — chạy toàn bộ unit test       |
 
 Nếu có lỗi ESLint có thể tự sửa, chạy `npm run lint` (có `--fix`) rồi kiểm tra lại.
+
+## Content pipeline
+
+Bài viết đi qua hàng đợi `src/data/content-queue.json` (trạng thái: proposed -> facts-pending
+-> facts-approved -> drafted -> in-pr -> published; nhánh parked/rejected). Ba skill vận hành:
+
+- `/propose-topics` - hàng tháng, đọc CSV Search Console trong `docs/search-console/` (local),
+  đề xuất đề tài mới vào hàng đợi.
+- `/write-article <slug>` - viết một bài từ hàng đợi: facts sheet (`docs/facts-review/`, local)
+  -> owner duyệt -> viết -> guide-evaluator chấm (news có chế độ riêng) -> PR kèm link share UTM.
+- `/seo-audit` - hàng tháng, quét hygiene toàn bộ guides + news (`npx vite-node
+  scripts/seo-audit.ts`) và sửa metadata trong một PR.
+
+Nguyên tắc: không viết facts Đế chế/AoE từ kiến thức generic - guide dùng kho facts đã duyệt
+(`.claude/skills/guide-evaluator/facts/`), news phải trích nguồn https cho mọi claim.
