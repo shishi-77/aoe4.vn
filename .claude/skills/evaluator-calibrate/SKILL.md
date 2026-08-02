@@ -18,13 +18,23 @@ pipeline, không tự sửa prompt; owner đọc báo cáo và quyết.
    trong expected.json), dùng NGUYÊN VĂN prompt ghim trong
    `.claude/skills/guide-evaluator/SKILL.md` - chỉ thay đường dẫn bài bằng đường
    dẫn file fixture:
+
+   QUAN TRỌNG - CHẤM MÙ: KHÔNG đưa judge/fact-check đường dẫn file fixture gốc.
+   Trước khi dispatch, trích PHẦN TRONG CODE FENCE của fixture (bỏ toàn bộ dòng
+   header FIXTURE/nhãn/kỳ vọng) ra file tạm trong thư mục scratchpad của phiên,
+   ví dụ <scratchpad>/golden-<case>.ts, và đưa subagent đường dẫn file tạm đó.
+   Judge thấy kỳ vọng là calibration vô nghĩa.
+
    - Kỳ vọng có `allDimsAtLeastFloor` / `voiceMax` / `conversionMax`: dispatch
-     3 subagent độc lập với prompt ghim Bước 2, lấy TRUNG VỊ từng chiều.
+     3 subagent độc lập với prompt ghim Bước 2, dùng đường dẫn file tạm (chứa
+     chỉ nội dung bài, không header), lấy TRUNG VỊ từng chiều.
    - Kỳ vọng có `contradictionsMin/Max` / `aoe1DisparagementMin/Max`: dispatch
      1 subagent fact-check theo prompt Bước 3 (đối chiếu facts corpus + quét dìm
-     AoE1). Ghi số lượng contradictions và aoe1Disparagement.
-   - Kỳ vọng có `winner`: chạy Bước 2.5 head-to-head, BẢN CŨ = nội dung fence
-     của `regression-pair-old.md`, BẢN MỚI = của `regression-pair-new.md`.
+     AoE1), dùng đường dẫn file tạm. Ghi số lượng contradictions và aoe1Disparagement.
+   - Kỳ vọng có `winner`: chạy Bước 2.5 head-to-head, BẢN CŨ = trích nội dung fence
+     của `regression-pair-old.md` (bỏ header), BẢN MỚI = trích nội dung fence
+     của `regression-pair-new.md` (bỏ header), đặt vào file tạm, đưa subagent
+     đường dẫn file tạm.
    - Bỏ qua Bước 1 hygiene - phần tất định đã có unit test riêng.
 3. Gom kết quả thành một mảng JSON đúng schema `CalibrationResult` của
    `@/lib/calibration` và ghi ra `docs/reviews/calibration-results-<YYYY-MM-DD>.json`:
