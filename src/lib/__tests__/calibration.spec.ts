@@ -112,6 +112,22 @@ describe('checkCalibration', () => {
   })
 })
 
+describe('golden/expected.json đã commit', () => {
+  it('parse được và mọi case có kind hợp lệ + expect không rỗng', () => {
+    const raw = readFileSync(
+      join(process.cwd(), '.claude/skills/guide-evaluator/golden/expected.json'),
+      'utf8',
+    )
+    const expected = JSON.parse(raw) as Record<string, CalibrationExpectation>
+    const cases = Object.entries(expected)
+    expect(cases.length).toBeGreaterThanOrEqual(9)
+    for (const [name, c] of cases) {
+      expect(['utility', 'strategy', 'news'], `kind của ${name}`).toContain(c.kind)
+      expect(Object.keys(c.expect).length, `expect của ${name}`).toBeGreaterThan(0)
+    }
+  })
+})
+
 describe('cách ly golden/', () => {
   it('không file nào trong src/ import từ thư mục golden', () => {
     const walk = (dir: string): string[] =>
