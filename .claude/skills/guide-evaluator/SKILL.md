@@ -1,6 +1,6 @@
 ---
 name: guide-evaluator
-description: Use when scoring or polishing a guide in src/data/guides before publish, or when running a write→score→fix loop. Grades one guide with a pinned strict rubric (SEO hygiene gate + structure/voice/conversion via median-of-3 judges + accuracy fact-checked against committed AoE facts files), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
+description: Use when scoring or polishing a guide in src/data/guides or a news post in src/data/news before publish, or when running a write→score→fix loop. Grades one guide with a pinned strict rubric (SEO hygiene gate + structure/voice/conversion via median-of-3 judges + accuracy fact-checked against committed AoE facts files), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
 ---
 
 # Guide Evaluator (v3)
@@ -167,3 +167,26 @@ Lưu ý:
   nếu không baseline sẽ trôi theo bản mới và cổng mất tác dụng.
 - Claim ngoài facts (`claimsToVerify`) là danh sách advisory - bạn (người duyệt) xem lại sau
   khi bài đã PASS, chốt đúng/sai hoặc bổ sung vào facts file. Loop không chờ việc này để PASS.
+
+## Chế độ news (bài trong src/data/news)
+
+Khi `<slug>` nằm trong `@/data/news` (không phải guides), chấm theo ĐÚNG giao thức trên với
+các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
+
+1. **Bước 1**: chạy `npx vite-node scripts/score-news-seo.ts <slug>` thay cho score-guide-seo.
+   `kind` luôn là `news`.
+2. **Bước 2**: prompt ghim giữ nguyên, thay đường dẫn file thành `src/data/news/<slug>.ts` và
+   thêm đúng một câu vào cuối đoạn QUAN TRỌNG: "Đây là BẢN TIN: đi thẳng thông tin, ngắn gọn
+   thời sự; hook/slang không được chặn thông tin." Chấm conversion như bài tra cứu (đi thẳng
+   vào thông tin là dẫn dắt tốt).
+3. **Bước 2.5**: giữ nguyên, so với `git show HEAD:src/data/news/<slug>.ts`.
+4. **Bước 3 (fact-check news)**: ngoài 2 nhiệm vụ cũ (đối chiếu facts corpus + quét dìm AoE1),
+   subagent đọc thêm facts sheet `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Mọi claim
+   sự kiện/số liệu trong bài PHẢI có dòng tương ứng trong facts sheet trỏ về một URL thuộc
+   `sources[]` của bài. Claim không truy vết được nguồn -> tính vào `contradictions[]` (với
+   news, "không nguồn" nghiêm trọng ngang "sai facts"). Không có facts sheet -> FAIL hygiene
+   luôn, ghi rõ lý do.
+5. **Bước 4**: dùng `floorsForArticleKind('news')` từ `@/lib/guideVerdict` (structure 7,
+   voice 5, conversion 3).
+6. **Bước 5**: scorecard ghi `Loại bài (kind): news` và thêm dòng
+   `Truy vết nguồn: <"mọi claim có nguồn" | "VI PHẠM: <claim thiếu nguồn>">`.
