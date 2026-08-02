@@ -1,16 +1,23 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { dlc } from '@/data/dlc'
 import { guides } from '@/data/guides'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
+import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
 import DlcSection from '@/components/sections/DlcSection.vue'
 import NorseDivider from '@/components/NorseDivider.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
 import TournamentCard from '@/components/TournamentCard.vue'
 import { useReveal } from '@/composables/useReveal'
+
+const route = useRoute()
+
+function onJoin(channel: OutboundClickEvent['channel']) {
+  trackOutboundClick({ channel, placement: 'homepage', path: route.path })
+}
 
 const pageTitle = `${site.name} - Cộng đồng Age of Empires IV Việt Nam`
 
@@ -98,8 +105,18 @@ const { el: communityEl } = useReveal()
           target="_blank"
           rel="noopener noreferrer"
           class="rounded-md bg-gold px-6 py-3 font-bold text-ink transition hover:bg-gold-dim"
+          @click="onJoin('discord')"
         >
           Discord
+        </a>
+        <a
+          :href="site.links.facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
+          @click="onJoin('facebook')"
+        >
+          Facebook Group
         </a>
         <a
           :href="site.links.youtube"

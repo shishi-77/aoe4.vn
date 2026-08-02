@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import { site } from '@/data/site'
+import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
 
 const open = ref(false)
+const route = useRoute()
+
+function onJoin(channel: OutboundClickEvent['channel']) {
+  trackOutboundClick({ channel, placement: 'header', path: route.path })
+}
 </script>
 
 <template>
@@ -46,10 +52,20 @@ const open = ref(false)
           Blog ↗
         </a>
         <a
+          :href="site.links.facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-bold text-cream hover:text-gold"
+          @click="onJoin('facebook')"
+        >
+          Facebook ↗
+        </a>
+        <a
           :href="site.links.discord"
           target="_blank"
           rel="noopener noreferrer"
           class="rounded-md bg-gold px-4 py-2 font-bold text-ink hover:bg-gold-dim"
+          @click="onJoin('discord')"
         >
           Discord
         </a>
