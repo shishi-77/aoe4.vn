@@ -181,12 +181,25 @@ các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
    vào thông tin là dẫn dắt tốt).
 3. **Bước 2.5**: giữ nguyên, so với `git show HEAD:src/data/news/<slug>.ts`.
 4. **Bước 3 (fact-check news)**: ngoài 2 nhiệm vụ cũ (đối chiếu facts corpus + quét dìm AoE1),
-   subagent đọc thêm facts sheet `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Mọi claim
-   sự kiện/số liệu trong bài PHẢI có dòng tương ứng trong facts sheet trỏ về một URL thuộc
-   `sources[]` của bài. Claim không truy vết được nguồn -> tính vào `contradictions[]` (với
-   news, "không nguồn" nghiêm trọng ngang "sai facts"). Không có facts sheet -> FAIL hygiene
-   luôn, ghi rõ lý do.
+   subagent làm thêm nhiệm vụ XÁC MINH NGUỒN TRỰC TIẾP:
+   a) Đọc facts sheet `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Không có
+      facts sheet -> FAIL hygiene luôn, ghi rõ lý do.
+   b) WebFetch TỪNG URL trong `sources[]` của bài, đối chiếu TỪNG claim sự kiện/số liệu
+      với nội dung nguồn thật (không tin facts sheet mù quáng). Mỗi claim ra đúng một
+      trong ba kết cục:
+      - Nguồn xác nhận claim -> qua.
+      - Nguồn nói NGƯỢC LẠI claim -> `contradictions[]` (với news, sai so với nguồn
+        nghiêm trọng ngang sai facts). Claim không có dòng nào trong facts sheet cũng
+        tính vào đây như trước.
+      - KHÔNG XÁC MINH ĐƯỢC (URL chết, timeout, hoặc nguồn không nhắc tới claim - có
+        thể là diễn giải tổng hợp) -> `unverifiableClaims[]` (câu trích + lý do).
+   WebFetch lỗi KHÔNG BAO GIỜ làm sập vòng chấm - claim liên quan rơi về
+   `unverifiableClaims`. JSON trả về thêm trường: {"unverifiableClaims":[...]}.
+   `unverifiableClaims` KHÔNG chặn PASS ở giai đoạn 1 (advisory như claimsToVerify)
+   nhưng là điều kiện chặn auto-merge ở giai đoạn 2 (xem skill write-article).
 5. **Bước 4**: dùng `floorsForArticleKind('news')` từ `@/lib/guideVerdict` (structure 7,
    voice 5, conversion 3).
 6. **Bước 5**: scorecard ghi `Loại bài (kind): news` và thêm dòng
-   `Truy vết nguồn: <"mọi claim có nguồn" | "VI PHẠM: <claim thiếu nguồn>">`.
+   `Truy vết nguồn: <"mọi claim xác minh trực tiếp từ nguồn" | "VI PHẠM: <claim bị
+   nguồn nói ngược / thiếu nguồn>" | "CHƯA XÁC MINH ĐƯỢC (không chặn PASS giai đoạn 1):
+   <liệt kê unverifiableClaims>">`.

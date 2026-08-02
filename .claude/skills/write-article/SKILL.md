@@ -72,6 +72,8 @@ Soạn `docs/facts-review/<slug>.md`:
 
 ## Giai đoạn 2 (chưa bật - chỉ ghi nhận)
 
-Chạy headless theo lịch chỉ khi: bài guide 100% facts từ kho + evaluator PASS + gate xanh +
-kind nằm trong danh sách owner cho phép. Thiếu một điều kiện -> PR để mở chờ owner như thường.
+Chạy headless theo lịch chỉ khi: bài guide 100% facts từ kho (bài news: mọi claim xác minh
+trực tiếp từ nguồn - dòng `unverifiableClaims` trong scorecard mới nhất RỖNG) + evaluator
+PASS + gate xanh + kind nằm trong danh sách owner cho phép. Thiếu một điều kiện -> PR để mở
+chờ owner như thường.
 Không tự merge trong giai đoạn hiện tại.
