@@ -5,7 +5,7 @@ export const aoe4VsAoe1Guide: Guide = {
   title: 'Đế chế 4 khác Đế chế thế nào? Góc nhìn người chơi AoE1',
   description:
     'AoE4 khác Đế chế thế nào? Giải thích cho người chơi Đế chế: nhịp trận và cơ chế tự động, thành chòi, lên đời bằng landmark, khắc chế binh chủng, và những kỹ năng Đế chế mang thẳng sang được.',
-  updatedAt: '2026-07-02',
+  updatedAt: '2026-08-03',
   cta: true,
   sections: [
     {
@@ -28,14 +28,14 @@ export const aoe4VsAoe1Guide: Guide = {
       paragraphs: [
         'Bên Đế chế, cộng đồng có luật cấm thành chòi cho trận đấu nhanh và gắt hơn - luật hay, anh em đúc kết qua nhiều năm. Sang Đế chế 4 thì chơi thành là chuyện bình thường, không ai kiêng.',
         'Vũ khí công thành ở đây có nhiều loại, giá lại dễ chịu. Đối thủ rùa trong thành thì anh em có đủ đồ để phá.',
-        'Một khác biệt về cơ chế: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế, muốn bo nhà thì chỉ có xây tường. Chơi thành ở đây không phải cù nhầy, nó là một phần của game.',
+        'Một khác biệt về cơ chế: Đế chế 4 không cho bo nhà bằng công trình như ở Đế chế, muốn bo nhà thì chỉ có xây tường. Chơi thành ở đây là một phần của game, chẳng ai coi đó là cù nhầy.',
       ],
       link: { slug: 'tuong-thanh-phong-thu-aoe4', label: 'Đọc thêm: Tường thành và phòng thủ trong Đế chế 4' },
     },
     {
       heading: 'Đánh cả 4 đời là chuyện bình thường',
       paragraphs: [
-        'Luật đời 3 cũng vậy. Đời 1 và đời 2 quá ít loại quân, đánh nhau quanh đi quẩn lại rìu bổ với quẩy đá, chơi mãi thành nhàm. Cộng đồng Đế chế đi qua thời đó rồi mới chốt luật đời 3.',
+        'Luật đời 3 cũng vậy: cộng đồng Đế chế chốt đánh từ đời 3 để trận nào cũng vào thẳng thế trận đủ bài, đủ binh chủng mà so tài.',
         'Ở Đế chế 4, quân đa dạng ngay từ sớm, đánh từ đời 1 đã có bài theo kiểu riêng. Game có 4 đời, chơi trọn cả 4 đời là chuyện bình thường.',
         'Cách lên đời cũng khác: không bấm nút ở nhà chính mà phải xây một công trình biểu tượng (Landmark). Mỗi lần lên đời chọn 1 trong 2 landmark, mỗi cái mở một hướng chơi. Tốc độ lên đời mỗi phe mỗi khác, nên nhịp mở trận cũng khác nhau.',
       ],
