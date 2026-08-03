@@ -1,0 +1,13 @@
+{
+  "bad-ai-voice": { "kind": "strategy", "expect": { "voiceMax": 4 } },
+  "bad-forced-slang": { "kind": "strategy", "expect": { "voiceMax": 4 } },
+  "bad-empty-hook": { "kind": "utility", "expect": { "conversionMax": 4 } },
+  "bad-aoe1-disparagement": { "kind": "strategy", "expect": { "aoe1DisparagementMin": 1 } },
+  "bad-wrong-facts": { "kind": "strategy", "expect": { "contradictionsMin": 1 } },
+  "regression-pair": { "kind": "strategy", "expect": { "winner": "old" } },
+  "frozen-good-build-order-co-ban-aoe4": { "kind": "strategy", "expect": { "allDimsAtLeastFloor": true, "contradictionsMax": 0, "aoe1DisparagementMax": 0 } },
+  "frozen-good-cau-hinh-may-aoe4": { "kind": "utility", "expect": { "allDimsAtLeastFloor": true, "contradictionsMax": 0, "aoe1DisparagementMax": 0 } },
+  "frozen-bad-voice-cung-r-ngua-chem-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } },
+  "frozen-bad-voice-tuong-thanh-phong-thu-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } },
+  "frozen-bad-voice-aoe4-khac-de-che-the-nao": { "kind": "strategy", "expect": { "voiceMax": 6 } }
+}
