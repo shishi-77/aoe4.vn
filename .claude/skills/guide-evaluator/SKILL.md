@@ -67,6 +67,14 @@ Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
   so sánh hai game đã nói rồi." / "Sang Đế chế 4, thành không phải thứ để cấm mà là thứ
   để học." / "Càng về cuối đồ công càng khỏe hơn đồ thủ, nên rùa tới cuối game không phải
   kèo thơm." / "Tường không chỉ để chặn - nó là chỗ đứng đánh nhau."
+  Mẫu owner chọn thêm 2026-08-03 (từ các bài PASS-nhưng-đơ, cùng mức ~5-6): "Game có 4 đời,
+  chơi trọn cả 4 đời là chuyện bình thường." / "Chơi thành ở đây là một phần của game, chẳng
+  ai coi đó là cù nhầy." / "Nếu xếp theo tốc độ: AoE3 > AoE1 > AoE4 > AoE2." / "Muốn biết vì
+  sao Đế chế 4 để xây thành thoải mái mà game vẫn cân, đọc bài so sánh hai game." / "Biết lúc
+  nào đáng bỏ gỗ ra xây, lúc nào phải đóng ram là đỡ bỡ ngỡ hẳn so với người mới cùng xuất
+  phát." / "Kỵ nặng bên Đế chế 4 là xe tăng thời trung cổ: lì, chạy nhanh, chém đau." / "Nên
+  trước khi lao kỵ vào, cân nhắc kỹ bài toán kinh tế." / "Camel Archer (lạc đà tên) ra từ
+  đời 2, vừa chạy vừa bắn."
   LUẬT CỨNG: bài có vài câu dạng này (câu tuyên bố đơ "Đó chính là...", chuyển ý sáo
   "Tuy nhiên, chẳng...", câu kết kiểu thuyết minh, câu đúc kết đối xứng kiểu khẩu hiệu
   "không phải X mà là Y", câu tham chiếu lười "bài kia đã nói rồi") -> voice CẢ BÀI tối đa 6;
