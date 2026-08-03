@@ -5,14 +5,14 @@ export const mobilityUnitsGuide: Guide = {
   title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
   description:
     'Cung R, ngựa chém hay lạc đà của Đế chế sang Đế chế 4 là lính nào? Kỵ cung Mangudai, Horse Archer, Onna-Musha, kỵ nặng Pháp và lạc đà Abbasid - bản đồ lính cho dân Đế chế mê đánh nhanh.',
-  updatedAt: '2026-07-03',
+  updatedAt: '2026-08-03',
   cta: true,
   sections: [
     {
       heading: 'Kỵ binh thống trị chiến trường',
       paragraphs: [
         'Đế chế đánh random, ra quân nào đánh theo bài quân đó. Nhưng có một thứ không đổi: quân nào cũng mở màn bằng ngựa dò, rồi mới tới cung R, ngựa chém, lạc đà. Trận nào cũng dùng kỵ, nên nhịp trận thường rất nhanh.',
-        'Đế chế 4 nhịp chậm hơn - chuyện đó bài so sánh hai game nói rồi. Nhưng trong game vẫn có nguyên một nhóm quân giữ được cái nhịp cũ, gồm kỵ cung, kỵ nặng và lạc đà. Bài này chỉ chỗ cho anh em mê đánh nhanh.',
+        'Đế chế 4 tổng thể nhịp chậm hơn, nhưng vẫn có nguyên một nhóm quân giữ được cái nhịp cũ: kỵ cung, kỵ nặng và lạc đà. Bài này chỉ chỗ cho anh em mê đánh nhanh.',
       ],
       link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế thế nào?' },
     },
@@ -20,32 +20,31 @@ export const mobilityUnitsGuide: Guide = {
       heading: 'Cung R: sang Đế chế 4 là kỵ cung',
       paragraphs: [
         'Bên Đế chế 1, mấy quân tuyển như Hit, Assy gần như mặc định lên cung R, chơi bài hit and run kinh điển.',
-        'Bên Đế chế 4, thứ giữ đúng cảm giác đó không phải cung bộ mà là kỵ cung. Mangudai của Mông Cổ ra từ đời 2, vừa chạy vừa bắn - hợp lối raid tỉa, đánh du kích. Nga có Horse Archer từ đời 3, gom số đông thành cung chủ lực dàn trận. Nhật có Onna-Musha, kỵ cung chuyên xuyên giáp nặng.',
-        'Tuy nhiên, chẳng có gì miễn phí. Một con Mangudai đắt gần gấp đôi cung thường, mất vài con là hụt hẳn thế trận. Và kỵ cung ở đây không phải muốn làm gì thì làm - số lượng chưa đủ đông thì vẫn bị kỵ nhẹ săn như thường. Đó chính là cơ chế khắc chế quân rất chặt của Đế chế 4.',
+        'Bên Đế chế 4, muốn giữ đúng cảm giác đó thì đừng tìm ở cung bộ - tìm ở kỵ cung. Mangudai của Mông Cổ ra từ đời 2, vừa chạy vừa bắn, hợp lối raid tỉa, đánh du kích. Nga có Horse Archer từ đời 3, gom số đông thành cung chủ lực dàn trận. Nhật có Onna-Musha, kỵ cung chuyên xuyên giáp nặng.',
+        'Giá thì chát: một con Mangudai đắt gần gấp đôi cung thường, mất vài con là hụt hẳn thế trận. Kỵ cung chưa đủ đông cũng vẫn bị kỵ nhẹ săn như thường - Đế chế 4 khắc chế quân chặt lắm, mạnh mấy cũng có khắc tinh.',
       ],
     },
     {
       heading: 'Ngựa chém: xe tăng của thời trung cổ',
       paragraphs: [
-        'Ngựa chém thì quân nào cũng đánh được. Người cầm kỵ nắm nhịp trận trong tay, muốn nhanh muốn chậm tùy mình. Nhất là ở team game map rộng, vai trò của kỵ càng nặng ký.',
-        'Kỵ nặng bên Đế chế 4 đúng nghĩa xe tăng thời trung cổ - cơ động, sát thương cao. Mê món này thì cầm Pháp - Royal Knight có từ đời 2, là quân kỵ tuyển, chém đầu trận rất rát. Tư duy điều quân gần như không khác Đế chế 1.',
-        'Bù lại, kỵ nặng đắt đỏ, mà thứ khắc nó lại rẻ hơn hẳn - combo giáo cộng nỏ. Bên Đế chế ngựa chém chỉ sợ lạc đà; bên này chỉ cần giáo nỏ đứng chờ sẵn. Nên trước khi lao kỵ vào, cân nhắc kỹ bài toán kinh tế.',
+        'Ngựa chém thì quân nào cũng đánh được. Cầm kỵ là nắm nhịp trận, muốn đẩy nhanh hay câu chậm tùy tay mình. Nhất là ở team game map rộng, vai trò của kỵ càng nặng ký.',
+        'Kỵ nặng bên Đế chế 4 là xe tăng thời trung cổ: lì, chạy nhanh, chém đau. Mê món này thì cầm Pháp - Royal Knight có từ đời 2, là quân kỵ tuyển, chém đầu trận rất rát. Tư duy điều quân gần như không khác Đế chế 1.',
+        'Bù lại, kỵ nặng đắt đỏ, mà thứ khắc nó lại rẻ hơn hẳn - combo giáo cộng nỏ. Bên Đế chế, khắc tinh nổi tiếng nhất của ngựa chém là lạc đà; bên này giáo nỏ đứng chờ sẵn là đủ. Nên trước khi lao kỵ vào, cân nhắc kỹ bài toán kinh tế.',
       ],
     },
     {
       heading: 'Lạc đà bay: Đế chế 4 trao vai đó cho Abbasid',
       paragraphs: [
         'Đội lạc đà bay Palmyran đi tới đâu là ngựa bên kia dạt tới đó - cầm rất đã tay, đủ sức xoay cả cục diện trận đấu.',
-        'Đế chế 4 trao vai đó cho Abbasid. Camel Archer (lạc đà tên) ra từ đời 2, vừa chạy vừa bắn. Camel Rider (lạc đà chém) ra từ đời 3, cận chiến chuyên trị kỵ. Ngựa của đối thủ đứng gần lạc đà còn bị trừ 20% sát thương - đúng chất ngựa sợ lạc đà như bên Đế chế.',
+        'Camel Archer (lạc đà tên) ra từ đời 2, vừa chạy vừa bắn. Camel Rider (lạc đà chém) ra từ đời 3, cận chiến chuyên trị kỵ. Ngựa của đối thủ đứng gần lạc đà còn bị trừ 20% sát thương - đúng chất ngựa sợ lạc đà như bên Đế chế.',
         'Lạc đà khắc kỵ chứ không khắc bộ binh. Cầm lạc đà đi đấm giáo với bộ binh cận chiến là nướng quân - nhưng Abbasid vốn mạnh kinh tế, đè được tiền thì đổi quân thoải mái hơn thiên hạ.',
       ],
     },
     {
       heading: 'Anh em thuộc hệ nào',
       paragraphs: [
-        'Chơi Đế chế mấy chục năm, ai cũng có một hệ ruột: quen tay đảo chém, thích cung chủ lực, hay mê lạc đà và boom kinh tế. Sang Đế chế 4 cứ theo đúng hệ đó mà đánh.',
-        'Thích đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, mê lạc đà và boom kinh tế thì cầm Abbasid.',
-        'Hệ ruột là thứ mang sang nhanh nhất. Vào một trận với máy, ra đúng dòng lính quen tay, rồi từ từ học phần còn lại của game sau.',
+        'Chơi Đế chế mấy chục năm, ai cũng có một hệ ruột. Quen tay đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, mê lạc đà và boom kinh tế thì cầm Abbasid.',
+        'Cứ ôm hệ ruột mà đánh là lên tay nhanh nhất. Vào một trận với máy, ra đúng dòng lính quen tay - kẹt chỗ nào thì vào nhóm anh em Đế chế hỏi, có người chỉ ngay.',
       ],
     },
   ],

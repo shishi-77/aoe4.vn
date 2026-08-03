@@ -5,14 +5,14 @@ export const wallsAndDefenseGuide: Guide = {
   title: 'Tường thành và phòng thủ trong Đế chế 4 cho dân quen "không thành"',
   description:
     'Tường thành và phòng thủ trong AoE4 cho người chơi Đế chế quen luật không thành: tường gỗ, tường đá, chòi canh, Keep, khi nào nên xây tường và phá thành bằng xe ram, máy bắn đá, Trebuchet.',
-  updatedAt: '2026-07-02',
+  updatedAt: '2026-08-03',
   cta: true,
   sections: [
     {
       heading: 'Cả đời đánh "không thành", giờ vào game toàn thành',
       paragraphs: [
-        'Dân Đế chế quen kèo 23 dân, đời 3 không thành. Sang Đế chế 4 thì ngược hẳn: tường chạy quanh làng, chòi canh giữa map, đời 3 mọc thành to đùng. Không có luật nào cấm cả - thành là một phần của game.',
-        'Vì sao Đế chế 4 bỏ được luật không thành thì bài so sánh hai game đã nói rồi. Bài này nói phần còn lại: đồ thủ có gì, khi nào nên xây, và phá thành người ta bằng gì.',
+        'Dân Đế chế quen kèo 23 dân, đời 3 không thành. Sang Đế chế 4 thì ngược hẳn: tường chạy quanh làng, chòi canh giữa map, đời 3 mọc thành to đùng. Ở đây thành nằm sẵn trong game, muốn xây là xây.',
+        'Muốn biết vì sao Đế chế 4 để xây thành thoải mái mà game vẫn cân, đọc bài so sánh hai game. Bài này chỉ lo phần thực chiến: đồ thủ có gì, khi nào nên xây, và phá thành người ta bằng gì.',
       ],
       link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế thế nào?' },
     },
@@ -26,7 +26,7 @@ export const wallsAndDefenseGuide: Guide = {
     {
       heading: 'Đồ thủ có gì: từ tường gỗ tới Keep',
       paragraphs: [
-        'Tường gỗ có từ đời 1, rẻ, đóng nhanh, đủ chặn ngựa dò với mấy đợt rush sớm. Tường đá mở từ đời 2, cho cung leo lên mặt tường đứng bắn xuống. Tường không chỉ để chặn - nó là chỗ đứng đánh nhau.',
+        'Tường gỗ có từ đời 1, rẻ, đóng nhanh, đủ chặn ngựa dò với mấy đợt rush sớm. Tường đá mở từ đời 2, cho cung leo lên mặt tường đứng bắn xuống: vừa chặn đường vừa là chỗ dàn trận, địch đứng dưới chịu trận.',
         'Chòi canh (Outpost) dựng từ đời 1, chủ yếu để canh map; muốn nó bắn tên phải nâng cấp thêm. Nhà chính thì tự bắn tên sẵn, cho dân vào trú là bắn dày thêm, thành chốt thủ tốt đầu trận.',
         'Đời 3 mở Keep - cái "thành" đúng nghĩa: máu dày, bắn tên đau, làm điểm tựa để ôm tài nguyên hoặc tràn bản đồ.',
       ],
@@ -42,7 +42,7 @@ export const wallsAndDefenseGuide: Guide = {
       heading: 'Phá thành bằng gì',
       paragraphs: [
         'Xe ram có từ đời 2, và hay ở chỗ: lính cận chiến tự đóng xe ram ngay giữa trận, không cần nhà xưởng. Thấy đối thủ rùa sau tường thì đừng đứng đốt - vài anh lính ngồi đóng xe ram là tường nào cũng sập.',
-        'Đời 3 có thêm máy bắn đá (Mangonel) dọn đám lính đứng trên tường, và Trebuchet đứng ngoài tầm Keep nã vào. Đời 4 có pháo, phá thành nhanh gọn hẳn. Càng về cuối đồ công càng khỏe hơn đồ thủ, nên rùa tới cuối game không phải kèo thơm.',
+        'Đời 3 có thêm máy bắn đá (Mangonel) dọn đám lính đứng trên tường, và Trebuchet đứng ngoài tầm Keep nã vào. Đời 4 có pháo, phá thành nhanh gọn hẳn. Về cuối trận, pháo với Trebuchet ra đủ thì tường nào cũng nát, nên đừng tính bài rùa tới hết game.',
         'Đồ công thành đắt mà giòn, đi đâu cũng phải kèm quân bảo kê. Mất xe ram giữa đường coi như tặng tài nguyên cho đối thủ.',
       ],
     },
@@ -51,7 +51,8 @@ export const wallsAndDefenseGuide: Guide = {
       paragraphs: [
         'Thích xây thành thì chọn Anh: lính đứng gần công trình thấy địch là đánh nhanh hơn, cả phe chơi quanh Keep với nhà chính rất lì đòn.',
         'Còn ai nhớ luật không thành thì có Mông Cổ: phe du mục, không xây được tường luôn. Cả game không một viên đá bo nhà, sống bằng ngựa và đi cướp - đúng chất "không thành" từ trong máu.',
-        'Sang Đế chế 4, thành không phải thứ để cấm mà là thứ để học. Biết lúc nào xây, biết cách phá là đi trước phần lớn người mới rồi. Vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào.',
+        'Biết lúc nào đáng bỏ gỗ ra xây, lúc nào phải đóng ram là đỡ bỡ ngỡ hẳn so với người mới cùng xuất phát.',
+        'Vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào - kẹt chỗ nào thì vào nhóm hỏi, anh em chỉ nhanh hơn tự mò.',
       ],
     },
   ],
