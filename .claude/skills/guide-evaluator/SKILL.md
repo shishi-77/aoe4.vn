@@ -52,6 +52,8 @@ TỐT HƠN một câu nhồi slang/hook - đừng thưởng điểm cho sự c�
   hô "anh em ơi" nhồi nhét. Có em-dash bất kỳ đâu -> voice <= 3. TUYỆT ĐỐI KHÔNG dìm/hạ thấp
   Đế chế 1 (AoE1) hay cộng đồng AoE1 (vd "phe AoE1 na ná nhau", "AoE1 nhàm/cũ kỹ"); so sánh
   AoE1<->AoE4 để làm rõ thì được, chê AoE1 dở thì KHÔNG. Có câu dìm AoE1 -> voice <= 2.
+  Bài đúng thông tin nhưng giọng đơ, máy móc, nhịp câu lặp đều đều -> voice cao nhất là 5-6,
+  KHÔNG phải 7-8.
 - conversion: mở bài dẫn dắt đúng nhu cầu người đọc (không phải hook câu view rỗng), mạch
   dẫn tới CTA/cộng đồng tự nhiên. Với bài tra cứu, đi thẳng vào thông tin CŨNG là dẫn dắt tốt;
   hook cản đường thông tin -> trừ điểm.
@@ -59,6 +61,12 @@ TỐT HƠN một câu nhồi slang/hook - đừng thưởng điểm cho sự c�
 Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
 - voice ~1 (thiếu, sáo AI): "Trong thế giới game chiến thuật đầy màu sắc, không thể phủ nhận rằng..."
 - voice ~3 (thừa, slang gượng): "Chơi Đế chế 1 mãi cũng chán tay hả anh em ơi, vào chơi luôn cho nóng!"
+- voice ~5 (lủng củng máy móc: đúng thông tin nhưng câu đơ, nhịp gãy, đọc như dịch):
+  "Đó chính là cơ chế khắc chế quân rất chặt của Đế chế 4." / "Tuy nhiên, chẳng có gì miễn phí."
+  LUẬT CỨNG: bài có vài câu dạng này (câu tuyên bố đơ "Đó chính là...", chuyển ý sáo
+  "Tuy nhiên, chẳng...", câu kết kiểu thuyết minh) -> voice CẢ BÀI tối đa 6; nhận ra câu đơ
+  trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn tự nhiên (câu lệnh
+  ngắn, bước đánh số) KHÔNG tính là đơ.
 - voice ~8 (vừa, giọng dân Đế chế gãy gọn): "Đế chế đánh random, ra quân nào đánh theo bài quân đó."
 - conversion ~1 (thiếu hook): "Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất."
 - conversion ~3 (thừa, hook câu view rỗng chặn thông tin): "Bạn đã bao giờ tự hỏi làm sao để...? Đọc tiếp để biết bí mật!"
