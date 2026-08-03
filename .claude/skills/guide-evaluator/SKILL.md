@@ -63,10 +63,15 @@ Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
 - voice ~3 (thừa, slang gượng): "Chơi Đế chế 1 mãi cũng chán tay hả anh em ơi, vào chơi luôn cho nóng!"
 - voice ~5 (lủng củng máy móc: đúng thông tin nhưng câu đơ, nhịp gãy, đọc như dịch):
   "Đó chính là cơ chế khắc chế quân rất chặt của Đế chế 4." / "Tuy nhiên, chẳng có gì miễn phí."
+  Mẫu owner duyệt thêm, cùng mức ~5: "Vì sao Đế chế 4 bỏ được luật không thành thì bài
+  so sánh hai game đã nói rồi." / "Sang Đế chế 4, thành không phải thứ để cấm mà là thứ
+  để học." / "Càng về cuối đồ công càng khỏe hơn đồ thủ, nên rùa tới cuối game không phải
+  kèo thơm." / "Tường không chỉ để chặn - nó là chỗ đứng đánh nhau."
   LUẬT CỨNG: bài có vài câu dạng này (câu tuyên bố đơ "Đó chính là...", chuyển ý sáo
-  "Tuy nhiên, chẳng...", câu kết kiểu thuyết minh) -> voice CẢ BÀI tối đa 6; nhận ra câu đơ
-  trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn tự nhiên (câu lệnh
-  ngắn, bước đánh số) KHÔNG tính là đơ.
+  "Tuy nhiên, chẳng...", câu kết kiểu thuyết minh, câu đúc kết đối xứng kiểu khẩu hiệu
+  "không phải X mà là Y", câu tham chiếu lười "bài kia đã nói rồi") -> voice CẢ BÀI tối đa 6;
+  nhận ra câu đơ trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn
+  tự nhiên (câu lệnh ngắn, bước đánh số) KHÔNG tính là đơ.
 - voice ~8 (vừa, giọng dân Đế chế gãy gọn): "Đế chế đánh random, ra quân nào đánh theo bài quân đó."
 - conversion ~1 (thiếu hook): "Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất."
 - conversion ~3 (thừa, hook câu view rỗng chặn thông tin): "Bạn đã bao giờ tự hỏi làm sao để...? Đọc tiếp để biết bí mật!"
