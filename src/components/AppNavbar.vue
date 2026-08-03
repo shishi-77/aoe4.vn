@@ -33,7 +33,6 @@ function onJoin(channel: OutboundClickEvent['channel']) {
         class="absolute left-0 top-full w-full flex-col gap-4 border-b border-gold-dim/20 bg-ink px-4 py-4 sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:border-0 sm:bg-transparent sm:py-0"
         :class="open ? 'flex' : 'hidden'"
       >
-        <RouterLink to="/" class="font-bold text-cream hover:text-gold">Trang chủ</RouterLink>
         <RouterLink to="/faq/" class="font-bold text-cream hover:text-gold">
           Hỏi đáp
         </RouterLink>
@@ -58,19 +57,10 @@ function onJoin(channel: OutboundClickEvent['channel']) {
           :href="site.links.facebook"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-bold text-cream hover:text-gold"
+          class="rounded-md bg-gold px-4 py-2 font-bold text-ink hover:bg-gold-dim"
           @click="onJoin('facebook')"
         >
-          Facebook ↗
-        </a>
-        <a
-          :href="site.links.discord"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rounded-md bg-gold px-4 py-2 font-bold text-ink hover:bg-gold-dim"
-          @click="onJoin('discord')"
-        >
-          Discord
+          Facebook
         </a>
       </div>
     </nav>
