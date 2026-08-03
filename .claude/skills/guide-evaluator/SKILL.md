@@ -72,7 +72,8 @@ Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
   "không phải X mà là Y", câu tham chiếu lười "bài kia đã nói rồi") -> voice CẢ BÀI tối đa 6;
   nhận ra câu đơ trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn
   tự nhiên (câu lệnh ngắn, bước đánh số) KHÔNG tính là đơ.
-- voice ~8 (vừa, giọng dân Đế chế gãy gọn): "Đế chế đánh random, ra quân nào đánh theo bài quân đó."
+- voice ~8 (vừa, văn thật của người thật - chuẩn đối chiếu): "Quân La Mã bị rơi vào vòng vây của quân Carthage." /
+  "Thế nhưng, Milde chần chừ thiếu quyết đoán, không chịu thừa thắng truy kích, mất cơ hội tiêu diệt toàn bộ quân của Tướng Lee.". Bài đạt 8+ khi đọc lẫn được vào giọng này; thấp hơn rõ rệt -> 6 trở xuống.
 - conversion ~1 (thiếu hook): "Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất."
 - conversion ~3 (thừa, hook câu view rỗng chặn thông tin): "Bạn đã bao giờ tự hỏi làm sao để...? Đọc tiếp để biết bí mật!"
 - conversion ~8 (vừa): mở bài chạm đúng thứ người đọc cần rồi đưa họ tới bước tiếp/cộng đồng.

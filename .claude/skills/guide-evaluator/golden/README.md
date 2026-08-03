@@ -13,3 +13,5 @@ phát hiện judge lỏng/trôi. Quy tắc:
   không so điểm chính xác.
 - Kho facts đổi có thể làm bad-wrong-facts hết sai ("fixture mục") - xem mục chẩn
   đoán trong skill evaluator-calibrate.
+- Các file frozen-bad-voice-v2-* là bản main 2026-08-03 của bài owner chê "đơ/nhạt
+  dù PASS" - nhãn để calibration bắt kiểu lệch "judge dễ tính hơn owner".
