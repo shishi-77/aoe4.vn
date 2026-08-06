@@ -14,10 +14,14 @@ Vòng chấm: 3/3 (hết số vòng cho phép của skill write-article)
 | conversion | 7 (7/7/7) | 6 | ✅ |
 | TỔNG (thông tin, không phải gate) | 22/30 | - | - |
 
-Chống thụt lùi: THỤT LÙI - judge head-to-head chọn BẢN CŨ (bản nháp tại git HEAD) đọc hay hơn
-bản vòng 3 (FAIL cứng). Lý do judge đưa ra: bản cũ giữ mạch giải thích kèm lý do chặt hơn, thứ
-tự so sánh "nền AoE2 trước, AoE4 sau", luận điểm "chọn phe là chọn luôn cách chơi", và "cầu nối
-bảng bonus damage của AoE2".
+Chống thụt lùi: bài mới, không có bản trước trên `main` -> `regressedVsPrevious = false`, cổng
+bỏ qua (giao thức cập nhật ở PR #49, main 7513136: baseline là bản trên `origin/main`, không
+phải bản nháp trong nhánh).
+
+Ghi lại lần chấm trước để đối chiếu: theo giao thức CŨ (baseline = `git HEAD` = bản nháp vừa
+commit), judge head-to-head chọn bản nháp và bài bị FAIL cứng vì "regressed". Lý do judge đưa
+ra có nhắc "cầu nối bảng bonus damage của AoE2" - đúng câu mà fact-check đã loại vì không có
+nguồn. Chính ca này là bằng chứng cho gap đã sửa ở PR #49.
 
 Tôn trọng game RTS: không có câu dìm game/cộng đồng RTS nào (cả 3 vòng, cả 3 judge + fact-check
 đều xác nhận).
@@ -43,17 +47,18 @@ Chưa xác minh được (không chặn PASS trong phiên có owner, CHẶN đi�
 - "Chơi AoE2 lâu năm thì ai cũng quen cảnh đang thua vẫn gỡ lại được" - hệ quả diễn giải từ
   claim #9 (xếp hạng nhịp), 3 URL chính thức không nhắc tới comeback/pacing.
 
-VERDICT: FAIL
-Reasons: regressed: bản mới bị đánh giá dở hơn bản trước - giữ bản cũ
+VERDICT: PASS
+Reasons: không có (hygiene PASS, cả ba chiều >= sàn comparison, 0 mâu thuẫn, 0 câu dìm game,
+cổng chống thụt lùi không áp dụng cho bài mới)
 
-## Cần sửa
+Lưu ý: nội dung bài KHÔNG đổi so với lần chấm vòng 3, nên điểm giữ nguyên; thứ đổi chỉ là kết
+quả cổng chống thụt lùi sau khi giao thức được sửa ở PR #49.
 
-Đây là ca FAIL đặc biệt: điểm rubric ĐẠT cả ba sàn, accuracy sạch, không dìm game, chỉ trượt ở
-cổng chống thụt lùi. Không thể áp luật "regressed -> hoàn nguyên bản cũ" một cách máy móc, bởi
-bản cũ (git HEAD) chính là bản có 2 MÂU THUẪN SỰ THẬT - hoàn nguyên là ship bài sai sự thật.
+## Gap đã phát hiện và đã sửa
 
-Gap phát hiện được từ dry run này (thuộc Task 10 Step 2 của plan
-`docs/superpowers/plans/2026-08-03-voice-and-comparison-scale.md`):
+Dry run này (Task 10 Step 2 của plan
+`docs/superpowers/plans/2026-08-03-voice-and-comparison-scale.md`) lộ ra hai lỗi giao thức, đã
+vá ở PR #49:
 
 1. Judge head-to-head KHÔNG được biết ràng buộc nguồn của kind comparison, nên nó chấm cao đúng
    đoạn văn bị luật cứng loại ("cầu nối bảng bonus damage của AoE2" là claim không nguồn). Cổng
@@ -61,10 +66,9 @@ Gap phát hiện được từ dry run này (thuộc Task 10 Step 2 của plan
 2. Bước 3.4 của skill write-article yêu cầu commit bản nháp (status `drafted`), nên baseline của
    cổng chống thụt lùi là BẢN NHÁP CHƯA QUA FACT-CHECK, chứ không phải một bản đã từng PASS.
 
-Đề xuất sửa (chờ owner chốt, làm trên nhánh `claude/fix-comparison-dryrun` trước khi bật routine
-ở Task 11):
-- Thêm vào prompt head-to-head một dòng: "Nếu một bản chứa câu đã bị fact-check đánh dấu
-  contradiction/không có nguồn, KHÔNG được chọn bản đó, dù nó đọc mượt hơn."
-- Ghi rõ trong skill: với bài MỚI (chưa từng có bản PASS), cổng chống thụt lùi chỉ áp khi bản
-  baseline đã sạch accuracy; nếu baseline có contradiction thì bỏ qua cổng và ghi lý do vào
-  scorecard.
+Đã sửa ở PR #49 (merged, main 7513136):
+- Baseline của cổng đổi từ `git HEAD` sang `git show origin/main:` - bản đã từng qua cổng. Bài
+  chưa có trên `main` thì không có bản trước, cổng bỏ qua và ghi lý do vào scorecard.
+- Bước 2.5 chạy SAU Bước 3, và prompt head-to-head nhận thêm "DANH SÁCH CÂU SAI SỰ THẬT" kèm
+  luật: bản chứa câu đó thua, dù đọc mượt hơn.
+- write-article Bước 3.4 không commit file bài giữa loop nữa; commit một lần sau khi PASS.
