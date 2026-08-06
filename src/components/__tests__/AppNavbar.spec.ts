@@ -1,17 +1,34 @@
-import { mount } from '@vue/test-utils'
+import { mount, flushPromises } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
+import { createRouter, createMemoryHistory } from 'vue-router'
 import { site } from '@/data/site'
 import AppNavbar from '../AppNavbar.vue'
 
-const mountOptions = {
-  global: {
-    stubs: { RouterLink: { props: ['to'], template: '<a :href="to"><slot /></a>' } },
-  },
+const Blank = { template: '<div />' }
+
+function createTestRouter() {
+  return createRouter({
+    history: createMemoryHistory(),
+    routes: [
+      { path: '/', component: Blank },
+      { path: '/faq/', component: Blank },
+      { path: '/tournaments/', component: Blank },
+      { path: '/guides/', component: Blank },
+      { path: '/news/', component: Blank },
+    ],
+  })
+}
+
+async function mountNavbar() {
+  const router = createTestRouter()
+  router.push('/')
+  await router.isReady()
+  return { router, wrapper: mount(AppNavbar, { global: { plugins: [router] } }) }
 }
 
 describe('AppNavbar', () => {
-  it('hiển thị logo trong brand link về trang chủ', () => {
-    const wrapper = mount(AppNavbar, mountOptions)
+  it('hiển thị logo trong brand link về trang chủ', async () => {
+    const { wrapper } = await mountNavbar()
     const brand = wrapper.get('a[href="/"]')
     const img = brand.get('img')
     expect(img.attributes('src')).toBe('/favicon.webp')
@@ -21,8 +38,8 @@ describe('AppNavbar', () => {
     expect(brand.text()).toContain('AoE4 VN')
   })
 
-  it('dùng Facebook làm CTA duy nhất, bỏ Discord và link Trang chủ', () => {
-    const wrapper = mount(AppNavbar, mountOptions)
+  it('dùng Facebook làm CTA duy nhất, bỏ Discord và link Trang chủ', async () => {
+    const { wrapper } = await mountNavbar()
 
     const hrefs = wrapper.findAll('a').map((a) => a.attributes('href'))
     expect(hrefs).not.toContain(site.links.discord)
@@ -34,5 +51,37 @@ describe('AppNavbar', () => {
     expect(facebook.classes()).toContain('bg-gold')
     expect(facebook.attributes('target')).toBe('_blank')
     expect(facebook.attributes('rel')).toBe('noopener noreferrer')
+  })
+
+  it('tự đóng menu mobile sau khi điều hướng sang trang khác', async () => {
+    const { router, wrapper } = await mountNavbar()
+    const toggle = wrapper.get('button[aria-label="Mở menu"]')
+    const panel = wrapper.get('nav > div')
+
+    await toggle.trigger('click')
+    expect(toggle.attributes('aria-expanded')).toBe('true')
+    expect(panel.classes()).toContain('flex')
+
+    await router.push('/guides/')
+    await flushPromises()
+
+    expect(toggle.attributes('aria-expanded')).toBe('false')
+    expect(panel.classes()).toContain('hidden')
+  })
+
+  it('đóng menu mobile khi bấm link của chính trang đang xem', async () => {
+    const { router, wrapper } = await mountNavbar()
+    await router.push('/guides/')
+    await flushPromises()
+
+    const toggle = wrapper.get('button[aria-label="Mở menu"]')
+    await toggle.trigger('click')
+    expect(toggle.attributes('aria-expanded')).toBe('true')
+
+    await wrapper.get('nav > div a[href="/guides/"]').trigger('click')
+    await flushPromises()
+
+    expect(toggle.attributes('aria-expanded')).toBe('false')
+    expect(wrapper.get('nav > div').classes()).toContain('hidden')
   })
 })
