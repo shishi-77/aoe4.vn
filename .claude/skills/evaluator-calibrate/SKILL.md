@@ -31,7 +31,9 @@ pipeline, không tự sửa prompt; owner đọc báo cáo và quyết.
      chỉ nội dung bài, không header), lấy TRUNG VỊ từng chiều.
    - Kỳ vọng có `contradictionsMin/Max` / `aoe1DisparagementMin/Max`: dispatch
      1 subagent fact-check theo prompt Bước 3 (đối chiếu facts corpus + quét dìm
-     AoE1), dùng đường dẫn file tạm. Ghi số lượng contradictions và aoe1Disparagement.
+     game/cộng đồng RTS nào), dùng đường dẫn file tạm. Ghi số lượng contradictions và
+     `disparagement` (tên kỳ vọng trong expected.json giữ nguyên `aoe1Disparagement*`;
+     `checkCalibration` cộng dồn hai trường).
    - Kỳ vọng có `winner`: chạy Bước 2.5 head-to-head, BẢN CŨ = trích nội dung fence
      của `regression-pair-old.md` (bỏ header), BẢN MỚI = trích nội dung fence
      của `regression-pair-new.md` (bỏ header), đặt vào file tạm, đưa subagent
@@ -39,7 +41,7 @@ pipeline, không tự sửa prompt; owner đọc báo cáo và quyết.
    - Bỏ qua Bước 1 hygiene - phần tất định đã có unit test riêng.
 3. Gom kết quả thành một mảng JSON đúng schema `CalibrationResult` của
    `@/lib/calibration` và ghi ra `docs/reviews/calibration-results-<YYYY-MM-DD>.json`:
-   `[{"case":"...","scores":{...},"contradictions":N,"aoe1Disparagement":N,"winner":"..."}]`
+   `[{"case":"...","scores":{...},"contradictions":N,"disparagement":N,"winner":"..."}]`
    (chỉ ghi các trường mà case đó có chạy).
 4. Chạy: `npx vite-node scripts/check-calibration.ts docs/reviews/calibration-results-<YYYY-MM-DD>.json`
 5. Ghi báo cáo `docs/reviews/evaluator-calibration-<YYYY-MM-DD>.md`:
