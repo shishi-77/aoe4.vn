@@ -42,6 +42,12 @@ Soạn `docs/facts-review/<slug>.md`:
    - Bài `news`: mỗi claim kèm URL nguồn chính thức (patch notes ageofempires.com, Liquipedia,
      Steam...). Dùng WebFetch đọc nguồn để trích đúng; claim không tìm được nguồn thì GHI RÕ
      `[KHÔNG CÓ NGUỒN - SẼ BỎ KHỎI BÀI]`.
+   - Bài `comparison`: phân tầng theo game claim nói về:
+     | Claim về | Yêu cầu |
+     | --- | --- |
+     | AoE1 / meta VN | Trong kho `aoe1-facts.md` -> `[ĐÃ CÓ TRONG KHO]`; ngoài kho -> `[CẦN XÁC NHẬN]` (câu hỏi cho owner) |
+     | AoE4 | Kho `aoe4-facts.md` -> `[ĐÃ CÓ TRONG KHO]`; hoặc URL nguồn chính thức (WebFetch trích đúng) |
+     | AoE2 / AoE3 / StarCraft | BẮT BUỘC URL nguồn chính thức (wiki game, Liquipedia, patch notes); không tìm được nguồn -> `[KHÔNG CÓ NGUỒN - SẼ BỎ KHỎI BÀI]` |
 3. Mẫu bảng:
    | # | Claim | Trạng thái | Nguồn / fact đối chiếu |
 
@@ -53,6 +59,9 @@ Soạn `docs/facts-review/<slug>.md`:
 - Guide 100% claim `[ĐÃ CÓ TRONG KHO]`: bỏ qua cổng, ghi vào facts sheet dòng
   "Bỏ qua cổng owner: 100% facts từ kho đã xác minh". (Đây là cơ chế mở khóa giai đoạn 2.)
 - News: cổng nhanh - owner liếc bảng claim->nguồn và gật (hoặc tự bỏ claim thiếu nguồn).
+- Comparison: 0 claim `[CẦN XÁC NHẬN]` (mọi claim có kho hoặc nguồn) -> bỏ qua cổng owner,
+  ghi dòng "Bỏ qua cổng owner: mọi claim có kho/nguồn" vào facts sheet. Có claim AoE1/meta VN
+  ngoài kho -> status `facts-pending`, chờ owner như guide thường.
 - Sau khi owner duyệt: status = `facts-approved`. Facts guide mới được xác nhận -> APPEND vào
   đúng file facts corpus (`aoe1-facts.md` / `aoe4-facts.md`) theo format sẵn có, kèm dòng
   `Confirmed by site owner <YYYY-MM-DD>` - commit cùng PR của bài.
@@ -65,6 +74,9 @@ Soạn `docs/facts-review/<slug>.md`:
    internal link: >= 1 link tới bài liên quan có thật (theo design internal-linking).
    News: tạo `src/data/news/<slug>.ts` theo `_template.ts` của news, đăng ký vào `index.ts`,
    `sources[]` = đúng các URL trong facts sheet, `cta: true`, `publishedAt` hôm nay.
+   Comparison: tạo `src/data/guides/<slug>.ts` như guide với `kind: 'comparison'`,
+   `sources[]` = đúng các URL trong facts sheet, `cta: true`; internal link >= 1 tới bài
+   liên quan có thật (ưu tiên bài so sánh/guide AoE4 gần chủ đề).
 3. CHỈ dùng claim đã duyệt trong facts sheet. Giọng văn: viết theo
    `docs/voice-corpus/voice-guide.md` (đặc điểm + few-shot, đã đọc ở Bước 0) ngay từ
    nháp đầu - không viết chay rồi chờ evaluator vá. Tự nhiên, không "văn AI", không
@@ -90,10 +102,15 @@ Soạn `docs/facts-review/<slug>.md`:
 5. Owner merge -> phiên sau (hoặc ngay nếu owner còn đó) đổi status = `published`, gộp vào
    PR/branch queue kế tiếp.
 
-## Giai đoạn 2 (chưa bật - chỉ ghi nhận)
+## Điều kiện headless (scheduled agent dùng - đang bật)
 
-Chạy headless theo lịch chỉ khi: bài guide 100% facts từ kho (bài news: mọi claim xác minh
-trực tiếp từ nguồn - dòng `unverifiableClaims` trong scorecard mới nhất RỖNG) + evaluator
-PASS + gate xanh + kind nằm trong danh sách owner cho phép. Thiếu một điều kiện -> PR để mở
-chờ owner như thường.
-Không tự merge trong giai đoạn hiện tại.
+Một queue item ĐỦ ĐIỀU KIỆN cho phiên chạy không có owner khi thỏa MỘT trong:
+
+1. `comparison` hoặc `news`: facts sheet KHÔNG có claim `[CẦN XÁC NHẬN]` - mọi claim có kho
+   hoặc URL nguồn. Sau khi chấm, scorecard có `unverifiableClaims` -> PR vẫn mở nhưng liệt kê
+   rõ trong PR body mục "Cần owner liếc trước khi merge".
+2. `guide`: 100% claim `[ĐÃ CÓ TRONG KHO]`.
+
+Item không đủ điều kiện -> phiên headless BỎ QUA (đặt/giữ `facts-pending` nếu vừa soạn facts
+sheet), thử item kế tiếp trong queue. Headless TUYỆT ĐỐI không merge PR - owner là người merge
+duy nhất, mọi trường hợp.
