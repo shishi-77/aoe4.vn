@@ -81,7 +81,11 @@ Soạn `docs/facts-review/<slug>.md`:
    `docs/voice-corpus/voice-guide.md` (đặc điểm + few-shot, đã đọc ở Bước 0) ngay từ
    nháp đầu - không viết chay rồi chờ evaluator vá. Tự nhiên, không "văn AI", không
    slang gượng, TUYỆT ĐỐI không dìm game/cộng đồng RTS nào (AoE1, AoE2, AoE3, StarCraft...).
-4. Status queue = `drafted` (commit cùng bài).
+4. Status queue = `drafted`. Bài MỚI (chưa có trên `main`): CHƯA commit file bài ở bước này, để
+   nguyên trong working tree tới khi evaluator PASS ở Bước 4 rồi commit một lần cùng status
+   queue. Sở dĩ phải chờ là bởi commit bản nháp làm nó thành mốc đối chiếu cho các vòng sau và
+   dễ kéo cả loop đi sai (ca thật: dry run comparison 2026-08-06). Bài đã có trên `main` mà đang
+   trau chuốt lại thì cũng KHÔNG commit giữa loop, giữ nguyên bản main làm mốc.
 
 ## Bước 4 - Chấm và sửa (tối đa 3 vòng)
 

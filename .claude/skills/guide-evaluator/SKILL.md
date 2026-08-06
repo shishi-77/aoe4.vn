@@ -108,10 +108,21 @@ Trả JSON: {"structure":X,"voice":X,"conversion":X,"fixes":[{"dimension":"...",
 Mục tiêu: chặn loop "tối ưu chỉ số" đẩy một bài vốn đã tốt qua đỉnh đường cong (bản gốc sạch
 bị viết lại thành slang gượng/hook rỗng mà điểm rubric lại CAO hơn).
 
-1. Lấy bản trước từ git: `git show HEAD:src/data/guides/<slug>.ts`
-2. Nếu working tree GIỐNG HỆT bản HEAD (bài chưa bị sửa vòng này) -> KHÔNG có gì để so,
+Bản trước để so là bản ĐÃ TỪNG QUA CỔNG, tức bản trên `main`, KHÔNG phải bản nháp vừa commit
+trong phiên. Cổng này sinh ra để bảo vệ bài đã tốt khỏi bị viết lại dở đi; lấy bản nháp chưa
+fact-check làm chuẩn đối chiếu là dùng sai cổng (ca thật: dry run comparison 2026-08-06, judge
+chọn bản nháp vì thích đúng câu bị fact-check loại do không có nguồn).
+
+Chạy bước này SAU Bước 3 để có sẵn danh sách `contradictions` mà đưa cho judge.
+
+1. Lấy bản trước từ git: `git show origin/main:src/data/guides/<slug>.ts`
+   (chưa fetch thì `git fetch origin main` trước).
+2. File KHÔNG tồn tại trên `main` (bài mới, chưa xuất bản lần nào) -> KHÔNG có bản trước để so,
+   `regressedVsPrevious = false`, bỏ qua bước này và ghi vào scorecard "bài mới, không có bản
+   trước trên main".
+3. Nếu working tree GIỐNG HỆT bản trên `main` (bài chưa bị sửa vòng này) -> KHÔNG có gì để so,
    `regressedVsPrevious = false`, bỏ qua bước này.
-3. Nếu KHÁC (bài đã bị viết lại): dispatch 1 subagent judge head-to-head. Đưa cho nó
+4. Nếu KHÁC (bài đã bị viết lại): dispatch 1 subagent judge head-to-head. Đưa cho nó
    phần văn (paragraphs) của BẢN CŨ và BẢN MỚI, hỏi ĐÚNG:
    ```
    Hai phiên bản của cùng một bài guide AoE4 cho dân kỳ cựu Đế chế 1. Bản nào ĐỌC HAY HƠN
@@ -122,11 +133,15 @@ bị viết lại thành slang gượng/hook rỗng mà điểm rubric lại CAO
    được thắng chỉ vì đọc "văn" hơn.
    TUYỆT ĐỐI KHÔNG chọn bản có câu dìm/hạ thấp bất kỳ game/cộng đồng RTS nào (AoE1, AoE2,
    AoE3, StarCraft...): bản nào dìm game RTS thì bản kia thắng, dù nó "có duyên" hơn.
+   TUYỆT ĐỐI KHÔNG chọn bản chứa câu nằm trong DANH SÁCH CÂU SAI SỰ THẬT dưới đây (fact-check
+   đã đánh dấu là mâu thuẫn hoặc claim không có nguồn): bản chứa câu đó thua, dù đọc mượt hơn.
+   DANH SÁCH CÂU SAI SỰ THẬT: <dán quote của contradictions từ Bước 3, cả hai bản; không có
+   thì ghi "không có">
    BẢN CŨ: <dán paragraphs bản cũ>
    BẢN MỚI: <dán paragraphs bản mới>
    Trả JSON: {"winner":"old"|"new"|"tie","why":"1 câu"}
    ```
-4. `regressedVsPrevious = (winner === "old")`. "tie" và "new" -> false.
+5. `regressedVsPrevious = (winner === "old")`. "tie" và "new" -> false.
 
 ### Bước 3 - Fact-check accuracy + kiểm tra tôn trọng game RTS (đối chiếu facts file, KHÔNG tự đoán)
 Dispatch 1 subagent đọc:
@@ -207,8 +222,8 @@ Dòng `VERDICT: PASS` / `VERDICT: FAIL` là mốc harness bám vào - phải đ�
 /ralph-loop "Trau chuốt guide <slug> trong src/data/guides. Mỗi vòng: (1) dùng skill guide-evaluator chấm <slug>; (2) đọc docs/reviews/<slug>-scorecard.md; (3) nếu VERDICT FAIL, sửa file guide đúng theo 'Cần sửa' và các mâu thuẫn sự thật - chỉ sửa văn/nội dung, giữ slug + cấu trúc dữ liệu; TUYỆT ĐỐI không thêm câu dìm/hạ thấp game/cộng đồng RTS nào (AoE1, AoE2, AoE3, StarCraft...); nếu lý do FAIL là 'regressed' thì HOÀN NGUYÊN về bản cũ (git) thay vì sửa thêm; (4) chấm lại. CHỈ in <promise>GUIDE-PASSED</promise> khi scorecard mới nhất VERDICT: PASS. Chỉ mâu thuẫn sự thật, dìm AoE1, hygiene, chất lượng dưới sàn và thụt lùi PHẢI hết mới được PASS - claimsToVerify không chặn loop - KHÔNG in promise giả." --completion-promise "GUIDE-PASSED" --max-iterations 12
 ```
 Lưu ý:
-- Cổng chống thụt lùi so với bản `git HEAD`. Trong một phiên loop, đừng commit bài giữa chừng,
-  nếu không baseline sẽ trôi theo bản mới và cổng mất tác dụng.
+- Cổng chống thụt lùi so với bản trên `origin/main` (bản đã qua cổng), không phải bản `HEAD` của
+  nhánh đang làm. Bài mới chưa có trên main thì không có gì để so, cổng tự bỏ qua.
 - Claim ngoài facts (`claimsToVerify`) là danh sách advisory - bạn (người duyệt) xem lại sau
   khi bài đã PASS, chốt đúng/sai hoặc bổ sung vào facts file. Loop không chờ việc này để PASS.
 
@@ -223,7 +238,8 @@ các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
    thêm đúng một câu vào cuối đoạn QUAN TRỌNG: "Đây là BẢN TIN: đi thẳng thông tin, ngắn gọn
    thời sự; hook/slang không được chặn thông tin." Chấm conversion như bài tra cứu (đi thẳng
    vào thông tin là dẫn dắt tốt).
-3. **Bước 2.5**: giữ nguyên, so với `git show HEAD:src/data/news/<slug>.ts`.
+3. **Bước 2.5**: giữ nguyên, so với `git show origin/main:src/data/news/<slug>.ts`; bản tin mới
+   chưa có trên main thì bỏ qua cổng.
 4. **Bước 3 (fact-check news)**: ngoài 2 nhiệm vụ cũ (đối chiếu facts corpus + quét dìm
    game/cộng đồng RTS nào),
    subagent làm thêm nhiệm vụ XÁC MINH NGUỒN TRỰC TIẾP:
