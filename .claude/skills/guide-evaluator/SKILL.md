@@ -47,9 +47,14 @@ tự nhiên = cao điểm. THIẾU (khô cứng, không hook) VÀ THỪA (cố q
 câu view, CTA nhét bừa) đều là điểm THẤP. Một câu thông tin sạch gọn, đi thẳng việc thường
 TỐT HƠN một câu nhồi slang/hook - đừng thưởng điểm cho sự cố gắng lộ liễu.
 
-- structure: bố cục, heading rõ, đoạn không dài, câu ngắn gãy gọn.
-- voice: giọng trò chuyện dân Đế chế tự nhiên, KHÔNG "văn AI" và cũng KHÔNG slang gượng/xưng
-  hô "anh em ơi" nhồi nhét. Có em-dash bất kỳ đâu -> voice <= 3. TUYỆT ĐỐI KHÔNG dìm/hạ thấp
+- structure: bố cục, heading rõ, đoạn không dài, câu mạch lạc (câu dài nhiều vế vẫn tốt
+  miễn các vế nối rõ ràng, không rối).
+- voice: chuẩn giọng là CẨM NANG CỘNG ĐỒNG Đế chế (kiểu aoe.vn, owner chốt 2026-08-06):
+  người chơi lâu năm giảng lại cho anh em, từ tốn, giải thích kèm lý do ("Sở dĩ... là bởi"),
+  thuật ngữ cộng đồng lần đầu để trong ngoặc kép, câu được phép dài nhiều vế nối bằng
+  "Bên cạnh đó/Chính vì vậy/Do đó" - KHÔNG trừ điểm vì câu dài đúng mạch. KHÔNG "văn AI",
+  KHÔNG slang gượng/xưng hô "anh em ơi" nhồi nhét, và cũng KHÔNG văn gằn từng câu cụt
+  để ra vẻ "chất văn chương". Có em-dash bất kỳ đâu -> voice <= 3. TUYỆT ĐỐI KHÔNG dìm/hạ thấp
   Đế chế 1 (AoE1) hay cộng đồng AoE1 (vd "phe AoE1 na ná nhau", "AoE1 nhàm/cũ kỹ"); so sánh
   AoE1<->AoE4 để làm rõ thì được, chê AoE1 dở thì KHÔNG. Có câu dìm AoE1 -> voice <= 2.
   Bài đúng thông tin nhưng giọng đơ, máy móc, nhịp câu lặp đều đều -> voice cao nhất là 5-6,
@@ -75,13 +80,21 @@ Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
   phát." / "Kỵ nặng bên Đế chế 4 là xe tăng thời trung cổ: lì, chạy nhanh, chém đau." / "Nên
   trước khi lao kỵ vào, cân nhắc kỹ bài toán kinh tế." / "Camel Archer (lạc đà tên) ra từ
   đời 2, vừa chạy vừa bắn."
+  Mẫu owner LOẠI ở blind test 2026-08-04 (văn gằn câu cụt, ra vẻ "chất" - cùng mức ~5-6):
+  "Gặp lính thì kiếm, gặp nhà thì lửa." / "Cầm kỵ trong tay là cầm luôn nhịp: muốn đẩy
+  sớm thì đẩy, muốn câu chậm lại thì câu." / "Hớ đúng một nhịp rút là mất sạch, tiền đâu
+  mà bù." / "tường đá cứ đứng đó trơ trơ."
   LUẬT CỨNG: bài có vài câu dạng này (câu tuyên bố đơ "Đó chính là...", chuyển ý sáo
   "Tuy nhiên, chẳng...", câu kết kiểu thuyết minh, câu đúc kết đối xứng kiểu khẩu hiệu
-  "không phải X mà là Y", câu tham chiếu lười "bài kia đã nói rồi") -> voice CẢ BÀI tối đa 6;
+  "không phải X mà là Y", câu tham chiếu lười "bài kia đã nói rồi", chuỗi câu gằn cụt
+  ra vẻ văn chương) -> voice CẢ BÀI tối đa 6;
   nhận ra câu đơ trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn
   tự nhiên (câu lệnh ngắn, bước đánh số) KHÔNG tính là đơ.
-- voice ~8 (vừa, văn thật của người thật - chuẩn đối chiếu): "Quân La Mã bị rơi vào vòng vây của quân Carthage." /
-  "Thế nhưng, Milde chần chừ thiếu quyết đoán, không chịu thừa thắng truy kích, mất cơ hội tiêu diệt toàn bộ quân của Tướng Lee.". Bài đạt 8+ khi đọc lẫn được vào giọng này; thấp hơn rõ rệt -> 6 trở xuống.
+- voice ~8 (vừa, chuẩn đối chiếu - giọng cẩm nang cộng đồng, owner chọn 2026-08-06):
+  "Nếu như đối thủ không đào vàng, vậy chắc chắn họ sẽ lựa chọn các loại quân gỗ như cung R, ngựa R hay thậm chí là cung T, quẩy đá." /
+  "Sở dĩ có lời khuyên này là bởi, dù nông dân solo 1vs1 gần như chắc thắng, đặc biệt là nếu dân phi trước, tuy nhiên việc dân mất máu khi giết sư tử sẽ gián đoạn việc đi dò." /
+  "Cũng nên nhớ rằng AoE vẫn luôn là một trò chơi đầy tính may rủi, hãy sẵn sàng tâm lý cho những bãi quả khó nhằn hoặc không thể ăn được."
+  Bài đạt 8+ khi đọc lẫn được vào giọng này; thấp hơn rõ rệt -> 6 trở xuống.
 - conversion ~1 (thiếu hook): "Bài viết dưới đây sẽ cung cấp cho bạn những thông tin hữu ích nhất."
 - conversion ~3 (thừa, hook câu view rỗng chặn thông tin): "Bạn đã bao giờ tự hỏi làm sao để...? Đọc tiếp để biết bí mật!"
 - conversion ~8 (vừa): mở bài chạm đúng thứ người đọc cần rồi đưa họ tới bước tiếp/cộng đồng.
@@ -102,6 +115,9 @@ bị viết lại thành slang gượng/hook rỗng mà điểm rubric lại CAO
    Hai phiên bản của cùng một bài guide AoE4 cho dân kỳ cựu Đế chế 1. Bản nào ĐỌC HAY HƠN
    cho người đọc đó (rõ, tự nhiên, không cố quá)? KHÔNG thưởng điểm cho bản chỉ vì nhiều
    slang/hook/CTA hơn - nếu thêm thắt làm bài lố hoặc chậm thông tin thì bản gọn hơn thắng.
+   Chuẩn giọng để so là giọng cẩm nang cộng đồng Đế chế (từ tốn, giải thích kèm lý do,
+   câu dài nhiều vế nối mạch lạc); bản gằn từng câu cụt để ra vẻ "chất văn chương" KHÔNG
+   được thắng chỉ vì đọc "văn" hơn.
    TUYỆT ĐỐI KHÔNG chọn bản có câu dìm/hạ thấp Đế chế 1 (AoE1) hay cộng đồng AoE1: bản nào
    dìm AoE1 thì bản kia thắng, dù nó "có duyên" hơn.
    BẢN CŨ: <dán paragraphs bản cũ>
