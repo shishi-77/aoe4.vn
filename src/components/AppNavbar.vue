@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { site } from '@/data/site'
 import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
 
 const open = ref(false)
 const route = useRoute()
+
+// The navbar lives outside RouterView, so it survives navigation: close the
+// mobile menu whenever the route changes.
+watch(
+  () => route.fullPath,
+  () => {
+    open.value = false
+  },
+)
 
 function onJoin(channel: OutboundClickEvent['channel']) {
   trackOutboundClick({ channel, placement: 'header', path: route.path })
@@ -32,6 +41,7 @@ function onJoin(channel: OutboundClickEvent['channel']) {
       <div
         class="absolute left-0 top-full w-full flex-col gap-4 border-b border-gold-dim/20 bg-ink px-4 py-4 sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:border-0 sm:bg-transparent sm:py-0"
         :class="open ? 'flex' : 'hidden'"
+        @click="open = false"
       >
         <RouterLink to="/faq/" class="font-bold text-cream hover:text-gold">
           Hỏi đáp
