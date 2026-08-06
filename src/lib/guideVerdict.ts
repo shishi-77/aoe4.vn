@@ -12,11 +12,13 @@ export interface AccuracyResult {
   /** Số câu mâu thuẫn với facts file (mỗi cái là lỗi sự thật cứng). */
   contradictions: number
   /**
-   * Số câu DÌM/HẠ THẤP Đế chế 1 (AoE1) hoặc cộng đồng AoE1 (vd "các phe AoE1 na ná
-   * nhau", "AoE1 nhàm/cũ kỹ"). Cộng đồng AoE1 là gốc và lớn nhất - TUYỆT ĐỐI không dìm.
-   * Vi phạm cứng, chặn PASS y như một mâu thuẫn sự thật. So sánh AoE1<->AoE4 để làm rõ
-   * thì được, chê AoE1 dở thì KHÔNG. Bỏ trống -> coi như 0.
+   * Số câu DÌM/HẠ THẤP bất kỳ game/cộng đồng RTS nào (AoE1, AoE2, AoE3, StarCraft...).
+   * Người đọc bài so sánh chính là dân game đó - chê game của họ là tự đuổi khách.
+   * So sánh làm rõ khác biệt thì được; phán game nào dở/nhàm/lỗi thời -> vi phạm cứng,
+   * chặn PASS y như một mâu thuẫn sự thật. Bỏ trống -> coi như 0.
    */
+  disparagement?: number
+  /** @deprecated Tên cũ (chỉ AoE1). Vẫn được cộng dồn vào disparagement. */
   aoe1Disparagement?: number
 }
 
@@ -27,7 +29,7 @@ export interface QualityFloors {
 }
 
 /** Loại bài quyết định sàn nào áp lên. Mặc định 'strategy' (chặt hơn). */
-export type GuideKind = 'utility' | 'strategy'
+export type GuideKind = 'utility' | 'strategy' | 'comparison'
 
 /**
  * Bài chiến thuật/quan điểm (build order, phân tích civ, so sánh). Hưởng lợi từ
@@ -52,6 +54,12 @@ export const UTILITY_FLOORS: QualityFloors = {
 }
 
 /**
+ * Bài so sánh cầu nối (AoE4 vs AoE2/AoE3/StarCraft...) kéo dân game khác khám phá
+ * AoE4. Sống chết ở giọng văn nên sàn giữ nguyên mức strategy.
+ */
+export const COMPARISON_FLOORS: QualityFloors = STRATEGY_FLOORS
+
+/**
  * News posts: clarity-first like utility (news readers want the information,
  * not community slang), so voice/conversion floors match UTILITY_FLOORS.
  */
@@ -66,7 +74,9 @@ export const DEFAULT_FLOORS: QualityFloors = STRATEGY_FLOORS
 
 /** Chọn bộ sàn theo loại bài. `undefined` -> coi như 'strategy'. */
 export function floorsForKind(kind: GuideKind | undefined): QualityFloors {
-  return kind === 'utility' ? UTILITY_FLOORS : STRATEGY_FLOORS
+  if (kind === 'utility') return UTILITY_FLOORS
+  if (kind === 'comparison') return COMPARISON_FLOORS
+  return STRATEGY_FLOORS
 }
 
 /** Article kind across both content types. */
@@ -94,7 +104,7 @@ export interface Verdict {
 
 /**
  * Cổng PASS/FAIL tất định cho một guide. Không có LLM cộng điểm bằng tay ở đây.
- * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ không dìm Đế chế 1 VÀ không
+ * PASS khi: hygiene ok VÀ không mâu thuẫn sự thật VÀ không dìm game RTS nào VÀ không
  * thụt lùi so với bản trước VÀ mỗi chiều >= sàn riêng của nó (theo loại bài). Không
  * có ngưỡng tổng.
  *
@@ -113,8 +123,11 @@ export function guideVerdict(
   if (!hygienePass) reasons.push('SEO hygiene failed')
   if (accuracy.contradictions > 0)
     reasons.push(`accuracy: ${accuracy.contradictions} contradiction(s) with facts`)
-  if ((accuracy.aoe1Disparagement ?? 0) > 0)
-    reasons.push(`respect: ${accuracy.aoe1Disparagement} câu dìm Đế chế 1 (AoE1) - cấm`)
+  const disparagement = (accuracy.disparagement ?? 0) + (accuracy.aoe1Disparagement ?? 0)
+  if (disparagement > 0)
+    reasons.push(
+      `respect: ${disparagement} câu dìm game/cộng đồng RTS (AoE1/AoE2/AoE3/StarCraft...) - cấm`,
+    )
   if (regression?.regressedVsPrevious)
     reasons.push('regressed: bản mới bị đánh giá dở hơn bản trước - giữ bản cũ')
   for (const dim of ['structure', 'voice', 'conversion'] as const) {

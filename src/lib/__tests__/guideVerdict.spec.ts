@@ -7,6 +7,7 @@ import {
   CONVERSION_FLOOR,
   STRATEGY_FLOORS,
   UTILITY_FLOORS,
+  COMPARISON_FLOORS,
   NEWS_FLOORS,
   floorsForArticleKind,
 } from '@/lib/guideVerdict'
@@ -36,7 +37,25 @@ describe('guideVerdict', () => {
   it('fail nếu dìm Đế chế 1 (dù điểm cao, không mâu thuẫn)', () => {
     const v = guideVerdict(true, strong, { contradictions: 0, aoe1Disparagement: 1 })
     expect(v.pass).toBe(false)
-    expect(v.reasons.some((r) => r.includes('dìm Đế chế 1'))).toBe(true)
+    expect(v.reasons.some((r) => r.includes('dìm'))).toBe(true)
+  })
+
+  it('comparison dùng sàn như strategy', () => {
+    expect(floorsForKind('comparison')).toEqual(STRATEGY_FLOORS)
+    expect(COMPARISON_FLOORS).toEqual(STRATEGY_FLOORS)
+    expect(floorsForArticleKind('comparison')).toEqual(STRATEGY_FLOORS)
+  })
+
+  it('fail nếu dìm bất kỳ game RTS nào (trường disparagement mới)', () => {
+    const v = guideVerdict(true, strong, { contradictions: 0, disparagement: 1 })
+    expect(v.pass).toBe(false)
+    expect(v.reasons.some((r) => r.includes('dìm'))).toBe(true)
+  })
+
+  it('aoe1Disparagement (alias cũ) vẫn chặn PASS và cộng dồn với disparagement', () => {
+    expect(guideVerdict(true, strong, { contradictions: 0, aoe1Disparagement: 1 }).pass).toBe(false)
+    const v = guideVerdict(true, strong, { contradictions: 0, disparagement: 1, aoe1Disparagement: 1 })
+    expect(v.reasons.some((r) => r.includes('2 câu dìm'))).toBe(true)
   })
 
   it('aoe1Disparagement bỏ trống hoặc 0 thì không chặn PASS', () => {

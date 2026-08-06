@@ -29,6 +29,8 @@ export interface CalibrationResult {
   scores?: CalibrationScores
   contradictions?: number
   aoe1Disparagement?: number
+  /** Canonical any-RTS disparagement count; summed with the legacy aoe1Disparagement. */
+  disparagement?: number
   winner?: 'old' | 'new' | 'tie'
 }
 
@@ -87,10 +89,11 @@ export function checkCalibration(
       problems.push(`contradictions ${r.contradictions ?? 0} below min ${e.contradictionsMin} (hard gate did not trip)`)
     if (e.contradictionsMax !== undefined && (r.contradictions ?? 0) > e.contradictionsMax)
       problems.push(`contradictions ${r.contradictions ?? 0} above max ${e.contradictionsMax} (false accusation)`)
-    if (e.aoe1DisparagementMin !== undefined && (r.aoe1Disparagement ?? 0) < e.aoe1DisparagementMin)
-      problems.push(`aoe1Disparagement ${r.aoe1Disparagement ?? 0} below min ${e.aoe1DisparagementMin} (hard gate did not trip)`)
-    if (e.aoe1DisparagementMax !== undefined && (r.aoe1Disparagement ?? 0) > e.aoe1DisparagementMax)
-      problems.push(`aoe1Disparagement ${r.aoe1Disparagement ?? 0} above max ${e.aoe1DisparagementMax} (false accusation)`)
+    const disp = (r.disparagement ?? 0) + (r.aoe1Disparagement ?? 0)
+    if (e.aoe1DisparagementMin !== undefined && disp < e.aoe1DisparagementMin)
+      problems.push(`aoe1Disparagement ${disp} below min ${e.aoe1DisparagementMin} (hard gate did not trip)`)
+    if (e.aoe1DisparagementMax !== undefined && disp > e.aoe1DisparagementMax)
+      problems.push(`aoe1Disparagement ${disp} above max ${e.aoe1DisparagementMax} (false accusation)`)
     if (e.winner !== undefined && r.winner !== e.winner)
       problems.push(`winner ${r.winner ?? 'missing'} but expected ${e.winner} (regression gate did not trip)`)
     verdicts.push({ case: name, pass: problems.length === 0, problems })

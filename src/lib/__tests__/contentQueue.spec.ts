@@ -31,6 +31,11 @@ describe('validateQueue', () => {
     expect(validateQueue([item({ kind: 'video' })]).length).toBeGreaterThan(0)
   })
 
+  it('kind comparison hợp lệ, kind lạ vẫn bị bắt', () => {
+    expect(validateQueue([item({ kind: 'comparison' })])).toEqual([])
+    expect(validateQueue([item({ kind: 'video' })]).length).toBeGreaterThan(0)
+  })
+
   it('bắt ngày sai định dạng và slug bẩn', () => {
     expect(validateQueue([item({ createdAt: '02/08/2026' })]).length).toBeGreaterThan(0)
     expect(validateQueue([item({ slug: 'Có Dấu' })]).length).toBeGreaterThan(0)

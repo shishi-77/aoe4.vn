@@ -1,1 +1,177 @@
-[]
+[
+  {
+    "slug": "aoe4-vs-aoe2-khac-biet-cot-loi",
+    "targetKeyword": "aoe4 vs aoe2",
+    "kind": "comparison",
+    "evidence": { "query": "aoe4 vs aoe2", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "dan-aoe2-chuyen-sang-aoe4",
+    "targetKeyword": "chuyển từ aoe2 sang aoe4",
+    "kind": "comparison",
+    "evidence": {
+      "query": "chuyển từ aoe2 sang aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "aoe4-vs-starcraft-tu-duy-chien-thuat",
+    "targetKeyword": "aoe4 vs starcraft",
+    "kind": "comparison",
+    "evidence": {
+      "query": "aoe4 vs starcraft",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "dan-starcraft-choi-aoe4",
+    "targetKeyword": "starcraft chuyển sang aoe4",
+    "kind": "comparison",
+    "evidence": {
+      "query": "starcraft chuyển sang aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "aoe4-vs-aoe3-khac-nhau-the-nao",
+    "targetKeyword": "aoe4 vs aoe3",
+    "kind": "comparison",
+    "evidence": { "query": "aoe4 vs aoe3", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "kinh-te-aoe4-vs-aoe2",
+    "targetKeyword": "kinh tế aoe4 aoe2",
+    "kind": "comparison",
+    "evidence": {
+      "query": "kinh tế aoe4 aoe2",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "quan-khac-che-aoe4-vs-aoe2",
+    "targetKeyword": "khắc chế quân aoe4",
+    "kind": "comparison",
+    "evidence": {
+      "query": "khắc chế quân aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "tuong-thanh-aoe4-vs-aoe2",
+    "targetKeyword": "tường thành aoe4 aoe2",
+    "kind": "comparison",
+    "evidence": {
+      "query": "tường thành aoe4 aoe2",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "civ-aoe4-vs-dan-toc-aoe2",
+    "targetKeyword": "civ aoe4 vs aoe2",
+    "kind": "comparison",
+    "evidence": {
+      "query": "civ aoe4 vs aoe2",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "ranked-aoe4-vs-ladder-starcraft",
+    "targetKeyword": "rank aoe4",
+    "kind": "comparison",
+    "evidence": { "query": "rank aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "aoe3-co-gi-hay",
+    "targetKeyword": "aoe3 có gì hay",
+    "kind": "comparison",
+    "evidence": { "query": "aoe3 có gì hay", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "game-rts-nao-de-bat-dau-2026",
+    "targetKeyword": "game rts cho người mới",
+    "kind": "comparison",
+    "evidence": {
+      "query": "game rts cho người mới",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "esports-aoe4-vs-starcraft2",
+    "targetKeyword": "giải đấu aoe4",
+    "kind": "comparison",
+    "evidence": { "query": "giải đấu aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "micro-aoe4-vs-starcraft",
+    "targetKeyword": "micro aoe4",
+    "kind": "comparison",
+    "evidence": { "query": "micro aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "aoe2-dinh-cao-vi-sao-van-nen-thu-aoe4",
+    "targetKeyword": "aoe2 hay aoe4",
+    "kind": "comparison",
+    "evidence": { "query": "aoe2 hay aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "createdAt": "2026-08-06",
+    "updatedAt": "2026-08-06"
+  }
+]
