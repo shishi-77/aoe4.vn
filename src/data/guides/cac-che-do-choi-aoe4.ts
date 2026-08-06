@@ -26,7 +26,7 @@ export const gameModesGuide: Guide = {
       heading: 'Chơi cùng bạn bè: phòng tùy chỉnh',
       paragraphs: [
         'Phòng tùy chỉnh (Custom) cho bạn tự tạo trận và mời bạn bè vào chơi chung, tự chọn bản đồ và luật. Đây là cách hợp nhất để chơi với hội bạn người Việt hoặc tổ đội cùng đánh máy.',
-        'Nếu chưa có nhóm bạn chơi cùng, hãy tham gia cộng đồng AoE4 Việt Nam để rủ kèo và lập đội - chi tiết ở bài hướng dẫn tìm người Việt chơi cùng.',
+        'Nếu chưa có nhóm bạn chơi cùng, hãy tham gia cộng đồng Đế chế 4 Việt Nam để rủ kèo và lập đội - chi tiết ở bài hướng dẫn tìm người Việt chơi cùng.',
       ],
     },
   ],

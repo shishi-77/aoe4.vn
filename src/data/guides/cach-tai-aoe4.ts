@@ -12,7 +12,7 @@ export const downloadGuide: Guide = {
     {
       heading: 'Mua Đế chế 4 ở đâu?',
       paragraphs: [
-        'Age of Empires IV (Đế chế 4) là game trả phí, bán chính thức trên Steam và nằm sẵn trong gói PC/Xbox Game Pass. Nếu bạn đang có Game Pass thì chơi được luôn mà không phải mua riêng.',
+        'Đế chế 4 (tên chính thức Age of Empires IV) là game trả phí, bán chính thức trên Steam và nằm sẵn trong gói PC/Xbox Game Pass. Nếu bạn đang có Game Pass thì chơi được luôn mà không phải mua riêng.',
         'Giá trên Steam thay đổi theo từng đợt giảm, nên xem giá mới nhất trực tiếp tại trang Steam của game trước khi mua.',
       ],
     },
@@ -28,11 +28,11 @@ export const downloadGuide: Guide = {
       heading: 'Cài qua Game Pass',
       paragraphs: [
         'Cài ứng dụng Xbox trên PC, đăng nhập tài khoản Microsoft đang có Game Pass.',
-        'Tìm Age of Empires IV trong thư viện Game Pass và bấm Cài đặt. Cách này không tốn phí mua game khi gói còn hiệu lực.',
+        'Tìm "Age of Empires IV" trong thư viện Game Pass và bấm Cài đặt. Cách này không tốn phí mua game khi gói còn hiệu lực.',
       ],
     },
   ],
   related: [
-    { slug: 'cau-hinh-may-aoe4', label: 'Cấu hình máy chơi AoE4' },
+    { slug: 'cau-hinh-may-aoe4', label: 'Cấu hình máy chơi Đế chế 4' },
   ],
 }

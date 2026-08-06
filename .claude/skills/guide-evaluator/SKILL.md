@@ -31,6 +31,10 @@ Chạy: `npx vite-node scripts/score-guide-seo.ts <slug>`
 - Đọc `hygiene`. Nếu `hygiene.pass === false` -> guide bị loại ngay, ghi scorecard FAIL với
   `hygiene.failures`, KHÔNG chấm tiếp. SEO KHÔNG cho điểm chất lượng (nó cho ~10 với mọi bài
   thật nên vô dụng làm tín hiệu chất lượng).
+- `hygiene.failures` gộp cả LỖI ĐẶT TÊN GAME (quy ước ở CLAUDE.md mục "Naming the games":
+  thân bài gọi `Đế chế 1/2/3/4`; `Đế chế` trơ chỉ dành cho cả dòng). Đây là luật tất định,
+  không phải chuyện gu - thấy nó trong `failures` thì ghi FAIL và trả nguyên câu lỗi vào
+  "Cần sửa", đừng diễn giải lại.
 - Đọc `kind` (`'utility'` | `'strategy'`). Đây là loại bài, quyết định bộ sàn ở Bước 4.
 
 ### Bước 2 - Chấm định tính bằng median-of-3 (structure / voice / conversion)

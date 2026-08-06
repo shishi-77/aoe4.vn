@@ -12,7 +12,7 @@ export const systemRequirementsGuide: Guide = {
     {
       heading: 'Đế chế 4 có nặng máy không?',
       paragraphs: [
-        'So với nhiều game 3D ra cùng thời, Age of Empires IV nhẹ hơn đáng kể. Đây là game chiến thuật nên ưu tiên CPU và RAM hơn là card đồ họa khủng, vì vậy nhiều máy tầm trung và cả một số laptop văn phòng đời mới vẫn chơi được ở thiết lập thấp đến trung bình.',
+        'So với nhiều game 3D ra cùng thời, Đế chế 4 nhẹ hơn đáng kể. Đây là game chiến thuật nên ưu tiên CPU và RAM hơn là card đồ họa khủng, vì vậy nhiều máy tầm trung và cả một số laptop văn phòng đời mới vẫn chơi được ở thiết lập thấp đến trung bình.',
         'Điểm cần lưu ý là khi trận đấu về cuối, quân và hiệu ứng nhiều lên thì máy yếu có thể bị khựng. Giảm số người chơi trong trận và hạ vài thiết lập đồ họa sẽ giúp chơi mượt hơn.',
       ],
     },
@@ -46,6 +46,6 @@ export const systemRequirementsGuide: Guide = {
     },
   ],
   related: [
-    { slug: 'cach-tai-aoe4', label: 'Cách tải và mua AoE4' },
+    { slug: 'cach-tai-aoe4', label: 'Cách tải và mua Đế chế 4' },
   ],
 }

@@ -27,7 +27,7 @@ export const beginnerGuide: Guide = {
     {
       heading: 'Chọn một nền văn minh dễ',
       paragraphs: [
-        'Mỗi nền văn minh trong AoE4 có lối chơi riêng. Người mới nên chọn một phe có lối chơi thẳng và ít cơ chế đặc biệt để tập trung học nền tảng, thay vì chọn phe phức tạp ngay từ đầu.',
+        'Mỗi nền văn minh trong Đế chế 4 có lối chơi riêng. Người mới nên chọn một phe có lối chơi thẳng và ít cơ chế đặc biệt để tập trung học nền tảng, thay vì chọn phe phức tạp ngay từ đầu.',
         'Khi đã quen tay, bạn có thể thử các nền văn minh khác để tìm phe hợp gu mình nhất.',
       ],
     },
@@ -47,7 +47,7 @@ export const beginnerGuide: Guide = {
     },
   ],
   related: [
-    { slug: 'cac-che-do-choi-aoe4', label: 'Các chế độ chơi trong AoE4' },
+    { slug: 'cac-che-do-choi-aoe4', label: 'Các chế độ chơi trong Đế chế 4' },
     { slug: 'cac-nen-van-minh-aoe4', label: 'Chọn nền văn minh nào?' },
   ],
 }

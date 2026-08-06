@@ -96,9 +96,9 @@ const { el: communityEl } = useReveal()
     class="reveal border-t border-steel/15 bg-surface/40 px-4 py-16"
   >
     <div class="mx-auto max-w-3xl text-center">
-      <SectionTitle eyebrow="Tham gia" title="Cộng đồng AoE4 Việt Nam" />
+      <SectionTitle eyebrow="Tham gia" title="Cộng đồng Đế chế 4 Việt Nam" />
       <p class="text-cream/85">
-        Nơi quy tụ người chơi Age of Empires IV tại Việt Nam - giải đấu và tin tức.
+        Nơi quy tụ người chơi Đế chế 4 tại Việt Nam - giải đấu và tin tức.
       </p>
       <div class="mt-6 flex flex-wrap justify-center gap-4">
         <a

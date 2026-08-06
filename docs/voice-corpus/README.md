@@ -22,4 +22,8 @@ write-article để sinh lại `voice-guide.md`. Không sửa tay voice-guide.md
 - 10-20 mẫu là đủ dùng; thêm dần khi gặp mẫu đắt.
 - Mẫu chỉ cần là đoạn 2-6 câu có chất giọng rõ; không cần cả bài.
 - Văn mẫu chỉ dùng nội bộ - không trích đăng, không chép nguyên câu vào bài.
+- Cách đặt tên game trong bài KHÔNG nằm ở đây: `voice-guide.md` là file sinh tự động nên quy
+  ước đó sống ở CLAUDE.md mục "Naming the games", và được máy kiểm tra bằng
+  `@/lib/gameNaming`. Văn mẫu có thể gọi game kiểu cũ (`AoE2`, `Đế chế` trơ) mà vẫn hợp lệ,
+  bài viết ra thì không.
 - Thư mục này nằm trong `docs/` (gitignore) nên khi commit phải dùng `git add -f`.

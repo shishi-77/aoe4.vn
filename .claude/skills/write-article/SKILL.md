@@ -81,6 +81,11 @@ Soạn `docs/facts-review/<slug>.md`:
    `docs/voice-corpus/voice-guide.md` (đặc điểm + few-shot, đã đọc ở Bước 0) ngay từ
    nháp đầu - không viết chay rồi chờ evaluator vá. Tự nhiên, không "văn AI", không
    slang gượng, TUYỆT ĐỐI không dìm game/cộng đồng RTS nào (AoE1, AoE2, AoE3, StarCraft...).
+   ĐẶT TÊN GAME theo quy ước ở CLAUDE.md mục "Naming the games": thân bài (đoạn văn,
+   heading, anchor text) gọi `Đế chế 1/2/3/4`, KHÔNG dùng `AoE4` hay `Age of Empires IV`
+   làm nhãn thường trực; `Đế chế` trơ chỉ để chỉ CẢ DÒNG và phải đi sau `dòng`/`cộng đồng`/
+   `làng`. Viết tắt để dành cho title, description, slug, meta. Vi phạm là FAIL hygiene ở
+   Bước 4, không phải góp ý.
 4. Status queue = `drafted`. Bài MỚI (chưa có trên `main`): CHƯA commit file bài ở bước này, để
    nguyên trong working tree tới khi evaluator PASS ở Bước 4 rồi commit một lần cùng status
    queue. Sở dĩ phải chờ là bởi commit bản nháp làm nó thành mốc đối chiếu cho các vòng sau và
