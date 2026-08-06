@@ -26,11 +26,14 @@ function onJoin(channel: OutboundClickEvent['channel']) {
       <CtaButton
         v-if="site.links.facebook"
         :href="site.links.facebook"
+        variant="facebook"
         @click="onJoin('facebook')"
       >
         Facebook Group
       </CtaButton>
-      <CtaButton :href="site.links.discord" @click="onJoin('discord')">Discord</CtaButton>
+      <CtaButton :href="site.links.discord" variant="discord" @click="onJoin('discord')">
+        Discord
+      </CtaButton>
     </div>
   </div>
 </template>
