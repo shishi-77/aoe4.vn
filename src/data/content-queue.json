@@ -4,7 +4,8 @@
     "targetKeyword": "aoe4 vs aoe2",
     "kind": "comparison",
     "evidence": { "query": "aoe4 vs aoe2", "impressions": 0, "position": 0, "source": "manual" },
-    "status": "drafted",
+    "status": "parked",
+    "notes": "Dry run Task 10: 3 vòng evaluator. Vòng 3 đạt cả 3 sàn (8/7/7), accuracy sạch, không dìm game, nhưng cổng chống thụt lùi chọn bản nháp cũ nên FAIL cứng. Bản nháp cũ lại chứa 2 mâu thuẫn sự thật nên không thể hoàn nguyên. Chờ owner chốt cách sửa cổng - xem docs/reviews/aoe4-vs-aoe2-khac-biet-cot-loi-scorecard.md",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
   },
