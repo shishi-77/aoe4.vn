@@ -4,7 +4,11 @@ Format mỗi mục: xem README.md cùng thư mục.
 
 Mẫu 1-12: trích "100 cuộc chiến lẫy lừng trong lịch sử thế giới" (Lý Giải Nhân, bản dịch),
 owner duyệt giữ 12/12 ngày 2026-08-03. Đã sửa lỗi OCR nhỏ. Chỉ dùng nội bộ học giọng.
-Còn thiếu: 5-10 post/comment thật từ cộng đồng Đế chế (giọng đối thoại) - owner bổ sung dần.
+
+Mẫu 13-23: trích 5 bài trên aoe.vn do owner chỉ định ngày 2026-08-06 ("phân tích văn
+phong của tác giả này và copy") - đây là giọng CHỦ ĐẠO owner muốn: văn cẩm nang cộng
+đồng Đế chế, từ tốn, giải thích cặn kẽ kèm lý do. Đã sửa vài lỗi chính tả nhỏ. Văn kể
+trận (mẫu 1-12) từ nay chỉ làm gia vị mở bài/cao trào.
 
 ## Mẫu 1
 - Nguồn: sách 100 cuộc chiến lẫy lừng
@@ -77,3 +81,69 @@ Còn thiếu: 5-10 post/comment thật từ cộng đồng Đế chế (giọng 
 - Thích vì: chốt cả chiến dịch bằng hai câu ngắn có trọng lượng
 
 > Đây là cuộc đổ bộ có quy mô lớn nhất trong lịch sử chiến tranh thế giới. Sau đó, quân Đức mắc vào thế bị tấn công ở hai chiến trường Đông, Tây và nắm chắc phần thất bại.
+
+## Mẫu 13
+- Nguồn: aoe.vn - Hướng dẫn cách đọc Timeline chuẩn trong AoE
+- Thích vì: mở bài định vị người đọc (pro đã thành phản xạ, người mới cần cẩm nang) rồi hứa đúng thứ bài sẽ đưa
+
+> Đối với những game thủ AoE chuyên nghiệp hoặc ngay cả những người chơi không chuyên nhưng có kinh nghiệm thi đấu lâu năm, việc "Đọc Timeline" thậm chí đã trở thành một phản xạ hay bản năng mỗi khi thi đấu. Tuy nhiên, với những người mới tiếp cận với trò chơi AoE hoặc chưa có nhiều kinh nghiệm, bài viết sau đây sẽ là một cẩm nang để giúp bạn có thể đọc Timeline chuẩn và tốt hơn.
+
+## Mẫu 14
+- Nguồn: aoe.vn - Nông dân vs Sư Tử: Kỹ năng sinh tồn trong AoE
+- Thích vì: đặt vấn đề bằng nghịch lý (trên giấy dân thắng chắc mà thực tế vẫn chết dân) rồi hứa giải đáp
+
+> Về lý thuyết, một sư tử yếu hơn một nông dân ở cả chỉ số máu và tấn công. Do đó, trong đa số các trường hợp 1 nông dân phi 1 sư tử, nông dân đều chiến thắng. Tuy nhiên, cũng có một số trường hợp đặc biệt, nông dân solo thua một sư tử. Tại sao điều đó lại xảy ra và có cách nào để khắc phục hay không? Đây chính là bài viết giúp những người chơi mới giải quyết vấn đề đó.
+
+## Mẫu 15
+- Nguồn: aoe.vn - Luật Đời 3 Không Thành (D3KT)
+- Thích vì: giải thích nguồn gốc luật bằng chuỗi nhân - quả tường minh, nối bằng "Bên cạnh đó / Chính vì vậy"
+
+> Tuy nhiên sau một khoảng thời gian khá dài thi đấu với luật tự do, những người chơi AoE bắt đầu cảm thấy nhàm chán. Các trận đấu - đặc biệt là Solo - sử dụng quẩy đá rất nhiều và thường xuyên lặp đi lặp lại. Bên cạnh đó, sự xuất hiện của thành chòi với lượng máu nhiều giúp tăng khả năng phòng thủ, kéo theo các trận đấu thường kéo dài lê thê, rất tốn thời gian. Chính vì vậy, thành và chòi dần bị loại bỏ khỏi cuộc chơi và những bộ luật bắt đầu xuất hiện nhiều hơn.
+
+## Mẫu 16
+- Nguồn: aoe.vn - Luật Đời 3 Không Thành (D3KT)
+- Thích vì: khen có lý lẽ, thuật ngữ cộng đồng để trong ngoặc kép kèm viết tắt, phân "pro" và "gà" tự nhiên
+
+> Khi không còn được thoải mái vẽ ra những dãy "Vạn Lý Trường Thành" để thủ nhà, người chơi bắt buộc phải tận dụng các công trình như nhà dân (BE), nhà chợ (BM), nhà quân bộ binh (BB) hay bất kỳ loại nhà nào, thậm chí cả ruộng để "bo nhà", tức là tạo ra một lớp phòng thủ thay cho thành. Tất nhiên là cần phải dùng nhiều đầu óc hơn, thậm chí phải tính toán khoa học ngay từ những chiếc nhà BE đầu game, hoặc tính toán bo nhỏ, chui hốc để tiết kiệm tài nguyên gỗ nhất có thể. Chính điều này cũng đem đến sự thách thức lớn hơn, khiến trò chơi càng thú vị hơn, cũng giúp phân định "pro" và "gà" một cách rạch ròi hơn.
+
+## Mẫu 17
+- Nguồn: aoe.vn - Luật Đời 3 Không Thành (D3KT)
+- Thích vì: chê thẳng nhưng có thông cảm với người chơi, hedge đúng chỗ ("đôi khi", "chẳng may")
+
+> Khi mà bản chất AoE RoR đã là một phiên bản game mất cân bằng, việc áp dụng D3KT làm cho sự mất cân bằng đó đôi khi trở nên nặng nề hơn. Ví dụ như thi đấu Solo Random sẽ xuất hiện rất nhiều cặp quân (nền văn minh) vô cùng chênh lệch điển hình là Shang vs Greek,... khiến cho người chẳng may phải cầm quân yếu hơn cảm thấy rất ức chế, đặc biệt là ở những giải đấu lớn. Còn trường hợp không may gặp map không đủ đồ ăn, đôi khi chỉ là thiếu 100 thịt hay là lực thịt ép đời không quá khỏe cũng khiến họ sớm nhận thua trong bất lực.
+
+## Mẫu 18
+- Nguồn: aoe.vn - Luật Đời 3 Không Thành (D3KT)
+- Thích vì: chốt bài nhìn xa, có bình luận đàng hoàng chứ không cắt cụt
+
+> Ngày nay, D3KT thực sự đã được công nhận, trở thành một phần không thể tách rời với AoE 1 cũng như tiềm thức của những người chơi tựa game này. Hễ nhắc đến AoE 1 thì chắc chắn là phải nhắc đến D3KT.
+
+## Mẫu 19
+- Nguồn: aoe.vn - AoE Bé Yêu Cup 2025: 16 game thủ vào chung kết Solo Random
+- Thích vì: tin giải đấu đánh giá nhánh đấu tự nhiên, nhắc người thật bằng tên trần kèm một dòng lai lịch
+
+> Dựa vào tên tuổi của các game thủ, có thể thấy rằng nhánh bên phải có phần khốc liệt hơn khi xuất hiện những cái tên ứng cử viên như Tễu, Lê Chí Linh. Kenz cũng là một game thủ từng thi đấu chuyên nghiệp, trước đây anh chơi cho Skyred. Lưu Hải Tú cũng là một tay Solo Random rất cứng trong đấu trường bán chuyên.
+
+## Mẫu 20
+- Nguồn: aoe.vn - AoE Bé Yêu Cup 2025: 16 game thủ vào chung kết Solo Random
+- Thích vì: bình về may rủi bằng giọng chia sẻ với người chơi, không phán xét
+
+> Với hơn 200 game thủ tham dự, để trụ lại được đến vòng đấu này, game thủ không chỉ cần đến trình độ, bản lĩnh mà chắc chắn không thể thiếu đi sự may mắn. Đó cũng là điều mà tất cả các game thủ thi đấu Solo Random đều mong mỏi, không cứ gì chuyên nghiệp hay bán chuyên.
+
+## Mẫu 21
+- Nguồn: aoe.vn - Nông dân vs Sư Tử: Kỹ năng sinh tồn trong AoE
+- Thích vì: lời khuyên luôn kèm lý do ("Sở dĩ có lời khuyên này là bởi...") và dẫn thói quen của cao thủ làm chuẩn
+
+> Nguyên tắc "gọi hội": Như đã đề cập, tốt nhất khi nông dân đi dò không nên trực tiếp đối đầu sư tử dù chỉ đứng đơn. Hãy cố gắng né chúng và đến thời điểm thích hợp thì "gọi hội" nông dân ra để giải quyết dễ dàng. Sở dĩ có lời khuyên này là bởi, dù nông dân solo 1vs1 gần như chắc thắng, đặc biệt là nếu dân phi trước, tuy nhiên việc dân mất máu khi giết sư tử sẽ gián đoạn việc đi dò. Ngoài ra, dân bị mất máu từ đời I và II cũng sẽ trở thành miếng mồi ngon cho ngựa dò, cung T của đối thủ. Với các cao thủ, trừ trường hợp bất khả kháng nếu không họ sẽ hạn chế tối đa việc để dân mất máu.
+
+## Mẫu 22
+- Nguồn: aoe.vn - Hướng dẫn cách đọc Timeline chuẩn trong AoE
+- Thích vì: suy luận từ dấu hiệu ra ý đồ đối thủ, mạch "Nếu... chứng tỏ/chắc chắn...", kèm ngoại lệ thực tế
+
+> Nếu như đối thủ không đào vàng, vậy chắc chắn họ sẽ lựa chọn các loại quân gỗ như cung R, ngựa R hay thậm chí là cung T, quẩy đá. Trừ một số trường hợp đặc biệt, game thủ có trình độ quá thấp có thể "quên" đào vàng hoặc map quá xấu đến nỗi không có bãi vàng gần nhà. Tuy nhiên ít nhất thì khi biết đối thủ không đào vàng, có thể yên tâm rằng khi vừa lên xong đời III sẽ không có ngựa chém hay lạc đà bất thình lình xuất hiện chém dân của bạn, vì vậy cũng không cần lãng phí gỗ để xây nhà Phù Thủy chống lại đối phương.
+
+## Mẫu 23
+- Nguồn: aoe.vn - Tập chơi Đế Chế #3: Tài nguyên và cách khai thác
+- Thích vì: chốt mục bằng "Nói tóm lại" - tổng kết, dặn dò bình tĩnh, chấp nhận yếu tố may rủi của game
+
+> Nói tóm lại, mỗi người chơi chỉ được cấp cho 200 thực khi bắt đầu game, nên việc đóng chiếc BG đầu để có một lượng thực ổn định trong vài phút đầu game, đẻ dân không bị chậm, là khá quan trọng, có thể coi đó là nền tảng căn bản cho việc ép đời của game đấu đó. Vậy nên, hãy bình tĩnh trong cả việc đi dò quả cũng như đặt móng BG sao cho hợp lý. Cũng nên nhớ rằng AoE vẫn luôn là một trò chơi đầy tính may rủi, hãy sẵn sàng tâm lý cho những bãi quả khó nhằn hoặc không thể ăn được.

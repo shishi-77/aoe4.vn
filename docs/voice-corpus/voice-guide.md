@@ -1,118 +1,131 @@
-> Sinh tự động từ samples.md ngày 2026-08-03, 12 mẫu - không sửa tay.
+> Sinh tự động từ samples.md ngày 2026-08-06, 23 mẫu - không sửa tay.
 
-Giọng này là giọng kể trận: dùng cho mở bài, đoạn giải thích cơ chế và đoạn chốt của
-bài chiến thuật / so sánh cho người chơi Đế chế Việt - KHÔNG phải slang, và không được
-ép vào những đoạn tra cứu khô (bảng số liệu, danh sách phím tắt).
+Giọng CHỦ ĐẠO là giọng cẩm nang cộng đồng Đế chế (mẫu 13-23, aoe.vn do owner chỉ định):
+người trong cộng đồng viết cho người chơi, từ tốn, giải thích cặn kẽ, mọi lời khuyên có
+lý do, không gồng. Văn kể trận (mẫu 1-12, sách "100 cuộc chiến lẫy lừng") chỉ là GIA VỊ:
+tối đa 1-2 chỗ mỗi bài, ở mở bài hoặc một khoảnh khắc cao trào - không được áp cả bài.
 
 ## Đặc điểm giọng
 
-### Nhịp câu: dài để dựng thế, ngắn dồn dập khi tới cao trào
+### Giọng nền: người trong cộng đồng viết cẩm nang, không phải nhà văn trình diễn
 
-Câu dẫn có thể dài và nhiều vế, nhưng đúng lúc quyết định thì câu co lại thành chuỗi
-ngắn, mỗi vế một hành động, không có tính từ thừa chen vào.
+Viết như một người chơi lâu năm ngồi giảng lại cho anh em, đủ kiên nhẫn để đi từng ý.
+Không cụt lủn gằn câu, không sử thi. Mở bài định vị người đọc (ai đã thạo, ai cần bài
+này) rồi hứa đúng thứ bài sẽ đưa.
 
-> những chiếc giáo dài gãy liền đổi sang dùng kiếm chém, khi kiếm gãy thì dùng đá ném, dùng nắm đấm đánh, dùng răng cắn
+> Đối với những game thủ AoE chuyên nghiệp hoặc ngay cả những người chơi không chuyên nhưng có kinh nghiệm thi đấu lâu năm, việc "Đọc Timeline" thậm chí đã trở thành một phản xạ hay bản năng mỗi khi thi đấu. Tuy nhiên, với những người mới tiếp cận với trò chơi AoE hoặc chưa có nhiều kinh nghiệm, bài viết sau đây sẽ là một cẩm nang để giúp bạn có thể đọc Timeline chuẩn và tốt hơn.
 
-### Liệt kê leo thang thay cho tính từ mạnh
+### Câu dài nhiều vế, mạch nhân - quả nối tường minh
 
-Muốn nói "ác liệt" thì không viết chữ "ác liệt" thêm lần nữa, mà xếp một chuỗi chi tiết
-xuống cấp hoặc tăng cấp để người đọc tự thấy mức độ.
+Câu được phép dài, miễn là các vế nối nhau bằng quan hệ rõ: "Bên cạnh đó", "Chính vì
+vậy", "Do đó", "Kéo theo", "Tuy nhiên", "Mặt khác". Người đọc luôn biết ý này sinh ra
+từ ý nào - không nhảy cóc, không cắt vụn thành chuỗi câu ngắn đanh.
 
-> Họ giành giật từng tấc đất, từng mái nhà, cuộc chiến giằng co đến hơn 13 ngày.
+> Bên cạnh đó, sự xuất hiện của thành chòi với lượng máu nhiều giúp tăng khả năng phòng thủ, kéo theo các trận đấu thường kéo dài lê thê, rất tốn thời gian. Chính vì vậy, thành và chòi dần bị loại bỏ khỏi cuộc chơi và những bộ luật bắt đầu xuất hiện nhiều hơn.
 
-### Vào bài bằng một khoảnh khắc cụ thể, không bằng định nghĩa
+### Đặt vấn đề bằng nghịch lý thực chiến rồi hứa giải đáp
 
-Mở bài luôn đặt người đọc vào một mốc thời gian và một cảnh có thể nhìn thấy, rồi mới
-để tình huống tự lộ ra.
+Mở mục hay bằng khoảng cách giữa lý thuyết và thực tế: trên giấy phải thắng mà vào trận
+vẫn thua - rồi hỏi thẳng "tại sao, khắc phục thế nào" và trả lời trong bài.
+
+> Về lý thuyết, một sư tử yếu hơn một nông dân ở cả chỉ số máu và tấn công. Do đó, trong đa số các trường hợp 1 nông dân phi 1 sư tử, nông dân đều chiến thắng. Tuy nhiên, cũng có một số trường hợp đặc biệt, nông dân solo thua một sư tử. Tại sao điều đó lại xảy ra và có cách nào để khắc phục hay không?
+
+### Thuật ngữ cộng đồng dùng tự nhiên, lần đầu đặt trong ngoặc kép
+
+Từ lóng của cộng đồng ("bo nhà", "gọi hội", "Time đè", "vẩy E") xuất hiện đúng lúc và
+lần đầu để trong ngoặc kép kèm một vế giải nghĩa ngắn; tên công trình/quân kèm viết tắt
+trong ngoặc đơn ở lần nhắc đầu - nhà dân (BE), Kho Lương (BG). Sau đó dùng trần.
+
+> người chơi bắt buộc phải tận dụng các công trình như nhà dân (BE), nhà chợ (BM), nhà quân bộ binh (BB) hay bất kỳ loại nhà nào, thậm chí cả ruộng để "bo nhà", tức là tạo ra một lớp phòng thủ thay cho thành.
+
+### Mọi lời khuyên đi kèm lý do, lấy thói quen của cao thủ làm chuẩn
+
+Không ra lệnh suông. Sau mỗi mẹo là "Sở dĩ có lời khuyên này là bởi..." hoặc một chuỗi
+hệ quả nếu làm sai; khi cần trọng lượng thì dẫn cách cao thủ xử lý.
+
+> Sở dĩ có lời khuyên này là bởi, dù nông dân solo 1vs1 gần như chắc thắng, đặc biệt là nếu dân phi trước, tuy nhiên việc dân mất máu khi giết sư tử sẽ gián đoạn việc đi dò. Với các cao thủ, trừ trường hợp bất khả kháng nếu không họ sẽ hạn chế tối đa việc để dân mất máu.
+
+### Suy luận từ dấu hiệu: "Nếu... chứng tỏ...", kèm ngoại lệ thực tế
+
+Phân tích thế trận đi theo mạch đọc dấu hiệu ra ý đồ, và luôn thòng ngoại lệ để giữ độ
+tin ("Trừ một số trường hợp đặc biệt...", "Tuy nhiên ít nhất thì...").
+
+> Nếu như đối thủ không đào vàng, vậy chắc chắn họ sẽ lựa chọn các loại quân gỗ như cung R, ngựa R hay thậm chí là cung T, quẩy đá. Trừ một số trường hợp đặc biệt, game thủ có trình độ quá thấp có thể "quên" đào vàng hoặc map quá xấu đến nỗi không có bãi vàng gần nhà.
+
+### Số liệu cụ thể nêu thẳng, có cả phép tính tay
+
+Chỉ số máu, damage, lượng tài nguyên, mốc phút nêu đích danh; khi giúp người đọc hình
+dung thì làm luôn phép tính thay họ.
+
+> Trong AoE RoR, 1 nông dân có tới 25 máu (riêng Sumerian có 40 máu), chỉ số tấn công khi gặp sư tử = 4, vượt trội hoàn toàn.
+
+### Khen chê đều có lý lẽ và có thông cảm với người chơi
+
+Chê luật, chê thiết kế thì chỉ thẳng vào hệ quả, nhưng đứng về phía người chịu trận
+("người chẳng may phải cầm quân yếu hơn cảm thấy rất ức chế"). Hedge đúng chỗ bằng
+"đôi khi", "phần nào", "thường thì" - không phán tuyệt đối những chuyện vốn tùy trận.
+
+> việc áp dụng D3KT làm cho sự mất cân bằng đó đôi khi trở nên nặng nề hơn. Ví dụ như thi đấu Solo Random sẽ xuất hiện rất nhiều cặp quân (nền văn minh) vô cùng chênh lệch điển hình là Shang vs Greek,... khiến cho người chẳng may phải cầm quân yếu hơn cảm thấy rất ức chế, đặc biệt là ở những giải đấu lớn.
+
+### Xưng hô: "người chơi", "game thủ", "chúng ta", "bạn"; người thật gọi tên trần kèm lai lịch
+
+Giọng đứng cùng phía người đọc, thỉnh thoảng "chúng ta" khi cùng phân tích, "bạn" khi
+dặn thao tác. Nhắc người chơi thật thì tên trần cộng một dòng lai lịch, không mỹ từ.
+
+> Kenz cũng là một game thủ từng thi đấu chuyên nghiệp, trước đây anh chơi cho Skyred. Lưu Hải Tú cũng là một tay Solo Random rất cứng trong đấu trường bán chuyên.
+
+### Thành ngữ dân dã điểm xuyết, mỗi bài một hai lần
+
+"Liệu cơm gắp mắm", "tốc chiến tốc thắng", "miếng mồi ngon" - dùng như người nói chuyện
+buột miệng, một lần rồi thôi, không xếp chồng hình ảnh.
+
+> do chúng có số lượng, hình dạng khác nhau nên người chơi vẫn cần phải "liệu cơm gắp mắm", khai thác một cách hợp lý để tối ưu thời gian tăng lương thực.
+
+### Chốt bài: tổng kết đàng hoàng, dặn dò, chấp nhận may rủi
+
+Kết mục bằng "Nói tóm lại/Như vậy" + gói lại ý chính + một lời dặn bình tĩnh; chấp nhận
+game có may rủi thay vì hứa công thức thắng chắc. KHÔNG cắt cụt kiểu văn sử thi.
+
+> Vậy nên, hãy bình tĩnh trong cả việc đi dò quả cũng như đặt móng BG sao cho hợp lý. Cũng nên nhớ rằng AoE vẫn luôn là một trò chơi đầy tính may rủi, hãy sẵn sàng tâm lý cho những bãi quả khó nhằn hoặc không thể ăn được.
+
+### Gia vị kể trận: chỉ mở bài hoặc một cao trào, tối đa 1-2 chỗ mỗi bài
+
+Chất kể trận của corpus sách (khung cảnh cụ thể, bước ngoặt một câu) chỉ dùng khi bài
+cần một khoảnh khắc sống động - ví dụ mở bài so sánh hoặc tả một pha đánh. Tuyệt đối
+không kéo giọng đó qua đoạn hướng dẫn, đoạn phân tích.
 
 > Một sáng sớm nọ, người thành Troy bất chợt phát hiện quân Hy Lạp ngoài thành đã rút hết, mấy chiếc thuyền chiến ngoài biển xa xa cũng không thấy tăm tích đâu nữa.
 
-### Hình ảnh cô đọng thay cho khái niệm trừu tượng
-
-Thế bí, thế mạnh, thế bao vây đều được gói vào một hình ảnh ngắn mà người đọc dựng được
-trong đầu ngay, không cần giải thích thêm.
-
-> Ba mặt xung quanh họ là địch, một mặt là biển, hoàn toàn không có cách đối phó với quân Đức đang ngày một tiến gần, tình hình vô cùng nguy cấp.
-
-### Bước ngoặt đặt trong đúng một câu
-
-Khoảnh khắc đổi cục diện không được kể lể; nó là một câu duy nhất, gọn, và câu sau đó
-mới nói hậu quả.
-
-> Lúc này, một mũi tên lao vút đến cắm thẳng vào người Harode.
-
-### Giải thích cơ chế bằng chuỗi nhân - quả có chủ ngữ
-
-Cơ chế được kể như một chuỗi hành động nối nhau: thấy gì, làm gì, dẫn tới gì. Không có
-đoạn lý thuyết tách rời khỏi người ra quyết định.
-
-> Ông liền lập tức chớp lấy thời cơ, đích thân chỉ huy kỵ binh tinh nhuệ xông thẳng vào lỗ hổng này, nhanh chóng tấn công vào vị trí chỉ huy của Darius, uy hiếp đoàn xe vương thất Ba Tư.
-
-### Chi tiết cụ thể và con số làm neo, không nói chung chung
-
-Mưu kế được chứng minh bằng vật thật và số thật, chứ không bằng chữ "quy mô lớn" suông.
-
-> họ cho xây dựng những bến cảng giả quy mô lớn, còn bố trí nhiều tàu đổ bộ, xe tăng, tàu lượn giả ở khu vực mà máy bay Đức có thể thăm dò tới, và bố trí một lượng lớn bộ đội dự bị tại đây, trong khi đó chỉ có 6 sư đoàn tại Normandy.
-
-### Nêu quan điểm phẳng, không rào đón
-
-Chê là chê thẳng vào quyết định, kèm cái giá phải trả, rồi thôi. Không "có lẽ", không
-"theo một số ý kiến", cũng không lên gân đạo đức.
-
-> Thế nhưng, Milde chần chừ thiếu quyết đoán, không chịu thừa thắng truy kích, mất cơ hội tiêu diệt toàn bộ quân của Tướng Lee.
-
-### Nước cờ hay luôn đi kèm cái giá của nó
-
-Khen một lựa chọn táo bạo thì câu ngay sau phải nói rủi ro thật mà nó mở ra - đây là
-cách giọng này giữ được độ tin.
-
-> Tuy nhiên hành động này cũng phải trả giá rất đắt.
-
-### Từ vựng và xưng hô: ngôi thứ ba, tên trần, ví von dân dã ngắn
-
-Nhân vật gọi thẳng bằng tên, không gắn mỹ từ ("vị tướng tài ba"). Động từ mạnh và cụ
-thể (xông thẳng, cua vòng, giành giật). Ví von nếu có thì phải là thành ngữ ngắn quen
-tai, dùng một lần rồi thôi.
-
-> Quân Ba Tư mất chỉ huy, như rắn mất đầu, lập tức tan rã.
-
-### Chốt hạ dừng luôn, không bình luận thêm
-
-Kết thúc bằng hành động cuối hoặc bằng hệ quả cuối, rồi cắt. Không có câu "bài học rút
-ra là...", không tổng kết lại điều vừa kể.
-
-> ông lấy hết hơi sức cuối cùng hét lớn: "Chúng ta đã chiến thắng rồi!", sau đó ngã xuống tắt thở.
-
 ## Few-shot (5-8 đoạn đắt nhất)
 
-### mở bài
+### mở bài (định vị người đọc)
 
-> Một sáng sớm nọ, người thành Troy bất chợt phát hiện quân Hy Lạp ngoài thành đã rút hết, mấy chiếc thuyền chiến ngoài biển xa xa cũng không thấy tăm tích đâu nữa. Họ đi ra khỏi thành, vui mừng hét lên: "Người Hy Lạp đã đi rồi! Chiến tranh kết thúc rồi!". Lúc này, mọi người phát hiện trên bãi biển có một con ngựa gỗ khổng lồ, con ngựa gỗ đó đang đứng, sinh động như thật, trên mình có những hình điêu khắc tinh xảo, trên đế ngựa còn bố trí bánh xe đẩy.
+> Đối với những game thủ AoE chuyên nghiệp hoặc ngay cả những người chơi không chuyên nhưng có kinh nghiệm thi đấu lâu năm, việc "Đọc Timeline" thậm chí đã trở thành một phản xạ hay bản năng mỗi khi thi đấu. Tuy nhiên, với những người mới tiếp cận với trò chơi AoE hoặc chưa có nhiều kinh nghiệm, bài viết sau đây sẽ là một cẩm nang để giúp bạn có thể đọc Timeline chuẩn và tốt hơn.
 
-### mở bài
+### mở bài (nghịch lý thực chiến)
 
-> Đến ngày 24, gần 400.000 quân Anh - Pháp bị quân Đức bao vây tại một khu vực tam giác chật hẹp gần Dunkerque. Ba mặt xung quanh họ là địch, một mặt là biển, hoàn toàn không có cách đối phó với quân Đức đang ngày một tiến gần, tình hình vô cùng nguy cấp. Đúng vào ngày 24, Hitler ra một mệnh lệnh khiến nhiều người thắc mắc, cho quân đoàn thiết giáp ngừng tiến công.
+> Về lý thuyết, một sư tử yếu hơn một nông dân ở cả chỉ số máu và tấn công. Do đó, trong đa số các trường hợp 1 nông dân phi 1 sư tử, nông dân đều chiến thắng. Tuy nhiên, cũng có một số trường hợp đặc biệt, nông dân solo thua một sư tử. Tại sao điều đó lại xảy ra và có cách nào để khắc phục hay không? Đây chính là bài viết giúp những người chơi mới giải quyết vấn đề đó.
 
-### giải thích cơ chế
+### giải thích cơ chế (chuỗi nhân - quả)
 
-> Quân La Mã tiếp tục tấn công, góc lồi trận địa hình bán nguyệt của quân Carthage bỗng chốc biến thành góc lõm, rồi lại xoay chuyển thành hình chiếc túi. Lúc này, kỵ binh tinh nhuệ của Hannibal cũng đã đánh bại được kỵ binh ở 2 cánh quân La Mã, họ vòng từ 2 bên đến, tấn công vào quân La Mã. Quân La Mã bị rơi vào vòng vây của quân Carthage.
+> Tuy nhiên sau một khoảng thời gian khá dài thi đấu với luật tự do, những người chơi AoE bắt đầu cảm thấy nhàm chán. Các trận đấu - đặc biệt là Solo - sử dụng quẩy đá rất nhiều và thường xuyên lặp đi lặp lại. Bên cạnh đó, sự xuất hiện của thành chòi với lượng máu nhiều giúp tăng khả năng phòng thủ, kéo theo các trận đấu thường kéo dài lê thê, rất tốn thời gian. Chính vì vậy, thành và chòi dần bị loại bỏ khỏi cuộc chơi và những bộ luật bắt đầu xuất hiện nhiều hơn.
 
-### giải thích cơ chế
+### mẹo kèm lý do
 
-> Lúc này, Alexandre nhanh chóng phát hiện ra khi kỵ binh Ba Tư di chuyển thì giữa họ với thế trận của bộ binh xuất hiện lỗ hổng. Ông liền lập tức chớp lấy thời cơ, đích thân chỉ huy kỵ binh tinh nhuệ xông thẳng vào lỗ hổng này, nhanh chóng tấn công vào vị trí chỉ huy của Darius, uy hiếp đoàn xe vương thất Ba Tư. Darius thiếu kinh nghiệm chỉ huy chiến đấu, thấy sắp thua, sợ bị bắt sống nên tháo chạy trước. Quân Ba Tư mất chỉ huy, như rắn mất đầu, lập tức tan rã.
+> Nguyên tắc "gọi hội": Như đã đề cập, tốt nhất khi nông dân đi dò không nên trực tiếp đối đầu sư tử dù chỉ đứng đơn. Hãy cố gắng né chúng và đến thời điểm thích hợp thì "gọi hội" nông dân ra để giải quyết dễ dàng. Sở dĩ có lời khuyên này là bởi, dù nông dân solo 1vs1 gần như chắc thắng, đặc biệt là nếu dân phi trước, tuy nhiên việc dân mất máu khi giết sư tử sẽ gián đoạn việc đi dò. Ngoài ra, dân bị mất máu từ đời I và II cũng sẽ trở thành miếng mồi ngon cho ngựa dò, cung T của đối thủ.
 
-### nêu quan điểm
+### phân tích suy luận từ dấu hiệu
 
-> Ngày 4, mưa gió bão bùng, Tướng Lee thấy tình thế bất lợi cho mình, bèn thừa lúc mưa to gió lớn chỉ huy tàn quân rút lui. Thế nhưng, Milde chần chừ thiếu quyết đoán, không chịu thừa thắng truy kích, mất cơ hội tiêu diệt toàn bộ quân của Tướng Lee.
+> Nếu như đối thủ không đào vàng, vậy chắc chắn họ sẽ lựa chọn các loại quân gỗ như cung R, ngựa R hay thậm chí là cung T, quẩy đá. Trừ một số trường hợp đặc biệt, game thủ có trình độ quá thấp có thể "quên" đào vàng hoặc map quá xấu đến nỗi không có bãi vàng gần nhà. Tuy nhiên ít nhất thì khi biết đối thủ không đào vàng, có thể yên tâm rằng khi vừa lên xong đời III sẽ không có ngựa chém hay lạc đà bất thình lình xuất hiện chém dân của bạn, vì vậy cũng không cần lãng phí gỗ để xây nhà Phù Thủy chống lại đối phương.
 
-### nêu quan điểm
+### nêu quan điểm (chê có thông cảm)
 
-> Togo bất ngờ ra lệnh tất cả các tàu Nhật xoay một vòng cua lớn, hành động này khiến các binh lính hai bên đều bất ngờ. Nhưng Togo rất kiên quyết, ông phải chiếm được vị trí tấn công ưu thế. Tuy nhiên hành động này cũng phải trả giá rất đắt. Chính lúc tàu của Nhật nối tiếp nhau cua vòng thì tàu Nga chớp thời cơ nổ súng trước.
-
-### chốt hạ
-
-> Miltiades vội cử Pheripides về Athens báo tin thắng lợi. Pheripides chạy một mạch 42km, đến quảng trường Athens. Nhìn ánh mắt nôn nóng của nhân dân Athens, ông lấy hết hơi sức cuối cùng hét lớn: "Chúng ta đã chiến thắng rồi!", sau đó ngã xuống tắt thở.
+> Khi mà bản chất AoE RoR đã là một phiên bản game mất cân bằng, việc áp dụng D3KT làm cho sự mất cân bằng đó đôi khi trở nên nặng nề hơn. Ví dụ như thi đấu Solo Random sẽ xuất hiện rất nhiều cặp quân (nền văn minh) vô cùng chênh lệch điển hình là Shang vs Greek,... khiến cho người chẳng may phải cầm quân yếu hơn cảm thấy rất ức chế, đặc biệt là ở những giải đấu lớn.
 
 ### chốt hạ
 
-> Đây là cuộc đổ bộ có quy mô lớn nhất trong lịch sử chiến tranh thế giới. Sau đó, quân Đức mắc vào thế bị tấn công ở hai chiến trường Đông, Tây và nắm chắc phần thất bại.
+> Nói tóm lại, mỗi người chơi chỉ được cấp cho 200 thực khi bắt đầu game, nên việc đóng chiếc BG đầu để có một lượng thực ổn định trong vài phút đầu game, đẻ dân không bị chậm, là khá quan trọng, có thể coi đó là nền tảng căn bản cho việc ép đời của game đấu đó. Vậy nên, hãy bình tĩnh trong cả việc đi dò quả cũng như đặt móng BG sao cho hợp lý. Cũng nên nhớ rằng AoE vẫn luôn là một trò chơi đầy tính may rủi, hãy sẵn sàng tâm lý cho những bãi quả khó nhằn hoặc không thể ăn được.
+
+### gia vị kể trận (chỉ cho mở bài / cao trào)
+
+> Một sáng sớm nọ, người thành Troy bất chợt phát hiện quân Hy Lạp ngoài thành đã rút hết, mấy chiếc thuyền chiến ngoài biển xa xa cũng không thấy tăm tích đâu nữa. Họ đi ra khỏi thành, vui mừng hét lên: "Người Hy Lạp đã đi rồi! Chiến tranh kết thúc rồi!".
