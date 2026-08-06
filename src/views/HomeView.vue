@@ -7,6 +7,7 @@ import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import { organizationJsonLd, websiteJsonLd } from '@/lib/structuredData'
 import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
+import BrandIcon from '@/components/BrandIcon.vue'
 import DlcSection from '@/components/sections/DlcSection.vue'
 import NorseDivider from '@/components/NorseDivider.vue'
 import SectionTitle from '@/components/SectionTitle.vue'
@@ -104,33 +105,36 @@ const { el: communityEl } = useReveal()
           :href="site.links.discord"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md bg-gold px-6 py-3 font-bold text-ink transition hover:bg-gold-dim"
+          class="inline-flex items-center gap-2 rounded-md bg-discord px-6 py-3 font-bold text-white transition hover:bg-discord-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
           @click="onJoin('discord')"
         >
+          <BrandIcon name="discord" />
           Discord
         </a>
         <a
           :href="site.links.facebook"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
+          class="inline-flex items-center gap-2 rounded-md bg-facebook px-6 py-3 font-bold text-white transition hover:bg-facebook-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
           @click="onJoin('facebook')"
         >
+          <BrandIcon name="facebook" />
           Facebook Group
         </a>
         <a
           :href="site.links.youtube"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
+          class="inline-flex items-center gap-2 rounded-md bg-youtube px-6 py-3 font-bold text-white transition hover:bg-youtube-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
         >
+          <BrandIcon name="youtube" />
           YouTube
         </a>
         <a
           :href="site.links.blog"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink"
+          class="rounded-md border border-gold px-6 py-3 font-bold text-gold transition hover:bg-gold hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
         >
           Blog
         </a>

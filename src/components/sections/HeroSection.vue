@@ -79,9 +79,11 @@ const registrationClosed = Date.now() >= new Date(props.tournament.registrationC
       </p>
 
       <div class="mt-10">
-        <CtaButton v-if="isOver" :href="props.tournament.links.youtube">🎬 Xem lại trên YouTube</CtaButton>
-        <CtaButton v-else-if="isLive" :href="props.tournament.links.youtube">
-          🔴 Xem trực tiếp
+        <CtaButton v-if="isOver" :href="props.tournament.links.youtube" variant="youtube">
+          Xem lại trên YouTube
+        </CtaButton>
+        <CtaButton v-else-if="isLive" :href="props.tournament.links.youtube" variant="youtube">
+          Xem trực tiếp
         </CtaButton>
         <CtaButton v-else-if="registrationClosed" :href="props.tournament.links.discord">
           💬 Tham gia Discord

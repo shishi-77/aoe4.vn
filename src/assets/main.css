@@ -10,6 +10,17 @@
   --color-wine: #7a1f1f;
   --color-steel: #5b8aa6;
   --color-ice: #9fc3d6;
+  /*
+   * Brand colors for the social CTAs. Each platform gets a resting tone and a
+   * brighter hover tone; the resting tone is darkened from the official hex so
+   * white label text stays above 4.5:1 contrast in both states.
+   */
+  --color-facebook: #1461d2;
+  --color-facebook-hover: #166fe5;
+  --color-youtube: #cc0000;
+  --color-youtube-hover: #e60000;
+  --color-discord: #4752c4;
+  --color-discord-hover: #5865f2;
   --font-display: 'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
 }
 

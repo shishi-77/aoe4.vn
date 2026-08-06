@@ -48,9 +48,21 @@ describe('AppNavbar', () => {
     const facebookLinks = wrapper.findAll(`a[href="${site.links.facebook}"]`)
     expect(facebookLinks).toHaveLength(1)
     const facebook = facebookLinks[0]
-    expect(facebook.classes()).toContain('bg-gold')
+    expect(facebook.classes()).toContain('bg-facebook')
     expect(facebook.attributes('target')).toBe('_blank')
     expect(facebook.attributes('rel')).toBe('noopener noreferrer')
+  })
+
+  it('giữ menu sau nút ☰ cho tới breakpoint lg, gồm cả tablet', async () => {
+    const { wrapper } = await mountNavbar()
+
+    const toggle = wrapper.get('button[aria-label="Mở menu"]')
+    expect(toggle.classes()).toContain('lg:hidden')
+    expect(toggle.classes()).not.toContain('sm:hidden')
+
+    const panel = wrapper.get('nav > div')
+    expect(panel.classes()).toContain('lg:flex')
+    expect(panel.classes()).not.toContain('sm:flex')
   })
 
   it('tự đóng menu mobile sau khi điều hướng sang trang khác', async () => {

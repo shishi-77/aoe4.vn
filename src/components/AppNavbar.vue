@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { site } from '@/data/site'
+import BrandIcon from '@/components/BrandIcon.vue'
 import { trackOutboundClick, type OutboundClickEvent } from '@/lib/analytics'
 
 const open = ref(false)
@@ -30,16 +31,16 @@ function onJoin(channel: OutboundClickEvent['channel']) {
       </RouterLink>
 
       <button
-        class="text-cream sm:hidden"
+        class="-mr-2 rounded-md px-2 py-1 text-xl leading-none text-cream transition hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold lg:hidden"
         :aria-expanded="open"
         aria-label="Mở menu"
         @click="open = !open"
       >
-        ☰
+        {{ open ? '✕' : '☰' }}
       </button>
 
       <div
-        class="absolute left-0 top-full w-full flex-col gap-4 border-b border-gold-dim/20 bg-ink px-4 py-4 sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:border-0 sm:bg-transparent sm:py-0"
+        class="absolute left-0 top-full w-full flex-col gap-4 border-b border-gold-dim/20 bg-ink px-4 py-4 lg:static lg:flex lg:w-auto lg:flex-row lg:items-center lg:border-0 lg:bg-transparent lg:py-0"
         :class="open ? 'flex' : 'hidden'"
         @click="open = false"
       >
@@ -67,9 +68,10 @@ function onJoin(channel: OutboundClickEvent['channel']) {
           :href="site.links.facebook"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-md bg-gold px-4 py-2 font-bold text-ink hover:bg-gold-dim"
+          class="inline-flex items-center gap-2 self-start rounded-md bg-facebook px-4 py-2 font-bold text-white transition hover:bg-facebook-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream"
           @click="onJoin('facebook')"
         >
+          <BrandIcon name="facebook" />
           Facebook
         </a>
       </div>
