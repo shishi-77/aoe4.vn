@@ -4,8 +4,8 @@
     "targetKeyword": "aoe4 vs aoe2",
     "kind": "comparison",
     "evidence": { "query": "aoe4 vs aoe2", "impressions": 0, "position": 0, "source": "manual" },
-    "status": "in-pr",
-    "notes": "Dry run Task 10: PASS sau 3 vòng evaluator (structure 8, voice 7, conversion 7, 0 mâu thuẫn, 0 dìm game). Dry run này lộ gap cổng chống thụt lùi, đã vá ở PR #49.",
+    "status": "published",
+    "notes": "Dry run Task 10: PASS (structure 8, voice 7, conversion 7, 0 mâu thuẫn, 0 dìm game). Merged 2026-08-06 qua PR #48; gap cổng chống thụt lùi phát hiện từ dry run này đã vá ở PR #49.",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
   },
