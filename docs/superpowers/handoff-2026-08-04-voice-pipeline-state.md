@@ -1,5 +1,10 @@
 # Handoff 2026-08-04: trạng thái thực thi plan voice + comparison scale
 
+> CẬP NHẬT 2026-08-06: ĐÃ GIẢI QUYẾT. Owner chỉ định 5 bài aoe.vn làm giọng chuẩn;
+> corpus + voice-guide + mỏ neo evaluator làm lại (calibration 14/14); 3 bài polish lại
+> từ bản cũ PASS sàn máy và owner chọn bản MỚI 3/3 ở blind test 2026-08-06. Cổng ĐÃ QUA,
+> Phase B được mở khóa. File này chỉ còn giá trị lịch sử.
+
 > Dành cho phiên làm việc tiếp theo (Claude web hoặc CLI). Đọc file này TRƯỚC khi làm gì.
 > Plan gốc: `docs/superpowers/plans/2026-08-03-voice-and-comparison-scale.md` (đã merge vào main qua PR #43, spec cùng chỗ).
 > Branch làm việc hiện tại: `claude/voice-foundation` (đã push). KHÔNG commit lên main.
