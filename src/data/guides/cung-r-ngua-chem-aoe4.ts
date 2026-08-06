@@ -2,7 +2,7 @@ import type { Guide } from './index'
 
 export const mobilityUnitsGuide: Guide = {
   slug: 'cung-r-ngua-chem-aoe4',
-  title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
+  title: 'Cung R, ngựa chém, lạc đà: dân Đế chế 1 mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
   description:
     'Cung R, ngựa chém hay lạc đà của Đế chế sang Đế chế 4 là lính nào? Kỵ cung Mangudai, Horse Archer, Onna-Musha, kỵ nặng Pháp và lạc đà Abbasid - bản đồ lính cho dân Đế chế mê đánh nhanh.',
   updatedAt: '2026-08-06',
@@ -11,10 +11,10 @@ export const mobilityUnitsGuide: Guide = {
     {
       heading: 'Kỵ binh thống trị chiến trường',
       paragraphs: [
-        'Đế chế đánh random, ra quân nào thì đánh theo bài quân đó, nhưng có một thứ gần như không đổi: quân nào cũng mở màn bằng con ngựa dò, rồi sau đó mới tới cung R, ngựa chém hay lạc đà. Trận nào cũng có kỵ trong tay, thành ra nhịp đánh bên Đế chế thường rất nhanh.',
+        'Đế chế 1 đánh random, ra quân nào thì đánh theo bài quân đó, nhưng có một thứ gần như không đổi: quân nào cũng mở màn bằng con ngựa dò, rồi sau đó mới tới cung R, ngựa chém hay lạc đà. Trận nào cũng có kỵ trong tay, thành ra nhịp đánh bên Đế chế 1 thường rất nhanh.',
         'Sang Đế chế 4, nhịp chung có chậm hơn, tuy nhiên vẫn có nguyên một nhóm quân giữ được cái nhịp cũ, đó là kỵ cung, kỵ nặng và lạc đà. Bài này sẽ chỉ chỗ từng dòng lính đó cho anh em mê đánh nhanh, kèm lý do vì sao nên bắt đầu từ chúng.',
       ],
-      link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế thế nào?' },
+      link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế 1 thế nào?' },
     },
     {
       heading: 'Cung R: sang Đế chế 4 là kỵ cung',
@@ -29,28 +29,28 @@ export const mobilityUnitsGuide: Guide = {
       paragraphs: [
         'Ngựa chém thì quân nào cũng đánh được. Sở dĩ ai cũng quý kỵ là bởi cầm kỵ trong tay là chủ động được nhịp trận, muốn đẩy nhanh hay câu chậm đều do mình quyết, và ở những map rộng như team game thì vai trò của kỵ càng nặng ký.',
         'Kỵ nặng bên Đế chế 4 giữ đúng vai xe tăng của thời trung cổ: vừa lì đòn, vừa cơ động, mỗi lần áp sát được đội hình cung của đối thủ là chém rất đau. Mê món này thì nên cầm Pháp, bởi Royal Knight có từ đời 2 là dòng kỵ tuyển, chém đầu trận rất rát, trong khi tư duy điều quân gần như không khác gì Đế chế 1.',
-        'Đổi lại, kỵ nặng rất đắt đỏ, mà thứ khắc nó là combo giáo cộng nỏ lại rẻ hơn hẳn. Bên Đế chế, khắc tinh nổi tiếng nhất của ngựa chém là lạc đà, còn bên này chỉ cần giáo nỏ đứng chờ sẵn là đủ. Chính vì vậy, trước khi cho kỵ lao vào, anh em nên nhẩm lại bài toán kinh tế xem pha đổi quân đó có lời hay không.',
+        'Đổi lại, kỵ nặng rất đắt đỏ, mà thứ khắc nó là combo giáo cộng nỏ lại rẻ hơn hẳn. Bên Đế chế 1, khắc tinh nổi tiếng nhất của ngựa chém là lạc đà, còn bên này chỉ cần giáo nỏ đứng chờ sẵn là đủ. Chính vì vậy, trước khi cho kỵ lao vào, anh em nên nhẩm lại bài toán kinh tế xem pha đổi quân đó có lời hay không.',
       ],
     },
     {
       heading: 'Lạc đà bay: Đế chế 4 trao vai đó cho Abbasid',
       paragraphs: [
-        'Dân Đế chế hẳn còn nhớ đội lạc đà bay Palmyran đi tới đâu là ngựa bên kia dạt tới đó, cầm rất đã tay và đủ sức xoay cả cục diện trận đấu. Sang Đế chế 4, vai đó được trao cho Abbasid.',
-        'Abbasid có hai dòng lạc đà: Camel Archer (lạc đà tên) ra từ đời 2, chơi kiểu vừa chạy vừa bắn, còn Camel Rider (lạc đà chém) ra từ đời 3, cận chiến chuyên trị kỵ. Đặc biệt, ngựa của đối thủ đứng gần lạc đà còn bị trừ 20% sát thương, đúng chất ngựa sợ lạc đà như bên Đế chế.',
+        'Dân Đế chế 1 hẳn còn nhớ đội lạc đà bay Palmyran đi tới đâu là ngựa bên kia dạt tới đó, cầm rất đã tay và đủ sức xoay cả cục diện trận đấu. Sang Đế chế 4, vai đó được trao cho Abbasid.',
+        'Abbasid có hai dòng lạc đà: Camel Archer (lạc đà tên) ra từ đời 2, chơi kiểu vừa chạy vừa bắn, còn Camel Rider (lạc đà chém) ra từ đời 3, cận chiến chuyên trị kỵ. Đặc biệt, ngựa của đối thủ đứng gần lạc đà còn bị trừ 20% sát thương, đúng chất ngựa sợ lạc đà như bên Đế chế 1.',
         'Cũng cần lưu ý lạc đà khắc kỵ chứ không khắc bộ binh, cầm lạc đà đi đấm giáo hay bộ binh cận chiến là nướng quân. Bù lại, Abbasid vốn mạnh về kinh tế, nếu đè được tiền thì những pha đổi quân cũng thoải mái hơn thiên hạ.',
       ],
     },
     {
       heading: 'Anh em thuộc hệ nào',
       paragraphs: [
-        'Chơi Đế chế mấy chục năm, ai cũng có một hệ ruột. Quen tay đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, còn mê lạc đà và thích boom kinh tế thì cầm Abbasid.',
-        'Kinh nghiệm chung là cứ ôm hệ ruột mà đánh sẽ lên tay nhanh nhất, bởi tư duy điều dòng lính đó đã ngấm sẵn trong tay từ bên Đế chế. Nói tóm lại, cứ vào một trận với máy, ra đúng dòng lính quen tay cho đã, còn vướng chỗ nào thì vào nhóm anh em Đế chế hỏi, có người chỉ ngay.',
+        'Chơi Đế chế 1 mấy chục năm, ai cũng có một hệ ruột. Quen tay đảo chém thì cầm Pháp, thích cung chủ lực thì cầm Nga, còn mê lạc đà và thích boom kinh tế thì cầm Abbasid.',
+        'Kinh nghiệm chung là cứ ôm hệ ruột mà đánh sẽ lên tay nhanh nhất, bởi tư duy điều dòng lính đó đã ngấm sẵn trong tay từ bên Đế chế 1. Nói tóm lại, cứ vào một trận với máy, ra đúng dòng lính quen tay cho đã, còn vướng chỗ nào thì vào nhóm cộng đồng Đế chế hỏi, có người chỉ ngay.',
       ],
     },
   ],
   related: [
-    { slug: 'aoe4-khac-de-che-the-nao', label: 'Đế chế 4 khác Đế chế thế nào? Góc nhìn người chơi AoE1' },
-    { slug: 'cac-nen-van-minh-aoe4', label: 'Các nền văn minh trong AoE4' },
-    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi AoE4 cho người mới' },
+    { slug: 'aoe4-khac-de-che-the-nao', label: 'Đế chế 4 khác Đế chế 1 thế nào?' },
+    { slug: 'cac-nen-van-minh-aoe4', label: 'Các nền văn minh trong Đế chế 4' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi Đế chế 4 cho người mới' },
   ],
 }

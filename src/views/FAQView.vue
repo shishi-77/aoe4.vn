@@ -38,13 +38,13 @@ useHead({
 <template>
   <article class="mx-auto max-w-3xl px-4 py-16">
     <header class="text-center">
-      <p class="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-gold-dim">Đế chế 4 · AoE4</p>
+      <p class="mb-2 text-sm font-bold uppercase tracking-[0.3em] text-gold-dim">Đế chế 4 (AoE4)</p>
       <h1 class="text-3xl font-black uppercase text-cream sm:text-4xl">
         Đế chế 4 là gì? Câu hỏi thường gặp
       </h1>
       <p class="mx-auto mt-4 max-w-2xl text-muted">
-        Bạn chơi Đế chế và tò mò về "Đế chế 4"? Đây là những giải đáp nhanh dành riêng cho người Việt
-        mới tìm hiểu Age of Empires IV.
+        Bạn chơi Đế chế 1 và tò mò về Đế chế 4? Đây là những giải đáp nhanh dành riêng cho người Việt
+        mới tìm hiểu game.
       </p>
       <div class="mx-auto mt-4 h-1 w-16 bg-gold"></div>
     </header>

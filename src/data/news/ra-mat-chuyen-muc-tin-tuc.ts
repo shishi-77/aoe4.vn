@@ -12,7 +12,7 @@ export const newsLaunchPost: NewsPost = {
     {
       heading: 'Chuyên mục này có gì',
       paragraphs: [
-        'Từ hôm nay, aoe4.vn có thêm chuyên mục Tin tức: nơi tổng hợp patch notes, lịch và kết quả giải đấu, cùng các đợt DLC của Age of Empires IV bằng tiếng Việt.',
+        'Từ hôm nay, aoe4.vn có thêm chuyên mục Tin tức: nơi tổng hợp patch notes, lịch và kết quả giải đấu, cùng các đợt DLC của Đế chế 4 bằng tiếng Việt.',
         'Mọi bản tin đều kèm link về nguồn chính thức để anh em tự kiểm chứng.',
       ],
     },

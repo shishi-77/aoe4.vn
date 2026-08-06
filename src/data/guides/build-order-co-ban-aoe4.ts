@@ -50,7 +50,7 @@ export const buildOrderGuide: Guide = {
     },
   ],
   related: [
-    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi AoE4 cho người mới' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi Đế chế 4 cho người mới' },
     { slug: 'cac-nen-van-minh-aoe4', label: 'Chọn nền văn minh nào?' },
   ],
 }

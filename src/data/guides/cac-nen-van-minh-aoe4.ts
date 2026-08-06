@@ -11,14 +11,14 @@ export const civilizationsGuide: Guide = {
     {
       heading: 'Đế chế 4 có những nền văn minh nào?',
       paragraphs: [
-        'Age of Empires IV ra mắt năm 2021 với 8 nền văn minh: Anh, Pháp, Đế quốc La Mã Thần thánh, Rus, Mông Cổ, Trung Quốc, Vương quốc Hồi giáo Delhi và Triều đại Abbasid.',
+        'Đế chế 4 (tên chính thức Age of Empires IV) ra mắt năm 2021 với 8 nền văn minh: Anh, Pháp, Đế quốc La Mã Thần thánh, Rus, Mông Cổ, Trung Quốc, Vương quốc Hồi giáo Delhi và Triều đại Abbasid.',
         'Sau đó các bản mở rộng (DLC) bổ sung thêm nhiều nền văn minh mới, nên danh sách ngày càng dài. Bạn xem được toàn bộ phe hiện có ngay trong game khi tạo trận.',
       ],
     },
     {
       heading: 'Mỗi phe một lối chơi riêng',
       paragraphs: [
-        'Ở AoE4 mỗi phe một chất riêng: quân đặc trưng, cách lên đời riêng, công trình mốc riêng, có phe còn cơ chế không phe nào có.',
+        'Ở Đế chế 4 mỗi phe một chất riêng: quân đặc trưng, cách lên đời riêng, công trình mốc riêng, có phe còn cơ chế không phe nào có.',
         'Ví dụ có phe mạnh kỵ binh đánh sớm, có phe thủ chắc kinh tế ổn, lại có phe du mục nhổ cả trại đi chỗ khác được. Chọn phe là chọn luôn lối đánh.',
       ],
     },

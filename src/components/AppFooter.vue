@@ -8,7 +8,7 @@ const year = new Date().getFullYear()
   <footer class="border-t border-gold-dim/20 bg-ink py-10 text-center">
     <div class="mx-auto max-w-2xl px-4">
       <p class="text-xs text-muted">
-        © {{ year }} {{ site.name }} - Cộng đồng Age of Empires IV Việt Nam
+        © {{ year }} {{ site.name }} - Cộng đồng Đế chế 4 Việt Nam
       </p>
       <p class="mt-2 text-xs text-muted">
         <a

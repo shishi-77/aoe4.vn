@@ -11,10 +11,10 @@ export const wallsAndDefenseGuide: Guide = {
     {
       heading: 'Cả đời đánh "không thành", giờ vào game toàn thành',
       paragraphs: [
-        'Đối với dân Đế chế, kèo quen thuộc bao nhiêu năm vẫn là 23 dân, đời 3 không thành. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Ở đây thành nằm sẵn trong game, không ai cấm, muốn xây là xây.',
+        'Đối với dân Đế chế 1, kèo quen thuộc bao nhiêu năm vẫn là 23 dân, đời 3 không thành. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Ở đây thành nằm sẵn trong game, không ai cấm, muốn xây là xây.',
         'Sở dĩ Đế chế 4 dám để người chơi xây thành thoải mái mà trận đấu vẫn cân là bởi game đã tính sẵn cả một hệ đồ công thành để trị tường, còn vì sao game dám thả cửa như vậy thì anh em đọc thêm bài so sánh hai game theo đường dẫn bên dưới, ở đó có giải thích kỹ phần gốc rễ. Bài này chỉ tập trung vào phần thực chiến: đồ thủ có những gì, khi nào nên xây, và muốn phá thành người ta thì dùng gì.',
       ],
-      link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế thế nào?' },
+      link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế 1 thế nào?' },
     },
     {
       heading: 'Lính nào cũng đốt được nhà, trừ tường đá',
@@ -28,7 +28,7 @@ export const wallsAndDefenseGuide: Guide = {
       paragraphs: [
         'Tường gỗ có ngay từ đời 1, giá rẻ và đóng nhanh, đủ để chặn ngựa dò cùng mấy đợt rush sớm. Tường đá mở từ đời 2 và làm thêm được một việc rất đáng tiền: cung thủ leo lên mặt tường đứng bắn xuống, nghĩa là tường vừa chặn đường vừa là chỗ dàn trận, còn địch tới chân tường thì đứng dưới chịu trận.',
         'Chòi canh (Outpost) dựng được từ đời 1, ban đầu chủ yếu làm con mắt canh map, muốn nó bắn được tên thì phải bỏ thêm một lượt nâng cấp. Nhà chính thì đỡ lo khoản đó vì tên bắn sẵn, đẩy dân vào trú là tên bắn dày thêm, đầu trận cứ thế thành một chốt thủ tốt.',
-        'Sang đời 3 sẽ mở được Keep, đây mới là cái "thành" đúng nghĩa mà dân Đế chế hình dung: máu dày, bắn tên đau, thường được dựng làm điểm tựa để ôm tài nguyên hoặc lấn dần bản đồ.',
+        'Sang đời 3 sẽ mở được Keep, đây mới là cái "thành" đúng nghĩa mà dân Đế chế 1 hình dung: máu dày, bắn tên đau, thường được dựng làm điểm tựa để ôm tài nguyên hoặc lấn dần bản đồ.',
       ],
     },
     {
@@ -56,7 +56,7 @@ export const wallsAndDefenseGuide: Guide = {
     },
   ],
   related: [
-    { slug: 'aoe4-khac-de-che-the-nao', label: 'Đế chế 4 khác Đế chế thế nào? Góc nhìn người chơi AoE1' },
-    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi AoE4 cho người mới' },
+    { slug: 'aoe4-khac-de-che-the-nao', label: 'Đế chế 4 khác Đế chế 1 thế nào?' },
+    { slug: 'huong-dan-aoe4-nguoi-moi', label: 'Hướng dẫn chơi Đế chế 4 cho người mới' },
   ],
 }
