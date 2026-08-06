@@ -12,6 +12,24 @@ NGUYÊN TẮC CỨNG (xem memory vn-aoe-domain-content): KHÔNG BAO GIỜ viết
 từ kiến thức generic. Guide: mọi claim phải nằm trong kho facts đã duyệt hoặc được owner
 xác nhận ở Bước 2. News: mọi claim phải truy vết được về URL nguồn chính thức.
 
+## Bước 0 - Chuẩn bị giọng văn (bắt buộc trước khi viết bất kỳ bài nào)
+
+1. Đọc `docs/voice-corpus/voice-guide.md`. Nếu file chưa có, hoặc
+   `docs/voice-corpus/samples.md` đã đổi sau lần sinh ghi ở đầu voice-guide ->
+   chưng cất lại: đọc TOÀN BỘ samples.md, viết voice-guide.md gồm đúng hai mục:
+   - `## Đặc điểm giọng`: nhịp và độ dài câu, từ vựng và xưng hô, cách vào bài,
+     cách chốt, cách nêu quan điểm - MỖI đặc điểm kèm một trích dẫn nguyên văn
+     từ corpus làm ví dụ.
+   - `## Few-shot (5-8 đoạn đắt nhất)`: mỗi đoạn dưới một heading `###` nhãn
+     ngữ cảnh (mở bài / giải thích cơ chế / nêu quan điểm / chốt hạ), trích
+     nguyên văn dạng blockquote.
+   Dòng đầu file: `> Sinh tự động từ samples.md ngày YYYY-MM-DD, N mẫu - không sửa tay.`
+   Commit bằng `git add -f` (docs/ nằm trong gitignore).
+2. Văn mẫu CHỈ để học giọng - TUYỆT ĐỐI không chép nguyên câu từ corpus vào bài.
+   Bài viết ra là văn mới cùng chất giọng.
+3. Chống công thức: đọc mở bài + chốt bài của 3 bài mới nhất trên site (theo
+   updatedAt/publishedAt); bài sắp viết không được lặp khuôn mở/chốt của chúng.
+
 ## Bước 1 - Facts sheet
 
 Soạn `docs/facts-review/<slug>.md`:
@@ -47,8 +65,10 @@ Soạn `docs/facts-review/<slug>.md`:
    internal link: >= 1 link tới bài liên quan có thật (theo design internal-linking).
    News: tạo `src/data/news/<slug>.ts` theo `_template.ts` của news, đăng ký vào `index.ts`,
    `sources[]` = đúng các URL trong facts sheet, `cta: true`, `publishedAt` hôm nay.
-3. CHỈ dùng claim đã duyệt trong facts sheet. Giọng văn: theo mỏ neo trong guide-evaluator
-   (tự nhiên, không "văn AI", không slang gượng, TUYỆT ĐỐI không dìm AoE1).
+3. CHỈ dùng claim đã duyệt trong facts sheet. Giọng văn: viết theo
+   `docs/voice-corpus/voice-guide.md` (đặc điểm + few-shot, đã đọc ở Bước 0) ngay từ
+   nháp đầu - không viết chay rồi chờ evaluator vá. Tự nhiên, không "văn AI", không
+   slang gượng, TUYỆT ĐỐI không dìm game/cộng đồng RTS nào (AoE1, AoE2, AoE3, StarCraft...).
 4. Status queue = `drafted` (commit cùng bài).
 
 ## Bước 4 - Chấm và sửa (tối đa 3 vòng)

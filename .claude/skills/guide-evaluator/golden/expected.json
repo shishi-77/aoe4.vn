@@ -9,5 +9,8 @@
   "frozen-good-cau-hinh-may-aoe4": { "kind": "utility", "expect": { "allDimsAtLeastFloor": true, "contradictionsMax": 0, "aoe1DisparagementMax": 0 } },
   "frozen-bad-voice-cung-r-ngua-chem-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } },
   "frozen-bad-voice-tuong-thanh-phong-thu-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } },
-  "frozen-bad-voice-aoe4-khac-de-che-the-nao": { "kind": "strategy", "expect": { "voiceMax": 6 } }
+  "frozen-bad-voice-aoe4-khac-de-che-the-nao": { "kind": "strategy", "expect": { "voiceMax": 6 } },
+  "frozen-bad-voice-v2-aoe4-khac-de-che-the-nao": { "kind": "strategy", "expect": { "voiceMax": 6 } },
+  "frozen-bad-voice-v2-tuong-thanh-phong-thu-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } },
+  "frozen-bad-voice-v2-cung-r-ngua-chem-aoe4": { "kind": "strategy", "expect": { "voiceMax": 6 } }
 }
