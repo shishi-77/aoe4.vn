@@ -21,7 +21,7 @@ export interface QueueEvidence {
 export interface QueueItem {
   slug: string
   targetKeyword: string
-  kind: 'guide' | 'news'
+  kind: 'guide' | 'news' | 'comparison'
   evidence: QueueEvidence
   status: QueueStatus
   notes?: string
@@ -51,7 +51,8 @@ export function validateQueue(data: unknown): string[] {
     else seen.add(it.slug)
     if (typeof it.targetKeyword !== 'string' || it.targetKeyword.trim() === '')
       problems.push(`${label}: missing targetKeyword`)
-    if (it.kind !== 'guide' && it.kind !== 'news') problems.push(`${label}: bad kind`)
+    if (it.kind !== 'guide' && it.kind !== 'news' && it.kind !== 'comparison')
+      problems.push(`${label}: bad kind`)
     if (!QUEUE_STATUSES.includes(it.status as QueueStatus)) problems.push(`${label}: bad status`)
     const ev = it.evidence as Partial<QueueEvidence> | undefined
     if (

@@ -32,8 +32,14 @@ export interface Guide {
    * 'utility' (tra cứu/hướng dẫn thao tác: tải game, cấu hình, tìm người chơi) chấm
    * nặng về clarity, không ép hook/slang. 'strategy' (build order, phân tích, quan
    * điểm) chấm chặt cả voice/conversion. Bỏ trống -> coi như 'strategy'.
+   * 'comparison' (bài so sánh cầu nối AoE4 vs AoE2/AoE3/StarCraft...) chấm sàn như 'strategy'.
    */
-  kind?: 'utility' | 'strategy'
+  kind?: 'utility' | 'strategy' | 'comparison'
+  /**
+   * URL nguồn chính thức cho bài comparison (wiki game, Liquipedia, patch notes...).
+   * Chỉ để evaluator truy vết claim - không render lên UI.
+   */
+  sources?: string[]
   /** Ngày cập nhật dạng YYYY-MM-DD. */
   updatedAt: string
   sections: GuideSection[]
