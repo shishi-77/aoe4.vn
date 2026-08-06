@@ -74,6 +74,15 @@ describe('checkCalibration', () => {
     expect(verdicts.find((v) => v.case === 'case-aoe1')?.pass).toBe(true)
   })
 
+  it('trường disparagement mới thỏa được kỳ vọng aoe1DisparagementMin (alias cộng dồn)', () => {
+    const verdicts = checkCalibration(
+      { 'bad-aoe1-disparagement': exp({ expect: { aoe1DisparagementMin: 1 } }) },
+      [res({ case: 'bad-aoe1-disparagement', aoe1Disparagement: 0, disparagement: 1 })],
+    )
+    expect(verdicts).toHaveLength(1)
+    expect(verdicts[0].pass).toBe(true)
+  })
+
   it('contradictionsMax/aoe1DisparagementMax trượt khi bài tốt bị buộc tội oan', () => {
     const verdicts = checkCalibration(
       { 'case-a': exp({ expect: { contradictionsMax: 0, aoe1DisparagementMax: 0 } }) },
