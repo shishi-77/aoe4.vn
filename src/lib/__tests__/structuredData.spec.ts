@@ -142,3 +142,84 @@ describe('newsArticleJsonLd', () => {
     expect(ld.dateModified).toBe('2026-08-01')
   })
 })
+
+describe('Article được làm giàu cho GEO', () => {
+  const postWithSources: NewsPost = {
+    slug: 'tin-mau',
+    title: 'Tin mẫu',
+    description: 'Mô tả tin mẫu.',
+    publishedAt: '2026-08-02',
+    sources: [{ label: 'Patch notes chính thức', url: 'https://www.ageofempires.com/news/' }],
+    sections: [{ heading: 'Nội dung', paragraphs: ['Đoạn.'] }],
+  }
+
+  it('guide khai báo ngôn ngữ, thuộc về WebSite và nói về game nào', () => {
+    const ld = guideArticleJsonLd(downloadGuide, site)
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.isPartOf).toMatchObject({ '@type': 'WebSite', url: `${site.url}/` })
+    expect(ld.about).toMatchObject({ '@type': 'VideoGame', name: 'Age of Empires IV' })
+  })
+
+  it('news cũng khai báo ba trường đó', () => {
+    const ld = newsArticleJsonLd(postWithSources, site)
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.isPartOf).toMatchObject({ '@type': 'WebSite' })
+    expect(ld.about).toMatchObject({ '@type': 'VideoGame' })
+  })
+
+  it('news phát citation kèm nhãn nguồn', () => {
+    const ld = newsArticleJsonLd(postWithSources, site)
+    expect(ld.citation).toEqual([
+      {
+        '@type': 'CreativeWork',
+        name: 'Patch notes chính thức',
+        url: 'https://www.ageofempires.com/news/',
+      },
+    ])
+  })
+
+  it('guide có sources thì phát citation chỉ gồm url', () => {
+    const ld = guideArticleJsonLd(
+      { ...downloadGuide, sources: ['https://liquipedia.net/ageofempires/'] },
+      site,
+    )
+    expect(ld.citation).toEqual([
+      { '@type': 'CreativeWork', url: 'https://liquipedia.net/ageofempires/' },
+    ])
+  })
+
+  it('guide không có sources thì bỏ hẳn khoá citation, không phát mảng rỗng', () => {
+    const ld = guideArticleJsonLd({ ...downloadGuide, sources: undefined }, site)
+    expect('citation' in ld).toBe(false)
+  })
+
+  it('news có sources rỗng cũng bỏ hẳn khoá citation', () => {
+    const ld = newsArticleJsonLd({ ...postWithSources, sources: [] }, site)
+    expect('citation' in ld).toBe(false)
+  })
+
+  it('author là Organization khi site.author.name rỗng', () => {
+    const ld = guideArticleJsonLd(downloadGuide, { ...site, author: { name: '', url: '' } })
+    expect(ld.author).toMatchObject({ '@type': 'Organization', name: site.name })
+  })
+
+  it('author thành Person khi owner đã điền tên', () => {
+    const ld = guideArticleJsonLd(downloadGuide, {
+      ...site,
+      author: { name: 'Nguyễn Văn A', url: 'https://example.com/a' },
+    })
+    expect(ld.author).toEqual({
+      '@type': 'Person',
+      name: 'Nguyễn Văn A',
+      url: 'https://example.com/a',
+    })
+  })
+
+  it('Person bỏ khoá url khi owner chỉ điền tên', () => {
+    const ld = guideArticleJsonLd(downloadGuide, {
+      ...site,
+      author: { name: 'Nguyễn Văn A', url: '' },
+    })
+    expect(ld.author).toEqual({ '@type': 'Person', name: 'Nguyễn Văn A' })
+  })
+})
