@@ -96,6 +96,11 @@ Mỏ neo chuẩn (đối chiếu để chấm nhất quán):
   ra vẻ văn chương) -> voice CẢ BÀI tối đa 6;
   nhận ra câu đơ trong fixes mà vẫn chấm voice 7-8 là chấm sai. Giọng hướng dẫn gãy gọn
   tự nhiên (câu lệnh ngắn, bước đánh số) KHÔNG tính là đơ.
+  NGOẠI LỆ (corpus aoe.vn, thêm 2026-08-08): một câu HỎI thay người đọc rồi đáp ngay bằng
+  một câu ngắn - "Vậy có cách nào nhanh hơn không? Câu trả lời là có!" - là nét giọng chuẩn
+  của corpus, KHÔNG tính là văn gằn, miễn cả bài chỉ dùng 1-2 lần và ngay sau đó quay về
+  nhịp câu dài để giải thích. Từ 3 lần trở lên, hoặc câu ngắn đứng một mình không có câu
+  hỏi dẫn ngay trước nó, thì vẫn tính là văn gằn và áp trần 6 như trên.
 - voice ~8 (vừa, chuẩn đối chiếu - giọng cẩm nang cộng đồng, owner chọn 2026-08-06):
   "Nếu như đối thủ không đào vàng, vậy chắc chắn họ sẽ lựa chọn các loại quân gỗ như cung R, ngựa R hay thậm chí là cung T, quẩy đá." /
   "Sở dĩ có lời khuyên này là bởi, dù nông dân solo 1vs1 gần như chắc thắng, đặc biệt là nếu dân phi trước, tuy nhiên việc dân mất máu khi giết sư tử sẽ gián đoạn việc đi dò." /
