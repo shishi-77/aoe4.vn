@@ -6,7 +6,7 @@ export const aoe4VsAoe2Guide: Guide = {
   description:
     'AoE4 vs AoE2 khác nhau ở đâu: cách lên đời, cách các nền văn minh khác nhau, vòng khắc chế giáo kỵ cung, luật tường thành và nhịp trận. Viết cho người chơi AoE2 muốn thử Đế chế 4.',
   kind: 'comparison',
-  updatedAt: '2026-08-06',
+  updatedAt: '2026-08-07',
   cta: true,
   sources: [
     'https://www.ageofempires.com/learn-to-play/advancing-aoe2/',
@@ -17,16 +17,16 @@ export const aoe4VsAoe2Guide: Guide = {
     {
       heading: 'Dân Đế chế 2 mở trận Đế chế 4 đầu tiên sẽ thấy gì',
       paragraphs: [
-        'Với người đã cày dòng Đế chế nhiều năm, dù là bên Đế chế 1 hay bên Đế chế 2, trận Đế chế 4 đầu tiên thường cho một cảm giác vừa quen vừa lạ. Quen là bởi bộ khung không đổi: vẫn ra dân đều tay, vẫn chia dân đi ăn từng loại tài nguyên, vẫn lên đời rồi mới đẩy quân sang nhà đối thủ. Còn lạ là bởi gần như mọi thao tác quen tay đều bị đặt lại chỗ, từ cái nút lên đời cho tới chuyện một bức tường bị phá bằng gì.',
-        'Bài này viết cho anh em bên Đế chế 2 đang ngó sang Đế chế 4, đi qua năm khác biệt cốt lõi theo đúng thứ tự sẽ gặp trong một trận: cách lên đời, cách các nền văn minh khác nhau, hệ khắc chế, luật tường thành và nhịp trận. Anh em bên Đế chế 1 đọc cũng dùng được nguyên bài, còn câu hỏi quen thuộc nhất từ phía đó, rằng kèo 23 dân đời 3 không thành sang đây có còn không, thì trả lời gọn luôn: bên Đế chế 4 tường và thành là phần nằm sẵn trong game, ai xây được thì cứ xây.',
+        'Với người đã cày Đế chế 2 nhiều năm, trận Đế chế 4 đầu tiên thường cho một cảm giác vừa quen vừa lạ. Quen là bởi bộ khung không đổi: vẫn ra dân đều tay, vẫn chia dân đi ăn từng loại tài nguyên, vẫn lên đời rồi mới đẩy quân sang nhà đối thủ. Còn lạ là bởi gần như mọi thao tác quen tay đều bị đặt lại chỗ, từ cái nút lên đời cho tới chuyện một bức tường bị phá bằng gì.',
+        'Bài này viết cho anh em bên Đế chế 2 đang ngó sang Đế chế 4, đi qua năm khác biệt cốt lõi theo đúng thứ tự sẽ gặp trong một trận: cách lên đời, cách các nền văn minh khác nhau, hệ khắc chế, luật tường thành và nhịp trận. Mỗi mục sẽ nói rõ bên Đế chế 2 đang quen làm thế nào, rồi sang Đế chế 4 phải chỉnh lại ra sao, để anh em vào ván đầu là dùng được luôn.',
       ],
     },
     {
       heading: 'Vẫn bốn đời, nhưng nút lên đời không còn nằm ở nhà chính',
       paragraphs: [
         'Bên Đế chế 2, bốn đời lần lượt là Dark Age, Feudal Age, Castle Age và Imperial Age, việc lên đời nghiên cứu ngay tại nhà chính, kèm điều kiện phải dựng ít nhất hai công trình của đời đang đứng, chẳng hạn trại gỗ với cối xay để lên Feudal. Riêng khi đang ở Castle Age, người chơi được chọn: hoặc hai công trình của đời đó, hoặc dựng một Castle là đủ.',
-        'Đế chế 4 cũng có bốn đời với tên gọi y hệt từ Dark tới Imperial, nhưng cách đi lên thì khác hẳn. Ở đây không có nút lên đời tại nhà chính, mỗi lần lên đời người chơi phải dựng một công trình biểu tượng mà cộng đồng gọi là "Landmark", và được chọn một trong hai cái, mỗi cái mở ra một hướng lợi ích riêng.',
-        'Sở dĩ chi tiết này đáng để ý ngay từ trận đầu là bởi mỗi lần lên đời giờ thành một lần phải cân nhắc xem mình muốn được lợi cái gì, mà cái nhà vừa dựng lên thì đối thủ nhìn thấy. Họ đoán được hướng đi của mình qua đó, và mình cũng đoán được hướng của họ theo đúng cách như vậy. Bên cạnh đó, vài nền văn minh còn đi lối riêng, ví dụ Abbasid, Ayyubids, Knights Templar và Golden Horde lên đời bằng nghiên cứu công nghệ chứ không chọn Landmark.',
+        'Đế chế 4 cũng có bốn đời với tên gọi y hệt từ Dark tới Imperial, nhưng cách đi lên thì khác hẳn. Với hầu hết các phe, nút lên đời không còn nằm ở nhà chính nữa: mỗi lần lên đời người chơi phải dựng một công trình biểu tượng mà cộng đồng gọi là "Landmark", và được chọn một trong hai cái, mỗi cái mở ra một hướng lợi ích riêng.',
+        'Sở dĩ chi tiết này đáng để ý ngay từ trận đầu là bởi mỗi lần lên đời giờ thành một lần phải cân nhắc xem mình muốn được lợi cái gì, mà cái nhà vừa dựng lên thì đối thủ nhìn thấy. Họ đoán được hướng đi của mình qua đó, và mình cũng đoán được hướng của họ theo đúng cách như vậy. Bên cạnh đó, không phải phe nào cũng đi đúng đường đó: Abbasid, Ayyubids, Knights Templar và Golden Horde lên đời bằng nghiên cứu công nghệ, còn một số phe khác vẫn lên đời ngay tại nhà chính hoặc ở một công trình phụ.',
       ],
     },
     {
@@ -37,8 +37,8 @@ export const aoe4VsAoe2Guide: Guide = {
         'Khoảng cách giữa hai cách thiết kế ấy đẻ ra một việc phải làm thêm khi đổi sang Đế chế 4. Trước lúc chốt phe, anh em nên ngó qua xem phe mình bị chặn cái gì và được mở thêm cái gì, rồi ngó tiếp sang phe đối diện, bởi cùng một thế trận nhưng gặp một phe không dựng nổi tường sẽ khác hẳn gặp một phe rùa kín trong đá.',
       ],
       link: {
-        slug: 'aoe4-khac-de-che-the-nao',
-        label: 'Đọc thêm: Đế chế 4 khác Đế chế 1 thế nào',
+        slug: 'cac-nen-van-minh-aoe4',
+        label: 'Đọc thêm: Các nền văn minh trong Đế chế 4',
       },
     },
     {
@@ -74,7 +74,7 @@ export const aoe4VsAoe2Guide: Guide = {
     {
       heading: 'Mang gì sang được, phải tập lại những gì',
       paragraphs: [
-        'Tay chia dân và tư duy thế trận bên Đế chế 2 mang sang Đế chế 4 dùng được gần như nguyên vẹn. Bốn chỗ phải tập lại thì vừa kể xong: lên đời bằng Landmark, mỗi phe một bộ cơ chế riêng, vòng khắc chế giáo kỵ cung, và luật tường thành. Còn chỗ thứ năm là nhịp trận thì không có gì để học thuộc, đánh vài ván là tay tự chỉnh lại.',
+        'Tay chia dân và tư duy thế trận bên Đế chế 2 mang sang Đế chế 4 dùng được gần như nguyên vẹn. Bốn chỗ phải tập lại thì vừa kể xong: cách lên đời, mỗi phe một bộ cơ chế riêng, vòng khắc chế giáo kỵ cung, và luật tường thành. Còn chỗ thứ năm là nhịp trận thì không có gì để học thuộc, đánh vài ván là tay tự chỉnh lại.',
         'Vậy nên anh em cứ gỡ lần lượt từng chỗ một qua mấy ván đầu, đừng ôm cả bốn cùng lúc rồi thấy rối. Thua vài ván lúc mới đổi game cũng là chuyện hết sức bình thường, kể cả với người đã cầm Đế chế 2 hàng chục năm.',
       ],
     },

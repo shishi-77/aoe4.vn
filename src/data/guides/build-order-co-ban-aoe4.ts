@@ -5,7 +5,7 @@ export const buildOrderGuide: Guide = {
   title: 'Build order cơ bản cho người mới chơi AoE4',
   description:
     'Build order là gì và người mới nên mở đầu trận AoE4 thế nào? Một build order lên Đời II đơn giản dùng được cho mọi nền văn minh, kèm cách luyện cho thuộc.',
-  updatedAt: '2026-07-02',
+  updatedAt: '2026-08-07',
   cta: true,
   sections: [
     {
@@ -29,7 +29,7 @@ export const buildOrderGuide: Guide = {
         'Công thức cơ bản nhất, nền văn minh nào cũng áp dụng được: 7 dân thực + 3 dân vàng. Đủ vàng đủ thực là lên đời.',
         'Mở đầu: cho cả 6 dân khởi điểm ăn cừu cạnh nhà chính, ngựa dò đi tìm thêm cừu, và giữ nhà chính ra dân liên tục.',
         'Con dân đầu tiên vừa ra, cho đi đóng một cái nhà dân (House) rồi quay về ăn cừu - vậy là đủ 7 dân thực. Những con dân ra tiếp theo cho đi đào vàng, đủ 3 dân vàng thì dừng. Nhớ đóng thêm nhà dân trước khi chạm giới hạn dân số.',
-        'Đủ 400 thực và 200 vàng thì chọn một công trình biểu tượng (Landmark) để lên Đời II. Trong lúc landmark đang xây, kéo dần dân sang chặt gỗ, tiếp tục ra dân và đóng trại lính - đừng ngồi chờ.',
+        'Đủ 400 thực và 200 vàng thì bấm lên Đời II. Với hầu hết các phe, thao tác đó là chọn một công trình biểu tượng (Landmark) rồi cho dân dựng, còn vài phe lại lên đời ngay tại nhà chính hoặc ở một công trình phụ. Trong lúc công trình lên đời đang xây, kéo dần dân sang chặt gỗ, tiếp tục ra dân và đóng trại lính - đừng ngồi chờ.',
       ],
       link: { slug: 'cac-nen-van-minh-aoe4', label: 'Chưa biết chọn phe nào? Xem bài nền văn minh' },
     },

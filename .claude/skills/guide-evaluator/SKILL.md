@@ -167,6 +167,13 @@ Người đọc bài so sánh chính là dân game đó; hạ thấp game nào c
 Trả JSON: {"contradictions":[...],"claimsToVerify":[...],"disparagement":[...]}
 Ví dụ mâu thuẫn phải bắt: câu ngụ ý "cung R khắc tất" -> facts nói cung R (Chariot Archer) và
 cung A (Composite Bowman) KHÔNG khắc chế class nào -> contradiction.
+Ví dụ mâu thuẫn phải bắt (thêm 2026-08-07, cả hai kho đều có WRITING RULE tương ứng):
+- Nêu một con số dân lên đời bên Đế chế 1 như luật chung ("kèo quen thuộc là 23 dân") -> kho
+  aoe1 nói số dân tùy bài (~23 chém / ~26 cung) và trôi theo meta -> contradiction. Câu nói rõ
+  đó chỉ là ví dụ thì KHÔNG tính.
+- Nói lên đời trong Đế chế 4 BẮT BUỘC dựng Landmark ("phải dựng Landmark", "không có nút lên
+  đời tại nhà chính") -> kho aoe4 nói đó là đường của HẦU HẾT các phe, vẫn có phe lên đời tại
+  nhà chính hoặc ở một công trình phụ -> contradiction.
 Ví dụ dìm phải bắt: "Bên Đế chế 1 các phe đánh na ná nhau, chọn phe gần như chỉ đổi màu" -> disparagement.
 
 ### Bước 4 - Verdict tất định
@@ -292,5 +299,14 @@ thường. Chấm theo ĐÚNG giao thức guide với các thay đổi sau:
    WebFetch lỗi không làm sập vòng chấm - claim rơi về `unverifiableClaims`.
 3. **Bước 4**: `floorsForKind('comparison')`. `unverifiableClaims` không chặn PASS trong
    phiên có owner nhưng CHẶN điều kiện headless (xem skill write-article).
-4. **Bước 5**: scorecard ghi `Loại bài (kind): comparison` + dòng `Truy vết nguồn:` như
-   chế độ news.
+4. **Cổng phạm vi so sánh (owner chốt 2026-08-07)**: bài so sánh chỉ so đúng HAI game trong
+   tiêu đề. Subagent Bước 3 làm thêm nhiệm vụ đếm: game thứ ba (kể cả Đế chế 1) xuất hiện
+   trong THÂN BÀI mấy lần, và có được cấp đoạn riêng / khung "bên kia đọc cũng dùng được
+   nguyên bài" / anchor text không. Có bất kỳ thứ nào trong ba thứ đó -> ghi vào `Cần sửa`
+   và structure tối đa 6. Nhắc qua một câu để định vị hai game chính (vd xếp hạng nhịp trận
+   cả dòng Đế chế) thì KHÔNG tính vi phạm. Sở dĩ có cổng này là bởi kéo game thứ ba vào làm
+   loãng bài và làm mất tiêu điểm so sánh; nhóm đọc đó đã có khối `related` dẫn sang bài
+   dành riêng cho họ. Trả thêm trường: {"comparisonScopeViolations":[...]}.
+5. **Bước 5**: scorecard ghi `Loại bài (kind): comparison` + dòng `Truy vết nguồn:` như
+   chế độ news, cùng dòng `Phạm vi so sánh: <"chỉ so hai game trong tiêu đề" | "VI PHẠM:
+   <liệt kê>">`.
