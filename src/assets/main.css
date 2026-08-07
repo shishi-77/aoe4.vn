@@ -28,6 +28,19 @@ body {
   font-family: var(--font-display);
 }
 
+/*
+ * Site-wide keyboard focus ring. The browser default is a thin near-black ring
+ * that all but vanishes on the dark palette, so every focusable element gets
+ * the gold ring instead. `:where()` keeps specificity at 0, so any component
+ * that needs a different colour - the white ring on the social CTAs, say -
+ * still wins with a plain Tailwind `focus-visible:outline-*` utility.
+ */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 /* ---- Hiệu ứng trang chủ ---- */
 /* Lớp ảnh key art nền của hero zoom chậm (Ken Burns). */
 @keyframes kenburns {

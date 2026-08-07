@@ -57,7 +57,7 @@ useHead({
           <RouterLink
             v-if="item.guide"
             :to="`/guides/${item.guide.slug}/`"
-            class="whitespace-nowrap text-sm font-semibold text-gold hover:underline"
+            class="whitespace-nowrap text-sm font-semibold text-gold underline underline-offset-2"
           >
             {{ item.guide.label }} →
           </RouterLink>
@@ -71,7 +71,7 @@ useHead({
         :href="site.links.blog"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-gold hover:underline"
+        class="text-gold underline underline-offset-2"
       >
         Đọc các bài viết chi tiết trên blog ↗
       </a>

@@ -3,7 +3,13 @@ import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import type { Tournament } from '@/data/tournaments'
 
-const props = defineProps<{ tournament: Tournament }>()
+// `headingLevel` lets the card sit one level below whatever heading introduces
+// the list it belongs to: h2 under the /tournaments h1, h3 under the home page
+// section title.
+const props = withDefaults(
+  defineProps<{ tournament: Tournament; headingLevel?: 'h2' | 'h3' }>(),
+  { headingLevel: 'h2' },
+)
 
 const status = computed(() => {
   const now = Date.now()
@@ -19,7 +25,9 @@ const status = computed(() => {
     class="block rounded-lg border border-gold-dim/20 bg-surface p-6 transition duration-200 hover:-translate-y-1 hover:border-gold hover:shadow-lg hover:shadow-gold/5 motion-reduce:transform-none motion-reduce:transition-none"
   >
     <span class="text-xs font-bold uppercase tracking-wide text-gold">{{ status }}</span>
-    <h2 class="mt-1 text-xl font-bold text-cream">{{ tournament.name }}</h2>
+    <component :is="headingLevel" class="mt-1 text-xl font-bold text-cream">
+      {{ tournament.name }}
+    </component>
     <p class="mt-1 text-sm text-muted">{{ tournament.dateLabel }}</p>
     <p class="mt-1 text-sm text-muted">{{ tournament.format }} · {{ tournament.prizePoolTotal }}</p>
   </RouterLink>

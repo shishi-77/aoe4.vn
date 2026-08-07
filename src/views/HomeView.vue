@@ -53,7 +53,12 @@ const { el: communityEl } = useReveal()
   <section ref="tournamentsEl" class="reveal mx-auto max-w-5xl px-4 py-16">
     <SectionTitle title="Giải đấu" />
     <div class="grid gap-4 sm:grid-cols-2">
-      <TournamentCard v-for="t in tournaments" :key="t.slug" :tournament="t" />
+      <TournamentCard
+        v-for="t in tournaments"
+        :key="t.slug"
+        :tournament="t"
+        heading-level="h3"
+      />
     </div>
     <div class="mt-8 text-center">
       <RouterLink

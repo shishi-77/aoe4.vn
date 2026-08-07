@@ -76,7 +76,13 @@ useHead(() => ({
       class="mx-auto max-w-3xl px-4 py-8 text-center text-sm text-muted"
     >
       Tổ chức giải? Tạo poll bình chọn và quiz khán giả trực tiếp với
-      <a :href="site.ahaslides.url" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">AhaSlides</a>.
+      <a
+        :href="site.ahaslides.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gold underline underline-offset-2"
+        >AhaSlides</a
+      >.
     </p>
     <FooterSection :tournament="tournament" />
   </template>
