@@ -78,6 +78,10 @@ describe('guideToMarkdown', () => {
   it('ném lỗi khi guide không có section nào', () => {
     expect(() => guideToMarkdown(guide({ sections: [] }), site)).toThrow(/không có section/)
   })
+
+  it('ném lỗi khi guide slug trống', () => {
+    expect(() => guideToMarkdown(guide({ slug: '' }), site)).toThrow(/thiếu slug/)
+  })
 })
 
 describe('newsPostToMarkdown', () => {
@@ -97,6 +101,20 @@ describe('newsPostToMarkdown', () => {
 
   it('ghi thêm ngày cập nhật khi có', () => {
     expect(newsPostToMarkdown(post({ updatedAt: '2026-08-05' }), site)).toContain('2026-08-05')
+  })
+
+  it('không ghi Cập nhật khi updatedAt trống', () => {
+    const md = newsPostToMarkdown(post({ updatedAt: undefined }), site)
+    expect(md).not.toContain('Cập nhật:')
+  })
+
+  it('ném lỗi khi post slug trống', () => {
+    expect(() => newsPostToMarkdown(post({ slug: '' }), site)).toThrow(/thiếu slug/)
+  })
+
+  it('không phát khối Nguồn tham khảo khi post không có sources', () => {
+    const md = newsPostToMarkdown(post({ sources: [] }), site)
+    expect(md).not.toContain('## Nguồn tham khảo')
   })
 })
 
@@ -122,6 +140,14 @@ describe('faqToMarkdown', () => {
       `[Xem cách tải](${site.url}/guides/cach-tai-aoe4/)`,
     )
   })
+
+  it('không phát link khi item không có guide', () => {
+    const itemsWithoutGuide: FaqItem[] = [
+      { question: 'Đế chế 4 là gì?', answer: 'Là game chiến thuật thời gian thực.' },
+    ]
+    const md = faqToMarkdown(itemsWithoutGuide, site)
+    expect(md).not.toContain('Xem thêm:')
+  })
 })
 
 describe('tournamentToMarkdown', () => {
@@ -140,5 +166,14 @@ describe('tournamentToMarkdown', () => {
 
   it('không nhắc tới banner', () => {
     expect(tournamentToMarkdown(lacHong, site)).not.toContain('.webp')
+  })
+
+  it('ném lỗi khi tournament slug trống', () => {
+    expect(() =>
+      tournamentToMarkdown(
+        { ...lacHong, slug: '' },
+        site,
+      ),
+    ).toThrow(/thiếu slug/)
   })
 })
