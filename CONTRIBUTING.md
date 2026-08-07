@@ -23,7 +23,7 @@ vào `llms.txt`), nhưng Vite nạp file config **trước khi** alias `@/` tồ
 mở đầu bằng `import banner from '@/assets/imgs/...'`, việc nạp config sẽ đổ ngay với lỗi
 `Cannot find package '@/assets'`. Giữ ảnh tách khỏi dữ liệu là điều kiện để build không vỡ.
 
-### Bước 1 — Tạo file dữ liệu giải đấu (không import ảnh)
+### Bước 1 - Tạo file dữ liệu giải đấu (không import ảnh)
 
 Copy file mẫu `src/data/tournaments/_template.ts` thành `ten-giai.data.ts`, đặt tên theo slug
 của giải (chỉ dùng chữ thường, số và dấu gạch ngang):
@@ -62,7 +62,7 @@ export const tenGiaiData: TournamentData = {
 }
 ```
 
-### Bước 2 — Tạo file gắn banner
+### Bước 2 - Tạo file gắn banner
 
 Tạo `ten-giai.ts` cùng thư mục, chỉ để ghép ảnh banner vào dữ liệu:
 
@@ -77,7 +77,7 @@ export const tenGiai: Tournament = { ...tenGiaiData, banner }
 
 > Xem cặp file `src/data/tournaments/lac-hong.data.ts` + `lac-hong.ts` để tham khảo ví dụ đầy đủ.
 
-### Bước 3 — Import vào index.ts và data.ts
+### Bước 3 - Import vào index.ts và data.ts
 
 Mở `src/data/tournaments/index.ts` và thêm import + phần tử vào mảng `tournaments`:
 
@@ -105,7 +105,7 @@ import { tenGiaiData } from './ten-giai.data'   // thêm dòng này
 export const tournamentsData: TournamentData[] = [lacHongData, tenGiaiData]  // thêm vào mảng
 ```
 
-### Bước 4 — Thêm route vào vite.config.ts (QUAN TRỌNG)
+### Bước 4 - Thêm route vào vite.config.ts (QUAN TRỌNG)
 
 Mở `vite.config.ts` và thêm slug vào **cả hai chỗ**: `includedRoutes` và mảng `urls` (sitemap):
 
