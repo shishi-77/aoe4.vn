@@ -4,6 +4,8 @@
 
 **Reviewed by**: domain expert (user), 2026-07-06 - core facts confirmed: "cung A" = Composite Bowman (foot archer), "cung R" = Chariot Archer (mounted archer) - two DIFFERENT units; neither hard-counters any class and Composite Bowman has no armor negation; Slinger ("quẩy đá") gets no bonus vs mounted archers; build conventions ("7 thực 3 vàng", "23 dân đời 3 không thành") correct. Minor patch/stat numbers still marked ⚠️ below.
 
+**Re-reviewed**: domain expert (user), 2026-08-07 - the "23 dân" half of that build convention was OVERSTATED. Population at age-up is build-dependent and meta-dependent, not a fixed rule; only the "đời 3 không thành" house-rule half stands as a convention. See "Economy & Build Order" below for the corrected fact plus the writing rule that follows from it.
+
 **Vocabulary map** (Vietnamese community slang → game unit):
 - "cung A" = the foot-archer line: Bowman → Improved Bowman → Composite Bowman
 - "ngựa chém"/"ngựa" = melee cavalry line: Scout → Cavalry → Heavy Cavalry → Cataphract
@@ -59,7 +61,9 @@
 ## Economy & Build Order
 
 - The 7-food-villager + 3-gold-villager opening ("build 7 thực 3 vàng") is a CORRECT, established community build-order convention for original AoE. - CONFIRMED by domain expert (2026-07-06). It is a convention (not an engine rule) but accurate as stated.
-- "23 dân, đời 3 không thành" (advance to Age 3 around 23 population, plus the competitive "no towers/castle" house-rule) is a CORRECT, accepted convention in the Vietnamese AoE1 scene. - CONFIRMED by domain expert (2026-07-06). It is a competitive house-rule, not engine-enforced, but accurate as community practice.
+- "Đời 3 không thành" (play the match out from Age 3, plus the competitive "no towers/castle" house-rule) is a CORRECT, accepted convention in the Vietnamese AoE1 scene. - CONFIRMED by domain expert (2026-07-06). It is a competitive house-rule, not engine-enforced, but accurate as community practice.
+- **The population number at age-up is NOT fixed at 23.** It follows the build being run: around 23 dân is typical of an early-melee opening ("bài chém"), around 26 dân of an archer opening ("bài cung"). Numbers like these track the meta and drift with it. - CONFIRMED by domain expert (2026-08-07). The older "23 dân, đời 3 không thành" entry stated the 23 as if it were the single default, which is wrong.
+- **WRITING RULE (owner, 2026-08-07): never print a population number as "the" AoE1 convention in an article.** The meta keeps moving, so a hard number both dates the article and reads as plainly wrong to anyone running a different build. To evoke the AoE1 opening, describe the SHAPE of the build instead: "bài chém sớm", "bài chủ lực khoẻ". A number is acceptable only when the sentence marks it as one example ("ví dụ bài chém hay lên đời quanh 23 dân"), never as a rule. An article asserting a fixed pop number as the convention is a `contradiction`, not a style note.
 - Scout is the standard unit to find sheep/forage and scout the map at the start of a game (matches "ngựa dò" usage in the guides). - source: WebSearch summary of https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/scout/
 - Town Center never idling and constant villager production are universal AoE-series economy fundamentals; no reason to doubt these apply to the original game the same as later titles, but no original-AoE-specific primary source was pulled for this exact phrasing. ⚠️ CẦN NGƯỜI DUYỆT (general knowledge, not directly sourced in this research pass)
 
@@ -89,7 +93,7 @@
 ## Open questions for the human reviewer
 
 1. RESOLVED (user, 2026-07-06): the original Composite Bowman ("cung A") does NOT ignore armor - the armor-ignore mechanic is AoE2-only. The statement "cung R has no bonus damage vs anything" stands.
-2. RESOLVED (user, 2026-07-06): the "7 thực 3 vàng" and "23 dân, đời 3 không thành" conventions are correct as stated.
+2. PARTLY REVISED (user, 2026-08-07): "7 thực 3 vàng" stands as originally recorded. "23 dân" does NOT stand as a universal convention - it is build-dependent (~23 chém / ~26 cung) and meta-dependent; only "đời 3 không thành" survives as the convention. See the corrected entry plus writing rule in "Economy & Build Order".
 3. RESOLVED (user, 2026-07-06): Slingers ("quẩy đá") get no anti-archer bonus against mounted/cavalry archers - only against foot archers.
 4. Exact Catapult/Heavy Catapult upgrade deltas (+10 damage, +2 range, etc.) should be checked against a primary stat table (e.g. artho.com's siege unit page, not yet fetched in this pass).
 5. Whether there is a real "-20%" or similar aura/damage-reduction effect for cavalry near Camel Riders in the original game, or whether that is an AoE4 mechanic the guide incorrectly implies existed in AoE1 too (the guide text itself only describes this for AoE4's Abbasid, so likely not an issue, but flagging in case a future guide conflates it).

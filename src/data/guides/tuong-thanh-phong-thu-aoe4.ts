@@ -5,13 +5,13 @@ export const wallsAndDefenseGuide: Guide = {
   title: 'Tường thành và phòng thủ trong Đế chế 4 cho dân quen "không thành"',
   description:
     'Tường thành và phòng thủ trong AoE4 cho người chơi Đế chế quen luật không thành: tường gỗ, tường đá, chòi canh, Keep, khi nào nên xây tường và phá thành bằng xe ram, máy bắn đá, Trebuchet.',
-  updatedAt: '2026-08-06',
+  updatedAt: '2026-08-07',
   cta: true,
   sections: [
     {
       heading: 'Cả đời đánh "không thành", giờ vào game toàn thành',
       paragraphs: [
-        'Đối với dân Đế chế 1, kèo quen thuộc bao nhiêu năm vẫn là 23 dân, đời 3 không thành. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Ở đây thành nằm sẵn trong game, không ai cấm, muốn xây là xây.',
+        'Đối với dân Đế chế 1, kèo quen thuộc bao nhiêu năm vẫn là đời 3 không thành, vào bài chém sớm rồi so tay nhau ở đó. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Ở đây thành nằm sẵn trong game, không ai cấm, muốn xây là xây.',
         'Sở dĩ Đế chế 4 dám để người chơi xây thành thoải mái mà trận đấu vẫn cân là bởi game đã tính sẵn cả một hệ đồ công thành để trị tường, còn vì sao game dám thả cửa như vậy thì anh em đọc thêm bài so sánh hai game theo đường dẫn bên dưới, ở đó có giải thích kỹ phần gốc rễ. Bài này chỉ tập trung vào phần thực chiến: đồ thủ có những gì, khi nào nên xây, và muốn phá thành người ta thì dùng gì.',
       ],
       link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế 1 thế nào?' },

@@ -5,13 +5,13 @@ export const aoe4VsAoe1Guide: Guide = {
   title: 'Đế chế 4 khác Đế chế 1 thế nào? Góc nhìn người chơi AoE1',
   description:
     'AoE4 khác Đế chế thế nào? Giải thích cho người chơi Đế chế: nhịp trận và cơ chế tự động, thành chòi, lên đời bằng landmark, khắc chế binh chủng, và những kỹ năng Đế chế mang thẳng sang được.',
-  updatedAt: '2026-08-06',
+  updatedAt: '2026-08-07',
   cta: true,
   sections: [
     {
       heading: 'Vẫn là dòng Đế chế, nhưng chơi khác',
       paragraphs: [
-        'Đối với những anh em đã gắn bó với Đế chế 1 nhiều năm, kèo quen thuộc vẫn là 23 dân, đời 3 không thành. Sang Đế chế 4, tin vui là không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời rồi đẩy quân, những thói quen đó mang sang dùng được ngay.',
+        'Đối với những anh em đã gắn bó với Đế chế 1 nhiều năm, kèo quen thuộc vẫn là đời 3 không thành, mở bài chủ lực khoẻ rồi so tay ở đó. Sang Đế chế 4, tin vui là không phải học lại từ đầu: vẫn ra dân, thu tài nguyên, lên đời rồi đẩy quân, những thói quen đó mang sang dùng được ngay.',
         'Tuy nhiên, một số luật mà cộng đồng Đế chế đúc kết qua nhiều năm như đời 3 hay không thành thì sang đây không còn ai đặt ra nữa, bởi Đế chế 4 được thiết kế theo hướng khác. Bài viết này sẽ đi qua từng khác biệt một, để anh em vào trận đầu tiên đỡ bỡ ngỡ.',
       ],
     },
@@ -37,7 +37,7 @@ export const aoe4VsAoe1Guide: Guide = {
       paragraphs: [
         'Luật đời 3 bên Đế chế 1 cũng ra đời theo cách tương tự: cộng đồng chốt đánh từ đời 3 để trận nào cũng vào thẳng thế trận đủ bài, đủ binh chủng mà so tài.',
         'Đế chế 4 thì không cần chốt như vậy, bởi quân đã đa dạng ngay từ sớm, đánh từ đời 1 đã có bài đánh riêng. Chính vì thế, người chơi bên này cứ đánh trọn cả 4 đời, mỗi đời là một giai đoạn trận đấu với việc riêng để làm.',
-        'Cách lên đời cũng khác hẳn: thay vì bấm nút ở nhà chính, người chơi phải dựng một công trình biểu tượng gọi là Landmark, và mỗi lần lên đời được chọn 1 trong 2 landmark, mỗi cái mở ra một hướng chơi khác nhau. Bên cạnh đó, tốc độ lên đời mỗi phe mỗi khác, nên nhịp mở trận của hai bên cũng hiếm khi trùng nhau.',
+        'Cách lên đời cũng khác hẳn: hầu hết các phe không bấm nút ở nhà chính nữa mà phải dựng một công trình biểu tượng gọi là Landmark, mỗi lần lên đời được chọn 1 trong 2 cái, mỗi cái mở ra một hướng chơi khác nhau. Có điều không phải phe nào cũng đi đường đó, vẫn có phe lên đời ngay tại nhà chính hoặc ở một công trình phụ, nên lần đầu cầm một phe lạ thì nên ngó qua xem phe đó lên đời bằng gì. Bên cạnh đó, tốc độ lên đời mỗi phe mỗi khác, nên nhịp mở trận của hai bên cũng hiếm khi trùng nhau.',
       ],
     },
     {

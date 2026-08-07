@@ -22,8 +22,8 @@
 | # | Claim | Trạng thái | Nguồn / fact đối chiếu |
 | --- | --- | --- | --- |
 | 1 | AoE4 có 4 đời: Dark (I) - Feudal (II) - Castle (III) - Imperial (IV) | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md` > Ages & unlocks: "AoE4 has 4 Ages total: Dark Age (I) → Feudal Age (II) → Castle Age (III) → Imperial Age (IV)" |
-| 2 | Lên đời trong AoE4 làm bằng cách xây một trong hai Landmark, mỗi cái mở một hướng lợi ích khác nhau | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md`: "Advancing ages is done by constructing one of two choosable Landmark buildings (not a simple button/tech at the Town Center as in AoE2)" |
-| 3 | Một số phe AoE4 (Abbasid, Ayyubids, Knights Templar, Golden Horde) lên đời bằng nghiên cứu công nghệ chứ không chọn Landmark | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md`: "Exceptions: Abbasid Dynasty, Ayyubids, Knights Templar, and Golden Horde age up via unique tech-research mechanics" |
+| 2 | HẦU HẾT các phe AoE4 lên đời bằng cách xây một trong hai Landmark, mỗi cái mở một hướng lợi ích khác nhau | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md`: "For most civs, advancing an age is done by constructing one of two choosable Landmark buildings... This is the DEFAULT path, not a universal one." Sửa 2026-08-07: bản cũ ghi claim này ở dạng tuyệt đối, owner đã bác |
+| 3 | Không phải phe nào cũng lên đời bằng Landmark: có phe lên đời bằng nghiên cứu công nghệ (Abbasid, Ayyubids, Knights Templar, Golden Horde), có phe lên đời ngay tại nhà chính hoặc ở một công trình phụ | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md`: "Not every civ ages up through a Landmark. Some civs still age up at the Town Center, and some at a secondary building instead" - owner xác nhận 2026-08-07; kho chưa map phe nào đi đường nào nên bài chỉ nêu chung, không gán phe cụ thể cho hai đường sau |
 | 4 | Tam giác khắc chế AoE4: giáo khắc kỵ, kỵ khắc cung, cung khắc giáo | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md` > Counters: "Spearman (giáo) counters Horseman/Cavalry (kỵ) → Cavalry counters Archer (cung) → Archer counters Spearman" - VERDICT CONFIRMED |
 | 5 | Tường đá AoE4 không phá được bằng đuốc của lính thường, chỉ đồ công thành mới phá | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md` > Fortifications: "Stone Walls in AoE4 cannot be destroyed by melee units' torches - they can only be damaged by dedicated siege weapons" |
 | 6 | Chòi canh (Outpost) AoE4 không tự bắn tên, phải nâng cấp Arrow Slits mới bắn | [ĐÃ CÓ TRONG KHO] AoE4 | `aoe4-facts.md`: "Outpost (chòi canh) in AoE4 does NOT shoot arrows by default - it must be upgraded (Arrow Slits)" - owner xác nhận 2026-07-07 |
@@ -37,7 +37,7 @@
 | 14 | AoE2: Watch Tower tự bắn tên vào địch, cho dân vào trong thì bắn nhiều hơn | [NGUỒN CHÍNH THỨC] AoE2 | cùng URL trên - "Watch Towers are a defensive tower that shoots an arrow at enemy units" + villagers can garrison to increase arrow output |
 | 15 | AoE2: Castle là công trình mạnh nhất, muốn hạ phải đầu tư đồ công thành; Castle huấn luyện quân riêng của phe và nghiên cứu công nghệ riêng của phe | [NGUỒN CHÍNH THỨC] AoE2 | cùng URL trên - "A Castle is the single strongest building... will require a costly investment in siege weapons to knock it down" + "Castles can train unique units, research civilization-specific technologies" |
 | 16 | AoE2:DE có 4 đời công nghệ để đi lên (câu xác nhận thứ hai) | [NGUỒN CHÍNH THỨC] AoE2 | https://www.ageofempires.com/learn-to-play/getting-started-aoe2/ - "Every empire and match in Age of Empires II: Definitive Edition features four Ages of technology to advance through." |
-| 17 | Luật quen của cộng đồng Đế chế VN: "23 dân, đời 3 không thành" | [ĐÃ CÓ TRONG KHO] AoE1/meta VN | `aoe1-facts.md` > Economy & Build Order - owner xác nhận 2026-07-06 |
+| 17 | ~~Luật quen của cộng đồng Đế chế VN: "23 dân, đời 3 không thành"~~ ĐÃ BỎ KHỎI BÀI 2026-08-07 | [BỎ] | Owner bác phần "23 dân" (`aoe1-facts.md` > Economy & Build Order, sửa 2026-08-07): số dân lên đời tùy bài (~23 chém, ~26 cung) và trôi theo meta, không được viết như luật chung. Đồng thời đây là claim về Đế chế 1 trong một bài so sánh Đế chế 2 vs Đế chế 4 - vi phạm luật phạm vi so sánh, xem mục dưới |
 
 ## Claim đã cân nhắc rồi BỎ (không đủ nguồn)
 
@@ -52,3 +52,19 @@
 ## Cổng owner
 
 Bỏ qua cổng owner: mọi claim có kho/nguồn (0 claim `[CẦN XÁC NHẬN]`).
+
+## Sửa sau khi owner fact-check lại (2026-08-07)
+
+Owner rà lại bài đã xuất bản và chốt ba việc:
+
+1. Claim 2 phải hạ xuống "hầu hết các phe" - lên đời bằng Landmark là đường mặc định,
+   không phải luật chung. Claim 3 mở rộng theo: ngoài nhánh nghiên cứu công nghệ, còn có phe
+   lên đời ngay tại nhà chính và phe lên đời ở một công trình phụ. Kho chưa map phe nào đi
+   đường nào, nên bài nêu chung, không gán tên phe cho hai đường sau.
+2. Claim 17 bỏ hẳn. Số dân lên đời bên Đế chế 1 tùy bài và trôi theo meta, viết ra thành luật
+   chung là sai; muốn gợi lại kèo AoE1 thì tả dạng bài ("bài chém sớm", "bài chủ lực khoẻ").
+3. **Luật phạm vi so sánh**: bài so sánh chỉ so đúng hai game trong tiêu đề. Đế chế 1 bị gỡ
+   khỏi đoạn mở bài (khung "anh em bên Đế chế 1 đọc cũng dùng được nguyên bài" + câu hỏi kèo
+   23 dân) và khỏi anchor text mục nền văn minh, chỉ còn được nhắc qua đúng một lần ở xếp hạng
+   nhịp trận bốn game, chỗ cần nó để định vị Đế chế 2 với Đế chế 4. Người đọc Đế chế 1 vẫn tới
+   được bài dành cho họ qua khối `related`.

@@ -58,9 +58,12 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
 ## Ages & unlocks (general)
 
 - AoE4 has 4 Ages total: Dark Age (I) → Feudal Age (II) → Castle Age (III) → Imperial Age (IV).
-- Advancing ages is done by constructing one of two choosable **Landmark** buildings (not a simple button/tech at the Town Center as in AoE2), each granting a different bonus/unlock path. This matches the guide's claim.
+- For **most** civs, advancing an age is done by constructing one of two choosable **Landmark** buildings (not a simple button/tech at the Town Center as in AoE2), each granting a different bonus/unlock path. This is the DEFAULT path, not a universal one.
   source: https://ageofempires.fandom.com/wiki/Advancement , https://ageofempires.fandom.com/wiki/Age
-- Exceptions: Abbasid Dynasty, Ayyubids, Knights Templar, and Golden Horde age up via unique tech-research mechanics rather than picking landmarks in the standard way.
+- **Not every civ ages up through a Landmark.** Some civs still age up at the **Town Center**, and some at a **secondary building** instead. - CONFIRMED by site owner (AoE4 domain expert), 2026-08-07. So "lên đời phải dựng Landmark", stated as absolute, is a factual error.
+  ⚠️ CẦN NGƯỜI DUYỆT: the exact civ → mechanism mapping is NOT recorded here. Documented non-Landmark civs so far are Abbasid Dynasty, Ayyubids, Knights Templar and Golden Horde (recorded below as tech-research age-ups). Do NOT assert which specific civ uses the Town Center path or the secondary-building path without a fresh check - name the paths generically instead.
+- Exceptions already documented: Abbasid Dynasty, Ayyubids, Knights Templar, and Golden Horde age up via unique tech-research mechanics rather than picking landmarks in the standard way.
+- **WRITING RULE (owner, 2026-08-07): never write the Landmark age-up as an absolute.** Say "hầu hết các phe" and add that some civs age up at the Town Center or at a secondary building. An article that says every civ must build a Landmark to age up is a `contradiction`, not a style note.
 
 ---
 
@@ -111,4 +114,5 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
 2. Confirm whether "The Sultans Ascend" (which added Japanese/Onna-Musha, Ayyubids, House of Lancaster, Knights Templar) is the correct/current DLC boundary as of July 2026, or whether a newer DLC has shipped that could add/change civs referenced in `cac-nen-van-minh-aoe4.ts`.
 3. RESOLVED (user, 2026-07-06): the AoE3 > AoE1 > AoE4 > AoE2 speed ranking is confirmed accepted/accurate - no caveat needed.
 4. Double check whether ALL civs truly use the 400 Food/200 Gold Feudal age-up cost, or whether any of the newer DLC civs (beyond the four tech-research exceptions already noted) deviate.
-5. Verify Onna-Musha's availability is Japanese-only in the standard game (a search result surfaced an "Onna-Musha - Holy Roman Empire" aoe4world page, possibly reflecting an event/mercenary/shared-tech mechanic) - was not investigated further and could be worth a sanity check if the guide ever claims Onna-Musha is Japanese-exclusive.
+5. Map out the full civ → age-up-mechanism table (Landmark / Town Center / secondary building / tech research). The owner confirmed on 2026-08-07 that all of these paths exist, but this file only records the four tech-research civs by name, so articles currently have to describe the non-Landmark paths generically.
+6. Verify Onna-Musha's availability is Japanese-only in the standard game (a search result surfaced an "Onna-Musha - Holy Roman Empire" aoe4world page, possibly reflecting an event/mercenary/shared-tech mechanic) - was not investigated further and could be worth a sanity check if the guide ever claims Onna-Musha is Japanese-exclusive.

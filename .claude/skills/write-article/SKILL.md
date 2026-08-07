@@ -86,7 +86,17 @@ Soạn `docs/facts-review/<slug>.md`:
    làm nhãn thường trực; `Đế chế` trơ chỉ để chỉ CẢ DÒNG và phải đi sau `dòng`/`cộng đồng`/
    `làng`. Viết tắt để dành cho title, description, slug, meta. Vi phạm là FAIL hygiene ở
    Bước 4, không phải góp ý.
-4. Status queue = `drafted`. Bài MỚI (chưa có trên `main`): CHƯA commit file bài ở bước này, để
+4. HAI LUẬT NỘI DUNG CỨNG (owner chốt 2026-08-07, sau lần fact-check lại các bài đã đăng):
+   - **Không neo số của meta làm luật chung.** Con số kiểu "23 dân lên đời" bên Đế chế 1 tùy
+     bài mà đổi (~23 cho bài chém, ~26 cho bài cung) và trôi theo meta, viết ra thành luật
+     chung là SAI chứ không phải hơi rộng. Muốn gợi lại kèo AoE1 thì tả DẠNG BÀI: "bài chém
+     sớm", "bài chủ lực khoẻ". Số chỉ được dùng khi câu văn nói rõ đó là ví dụ.
+   - **Bài `comparison` chỉ so đúng HAI game trong tiêu đề.** Game thứ ba (kể cả Đế chế 1)
+     chỉ được nhắc qua, không cấp đoạn riêng, không dựng khung "bên kia đọc cũng dùng được
+     nguyên bài", không lấy làm anchor text. Nhắc qua một câu để định vị hai game chính (vd
+     xếp hạng nhịp trận cả dòng) thì được. Muốn phục vụ nhóm đọc đó thì để khối `related`
+     và internal link làm việc, đừng kéo game thứ ba vào thân bài.
+5. Status queue = `drafted`. Bài MỚI (chưa có trên `main`): CHƯA commit file bài ở bước này, để
    nguyên trong working tree tới khi evaluator PASS ở Bước 4 rồi commit một lần cùng status
    queue. Sở dĩ phải chờ là bởi commit bản nháp làm nó thành mốc đối chiếu cho các vòng sau và
    dễ kéo cả loop đi sai (ca thật: dry run comparison 2026-08-06). Bài đã có trên `main` mà đang
