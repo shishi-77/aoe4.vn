@@ -45,7 +45,7 @@ Giá trị xếp theo độ chắc chắn, cao xuống thấp:
 | Hạng mục | Độ chắc | Ghi chú |
 |---|---|---|
 | `BreadcrumbList` | Cao | Google dùng trực tiếp cho rich result và grounding, áp cho mọi trang |
-| `citation` từ `guide.sources` | Cao nhưng hẹp | Dữ liệu đã có sẵn, nhưng hôm nay chỉ 1/11 guide có `sources` |
+| `citation` từ `sources` | Cao | Phủ 100% news (trường bắt buộc), 1/11 guide (trường tuỳ chọn) |
 | robots.txt khai báo bot | Trung bình | Gần như miễn phí, loại bỏ rủi ro diễn giải nhầm |
 | `llms.txt` / `llms-full.txt` | Thấp, đầu cơ | Quy ước cộng đồng, chưa được chuẩn hoá |
 | `.md` từng bài | Thấp nhất | Nhưng chi phí biên ~0 vì dùng lại hàm của `llms-full.txt` |
@@ -66,12 +66,50 @@ Nguyên tắc bám đúng pattern đã có của `buildSitemapXml`: **hàm thu�
 `vite.config.ts` chạm đĩa.** Không đẻ ra cơ chế build mới.
 
 ```
+src/data/tournaments/        tách dữ liệu khỏi asset (xem 4.0 - điều kiện tiên quyết)
 src/lib/contentMarkdown.ts   render một đơn vị nội dung -> Markdown (thuần, không fs)
 src/lib/llmsTxt.ts           gộp thành llms.txt / llms-full.txt / danh sách file .md (thuần)
 vite.config.ts onFinished    +6 dòng: gọi hàm, writeFileSync, ngay cạnh sitemap
 public/robots.txt            viết lại tay, file tĩnh
 src/lib/structuredData.ts    thêm breadcrumb + làm giàu Article/NewsArticle + listing
 ```
+
+### 4.0 Điều kiện tiên quyết: tách banner khỏi dữ liệu giải đấu
+
+**Đo thực tế, không phải suy đoán.** Thử import `tournaments` vào một vite config rồi chạy
+build:
+
+```
+failed to load config from vite.probe.config.ts
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@/assets'
+```
+
+Nguyên nhân: `lac-hong.ts` và `ha-noi-open-1.ts` mở đầu bằng
+`import banner from '@/assets/imgs/....webp'`. Vite nạp file config **trước khi** alias `@/`
+tồn tại, nên toàn bộ build đổ. `site` và `faqItems` thì sạch, đã thử và nạp bình thường.
+
+Vì thế `vite.config.ts` **không được** import module giải đấu hiện tại. Cách xử lý đã chốt:
+tách mỗi giải làm hai lớp, giữ đúng một nguồn sự thật.
+
+```
+src/data/tournaments/types.ts             interface + TournamentData = Omit<Tournament, 'banner'>
+src/data/tournaments/lac-hong.data.ts     dữ liệu thuần, KHÔNG import asset
+src/data/tournaments/ha-noi-open-1.data.ts    nt
+src/data/tournaments/data.ts              export tournamentsData - cửa vào sạch cho build tooling
+src/data/tournaments/lac-hong.ts          { ...lacHongData, banner } - chỉ gắn ảnh
+src/data/tournaments/ha-noi-open-1.ts     nt
+```
+
+Ràng buộc của bước tách này:
+
+- **Không đổi hành vi.** `lacHong` và `haNoiOpen1` xuất ra vẫn y hệt, mọi component và test
+  đang import chúng không phải sửa.
+- **Không trùng lặp dữ liệu.** Lớp `.ts` spread từ lớp `.data.ts`, không chép tay.
+- `index.ts` re-export type từ `./types`; `_template.ts` và `CONTRIBUTING.md` phải được cập
+  nhật cho khớp quy trình thêm giải mới, nếu không lần sau thêm giải sẽ làm sai.
+- `tournamentToMarkdown` và `LlmsInput.tournaments` nhận `TournamentData`, không nhận
+  `Tournament` - chúng không dùng tới `banner`. `Tournament` vẫn gán được vào `TournamentData`
+  nên test có thể truyền thẳng `lacHong`.
 
 Luồng dữ liệu:
 
@@ -136,7 +174,8 @@ interface LlmsInput {
   guides: Guide[]
   news: NewsPost[]
   faq: FaqItem[]
-  tournaments: Tournament[]
+  /** TournamentData, không phải Tournament - xem 4.0. */
+  tournaments: TournamentData[]
 }
 
 export function buildLlmsTxt(input: LlmsInput): string
@@ -211,10 +250,13 @@ for (const file of buildMarkdownFiles(llmsInput)) {
 }
 ```
 
-`vite.config.ts` cần import thêm `site`, `faqItems`, `tournaments`. Lưu ý: file này dùng
-đường dẫn tương đối (`./src/data/...`) chứ không dùng alias `@/`, vì alias chưa được phân
-giải lúc Vite đọc config - đây là pattern có sẵn của `guides` và `newsPosts`, đừng "sửa" nó
-cho khớp quy ước của `src/`.
+`vite.config.ts` cần import thêm `site`, `faqItems`, và `tournamentsData` **từ
+`./src/data/tournaments/data`** - không phải từ `./src/data/tournaments`, xem mục 4.0.
+
+Lưu ý: file này dùng đường dẫn tương đối (`./src/data/...`) chứ không dùng alias `@/`, vì
+alias chưa được phân giải lúc Vite đọc config - đây là pattern có sẵn của `guides` và
+`newsPosts`, đừng "sửa" nó cho khớp quy ước của `src/`. Đây cũng chính là lý do gốc của mục
+4.0: bất cứ thứ gì `vite.config.ts` chạm tới đều không được đi qua alias.
 
 ## 5. robots.txt
 
@@ -295,11 +337,21 @@ Thêm vào cả hai:
 - `isPartOf`: `{ '@type': 'WebSite', name, url }` trỏ về gốc site
 - `about`: `{ '@type': 'VideoGame', name: 'Age of Empires IV' }`
 
-Riêng `guideArticleJsonLd`, khi `guide.sources` có phần tử:
+Thêm `citation` khi có nguồn. Hai loại nội dung có hình dạng `sources` **khác nhau**, đừng
+gộp làm một:
 
-- `citation`: mảng URL nguồn
+| | Kiểu | Bắt buộc? | Phủ sóng hôm nay |
+|---|---|---|---|
+| `Guide.sources` | `string[]` (URL trần) | Tuỳ chọn | 1/11 bài |
+| `NewsPost.sources` | `{ label, url }[]` | **Bắt buộc** | 1/1 bài, và mọi bài sau |
 
-Đo thực tế trước khi làm: **chỉ 1 trong 11 guide hiện có `sources`** -
+Cả hai render thành `citation` là mảng `CreativeWork` cho đồng nhất: guide chỉ có `url`, news
+có thêm `name` lấy từ `label`.
+
+`NewsPost.sources` bắt buộc theo type, nên `citation` phủ **toàn bộ chuyên mục tin tức** ngay
+từ ngày đầu - đây mới là chỗ thay đổi này có tác dụng thật, chứ không phải ở guides.
+
+Đo thực tế phía guides: **chỉ 1 trong 11 guide hiện có `sources`** -
 `aoe4-vs-aoe2-khac-biet-cot-loi.ts`. Nên hôm nay `citation` chỉ lên sóng ở đúng một bài. Giá
 trị của thay đổi này nằm ở chỗ nó **tự lớn theo thời gian**: mỗi guide `comparison` viết sau
 đều bắt buộc có `sources`, và cơ chế phát ra HTML sẽ có sẵn thay vì phải nhớ làm sau.
@@ -393,9 +445,12 @@ Mục đích: thêm bài mới mà generator quên xử lý là **đỏ ngay**, 
 1. `https://aoe4.vn/llms.txt` và `/llms-full.txt` phục vụ được, liệt kê đủ nội dung hiện có.
 2. Mỗi guide và news post có bản `.md` tương ứng, nội dung khớp bản HTML.
 3. `robots.txt` khai báo tường minh 16 bot, giữ `Sitemap:`.
-4. Guide có `sources` phát `citation` trong JSON-LD; guide không có thì không phát khoá đó.
+4. Mọi news post phát `citation`; guide có `sources` phát `citation`, guide không có thì
+   không phát khoá đó (không phát mảng rỗng).
 5. Guide/news/tournament detail và bốn trang listing phát `BreadcrumbList`.
 6. Toàn bộ gate trong CLAUDE.md xanh, cộng `npm run build`.
+6b. Tách banner không đổi hành vi: mọi test giải đấu và component section đang có vẫn xanh mà
+   không phải sửa; `_template.ts` và `CONTRIBUTING.md` đã cập nhật theo cấu trúc mới.
 7. Không một chữ prose nào bị sửa - `git diff` **không chạm** `src/data/guides/*.ts` và
    `src/data/news/*.ts`. Không back-fill `sources`, không sửa `faq.ts`.
 
