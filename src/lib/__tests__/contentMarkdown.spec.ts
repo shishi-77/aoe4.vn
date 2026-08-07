@@ -59,6 +59,11 @@ describe('guideToMarkdown', () => {
     expect(md).not.toContain('cach-tai-aoe4.md')
   })
 
+  it('không thêm tiền tố "Xem thêm:" trước link section, phát nguyên nhãn dữ liệu', () => {
+    const md = guideToMarkdown(guide(), site)
+    expect(md).not.toContain('Xem thêm:')
+  })
+
   it('ghi URL canonical và ngày cập nhật của chính bài', () => {
     const md = guideToMarkdown(guide(), site)
     expect(md).toContain(`${site.url}/guides/build-order-co-ban/`)
@@ -73,6 +78,19 @@ describe('guideToMarkdown', () => {
 
   it('không phát khối Nguồn tham khảo khi guide không có sources', () => {
     expect(guideToMarkdown(guide(), site)).not.toContain('## Nguồn tham khảo')
+  })
+
+  it('phát khối Bài liên quan khi guide có related', () => {
+    const md = guideToMarkdown(
+      guide({ related: [{ slug: 'cach-tai-aoe4', label: 'Cách tải Đế chế 4' }] }),
+      site,
+    )
+    expect(md).toContain('## Bài liên quan')
+    expect(md).toContain(`- [Cách tải Đế chế 4](${site.url}/guides/cach-tai-aoe4/)`)
+  })
+
+  it('không phát khối Bài liên quan khi guide không có related', () => {
+    expect(guideToMarkdown(guide(), site)).not.toContain('## Bài liên quan')
   })
 
   it('ném lỗi khi guide không có section nào', () => {
@@ -135,18 +153,18 @@ describe('faqToMarkdown', () => {
     expect(md).toContain('## Tải ở đâu?')
   })
 
-  it('phát link tới guide khi câu hỏi có', () => {
-    expect(faqToMarkdown(items, site)).toContain(
-      `[Xem cách tải](${site.url}/guides/cach-tai-aoe4/)`,
-    )
+  it('phát link tới guide khi câu hỏi có, không kèm tiền tố "Xem thêm:"', () => {
+    const md = faqToMarkdown(items, site)
+    expect(md).toContain(`[Xem cách tải](${site.url}/guides/cach-tai-aoe4/)`)
+    expect(md).not.toContain('Xem thêm:')
   })
 
-  it('không phát link khi item không có guide', () => {
+  it('không phát link nào khi item không có guide', () => {
     const itemsWithoutGuide: FaqItem[] = [
       { question: 'Đế chế 4 là gì?', answer: 'Là game chiến thuật thời gian thực.' },
     ]
     const md = faqToMarkdown(itemsWithoutGuide, site)
-    expect(md).not.toContain('Xem thêm:')
+    expect(md).not.toContain('](')
   })
 })
 
@@ -166,6 +184,11 @@ describe('tournamentToMarkdown', () => {
 
   it('không nhắc tới banner', () => {
     expect(tournamentToMarkdown(lacHong, site)).not.toContain('.webp')
+  })
+
+  it('gọi tên game theo quy ước Đế chế 4, gloss tên chính thức trong ngoặc', () => {
+    const md = tournamentToMarkdown(lacHong, site)
+    expect(md).toContain(`Giải đấu Đế chế 4 (${lacHong.game}) do ${lacHong.organizer} tổ chức.`)
   })
 
   it('ném lỗi khi tournament slug trống', () => {

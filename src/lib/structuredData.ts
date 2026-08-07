@@ -172,6 +172,8 @@ export function newsArticleJsonLd(post: NewsPost, site: Site): Record<string, un
 /**
  * Schema.org BreadcrumbList. `trail` goes from the site root to the current
  * page; names must match the wording readers see in the navbar.
+ *
+ * Callers must pass `path` with a trailing slash already - this function does not add one.
  */
 export function breadcrumbJsonLd(
   trail: Array<{ name: string; path: string }>,
@@ -189,7 +191,12 @@ export function breadcrumbJsonLd(
   }
 }
 
-/** Schema.org CollectionPage wrapping an ItemList, for the guide and news indexes. */
+/**
+ * Schema.org CollectionPage wrapping an ItemList, for the guide and news indexes.
+ *
+ * Callers must pass every `path` (page and item) with a trailing slash already - this
+ * function does not add one.
+ */
 export function collectionPageJsonLd(
   page: { name: string; description: string; path: string },
   items: Array<{ name: string; path: string }>,

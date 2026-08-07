@@ -12,7 +12,7 @@ import type { TournamentData } from './types'
  *      import { tenGiaiData } from './ten-giai.data'
  *      export const tenGiai: Tournament = { ...tenGiaiData, banner }
  * 3. Thêm vào `tournaments` trong index.ts và `tournamentsData` trong data.ts.
- * 4. Thêm URL vào `urls`/`includedRoutes` trong vite.config.ts và vào sitemap.ts.
+ * 4. Thêm URL vào `includedRoutes` trong vite.config.ts và vào src/lib/sitemap.ts.
  */
 export const templateData: TournamentData = {
   slug: 'ten-giai',

@@ -1,3 +1,8 @@
+// This module is imported (as a value) from src/lib/llmsTxt.ts, which is in turn
+// imported directly from vite.config.ts - loaded before the `@/` alias exists.
+// Type-only imports below are erased at compile time and never reach the config
+// loader, so they may keep using the alias; any *value* import added here must
+// stay relative instead.
 import type { Guide } from '@/data/guides'
 import type { NewsPost } from '@/data/news'
 import type { FaqItem } from '@/data/faq'
@@ -18,7 +23,7 @@ function joinBlocks(blocks: string[]): string {
 
 /** Markdown link to a guide's canonical HTML page, never to its .md mirror. */
 function guideLink(site: Site, slug: string, label: string): string {
-  return `Xem thêm: [${label}](${pageUrl(site, `/guides/${slug}/`)})`
+  return `[${label}](${pageUrl(site, `/guides/${slug}/`)})`
 }
 
 export function guideToMarkdown(guide: Guide, site: Site): string {
@@ -37,6 +42,15 @@ export function guideToMarkdown(guide: Guide, site: Site): string {
     blocks.push(`## ${section.heading}`)
     blocks.push(...section.paragraphs)
     if (section.link) blocks.push(guideLink(site, section.link.slug, section.link.label))
+  }
+
+  if (guide.related && guide.related.length > 0) {
+    blocks.push('## Bài liên quan')
+    blocks.push(
+      guide.related
+        .map((r) => `- [${r.label}](${pageUrl(site, `/guides/${r.slug}/`)})`)
+        .join('\n'),
+    )
   }
 
   if (guide.sources && guide.sources.length > 0) {
@@ -106,7 +120,7 @@ export function tournamentToMarkdown(tournament: TournamentData, site: Site): st
 
   return joinBlocks([
     `# ${tournament.name}`,
-    `Giải ${tournament.game} do ${tournament.organizer} tổ chức.`,
+    `Giải đấu Đế chế 4 (${tournament.game}) do ${tournament.organizer} tổ chức.`,
     `Nguồn: ${pageUrl(site, `/tournaments/${tournament.slug}/`)}`,
     facts.join('\n'),
   ])

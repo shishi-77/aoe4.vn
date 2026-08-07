@@ -3,9 +3,11 @@ import type { NewsPost } from '@/data/news'
 import type { FaqItem } from '@/data/faq'
 import type { TournamentData } from '@/data/tournaments/types'
 import type { site as siteData } from '@/data/site'
-// Relative import, not the usual '@/' alias: this module is imported directly
-// from vite.config.ts, which loads before the alias exists (see vite.config.ts
-// for the same exception applied to src/data/tournaments/data).
+// This module is imported directly from vite.config.ts, which loads before the
+// `@/` alias exists. The type imports above are erased at compile time and never
+// reach the config loader, so they may stay on the alias; this is a *value*
+// import, so it must be relative instead (see vite.config.ts for the same
+// exception applied to src/data/tournaments/data).
 import {
   guideToMarkdown,
   newsPostToMarkdown,
