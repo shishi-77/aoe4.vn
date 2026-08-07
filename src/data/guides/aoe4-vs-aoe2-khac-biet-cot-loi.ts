@@ -22,7 +22,7 @@ export const aoe4VsAoe2Guide: Guide = {
       ],
     },
     {
-      heading: 'Vẫn bốn đời, nhưng nút lên đời không còn nằm ở nhà chính',
+      heading: 'Vẫn bốn đời, nhưng hầu hết các phe không lên đời ở nhà chính nữa',
       paragraphs: [
         'Bên Đế chế 2, bốn đời lần lượt là Dark Age, Feudal Age, Castle Age và Imperial Age, việc lên đời nghiên cứu ngay tại nhà chính, kèm điều kiện phải dựng ít nhất hai công trình của đời đang đứng, chẳng hạn trại gỗ với cối xay để lên Feudal. Riêng khi đang ở Castle Age, người chơi được chọn: hoặc hai công trình của đời đó, hoặc dựng một Castle là đủ.',
         'Đế chế 4 cũng có bốn đời với tên gọi y hệt từ Dark tới Imperial, nhưng cách đi lên thì khác hẳn. Với hầu hết các phe, nút lên đời không còn nằm ở nhà chính nữa: mỗi lần lên đời người chơi phải dựng một công trình biểu tượng mà cộng đồng gọi là "Landmark", và được chọn một trong hai cái, mỗi cái mở ra một hướng lợi ích riêng.',
