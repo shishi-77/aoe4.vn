@@ -10,6 +10,14 @@ phong của tác giả này và copy") - đây là giọng CHỦ ĐẠO owner mu
 đồng Đế chế, từ tốn, giải thích cặn kẽ kèm lý do. Đã sửa vài lỗi chính tả nhỏ. Văn kể
 trận (mẫu 1-12) từ nay chỉ làm gia vị mở bài/cao trào.
 
+Mẫu 24-39: trích 8 bài aoe.vn owner gửi thêm ngày 2026-08-08, để phủ những dạng bài mà
+đợt 13-23 chưa chạm: bài cải chính thông tin sai, bài mẹo nhận biết, tin tổng kết giải,
+tin khởi tranh, bài bình luận từ chuyện cộng đồng, và văn luật thi đấu. Owner cũng gửi
+lại bài "Đọc Timeline" - bài này đã có ở mẫu 13 và 22 nên không trích thêm.
+
+Riêng ba bài luật thi đấu (mẫu 35-36) phần lớn là bảng cấu hình và gạch đầu dòng; chỉ
+trích những câu văn xuôi, các phần liệt kê không lấy làm mẫu giọng.
+
 ## Mẫu 1
 - Nguồn: sách 100 cuộc chiến lẫy lừng
 - Thích vì: mở màn bằng khung cảnh yên tĩnh giả tạo rồi thả cú lừa (ngựa gỗ Troy)
@@ -147,3 +155,103 @@ trận (mẫu 1-12) từ nay chỉ làm gia vị mở bài/cao trào.
 - Thích vì: chốt mục bằng "Nói tóm lại" - tổng kết, dặn dò bình tĩnh, chấp nhận yếu tố may rủi của game
 
 > Nói tóm lại, mỗi người chơi chỉ được cấp cho 200 thực khi bắt đầu game, nên việc đóng chiếc BG đầu để có một lượng thực ổn định trong vài phút đầu game, đẻ dân không bị chậm, là khá quan trọng, có thể coi đó là nền tảng căn bản cho việc ép đời của game đấu đó. Vậy nên, hãy bình tĩnh trong cả việc đi dò quả cũng như đặt móng BG sao cho hợp lý. Cũng nên nhớ rằng AoE vẫn luôn là một trò chơi đầy tính may rủi, hãy sẵn sàng tâm lý cho những bãi quả khó nhằn hoặc không thể ăn được.
+
+## Mẫu 24
+- Nguồn: aoe.vn - Cung R Assyrian bắn nhanh hơn 33% là thông tin sai
+- Thích vì: mở bài lùi ra xa (lịch sử game, hạn chế thời đó) rồi mới khoanh vùng đúng cái sai sắp cải chính
+
+> Được phát hành từ năm 1997, Trò chơi Age of Empires (AoE/ Đế Chế) ngay lập tức tạo nên một cơn sốt trên toàn cầu và được cộng đồng game thủ yêu thích trong suốt nhiều năm liền. Tuy nhiên, do những sự hạn chế mang cả yếu tố chủ quan và khách quan ở thời điểm đó mà cho đến tận bây giờ, cộng đồng dù rất đông đảo nhưng đa số vẫn chưa nắm được hết những thông số chính thức trong trò chơi. Một trong những thông tin sai lệch nhất có liên quan đến nền văn minh Assyrian.
+
+## Mẫu 25
+- Nguồn: aoe.vn - Cung R Assyrian bắn nhanh hơn 33% là thông tin sai
+- Thích vì: nêu tin đồn nguyên trạng, bác thẳng bằng chữ in hoa, rồi đặt câu hỏi làm heading và đáp ngay bằng một câu cụt
+
+> Cụ thể, theo nhiều bài viết, tin tức trước đây hoặc những câu truyền miệng trong cộng đồng, thì cung R Assyrian được cho là sở hữu tốc độ bắn nhanh hơn 33% so với các nền văn minh khác. Dù vậy, thông tin này là CHƯA CHÍNH XÁC.
+>
+> Vậy cung R Assyrian bắn nhanh hơn bao nhiêu %?
+>
+> Câu trả lời là: ~36.4%!
+
+## Mẫu 26
+- Nguồn: aoe.vn - Cung R Assyrian bắn nhanh hơn 33% là thông tin sai
+- Thích vì: chứng minh bằng ba tầng nguồn (code game, wiki quốc tế, bài test cộng đồng) và bày luôn phép tính
+
+> Sở dĩ có con số trên là bởi, theo công bố từ EGOPLAY, nền tảng này đã đọc được thông số từ code của game AoE và biết chính xác cung R Assyrian có tốc độ nạp tên là 1.1s (tức mỗi lần bắn tên cách nhau 1.1s). Trong khi các nền văn minh thông thường là 1.5s. Sau đó, chỉ cần áp dụng công thức toán học cơ bản từ 2 con số trên là tính được phần trăm mà cung R Assyrian bắn nhanh hơn, đó là xấp xỉ 36.4%. Đây cũng là thông tin được xác nhận bởi trang thông tin AoE quốc tế uy tín là AoE Fandom (Wiki).
+
+## Mẫu 27
+- Nguồn: aoe.vn - Cung R Assyrian bắn nhanh hơn 33% là thông tin sai
+- Thích vì: giải thích cái nhầm bằng "cộng đồng của chúng ta", chỉ ra lỗi phương pháp chứ không dìm ai, chốt cân đối (sai không đáng kể nhưng vẫn nên chuẩn)
+
+> Thực tế là trước đây, cộng đồng của chúng ta chỉ thực hiện bài test cho 2 cung R bắn nhau. Sau đó đếm số lượng mũi tên mà R Assy bắn ra rồi chia cho số lượng mũi tên mà cung R khác bắn ra và thu được con số 33%. Đây chỉ là con số tương đối, bởi vì 2 cung R bắn nhau thì lượng mũi tên bắn ra là rất ít (Chỉ khoảng mười mấy phát bắn) nên không thể đo đạc một cách chính xác. [...] Dĩ nhiên, con số 33% và 36% chênh lệch không đáng kể, đặc biệt là trong thi đấu AoE thực tế. Tuy nhiên, các thông tin vẫn nên được "chuẩn hóa" một cách chính xác nhất, đúng theo những gì nhà phát hành đã lập trình.
+
+## Mẫu 28
+- Nguồn: aoe.vn - Bí quyết phân biệt cây gỗ 75 thật và ảo trong AoE
+- Thích vì: cặp "về lý thuyết - thực tế khắc nghiệt hơn nhiều", quy mọi lợi ích về thời gian ép đời chứ không dừng ở con số
+
+> Thực tế "khắc nghiệt" hơn nhiều so với lý thuyết, bởi vị trí xa gần của các cây là khác nhau. Thông thường, người chơi sẽ chặt gỗ gần Nhà chính trước, sau khi chặt hết thì sẽ chặt cây ở xa hơn. Điều đó đồng nghĩa là nếu map toàn gỗ 40, hành trình di chuyển của nông dân sẽ nhiều và xa hơn. Thậm chí một số cây gỗ 40 khi khai thác xong còn bị "lỗi" vẫn còn móng gỗ, làm cho nông dân tốn thêm 1 lần di chuyển mà chẳng được gì. Trong khi với những cây gỗ 75, người chơi chỉ cần 3 cây mọc gần nhà chính là đủ gỗ đóng các nhà BE và BS đầu.
+
+## Mẫu 29
+- Nguồn: aoe.vn - Bí quyết phân biệt cây gỗ 75 thật và ảo trong AoE
+- Thích vì: ngoại lệ được gọi đích danh, mô tả đúng cái khó chịu của nó, và xếp hạng luôn ngoại lệ nào đáng lo hơn
+
+> Đầu tiên là cây gỗ Oak 31. Đây là cây gỗ gây sự khó chịu cho người chơi khi hiển thị là 75, ken được E, tuy nhiên khi khai thác lại chỉ còn 40 gỗ. Thậm chí một số trường hợp chỉ khai thác được 39 gỗ, khiến người chơi bị lỗi thời gian đóng BS đầu. Ngoại lệ thứ 2 là cây lá vàng ở rừng già. Nó hiển thị 40 gỗ, khi chặt cũng thu được 40 gỗ, song lại vẫn ken được E. Tuy nhiên trường hợp này thường không ảnh hưởng quá nhiều giống như trường hợp phía trên.
+
+## Mẫu 30
+- Nguồn: aoe.vn - Bí quyết phân biệt cây gỗ 75 thật và ảo trong AoE
+- Thích vì: tự hỏi thay người đọc rồi đáp ngay, mẹo dựa vào một dấu hiệu nhìn được, và nói rõ mẹo đó mua lại cho ta cái gì
+
+> Vậy có cách nào nhanh hơn không? Câu trả lời là có! Ngoài tên cây gỗ Oak 31 và Oak thì hai cây này còn khác nhau ở cái "móng" (gốc cây). Cây Oak tức gỗ 75 thật thì móng rất nhỏ, trong khi Oak 31 móng to hơn. Vì vậy, người chơi muốn chặt đúng cây Oak có 75 gỗ thì chỉ cần chọn nông dân rồi click chuột phải chặt cây gỗ đó. Nếu móng cây to thì đổi ngay sang cây còn lại, nếu thấy móng nhỏ thì đó đúng là cây 75. Nhờ vậy mà thao tác trong khi thi đấu được tiết kiệm thêm, từ đó giúp người chơi có thể rảnh tay câu voi, lùa hươu.
+
+## Mẫu 31
+- Nguồn: aoe.vn - Bí quyết phân biệt cây gỗ 75 thật và ảo trong AoE
+- Thích vì: chốt bài mẹo bằng cách định vị lại chủ đề (gỗ là tài nguyên "tĩnh") thay vì nhắc lại các bước
+
+> Tổng kết: Gỗ là một tài nguyên dạng "tĩnh", bởi vậy chúng không đòi hỏi những kỹ năng phức tạp như câu voi, lùa hươu. Tuy nhiên, để khai thác gỗ sao cho hiệu quả để ép đời một cách tối ưu thì người chơi cũng cần phải tinh ý, có kinh nghiệm để biết xử lý những trường hợp đặc biệt.
+
+## Mẫu 32
+- Nguồn: aoe.vn - Chùm ảnh lễ bế mạc và trao giải AoE Hà Nội Open 12
+- Thích vì: tin giải đặt bối cảnh trước khi đưa kết quả - giải có từ năm nào, ai khởi xướng, năm nay ai đồng hành
+
+> AoE Hà Nội Open là giải đấu AoE truyền thống của cộng đồng AoE Việt Nam, do đơn vị chủ quản VEC khởi xướng tổ chức từ năm 2011 và duy trì tổ chức đều đặn trước dịp Tết Nguyên Đán hằng năm. Năm nay, với sự đồng hành của nhà tài trợ kim cương EGOPLAY cùng đơn vị đầu tư gói bản quyền phát sóng Thiên Khôi Esports, giải đấu AoE Hà Nội Open lần thứ 12 đã diễn ra thành công hết sức tốt đẹp.
+
+## Mẫu 33
+- Nguồn: aoe.vn - Chùm ảnh lễ bế mạc và trao giải AoE Hà Nội Open 12
+- Thích vì: khen cá nhân nhưng chứng minh bằng lời đối thủ, tả lối chơi bằng từ của cộng đồng, rồi tự cân bằng lại để không thành tâng bốc
+
+> Xét về mặt cá nhân, Tiểu Màn Thầu được nhiều người hâm mộ đánh giá là cái tên gây ấn tượng nhất. Thậm chí chính các đối thủ hoặc bình luận viên của team đối thủ cũng phải tấm tắc dành lời khen cho game thủ này. Quả thực lối chơi đầy sự khó chịu, luôn rất lạnh lùng và đặc biệt là cung - chém song toàn của Tiểu Màn Thầu đã góp phần không nhỏ vào các chiến thắng của Thiên Khôi. Song, cũng phải nhìn nhận rằng lực lượng của Thiên Khôi Esports quá mạnh và đồng đều.
+
+## Mẫu 34
+- Nguồn: aoe.vn - Chùm ảnh lễ bế mạc và trao giải AoE Hà Nội Open 12
+- Thích vì: công bằng với đội thua (kê đủ cái tiếc rồi trả lại cái được), chốt tin giải bằng chúc mừng và hẹn gặp lại
+
+> Về phía EGO, đây là một giải đấu để lại cho họ nhiều tiếc nuối. Thiếu vắng Hồng Anh trong đội hình, EGO vẫn chứng tỏ mình là một Clan mạnh với những con người đủ sức tiến đến trận chung kết của cả 3 nội dung. Chỉ tiếc là, họ đã thất bại trong cả 3 trận chung kết đó. Nhưng dù sao đi nữa, 3 danh hiệu á quân ở giải đấu lần này cũng không phải là một kết quả tệ. [...] Xin chúc mừng VEC với một giải đấu thành công và đáng nhớ. Xin chào tạm biệt và hẹn gặp lại ở những giải đấu AoE tiếp theo trong năm 2025.
+
+## Mẫu 35
+- Nguồn: aoe.vn - Luật thi đấu AoE chuyên nghiệp: Solo Assyrian
+- Thích vì: sang văn luật thì bỏ hẳn giọng tâm tình - mỗi dòng một hành vi kèm một chế tài, mức phạt xếp thang, không một chữ thừa
+
+> Game thủ phải điểm danh với Ban tổ chức trước thời gian trận đấu ít nhất 15 phút (gọi là thời gian check-in). Mức phạt: Có mặt muộn 5 phút so với thời gian check-in: Cảnh cáo lần 1. Có mặt muộn 15 phút so với thời gian check-in: Cảnh cáo lần 2. Có mặt muộn 30 phút so với thời gian check-in: Xử thua trận đấu. [...] Khi bị cảnh cáo, game thủ phải ngay lập tức hủy bỏ mọi hành vi vi phạm. Nếu tiếp tục tái phạm sẽ bị xử thua ngay lập tức.
+
+## Mẫu 36
+- Nguồn: aoe.vn - Luật thi đấu AoE chuyên nghiệp: Solo Assyrian
+- Thích vì: luật chặt đến đâu vẫn thòng một câu thừa nhận giới hạn của chính nó rồi trả quyền quyết định cho người cầm cân
+
+> Do timeline trong game thường nhạy cảm và không phản ánh hết được trận đấu, quyết định cuối cùng thuộc về Ban tổ chức. Ngoài ra đội nào bị disconnect 03 lần trong 1 lượt trận sẽ bị xử thua cả lượt trận đó.
+
+## Mẫu 37
+- Nguồn: aoe.vn - Map đấu AoE "không lối thoát" huyền thoại gắn liền với tên tuổi Hồng Anh
+- Thích vì: lấy một post đang nóng trong group làm cớ vào bài, rồi kể lại tích cũ gọn trong ba câu; gọi người chơi bằng lai lịch ("game thủ quê Phú Thọ") thay vì lặp tên
+
+> Mới đây, một tài khoản Facebook có tên JOe Lê đã đăng tải một bài viết trong group EGO Play - Kết nối cộng đồng. Đáng chú ý là bài viết này lại gợi nhắc nhiều người về game thủ Hồng Anh. [...] Với một Map đấu mà Yamato khép góc trên đỉnh 12h, xung quanh nhà được bao bọc bởi 1 cánh rừng già và hoàn toàn không có đường vào/ra, Hồng Anh năm ấy đã lựa chọn đóng ruộng đào vàng lên thẳng đời IV. Phía bên kia, hai game thủ không dò ra nhà của Hồng Anh ở vị trí nào đành tập trung đánh No1. Ngoài phút 20 khi phát hiện game thủ quê Phú Thọ đã lên IV xong thì đành quit game.
+
+## Mẫu 38
+- Nguồn: aoe.vn - Map đấu AoE "không lối thoát" huyền thoại gắn liền với tên tuổi Hồng Anh
+- Thích vì: so meta xưa - nay để trả lời "nếu bây giờ gặp lại thì sao", rồi tự hạ giọng thừa nhận đó mới là lý thuyết
+
+> Bên cạnh việc hồi tưởng lại trận đấu của Hồng Anh trong quá khứ, một số khán giả cũng chỉ ra rằng game thủ thuộc biên chế Clan EGO hiện tại năm đó đã khá may mắn. Bởi vì khi đó các game thủ chưa biết đến Map đấu này nên không tìm được Hồng Anh trên góc 12h, nhờ đó anh có thể thoải mái click đời IV. Còn hiện tại, nếu gặp trường hợp tương tự, người cầm Yamato sẽ gặp khó hơn nhiều khi các game thủ sẽ biết được bài và chủ động công K để khiến người bên trong không ăn được gỗ. [...] Dù sao đi nữa đó cũng chỉ là phân tích về mặt lý thuyết mà thôi.
+
+## Mẫu 39
+- Nguồn: aoe.vn - Khởi tranh giải đấu AoE Mõm Vương lần 4
+- Thích vì: tin khởi tranh mở bằng khi - ở đâu - ai ngay câu đầu, rồi định giá đúng tầm giải: nói thẳng chuyên môn không bằng giải chuyên nghiệp mà vẫn chỉ ra giá trị thật của nó
+
+> Sáng nay (5/10), giải đấu AoE Mõm Vương lần thứ 4 - Giải đấu dành cho các bình luận viên AoE - sẽ chính thức khởi tranh tại Cybergame AoE Kinh Bắc. [...] Thực tế, yếu tố tiền thưởng hay bản quyền hình ảnh cũng chỉ mang tính chất "động viên tinh thần", giúp các team tăng thêm tính cạnh tranh mà thôi. Về bản chất, giải đấu được tạo ra để tăng thêm sự gắn kết, đoàn kết giữa các bình luận viên. [...] Nhưng trước đó, chắc chắn sẽ là những trận đấu rất nảy lửa, dù chuyên môn trận đấu sẽ không cao bằng các trận đấu chuyên nghiệp, nhưng quyết tâm mỗi team tham gia vẫn là vô cùng lớn.
