@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { buildLlmsTxt, buildLlmsFullTxt, buildMarkdownFiles } from '@/lib/llmsTxt'
 import type { LlmsInput } from '@/lib/llmsTxt'
+import type { NewsPost } from '@/data/news'
 import { site } from '@/data/site'
 import { guides } from '@/data/guides'
 import { newsPosts } from '@/data/news'
@@ -73,6 +74,78 @@ describe('buildMarkdownFiles', () => {
     for (const file of buildMarkdownFiles(realInput)) {
       expect(file.content.trim().length).toBeGreaterThan(0)
     }
+  })
+})
+
+describe('sắp xếp tin tức mới nhất trước', () => {
+  const oldPost: NewsPost = {
+    slug: 'old-news',
+    title: 'Tin cũ từ tháng 1',
+    description: 'Ngày 2026-01-01',
+    publishedAt: '2026-01-01',
+    sections: [{ heading: 'Chi tiết', paragraphs: ['Nội dung tin cũ.'] }],
+    sources: [{ label: 'Nguồn', url: 'https://example.com/old' }],
+  }
+
+  const middlePost: NewsPost = {
+    slug: 'middle-news',
+    title: 'Tin ở giữa từ tháng 2',
+    description: 'Ngày 2026-02-01',
+    publishedAt: '2026-02-01',
+    sections: [{ heading: 'Chi tiết', paragraphs: ['Nội dung tin ở giữa.'] }],
+    sources: [{ label: 'Nguồn', url: 'https://example.com/middle' }],
+  }
+
+  const newestPost: NewsPost = {
+    slug: 'newest-news',
+    title: 'Tin mới từ tháng 3',
+    description: 'Ngày 2026-03-01',
+    publishedAt: '2026-03-01',
+    sections: [{ heading: 'Chi tiết', paragraphs: ['Nội dung tin mới.'] }],
+    sources: [{ label: 'Nguồn', url: 'https://example.com/newest' }],
+  }
+
+  it('buildLlmsTxt liệt kê tin theo thứ tự mới nhất trước', () => {
+    const unorderedNews = [oldPost, newestPost, middlePost]
+    const input: LlmsInput = { site, guides, news: unorderedNews, faq: faqItems, tournaments: tournamentsData }
+    const txt = buildLlmsTxt(input)
+
+    const newestIndex = txt.indexOf('Tin mới từ tháng 3')
+    const middleIndex = txt.indexOf('Tin ở giữa từ tháng 2')
+    const oldIndex = txt.indexOf('Tin cũ từ tháng 1')
+
+    expect(newestIndex).toBeGreaterThan(-1)
+    expect(middleIndex).toBeGreaterThan(-1)
+    expect(oldIndex).toBeGreaterThan(-1)
+    expect(newestIndex).toBeLessThan(middleIndex)
+    expect(middleIndex).toBeLessThan(oldIndex)
+  })
+
+  it('buildLlmsFullTxt liệt kê tin theo thứ tự mới nhất trước', () => {
+    const unorderedNews = [oldPost, newestPost, middlePost]
+    const input: LlmsInput = { site, guides, news: unorderedNews, faq: faqItems, tournaments: tournamentsData }
+    const full = buildLlmsFullTxt(input)
+
+    const newestIndex = full.indexOf('Tin mới từ tháng 3')
+    const middleIndex = full.indexOf('Tin ở giữa từ tháng 2')
+    const oldIndex = full.indexOf('Tin cũ từ tháng 1')
+
+    expect(newestIndex).toBeGreaterThan(-1)
+    expect(middleIndex).toBeGreaterThan(-1)
+    expect(oldIndex).toBeGreaterThan(-1)
+    expect(newestIndex).toBeLessThan(middleIndex)
+    expect(middleIndex).toBeLessThan(oldIndex)
+  })
+
+  it('không mutate mảng input news', () => {
+    const unorderedNews = [oldPost, newestPost, middlePost]
+    const input: LlmsInput = { site, guides, news: unorderedNews, faq: faqItems, tournaments: tournamentsData }
+
+    buildLlmsTxt(input)
+
+    expect(input.news[0]).toBe(oldPost)
+    expect(input.news[1]).toBe(newestPost)
+    expect(input.news[2]).toBe(middlePost)
   })
 })
 
