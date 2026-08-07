@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { tournaments, getTournamentBySlug } from '../index'
+import { tournamentsData } from '../data'
 
 describe('tournaments collection', () => {
   it('có ít nhất một giải', () => {
@@ -29,5 +30,14 @@ describe('tournaments collection', () => {
   it('có cả Lạc Hồng và Hà Nội Open 1', () => {
     expect(getTournamentBySlug('lac-hong')?.name).toBe('Lạc Hồng Cup')
     expect(getTournamentBySlug('ha-noi-open-1')?.name).toBe('Hà Nội Open 1')
+  })
+
+  it('tournamentsData khớp tournaments, chỉ khác banner', () => {
+    const withoutBanner = tournaments.map((t) => {
+      const { banner, ...rest } = t
+      void banner
+      return rest
+    })
+    expect(withoutBanner).toEqual(tournamentsData)
   })
 })

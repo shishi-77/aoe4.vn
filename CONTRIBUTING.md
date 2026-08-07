@@ -15,23 +15,30 @@ Chào mừng bạn đóng góp cho **AoE4 VN**! Tài liệu này hướng dẫn 
 
 ## 1. Thêm một giải đấu
 
-Thêm giải đấu mới cần cập nhật **ba nơi**. Thiếu bước thứ ba là lỗi thường gặp nhất — route sẽ không được pre-render và không xuất hiện trong sitemap.
+Thêm giải đấu mới cần cập nhật **bốn nơi**. Thiếu bước thứ tư là lỗi thường gặp nhất - route sẽ không được pre-render và không xuất hiện trong sitemap.
 
-### Bước 1 — Tạo file dữ liệu giải đấu
+Dữ liệu giải đấu chia làm **hai lớp file**: `.data.ts` (thuần dữ liệu, không import ảnh) và
+`.ts` (gắn banner). Lý do bắt buộc chia: `vite.config.ts` cần đọc dữ liệu giải đấu (để liệt kê
+vào `llms.txt`), nhưng Vite nạp file config **trước khi** alias `@/` tồn tại. Nếu file dữ liệu
+mở đầu bằng `import banner from '@/assets/imgs/...'`, việc nạp config sẽ đổ ngay với lỗi
+`Cannot find package '@/assets'`. Giữ ảnh tách khỏi dữ liệu là điều kiện để build không vỡ.
 
-Copy file mẫu `src/data/tournaments/_template.ts` thành file mới, đặt tên theo slug của giải (chỉ dùng chữ thường, số và dấu gạch ngang):
+### Bước 1 - Tạo file dữ liệu giải đấu (không import ảnh)
+
+Copy file mẫu `src/data/tournaments/_template.ts` thành `ten-giai.data.ts`, đặt tên theo slug
+của giải (chỉ dùng chữ thường, số và dấu gạch ngang):
 
 ```sh
-cp src/data/tournaments/_template.ts src/data/tournaments/ten-giai.ts
+cp src/data/tournaments/_template.ts src/data/tournaments/ten-giai.data.ts
 ```
 
-Mở file vừa tạo và điền đầy đủ thông tin:
+Mở file vừa tạo và điền đầy đủ thông tin. File này **không được import ảnh**:
 
 ```ts
-// src/data/tournaments/ten-giai.ts
-import type { Tournament } from './lac-hong'
+// src/data/tournaments/ten-giai.data.ts
+import type { TournamentData } from './types'
 
-export const tenGiai: Tournament = {
+export const tenGiaiData: TournamentData = {
   slug: 'ten-giai',           // phải khớp với tên file và URL route
   name: 'Tên giải đấu',
   game: 'Age of Empires IV',
@@ -45,6 +52,7 @@ export const tenGiai: Tournament = {
   registrationClosesAt: '2026-05-25T23:59:00+07:00',
   dateLabel: '01/06/2026',
   prizePoolTotal: '500,000 VND',
+  bracketFormat: '',
   prizes: [{ rank: 1, label: 'Vô địch', amount: '1.000.000đ', medal: '🥇' }],
   maps: [],
   links: { discord: '', banPick: '', mapPool: '', youtube: '' },
@@ -54,9 +62,22 @@ export const tenGiai: Tournament = {
 }
 ```
 
-> Xem file `src/data/tournaments/lac-hong.ts` để tham khảo ví dụ đầy đủ.
+### Bước 2 - Tạo file gắn banner
 
-### Bước 2 — Import vào index.ts
+Tạo `ten-giai.ts` cùng thư mục, chỉ để ghép ảnh banner vào dữ liệu:
+
+```ts
+// src/data/tournaments/ten-giai.ts
+import banner from '@/assets/imgs/ten-giai-banner.webp'
+import type { Tournament } from './types'
+import { tenGiaiData } from './ten-giai.data'
+
+export const tenGiai: Tournament = { ...tenGiaiData, banner }
+```
+
+> Xem cặp file `src/data/tournaments/lac-hong.data.ts` + `lac-hong.ts` để tham khảo ví dụ đầy đủ.
+
+### Bước 3 - Import vào index.ts và data.ts
 
 Mở `src/data/tournaments/index.ts` và thêm import + phần tử vào mảng `tournaments`:
 
@@ -64,7 +85,7 @@ Mở `src/data/tournaments/index.ts` và thêm import + phần tử vào mảng 
 // src/data/tournaments/index.ts
 import { lacHong } from './lac-hong'
 import { tenGiai } from './ten-giai'      // thêm dòng này
-export type { Tournament, Prize, TournamentLinks, Venue } from './lac-hong'
+export type { Tournament, Prize, TournamentLinks, Venue } from './types'
 
 export const tournaments = [lacHong, tenGiai]  // thêm vào mảng
 
@@ -73,7 +94,18 @@ export function getTournamentBySlug(slug: string) {
 }
 ```
 
-### Bước 3 — Thêm route vào vite.config.ts (QUAN TRỌNG)
+Mở `src/data/tournaments/data.ts` và thêm `tenGiaiData` vào mảng `tournamentsData` - mảng này
+là thứ duy nhất `vite.config.ts` được phép import từ thư mục `tournaments/`:
+
+```ts
+// src/data/tournaments/data.ts
+import { lacHongData } from './lac-hong.data'
+import { tenGiaiData } from './ten-giai.data'   // thêm dòng này
+
+export const tournamentsData: TournamentData[] = [lacHongData, tenGiaiData]  // thêm vào mảng
+```
+
+### Bước 4 - Thêm route vào vite.config.ts (QUAN TRỌNG)
 
 Mở `vite.config.ts` và thêm slug vào **cả hai chỗ**: `includedRoutes` và mảng `urls` (sitemap):
 

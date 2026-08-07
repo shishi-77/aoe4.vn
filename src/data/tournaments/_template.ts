@@ -1,17 +1,24 @@
-import type { Tournament } from './lac-hong'
+import type { TournamentData } from './types'
 
 /**
- * Mẫu thêm giải đấu mới:
- * 1. Copy file này thành ten-giai.ts
- * 2. Điền đầy đủ field bên dưới
- * 3. Import vào index.ts và thêm vào mảng `tournaments`
+ * Mẫu thêm giải đấu mới - cấu trúc hai lớp:
+ *
+ * 1. Copy file này thành `ten-giai.data.ts`, điền đầy đủ field bên dưới.
+ *    File .data.ts KHÔNG được import ảnh - vite.config.ts đọc nó lúc build,
+ *    trước khi alias @/ tồn tại.
+ * 2. Tạo `ten-giai.ts` chỉ để gắn banner:
+ *      import banner from '@/assets/imgs/ten-giai-banner.webp'
+ *      import type { Tournament } from './types'
+ *      import { tenGiaiData } from './ten-giai.data'
+ *      export const tenGiai: Tournament = { ...tenGiaiData, banner }
+ * 3. Thêm vào `tournaments` trong index.ts và `tournamentsData` trong data.ts.
+ * 4. Thêm URL vào `includedRoutes` trong vite.config.ts và vào src/lib/sitemap.ts.
  */
-export const template: Tournament = {
+export const templateData: TournamentData = {
   slug: 'ten-giai',
   name: 'Tên giải',
   game: 'Age of Empires IV',
   format: '1vs1',
-  banner: '',
   organizer: 'Cộng Đồng AOE IV Việt Nam',
   entryFee: 'Miễn phí',
   registrationType: 'Đăng ký tự do',

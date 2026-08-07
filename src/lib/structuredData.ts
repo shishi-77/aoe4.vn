@@ -10,6 +10,38 @@ function absoluteUrl(siteUrl: string, path: string): string {
   return `${siteUrl}${path}`
 }
 
+/** Person when the owner has filled in site.author, Organization otherwise. */
+function articleAuthor(site: Site): Record<string, unknown> {
+  if (!site.author.name) return { '@type': 'Organization', name: site.name }
+  const person: Record<string, unknown> = { '@type': 'Person', name: site.author.name }
+  if (site.author.url) person.url = site.author.url
+  return person
+}
+
+/** Shared fields telling an answer engine what this article is and where it lives. */
+function articleContext(site: Site): Record<string, unknown> {
+  return {
+    inLanguage: 'vi-VN',
+    isPartOf: { '@type': 'WebSite', name: site.name, url: absoluteUrl(site.url, '/') },
+    about: { '@type': 'VideoGame', name: 'Age of Empires IV' },
+  }
+}
+
+/**
+ * Schema.org citation list. Returns an empty object when there are no sources,
+ * so spreading it omits the key entirely - an empty array trips Search Console.
+ */
+function citations(sources: Array<{ name?: string; url: string }>): Record<string, unknown> {
+  if (sources.length === 0) return {}
+  return {
+    citation: sources.map((s) => ({
+      '@type': 'CreativeWork',
+      ...(s.name ? { name: s.name } : {}),
+      url: s.url,
+    })),
+  }
+}
+
 /**
  * Schema.org SportsEvent for a tournament detail page.
  *
@@ -109,8 +141,10 @@ export function guideArticleJsonLd(guide: Guide, site: Site): Record<string, unk
     datePublished: guide.updatedAt,
     dateModified: guide.updatedAt,
     mainEntityOfPage: url,
-    author: { '@type': 'Organization', name: site.name },
+    ...articleContext(site),
+    author: articleAuthor(site),
     publisher: { '@type': 'Organization', name: site.name },
+    ...citations((guide.sources ?? []).map((u) => ({ url: u }))),
   }
 }
 
@@ -128,7 +162,62 @@ export function newsArticleJsonLd(post: NewsPost, site: Site): Record<string, un
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
     mainEntityOfPage: url,
-    author: { '@type': 'Organization', name: site.name },
+    ...articleContext(site),
+    author: articleAuthor(site),
     publisher: { '@type': 'Organization', name: site.name },
+    ...citations(post.sources.map((s) => ({ name: s.label, url: s.url }))),
+  }
+}
+
+/**
+ * Schema.org BreadcrumbList. `trail` goes from the site root to the current
+ * page; names must match the wording readers see in the navbar.
+ *
+ * Callers must pass `path` with a trailing slash already - this function does not add one.
+ */
+export function breadcrumbJsonLd(
+  trail: Array<{ name: string; path: string }>,
+  site: Site,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((step, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: step.name,
+      item: absoluteUrl(site.url, step.path),
+    })),
+  }
+}
+
+/**
+ * Schema.org CollectionPage wrapping an ItemList, for the guide and news indexes.
+ *
+ * Callers must pass every `path` (page and item) with a trailing slash already - this
+ * function does not add one.
+ */
+export function collectionPageJsonLd(
+  page: { name: string; description: string; path: string },
+  items: Array<{ name: string; path: string }>,
+  site: Site,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: page.name,
+    description: page.description,
+    url: absoluteUrl(site.url, page.path),
+    inLanguage: 'vi-VN',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(site.url, item.path),
+      })),
+    },
   }
 }

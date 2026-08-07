@@ -5,6 +5,8 @@ import {
   websiteJsonLd,
   guideArticleJsonLd,
   newsArticleJsonLd,
+  breadcrumbJsonLd,
+  collectionPageJsonLd,
 } from '@/lib/structuredData'
 import { lacHong } from '@/data/tournaments/lac-hong'
 import { downloadGuide } from '@/data/guides/cach-tai-aoe4'
@@ -140,5 +142,148 @@ describe('newsArticleJsonLd', () => {
   it('dateModified rơi về publishedAt khi không có updatedAt', () => {
     const ld = newsArticleJsonLd({ ...post, updatedAt: undefined }, site)
     expect(ld.dateModified).toBe('2026-08-01')
+  })
+})
+
+describe('Article được làm giàu cho GEO', () => {
+  const postWithSources: NewsPost = {
+    slug: 'tin-mau',
+    title: 'Tin mẫu',
+    description: 'Mô tả tin mẫu.',
+    publishedAt: '2026-08-02',
+    sources: [{ label: 'Patch notes chính thức', url: 'https://www.ageofempires.com/news/' }],
+    sections: [{ heading: 'Nội dung', paragraphs: ['Đoạn.'] }],
+  }
+
+  it('guide khai báo ngôn ngữ, thuộc về WebSite và nói về game nào', () => {
+    const ld = guideArticleJsonLd(downloadGuide, site)
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.isPartOf).toMatchObject({ '@type': 'WebSite', url: `${site.url}/` })
+    expect(ld.about).toMatchObject({ '@type': 'VideoGame', name: 'Age of Empires IV' })
+  })
+
+  it('news cũng khai báo ba trường đó', () => {
+    const ld = newsArticleJsonLd(postWithSources, site)
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.isPartOf).toMatchObject({ '@type': 'WebSite' })
+    expect(ld.about).toMatchObject({ '@type': 'VideoGame' })
+  })
+
+  it('news phát citation kèm nhãn nguồn', () => {
+    const ld = newsArticleJsonLd(postWithSources, site)
+    expect(ld.citation).toEqual([
+      {
+        '@type': 'CreativeWork',
+        name: 'Patch notes chính thức',
+        url: 'https://www.ageofempires.com/news/',
+      },
+    ])
+  })
+
+  it('guide có sources thì phát citation chỉ gồm url', () => {
+    const ld = guideArticleJsonLd(
+      { ...downloadGuide, sources: ['https://liquipedia.net/ageofempires/'] },
+      site,
+    )
+    expect(ld.citation).toEqual([
+      { '@type': 'CreativeWork', url: 'https://liquipedia.net/ageofempires/' },
+    ])
+  })
+
+  it('guide không có sources thì bỏ hẳn khoá citation, không phát mảng rỗng', () => {
+    const ld = guideArticleJsonLd({ ...downloadGuide, sources: undefined }, site)
+    expect('citation' in ld).toBe(false)
+  })
+
+  it('news có sources rỗng cũng bỏ hẳn khoá citation', () => {
+    const ld = newsArticleJsonLd({ ...postWithSources, sources: [] }, site)
+    expect('citation' in ld).toBe(false)
+  })
+
+  it('author là Organization khi site.author.name rỗng', () => {
+    const ld = guideArticleJsonLd(downloadGuide, { ...site, author: { name: '', url: '' } })
+    expect(ld.author).toMatchObject({ '@type': 'Organization', name: site.name })
+  })
+
+  it('author thành Person khi owner đã điền tên', () => {
+    const ld = guideArticleJsonLd(downloadGuide, {
+      ...site,
+      author: { name: 'Nguyễn Văn A', url: 'https://example.com/a' },
+    })
+    expect(ld.author).toEqual({
+      '@type': 'Person',
+      name: 'Nguyễn Văn A',
+      url: 'https://example.com/a',
+    })
+  })
+
+  it('Person bỏ khoá url khi owner chỉ điền tên', () => {
+    const ld = guideArticleJsonLd(downloadGuide, {
+      ...site,
+      author: { name: 'Nguyễn Văn A', url: '' },
+    })
+    expect(ld.author).toEqual({ '@type': 'Person', name: 'Nguyễn Văn A' })
+  })
+})
+
+describe('breadcrumbJsonLd', () => {
+  const ld = breadcrumbJsonLd(
+    [
+      { name: 'Trang chủ', path: '/' },
+      { name: 'Hướng dẫn', path: '/guides/' },
+      { name: 'Cách tải Đế chế 4', path: '/guides/cach-tai-aoe4/' },
+    ],
+    site,
+  )
+  const items = ld.itemListElement as Array<Record<string, unknown>>
+
+  it('là BreadcrumbList hợp lệ', () => {
+    expect(ld['@context']).toBe('https://schema.org')
+    expect(ld['@type']).toBe('BreadcrumbList')
+  })
+
+  it('đánh position từ 1 và giữ đúng thứ tự', () => {
+    expect(items.map((i) => i.position)).toEqual([1, 2, 3])
+    expect(items.map((i) => i.name)).toEqual(['Trang chủ', 'Hướng dẫn', 'Cách tải Đế chế 4'])
+  })
+
+  it('mọi item là URL tuyệt đối có dấu / cuối', () => {
+    for (const item of items) {
+      expect(String(item.item).startsWith(site.url)).toBe(true)
+      expect(String(item.item).endsWith('/')).toBe(true)
+    }
+  })
+})
+
+describe('collectionPageJsonLd', () => {
+  const ld = collectionPageJsonLd(
+    { name: 'Hướng dẫn Đế chế 4', description: 'Tổng hợp hướng dẫn.', path: '/guides/' },
+    [
+      { name: 'Bài một', path: '/guides/mot/' },
+      { name: 'Bài hai', path: '/guides/hai/' },
+    ],
+    site,
+  )
+  const list = ld.mainEntity as Record<string, unknown>
+  const items = list.itemListElement as Array<Record<string, unknown>>
+
+  it('là CollectionPage bọc một ItemList', () => {
+    expect(ld['@type']).toBe('CollectionPage')
+    expect(list['@type']).toBe('ItemList')
+    expect(list.numberOfItems).toBe(2)
+  })
+
+  it('mỗi mục có position, name và url tuyệt đối', () => {
+    expect(items[0]).toEqual({
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Bài một',
+      url: `${site.url}/guides/mot/`,
+    })
+  })
+
+  it('khai báo ngôn ngữ và url của chính trang', () => {
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.url).toBe(`${site.url}/guides/`)
   })
 })

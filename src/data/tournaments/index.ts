@@ -1,6 +1,6 @@
 import { lacHong } from './lac-hong'
 import { haNoiOpen1 } from './ha-noi-open-1'
-export type { Tournament, Prize, TournamentLinks, Venue } from './lac-hong'
+export type { Tournament, Prize, TournamentLinks, Venue } from './types'
 
 export const tournaments = [lacHong, haNoiOpen1]
 
