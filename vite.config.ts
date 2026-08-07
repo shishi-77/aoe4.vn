@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -10,6 +10,10 @@ import 'vite-ssg'
 import { guides } from './src/data/guides'
 import { newsPosts } from './src/data/news'
 import { buildSitemapXml } from './src/lib/sitemap'
+import { site } from './src/data/site'
+import { faqItems } from './src/data/faq'
+import { tournamentsData } from './src/data/tournaments/data'
+import { buildLlmsTxt, buildLlmsFullTxt, buildMarkdownFiles } from './src/lib/llmsTxt'
 
 /**
  * Fail the build if any pre-rendered page ships a `<html lang>` other than "vi".
@@ -72,6 +76,24 @@ export default defineConfig({
     },
     onFinished() {
       writeFileSync('dist/sitemap.xml', buildSitemapXml('https://aoe4.vn', guides, newsPosts))
+
+      // Machine-readable mirror for LLM crawlers. Same data as the HTML pages,
+      // rendered by pure functions in src/lib so it can never drift untested.
+      const llmsInput = {
+        site,
+        guides,
+        news: newsPosts,
+        faq: faqItems,
+        tournaments: tournamentsData,
+      }
+      writeFileSync('dist/llms.txt', buildLlmsTxt(llmsInput))
+      writeFileSync('dist/llms-full.txt', buildLlmsFullTxt(llmsInput))
+      for (const file of buildMarkdownFiles(llmsInput)) {
+        const target = join('dist', file.path)
+        mkdirSync(dirname(target), { recursive: true })
+        writeFileSync(target, file.content)
+      }
+
       assertPagesDeclareVietnamese('dist')
     },
   },

@@ -3,12 +3,15 @@ import type { NewsPost } from '@/data/news'
 import type { FaqItem } from '@/data/faq'
 import type { TournamentData } from '@/data/tournaments/types'
 import type { site as siteData } from '@/data/site'
+// Relative import, not the usual '@/' alias: this module is imported directly
+// from vite.config.ts, which loads before the alias exists (see vite.config.ts
+// for the same exception applied to src/data/tournaments/data).
 import {
   guideToMarkdown,
   newsPostToMarkdown,
   faqToMarkdown,
   tournamentToMarkdown,
-} from '@/lib/contentMarkdown'
+} from './contentMarkdown'
 
 type Site = typeof siteData
 
