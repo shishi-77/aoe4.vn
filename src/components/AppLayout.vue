@@ -21,7 +21,7 @@ function skipToMain(event: MouseEvent) {
 <template>
   <a
     :href="`#${MAIN_ID}`"
-    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-gold focus:px-4 focus:py-2 focus:font-bold focus:text-ink"
+    class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-60 focus:rounded-md focus:bg-gold focus:px-4 focus:py-2 focus:font-bold focus:text-ink"
     @click="skipToMain"
   >
     Bỏ qua tới nội dung chính

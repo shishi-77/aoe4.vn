@@ -73,10 +73,37 @@ npm run dev
    and UI borders. Check both the resting and the hover tone - the social CTA colours in
    `src/assets/main.css` were already darkened from their official brand hex for exactly this.
 
-4. **Tap targets** at 390px wide. Aim for 44×44 CSS px on anything a thumb hits. WCAG 2.2 AA only
-   demands 24×24, and isolated links get a spacing exemption, but 44 is the comfortable target.
-   The navbar toggle currently measures 40×36 - above the requirement, below the ideal, and held
-   there by the height of the header bar.
+4. **Tap targets** at 390px wide. **Every standalone control on this site is 44×44 CSS px** - the
+   comfortable target, not WCAG 2.2's 24×24 floor. Hold new work to 44. Reach for
+   `inline-flex min-h-11 items-center` rather than padding, so the hit area grows without moving
+   anything around it.
+
+   The one carve-out is SC 2.5.8's **inline exception**: a link sitting inside a sentence is
+   constrained by the line-height of the text around it and is exempt. Those stay as they are -
+   forcing them to 44 would wreck the paragraph. The sweep below tells the two apart rather than
+   flagging every inline link.
+
+   Growing a target must not grow the sticky header. The navbar carries `py-2 lg:py-3` precisely
+   so the 44px toggle fits inside the bar's original 61px height; check that number after
+   touching the header, because a taller sticky bar costs viewport on every page.
+
+   ```js
+   // Paste into the console after loading a page at 390px wide.
+   const inlineExempt = (e) => {
+     const p = e.parentElement
+     if (!p || !['P', 'LI', 'SPAN'].includes(p.tagName)) return false
+     return [...p.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim())
+   }
+   ;[...document.querySelectorAll('#app a, #app button')]
+     .filter((e) => e.getClientRects().length && !e.classList.contains('sr-only'))
+     .map((e) => ({ e, r: e.getBoundingClientRect() }))
+     .filter(({ e, r }) => (r.width < 44 || r.height < 44) && !inlineExempt(e))
+     .forEach(({ e, r }) =>
+       console.warn(`${Math.round(r.width)}x${Math.round(r.height)}`, e.innerText.trim(), e),
+     )
+   ```
+
+   Open the mobile menu and re-run it - the panel links are only measurable while it is open.
 
    Watch for `link-in-text-block` here too. A gold link inside a muted paragraph is invisible to
    a reader who cannot see colour, and axe only catches it in a real browser because the rule
@@ -105,6 +132,12 @@ Fixed in the same pass: the missing skip link (WCAG 2.4.1, level A), the mobile 
 `aria-label`, its missing `aria-controls` and Escape handling, tournament card headings sitting
 at the same level as the section title that introduces them on the home page, and the browser
 default focus ring - a near-black outline that all but vanished on this dark palette.
+
+Tap targets were then raised across the board. Every standalone control on mobile now measures at
+least 44×44: the navbar toggle (was 34×28), the brand link, all six menu links, the footer source
+link, the related-guide and news-source lists, and the not-found fallback links. Links inline in
+a sentence are left alone under SC 2.5.8's inline exception. The sticky header stayed at its
+original 61px - `py-2 lg:py-3` on the nav absorbs the taller toggle.
 
 Two defects surfaced only after the jsdom gate was already green, which is the argument for
 keeping layer 2:
