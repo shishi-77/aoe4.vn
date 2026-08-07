@@ -5,6 +5,8 @@ import {
   websiteJsonLd,
   guideArticleJsonLd,
   newsArticleJsonLd,
+  breadcrumbJsonLd,
+  collectionPageJsonLd,
 } from '@/lib/structuredData'
 import { lacHong } from '@/data/tournaments/lac-hong'
 import { downloadGuide } from '@/data/guides/cach-tai-aoe4'
@@ -221,5 +223,67 @@ describe('Article được làm giàu cho GEO', () => {
       author: { name: 'Nguyễn Văn A', url: '' },
     })
     expect(ld.author).toEqual({ '@type': 'Person', name: 'Nguyễn Văn A' })
+  })
+})
+
+describe('breadcrumbJsonLd', () => {
+  const ld = breadcrumbJsonLd(
+    [
+      { name: 'Trang chủ', path: '/' },
+      { name: 'Hướng dẫn', path: '/guides/' },
+      { name: 'Cách tải Đế chế 4', path: '/guides/cach-tai-aoe4/' },
+    ],
+    site,
+  )
+  const items = ld.itemListElement as Array<Record<string, unknown>>
+
+  it('là BreadcrumbList hợp lệ', () => {
+    expect(ld['@context']).toBe('https://schema.org')
+    expect(ld['@type']).toBe('BreadcrumbList')
+  })
+
+  it('đánh position từ 1 và giữ đúng thứ tự', () => {
+    expect(items.map((i) => i.position)).toEqual([1, 2, 3])
+    expect(items.map((i) => i.name)).toEqual(['Trang chủ', 'Hướng dẫn', 'Cách tải Đế chế 4'])
+  })
+
+  it('mọi item là URL tuyệt đối có dấu / cuối', () => {
+    for (const item of items) {
+      expect(String(item.item).startsWith(site.url)).toBe(true)
+      expect(String(item.item).endsWith('/')).toBe(true)
+    }
+  })
+})
+
+describe('collectionPageJsonLd', () => {
+  const ld = collectionPageJsonLd(
+    { name: 'Hướng dẫn Đế chế 4', description: 'Tổng hợp hướng dẫn.', path: '/guides/' },
+    [
+      { name: 'Bài một', path: '/guides/mot/' },
+      { name: 'Bài hai', path: '/guides/hai/' },
+    ],
+    site,
+  )
+  const list = ld.mainEntity as Record<string, unknown>
+  const items = list.itemListElement as Array<Record<string, unknown>>
+
+  it('là CollectionPage bọc một ItemList', () => {
+    expect(ld['@type']).toBe('CollectionPage')
+    expect(list['@type']).toBe('ItemList')
+    expect(list.numberOfItems).toBe(2)
+  })
+
+  it('mỗi mục có position, name và url tuyệt đối', () => {
+    expect(items[0]).toEqual({
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Bài một',
+      url: `${site.url}/guides/mot/`,
+    })
+  })
+
+  it('khai báo ngôn ngữ và url của chính trang', () => {
+    expect(ld.inLanguage).toBe('vi-VN')
+    expect(ld.url).toBe(`${site.url}/guides/`)
   })
 })

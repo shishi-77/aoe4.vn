@@ -168,3 +168,49 @@ export function newsArticleJsonLd(post: NewsPost, site: Site): Record<string, un
     ...citations(post.sources.map((s) => ({ name: s.label, url: s.url }))),
   }
 }
+
+/**
+ * Schema.org BreadcrumbList. `trail` goes from the site root to the current
+ * page; names must match the wording readers see in the navbar.
+ */
+export function breadcrumbJsonLd(
+  trail: Array<{ name: string; path: string }>,
+  site: Site,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((step, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: step.name,
+      item: absoluteUrl(site.url, step.path),
+    })),
+  }
+}
+
+/** Schema.org CollectionPage wrapping an ItemList, for the guide and news indexes. */
+export function collectionPageJsonLd(
+  page: { name: string; description: string; path: string },
+  items: Array<{ name: string; path: string }>,
+  site: Site,
+): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: page.name,
+    description: page.description,
+    url: absoluteUrl(site.url, page.path),
+    inLanguage: 'vi-VN',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(site.url, item.path),
+      })),
+    },
+  }
+}
