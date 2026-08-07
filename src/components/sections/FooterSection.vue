@@ -30,7 +30,7 @@ const registrationClosed = computed(
           :href="props.tournament.links.discord"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gold hover:underline"
+          class="text-gold underline underline-offset-2"
           >Discord</a
         >
         ·
@@ -38,7 +38,7 @@ const registrationClosed = computed(
           :href="props.tournament.venue.mapsUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gold hover:underline"
+          class="text-gold underline underline-offset-2"
           >Chỉ đường tới {{ props.tournament.venue.name }}</a
         >
       </p>

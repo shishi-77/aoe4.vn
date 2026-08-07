@@ -63,7 +63,7 @@ useHead(() => {
             :href="src.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-cream hover:text-gold hover:underline"
+            class="inline-flex min-h-11 items-center text-cream hover:text-gold hover:underline"
           >
             {{ src.label }} ↗
           </a>
@@ -76,7 +76,7 @@ useHead(() => {
 
   <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">
     <h1 class="text-3xl font-black text-gold">Không tìm thấy bản tin</h1>
-    <RouterLink to="/news/" class="mt-6 inline-block text-cream underline">
+    <RouterLink to="/news/" class="mt-6 inline-flex min-h-11 items-center text-cream underline">
       Xem tất cả tin tức
     </RouterLink>
   </div>

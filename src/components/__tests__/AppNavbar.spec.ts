@@ -23,7 +23,11 @@ async function mountNavbar() {
   const router = createTestRouter()
   router.push('/')
   await router.isReady()
-  return { router, wrapper: mount(AppNavbar, { global: { plugins: [router] } }) }
+  // Attached to the document so focus assertions can read document.activeElement.
+  return {
+    router,
+    wrapper: mount(AppNavbar, { attachTo: document.body, global: { plugins: [router] } }),
+  }
 }
 
 describe('AppNavbar', () => {
@@ -79,6 +83,37 @@ describe('AppNavbar', () => {
 
     expect(toggle.attributes('aria-expanded')).toBe('false')
     expect(panel.classes()).toContain('hidden')
+  })
+
+  it('đổi nhãn ARIA của nút theo trạng thái menu', async () => {
+    const { wrapper } = await mountNavbar()
+    const toggle = wrapper.get('header button')
+
+    expect(toggle.attributes('aria-label')).toBe('Mở menu')
+    await toggle.trigger('click')
+    expect(toggle.attributes('aria-label')).toBe('Đóng menu')
+  })
+
+  it('trỏ aria-controls của nút tới đúng id của panel menu', async () => {
+    const { wrapper } = await mountNavbar()
+    const controls = wrapper.get('header button').attributes('aria-controls')
+
+    expect(controls).toBeTruthy()
+    expect(wrapper.get('nav > div').attributes('id')).toBe(controls)
+  })
+
+  it('đóng menu và trả focus về nút khi nhấn Escape', async () => {
+    const { wrapper } = await mountNavbar()
+    const toggle = wrapper.get('header button')
+
+    await toggle.trigger('click')
+    expect(toggle.attributes('aria-expanded')).toBe('true')
+
+    await wrapper.get('header').trigger('keydown', { key: 'Escape' })
+
+    expect(toggle.attributes('aria-expanded')).toBe('false')
+    expect(wrapper.get('nav > div').classes()).toContain('hidden')
+    expect(document.activeElement).toBe(toggle.element)
   })
 
   it('đóng menu mobile khi bấm link của chính trang đang xem', async () => {

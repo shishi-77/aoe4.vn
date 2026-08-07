@@ -15,7 +15,7 @@ const year = new Date().getFullYear()
           :href="site.links.github"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1 text-gold hover:underline"
+          class="inline-flex min-h-11 items-center gap-1 text-gold hover:underline"
         >
           <svg
             class="h-3.5 w-3.5"

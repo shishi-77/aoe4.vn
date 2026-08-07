@@ -18,6 +18,6 @@ useHead({
   <section class="mx-auto max-w-2xl px-4 py-32 text-center">
     <h1 class="text-5xl font-black text-gold">404</h1>
     <p class="mt-4 text-cream">Trang không tồn tại.</p>
-    <RouterLink to="/" class="mt-6 inline-block text-cream underline">Về trang chủ</RouterLink>
+    <RouterLink to="/" class="mt-6 inline-flex min-h-11 items-center text-cream underline">Về trang chủ</RouterLink>
   </section>
 </template>

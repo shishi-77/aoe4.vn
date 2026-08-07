@@ -20,4 +20,18 @@ describe('TournamentCard', () => {
     const wrapper = mount(TournamentCard, { props: { tournament: lacHong }, ...mountOptions })
     expect(wrapper.text()).toMatch(/sắp diễn ra|đang diễn ra|đã kết thúc/i)
   })
+
+  it('mặc định đặt tên giải ở h2, cho trang danh sách giải đấu', () => {
+    const wrapper = mount(TournamentCard, { props: { tournament: lacHong }, ...mountOptions })
+    expect(wrapper.get('h2').text()).toBe(lacHong.name)
+  })
+
+  it('hạ xuống h3 khi nằm dưới một section title trên trang chủ', () => {
+    const wrapper = mount(TournamentCard, {
+      props: { tournament: lacHong, headingLevel: 'h3' },
+      ...mountOptions,
+    })
+    expect(wrapper.get('h3').text()).toBe(lacHong.name)
+    expect(wrapper.find('h2').exists()).toBe(false)
+  })
 })

@@ -42,6 +42,30 @@ hygiene gate via `scripts/score-guide-seo.ts`.
 npm run lint:check && npm run type-check && npm run test:run
 ```
 
+`test:run` includes the accessibility gate - see below. Never open a PR without it green.
+
+## Accessibility
+
+Every PR is gated on accessibility; there is no "I'll fix a11y later" path.
+
+- `src/__tests__/accessibility.spec.ts` runs axe-core over **every page shape** (each static
+  route, one URL per guide/news post/tournament, and the 404) and fails on any violation. New
+  content is picked up automatically from the data files - no test edit needed. A new *route*
+  does need a line in that spec's `PAGES` array.
+- axe in jsdom cannot see anything that needs layout or real CSS. Three rules are switched off
+  there - `color-contrast`, `color-contrast-enhanced`, `target-size` - and are covered by the
+  manual sweep in [ACCESSIBILITY.md](./ACCESSIBILITY.md) instead.
+- axe also cannot judge whether an accessible name is *correct*, only that one exists: a button
+  labelled `☰` passes. Behaviour like that - a disclosure's label flipping between open and
+  closed, Escape closing a menu, focus landing where it should - needs an explicit unit test.
+  See `AppNavbar.spec.ts` and `AppLayout.spec.ts`.
+- When a change touches colour, spacing, or an interactive widget, run the manual browser sweep
+  in [ACCESSIBILITY.md](./ACCESSIBILITY.md) as well - the jsdom gate will not catch it.
+- The page language is set by `useHead` in `App.vue`, not by `index.html` - unhead rewrites the
+  `<html>` tag during pre-render and defaults to `en`. `assertPagesDeclareVietnamese` in
+  `vite.config.ts` fails the build if any emitted page disagrees, so run `npm run build` on any
+  PR that touches head handling, `ssgOptions`, or `App.vue`.
+
 ## Routes & SEO
 
 - Static routes are pre-rendered automatically, but add their URL to the `urls` array in `vite.config.ts` so they appear in `sitemap.xml`. Dynamic routes (e.g. `/tournaments/:slug`) must also be listed in `includedRoutes`.

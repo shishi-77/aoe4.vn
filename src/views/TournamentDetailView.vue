@@ -76,13 +76,19 @@ useHead(() => ({
       class="mx-auto max-w-3xl px-4 py-8 text-center text-sm text-muted"
     >
       Tổ chức giải? Tạo poll bình chọn và quiz khán giả trực tiếp với
-      <a :href="site.ahaslides.url" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">AhaSlides</a>.
+      <a
+        :href="site.ahaslides.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gold underline underline-offset-2"
+        >AhaSlides</a
+      >.
     </p>
     <FooterSection :tournament="tournament" />
   </template>
   <div v-else class="mx-auto max-w-2xl px-4 py-32 text-center">
     <h1 class="text-3xl font-black text-gold">Không tìm thấy giải đấu</h1>
-    <RouterLink to="/tournaments/" class="mt-6 inline-block text-cream underline">
+    <RouterLink to="/tournaments/" class="mt-6 inline-flex min-h-11 items-center text-cream underline">
       Xem tất cả giải
     </RouterLink>
   </div>
