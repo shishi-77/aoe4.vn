@@ -4,7 +4,7 @@ import { useRoute, RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getNewsPostBySlug } from '@/data/news'
 import { site } from '@/data/site'
-import { newsArticleJsonLd } from '@/lib/structuredData'
+import { newsArticleJsonLd, breadcrumbJsonLd } from '@/lib/structuredData'
 import CommunityCta from '@/components/CommunityCta.vue'
 
 const route = useRoute()
@@ -31,6 +31,19 @@ useHead(() => {
     ],
     script: [
       { type: 'application/ld+json', innerHTML: JSON.stringify(newsArticleJsonLd(p, site)) },
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(
+          breadcrumbJsonLd(
+            [
+              { name: 'Trang chủ', path: '/' },
+              { name: 'Tin tức', path: '/news/' },
+              { name: p.title, path: `/news/${p.slug}/` },
+            ],
+            site,
+          ),
+        ),
+      },
     ],
   }
 })

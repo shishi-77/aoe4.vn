@@ -4,7 +4,7 @@ import { useRoute, RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getGuideBySlug } from '@/data/guides'
 import { site } from '@/data/site'
-import { guideArticleJsonLd } from '@/lib/structuredData'
+import { guideArticleJsonLd, breadcrumbJsonLd } from '@/lib/structuredData'
 import CommunityCta from '@/components/CommunityCta.vue'
 
 const route = useRoute()
@@ -31,6 +31,19 @@ useHead(() => {
     ],
     script: [
       { type: 'application/ld+json', innerHTML: JSON.stringify(guideArticleJsonLd(g, site)) },
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(
+          breadcrumbJsonLd(
+            [
+              { name: 'Trang chủ', path: '/' },
+              { name: 'Hướng dẫn', path: '/guides/' },
+              { name: g.title, path: `/guides/${g.slug}/` },
+            ],
+            site,
+          ),
+        ),
+      },
     ],
   }
 })

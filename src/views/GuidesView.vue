@@ -3,6 +3,7 @@ import { useHead } from '@unhead/vue'
 import { RouterLink } from 'vue-router'
 import { site } from '@/data/site'
 import { guides } from '@/data/guides'
+import { breadcrumbJsonLd, collectionPageJsonLd } from '@/lib/structuredData'
 
 const pageUrl = `${site.url}/guides/`
 const title = 'Hướng dẫn Age of Empires IV (Đế chế 4) cho người Việt'
@@ -19,6 +20,30 @@ useHead({
     { property: 'og:description', content: description },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(
+        collectionPageJsonLd(
+          { name: title, description, path: '/guides/' },
+          guides.map((g) => ({ name: g.title, path: `/guides/${g.slug}/` })),
+          site,
+        ),
+      ),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(
+        breadcrumbJsonLd(
+          [
+            { name: 'Trang chủ', path: '/' },
+            { name: 'Hướng dẫn', path: '/guides/' },
+          ],
+          site,
+        ),
+      ),
+    },
   ],
 })
 </script>

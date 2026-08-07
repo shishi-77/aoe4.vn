@@ -3,6 +3,7 @@ import { useHead } from '@unhead/vue'
 import { tournaments } from '@/data/tournaments'
 import { site } from '@/data/site'
 import TournamentCard from '@/components/TournamentCard.vue'
+import { breadcrumbJsonLd } from '@/lib/structuredData'
 
 useHead({
   title: `Giải đấu - ${site.name}`,
@@ -14,6 +15,20 @@ useHead({
     { property: 'og:description', content: 'Danh sách giải đấu Age of Empires IV tại Việt Nam.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: `${site.url}/og.jpg` },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(
+        breadcrumbJsonLd(
+          [
+            { name: 'Trang chủ', path: '/' },
+            { name: 'Giải đấu', path: '/tournaments/' },
+          ],
+          site,
+        ),
+      ),
+    },
   ],
 })
 </script>

@@ -3,6 +3,7 @@ import { useHead } from '@unhead/vue'
 import { RouterLink } from 'vue-router'
 import { site } from '@/data/site'
 import { faqItems } from '@/data/faq'
+import { breadcrumbJsonLd } from '@/lib/structuredData'
 import CommunityCta from '@/components/CommunityCta.vue'
 
 const pageUrl = `${site.url}/faq/`
@@ -31,7 +32,21 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: `${site.url}/og.jpg` },
   ],
-  script: [{ type: 'application/ld+json', innerHTML: faqJsonLd }],
+  script: [
+    { type: 'application/ld+json', innerHTML: faqJsonLd },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(
+        breadcrumbJsonLd(
+          [
+            { name: 'Trang chủ', path: '/' },
+            { name: 'Hỏi đáp', path: '/faq/' },
+          ],
+          site,
+        ),
+      ),
+    },
+  ],
 })
 </script>
 

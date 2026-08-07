@@ -4,7 +4,7 @@ import { useRoute, RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { getTournamentBySlug } from '@/data/tournaments'
 import { site } from '@/data/site'
-import { tournamentEventJsonLd } from '@/lib/structuredData'
+import { tournamentEventJsonLd, breadcrumbJsonLd } from '@/lib/structuredData'
 import HeroSection from '@/components/sections/HeroSection.vue'
 import QuickInfoSection from '@/components/sections/QuickInfoSection.vue'
 import PrizeSection from '@/components/sections/PrizeSection.vue'
@@ -56,6 +56,19 @@ useHead(() => ({
         {
           type: 'application/ld+json',
           innerHTML: JSON.stringify(tournamentEventJsonLd(tournament.value, site)),
+        },
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify(
+            breadcrumbJsonLd(
+              [
+                { name: 'Trang chủ', path: '/' },
+                { name: 'Giải đấu', path: '/tournaments/' },
+                { name: tournament.value.name, path: `/tournaments/${tournament.value.slug}/` },
+              ],
+              site,
+            ),
+          ),
         },
       ]
     : [],
