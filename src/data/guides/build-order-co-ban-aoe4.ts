@@ -5,6 +5,7 @@ export const buildOrderGuide: Guide = {
   title: 'Build order cơ bản cho người mới chơi AoE4',
   description:
     'Build order là gì và người mới nên mở đầu trận AoE4 thế nào? Một build order lên Đời II đơn giản dùng được cho mọi nền văn minh, kèm cách luyện cho thuộc.',
+  kind: 'strategy',
   updatedAt: '2026-08-08',
   cta: true,
   sections: [

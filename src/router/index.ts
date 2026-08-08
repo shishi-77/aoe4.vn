@@ -20,6 +20,11 @@ export const routes: RouteRecordRaw[] = [
     component: () => import('@/views/GuideView.vue'),
   },
   {
+    path: '/tools',
+    name: 'tools',
+    component: () => import('@/views/ToolsView.vue'),
+  },
+  {
     path: '/news',
     name: 'news',
     component: () => import('@/views/NewsView.vue'),

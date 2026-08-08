@@ -5,6 +5,7 @@ export const mobilityUnitsGuide: Guide = {
   title: 'Cung R, ngựa chém, lạc đà: dân Đế chế 1 mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
   description:
     'Cung R, ngựa chém hay lạc đà của Đế chế sang Đế chế 4 là lính nào? Kỵ cung Mangudai, Horse Archer, Onna-Musha, kỵ nặng Pháp và lạc đà Abbasid - bản đồ lính cho dân Đế chế mê đánh nhanh.',
+  kind: 'strategy',
   updatedAt: '2026-08-06',
   cta: true,
   sections: [

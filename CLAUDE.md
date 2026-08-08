@@ -68,5 +68,5 @@ Every PR is gated on accessibility; there is no "I'll fix a11y later" path.
 
 ## Routes & SEO
 
-- Static routes are pre-rendered automatically, but add their URL to the `urls` array in `vite.config.ts` so they appear in `sitemap.xml`. Dynamic routes (e.g. `/tournaments/:slug`) must also be listed in `includedRoutes`.
+- Static routes are pre-rendered automatically, but add their URL to the `entries` array in `buildSitemapXml` (`src/lib/sitemap.ts`) so they appear in `sitemap.xml`. Dynamic routes (e.g. `/tournaments/:slug`) must also be listed in `includedRoutes` in `vite.config.ts`.
 - Set page metadata (title, description, canonical, OG, JSON-LD) via `useHead`; use a trailing slash in canonical URLs.

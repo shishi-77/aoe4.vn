@@ -27,6 +27,7 @@ const PAGES: { name: string; path: string }[] = [
   { name: 'trang chủ', path: '/' },
   { name: 'hỏi đáp', path: '/faq' },
   { name: 'danh sách hướng dẫn', path: '/guides' },
+  { name: 'công cụ', path: '/tools' },
   { name: 'danh sách tin tức', path: '/news' },
   { name: 'danh sách giải đấu', path: '/tournaments' },
   ...guides.map((g) => ({ name: `hướng dẫn ${g.slug}`, path: `/guides/${g.slug}` })),

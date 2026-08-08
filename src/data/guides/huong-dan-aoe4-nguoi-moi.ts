@@ -5,6 +5,7 @@ export const beginnerGuide: Guide = {
   title: 'Hướng dẫn chơi Age of Empires IV cho người mới',
   description:
     'Mới chơi Đế chế 4 nên bắt đầu từ đâu? Lộ trình cho người mới: học qua Chiến dịch và Art of War, nắm build order cơ bản, đánh với máy rồi mới lên mạng.',
+  kind: 'strategy',
   updatedAt: '2026-06-28',
   cta: true,
   sections: [

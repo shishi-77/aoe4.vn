@@ -9,6 +9,7 @@ const goodGuide: Guide = {
   slug: 'bai-chuan-vi-du',
   title: 'Bài hướng dẫn ví dụ đạt chuẩn SEO',
   description: 'Mô tả bài hướng dẫn ví dụ dài quá năm mươi ký tự để qua cổng vệ sinh.',
+  kind: 'strategy',
   updatedAt: '2026-08-02',
   cta: true,
   sections: [{ heading: 'Mục', paragraphs: ['Đoạn.'], link: { slug: 'x', label: 'x' } }],

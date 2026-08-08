@@ -15,6 +15,7 @@ const guide = (over: Partial<Guide> = {}): Guide => ({
   slug: 'build-order-co-ban',
   title: 'Build order cơ bản Đế chế 4',
   description: 'Thứ tự xây dựng mở đầu cho người mới.',
+  kind: 'strategy',
   updatedAt: '2026-08-01',
   sections: [
     { heading: 'Mở đầu', paragraphs: ['Đoạn một.', 'Đoạn hai.'] },

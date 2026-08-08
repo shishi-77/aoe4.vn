@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { guides, getGuideBySlug } from '@/data/guides'
+import { guides, getGuideBySlug, GUIDE_GROUPS, guidesByKind } from '@/data/guides'
 
 describe('guide internal links', () => {
   const allLinks = guides.flatMap((g) => [
@@ -150,5 +150,33 @@ describe('bài satellite cung-r-ngua-chem-aoe4', () => {
     for (const banned of ['bốc', 'vào trớn', 'bãi cung', 'kéo quân']) {
       expect(body).not.toContain(banned)
     }
+  })
+})
+
+describe('guide kinds', () => {
+  it('mọi guide khai kind tường minh', () => {
+    for (const g of guides) {
+      expect(['utility', 'strategy', 'comparison']).toContain(g.kind)
+    }
+  })
+
+  it('GUIDE_GROUPS phủ hết mọi kind đang dùng, không trùng', () => {
+    const kinds = GUIDE_GROUPS.map((group) => group.kind)
+    expect(new Set(kinds).size).toBe(kinds.length)
+    for (const g of guides) {
+      expect(kinds).toContain(g.kind)
+    }
+  })
+
+  it('guidesByKind chia hết bộ sưu tập, không bỏ sót bài nào', () => {
+    const total = GUIDE_GROUPS.reduce((n, group) => n + guidesByKind(group.kind).length, 0)
+    expect(total).toBe(guides.length)
+  })
+
+  it('ba bài so sánh được xếp đúng nhóm', () => {
+    const slugs = guidesByKind('comparison').map((g) => g.slug)
+    expect(slugs).toContain('aoe4-vs-aoe2-khac-biet-cot-loi')
+    expect(slugs).toContain('game-rts-nao-de-bat-dau-2026')
+    expect(slugs).toContain('aoe4-khac-de-che-the-nao')
   })
 })
