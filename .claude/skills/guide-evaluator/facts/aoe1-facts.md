@@ -88,6 +88,31 @@
 - Slow units like War Elephants and Elephant Archers are especially prone to being converted (long exposure time to a Priest). - source: WebSearch summary of Conversion-related forum/wiki threads
 - Researching Monotheism enables converting/capturing entire enemy structures (not just units) without destroying them first. - source: https://artho.com/age/units1.html
 
+## The Vietnamese AoE1 scene (added 2026-08-08, for `de-che-co-nhung-ban-nao`)
+
+Everything in this section is the site owner speaking about the community they belong to. That
+is the same standing as the other `Confirmed by site owner` lines in this file, and it is the
+ONLY admissible source for claims of this kind - the voice corpus in `docs/voice-corpus/` says
+similar things but is for learning voice, never for sourcing facts.
+
+- **AoE1 has the largest and oldest community in Vietnam of any title in the series.** No other
+  Age title comes close on depth of history there. Confirmed by site owner 2026-08-08.
+- **That community is declining, and the reason is a thin next generation, not the game.** New
+  players entering are far fewer than the cohort already there. Confirmed by site owner
+  2026-08-08.
+  - **WRITING RULE (owner, 2026-08-08)**: this may be written plainly but must be framed as a
+    demographic fact, never as a judgement on the game or on the people playing it. The owner
+    explicitly chose "nói thẳng, có tôn trọng" over softening it away. Wording that reads as
+    disparagement of AoE1 or its players is a `disparagement[]` failure, and wording that hides
+    the problem entirely loses the most useful thing the article has to say.
+- **Age of Empires: Definitive Edition (2018) did not capture the Vietnamese community.**
+  Vietnamese AoE1 players largely stayed on the older version and still are there. Confirmed by
+  site owner 2026-08-08. So an article must not assume the DE is where Vietnamese players meet.
+- **NOT ESTABLISHED, do not write**: whether Age of Mythology or Empire Earth have any
+  Vietnamese community presence. Asked of the owner on 2026-08-08; the answer was to write those
+  two purely as history and mechanics. Do not infer a Vietnamese scene for them, not even
+  obliquely ("game quán net một thời", "ký ức quán net").
+
 ---
 
 ## Open questions for the human reviewer

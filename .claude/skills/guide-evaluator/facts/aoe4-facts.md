@@ -217,6 +217,25 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
   holds no tournament data - same dead end as the StarCraft `Winnings/<year>` pages. Only Red Bull
   Wololo is sourced here; do not imply it is the only AoE4 event of the year.
 
+## Where AoE4 stands in Vietnam (added 2026-08-08, for `de-che-co-nhung-ban-nao`)
+
+Site owner speaking about their own community, 2026-08-08. Same standing as the other
+`Confirmed by site owner` lines here. See `aoe1-facts.md` for the AoE1 half of the picture.
+
+- **AoE2 and AoE4 are currently level in Vietnam, and both are small next to AoE1.** Confirmed
+  by site owner 2026-08-08.
+- **On the current trend AoE4 is the one that will pull ahead of those two.** Confirmed by site
+  owner 2026-08-08.
+  - **WRITING RULE (owner, 2026-08-08)**: this is the owner's READ of a trend, not a measurement.
+    An article must present it as a judgement and show its reasoning ("theo đà hiện nay", then
+    the sourced grounds - newest title, steadiest content cadence, on PC/console/Game Pass,
+    seasonal ranked ladder for matchmaking). Dressing it up as data - a number, a player count,
+    a survey - is a `contradiction`, because no such measurement exists in this store.
+- These claims must not be turned into disparagement of AoE2 or AoE1. The sourced material in
+  `aoe2-facts.md` (seven years of continuous expansion, Metacritic 84, cross-platform) is the
+  reason AoE2 is level rather than behind, and it belongs in any article that makes this
+  comparison.
+
 ## Open questions for the human reviewer
 
 1. Confirm current-patch (mid-2026) exact costs for Mangudai/Camel Archer/Camel Rider/Horse Archer/Onna-Musha/Royal Knight - this file cites figures gathered from web sources of varying vintage and AoE4 has had multiple balance patches since 2021 launch.
