@@ -14,6 +14,7 @@ function createTestRouter() {
       { path: '/faq/', component: Blank },
       { path: '/tournaments/', component: Blank },
       { path: '/guides/', component: Blank },
+      { path: '/tools/', component: Blank },
       { path: '/news/', component: Blank },
     ],
   })
@@ -130,5 +131,22 @@ describe('AppNavbar', () => {
 
     expect(toggle.attributes('aria-expanded')).toBe('false')
     expect(wrapper.get('nav > div').classes()).toContain('hidden')
+  })
+
+  it('có link Công cụ trong menu', async () => {
+    const { wrapper } = await mountNavbar()
+    const link = wrapper.get('nav > div a[href="/tools/"]')
+    expect(link.text()).toContain('Công cụ')
+  })
+
+  it('giữ link Blog trong header', async () => {
+    const { wrapper } = await mountNavbar()
+    const hrefs = wrapper.findAll('a').map((a) => a.attributes('href'))
+    expect(hrefs).toContain(site.links.blog)
+  })
+
+  it('có đúng 7 mục trong menu', async () => {
+    const { wrapper } = await mountNavbar()
+    expect(wrapper.findAll('nav > div a')).toHaveLength(7)
   })
 })

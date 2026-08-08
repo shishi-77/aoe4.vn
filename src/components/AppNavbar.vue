@@ -75,6 +75,7 @@ function onJoin(channel: OutboundClickEvent['channel']) {
         <RouterLink to="/faq/" :class="MENU_LINK_CLASS"> Hỏi đáp </RouterLink>
         <RouterLink to="/tournaments/" :class="MENU_LINK_CLASS"> Giải đấu </RouterLink>
         <RouterLink to="/guides/" :class="MENU_LINK_CLASS"> Hướng dẫn </RouterLink>
+        <RouterLink to="/tools/" :class="MENU_LINK_CLASS"> Công cụ </RouterLink>
         <RouterLink to="/news/" :class="MENU_LINK_CLASS"> Tin tức </RouterLink>
         <a
           :href="site.links.blog"
