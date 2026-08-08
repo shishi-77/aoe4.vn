@@ -144,8 +144,8 @@
       "position": 0,
       "source": "manual"
     },
-    "status": "in-pr",
-    "notes": "Cớ vào bài: thread r/RealTimeStrategy \"currently the best RTS and upcoming RTS?\" owner gửi 2026-08-08. Facts sheet: 0 claim CẦN XÁC NHẬN nên bỏ qua cổng owner. Evaluator vòng 2: PASS 8/8/8, 0 mâu thuẫn, 0 dìm game.",
+    "status": "published",
+    "notes": "Cớ vào bài: thread r/RealTimeStrategy \"currently the best RTS and upcoming RTS?\" owner gửi 2026-08-08. Facts sheet: 0 claim CẦN XÁC NHẬN nên bỏ qua cổng owner. Evaluator vòng 2: PASS 8/8/8, 0 mâu thuẫn, 0 dìm game. Merged 2026-08-08 qua PR #58.",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-08"
   },
