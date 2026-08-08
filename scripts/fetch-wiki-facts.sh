@@ -82,5 +82,10 @@ liquipedia starcraft2 "Battle.net_Leagues" sc2-leagues
 liquipedia starcraft2 "Macro" sc2-macro
 liquipedia starcraft2 "Resources" sc2-resources
 liquipedia starcraft2 "Global_StarCraft_II_League" sc2-gsl
+liquipedia starcraft2 "ESL_Pro_Tour" sc2-ept
+# Current-season pages carry the live prize pool in their infobox. Bump the year as needed - the
+# Winnings/<year> pages look like the obvious source for aggregates but are pure template
+# transclusion, so their wikitext is empty of numbers.
+liquipedia starcraft2 "Global_StarCraft_II_League/2026/Season_1" sc2-gsl-2026
 
 log "DONE - read the files in $OUT, then update the fact stores by hand."

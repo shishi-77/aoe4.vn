@@ -6,12 +6,13 @@
 
 **Reviewed by**: NOBODY YET. Gathered 2026-08-08 with sources attached.
 
-**This is still the weakest of the three new stores, and it is worth knowing why.** Liquipedia is
-the canonical StarCraft reference and it *is* reachable - it requires gzip and rate-limits
-`action=parse` to about one request per 30 seconds, which plain `curl` handles fine. But its race
-pages and `starcraft.fandom.com` alike are written lore-first: the Terran page opens with a novel
-quote, not a build order. The gameplay-mechanics pages are scattered under titles that mostly
-redirect. So the AoE2 file got stat infoboxes and this one got prose.
+**Sourcing note.** Liquipedia is the canonical StarCraft reference and it *is* reachable: it
+requires gzip and rate-limits `action=parse` to about one request per 30 seconds, which plain
+`curl` handles fine. Its race pages and `starcraft.fandom.com` alike are written lore-first
+though - the Terran page opens with a novel quote, not a build order - and the gameplay-mechanics
+pages sit under titles that mostly redirect. So where the AoE2 file is built on stat infoboxes,
+this one is built on prose plus two tournament infoboxes. The ladder, macro and 2026 esports
+sections are solid; the race-design section is still the soft spot.
 
 **Register warning**: the evaluator's `disparagement[]` rule covers StarCraft exactly as it covers
 AoE1/AoE2/AoE3. StarCraft players are the intended readers of these articles. "SC quá khó",
@@ -131,10 +132,50 @@ AoE1/AoE2/AoE3. StarCraft players are the intended readers of these articles. "S
 - Named tournaments: the **Global StarCraft II League (GSL)** and the **StarCraft II World
   Championship Series (WCS)**, the latter established in 2012.
   - source: https://en.wikipedia.org/wiki/StarCraft_II
-- ⚠️ CẦN NGƯỜI DUYỆT - the state of the scene in 2026, whether WCS still runs in that form, and
-  who funds the circuit were NOT sourced. The Liquipedia GSL page was fetched but not mined this
-  pass. `esports-aoe4-vs-starcraft2` needs current facts on both sides; writing "SC2 esports đã
-  tàn" from stale knowledge would be both wrong and disparaging.
+### Circuit history
+
+- **GSL** started in late August 2010 and runs multiple events a year on location in South Korea.
+  Its first tournament, the GOMTV StarCraft II Open 1, ran 28 August to 2 October 2010. It was the
+  first step toward a professional StarCraft II league in Korea.
+  - source: https://liquipedia.net/starcraft2/Global_StarCraft_II_League
+- **ESL Pro Tour (EPT)** was announced by ESL in January 2020, replacing Blizzard's WCS system. It
+  combined ESL, DreamHack and WCS legacies in a three-year partnership, offered "more than $4
+  million USD in prize money across the tours", and crowned the official StarCraft II World
+  Champions, building toward the Masters Championship at IEM Katowice each year.
+  - source: https://liquipedia.net/starcraft2/ESL_Pro_Tour
+
+### 2026: the funding fell away, the scene did not
+
+Two facts here are primary and safe to state plainly.
+
+- **StarCraft II is NOT in the 2026 Esports World Cup.** The 2026 EWC runs 25 events across 24
+  titles for a $75 million total purse, up from $71.5 million in 2025, and StarCraft II was one of
+  two titles dropped from the 2025 lineup. Wikipedia states the consequence directly: "The
+  exclusion of StarCraft II from the lineup meant that the 2026 EWC will not feature any real-time
+  strategy games." - source: https://en.wikipedia.org/wiki/2026_Esports_World_Cup
+- **GSL 2026 Season 1 ran 29 April to 17 May 2026, organised by SOOP, with a $15,000 prize pool**,
+  1v1 group stages plus playoffs, sponsors Intel and ONSYDE. Liquipedia still rates it **Tier 1**.
+  - source: https://liquipedia.net/starcraft2/Global_StarCraft_II_League/2026/Season_1 (infobox)
+
+**The honest comparison to draw is between those two sourced numbers**: the EPT offered more than
+$4 million across its tours in 2020; a Tier 1 GSL season in 2026 carries $15,000. That contrast is
+fully sourced on both ends and needs no editorialising.
+
+⚠️ CẦN NGƯỜI DUYỆT - everything below is search-summary grade and must NOT be stated as fact:
+that the ESL Pro Tour ended in April 2025; that total 2026 SC2 prize money is around $120,000
+against $2.3 million in 2024; that GSL 2026 was revived by crowdfunding; that GSL evolved into a
+"GSL CK" team format with captains drafting rosters. The GSL 2026 infobox lists corporate sponsors
+rather than crowdfunding, which does not disprove the crowdfunding claim but does mean it is not
+confirmed. Liquipedia's `Winnings/2026` page cannot verify the aggregates either - it is pure
+template transclusion, so the numbers exist only in the rendered page, not the wikitext.
+
+**WRITING RULE for this section.** The sourced facts describe money leaving the game, not the game
+dying, and the difference is not a nicety - it is accuracy. A Tier 1 league still ran in 2026, with
+sponsors, on schedule. Framing this as "SC2 esports đã tàn" or "hết thời" is both unsupported and a
+`disparagement[]` violation against the exact readers the article is written for. State the
+numbers, note that the scene now runs on a much smaller budget, and stop there. If a comparison
+with AoE4 esports is drawn, the AoE4 half needs its own sourcing, which does not exist yet in
+`aoe4-facts.md`.
 
 ## Access
 
@@ -151,8 +192,10 @@ AoE1/AoE2/AoE3. StarCraft players are the intended readers of these articles. "S
    and `Vespene Gas` redirect to `liquipedia.net/starcraft2/Resources`, which was identified but
    not fetched. One request closes it. (The per-race supply buildings question that used to sit
    here is now answered and sourced above.)
-2. Current-2026 SC2 esports. The GSL page is already fetched into the scratchpad and just needs
-   mining.
+2. The 2026 prize-money aggregates and whether GSL 2026 was crowdfunded. Liquipedia's
+   `Winnings/2026` is template-only so wikitext cannot confirm it; the rendered page or
+   esportsearnings.com would. Only matters if an article wants to quantify the drop beyond the
+   two sourced figures already in the esports section.
 3. **Does the Vietnamese RTS audience overlap with StarCraft at all?** Four of thirteen queued
    comparison items assume it does. If the overlap is thin, that is four articles chasing traffic
    that will not convert, and the queue wants reprioritising more than this file wants filling.

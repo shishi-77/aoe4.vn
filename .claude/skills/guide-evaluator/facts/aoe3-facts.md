@@ -75,10 +75,55 @@ plain `curl` with a descriptive User-Agent on `?action=raw`. Script: `scripts/fe
   including artillery and rifle companies." Artillery uses cannon and mortars, and some artillery
   is grenade-armed. - source: https://ageofempires.fandom.com/wiki/Age_of_Empires_III ,
   https://en.wikipedia.org/wiki/Age_of_Empires_III
-- ⚠️ CẦN NGƯỜI DUYỆT - AoE3's counter system (the musketeer / cavalry / skirmisher relationships
-  the community discusses) was NOT sourced. The Fandom `Counter` page covers AoE1, AoE2, AoM,
-  AoE3 and AoE4, but the AoE3 section was not extracted this pass. **Do not write an AoE3
-  counters paragraph yet** - it is one more fetch away, not a guess away.
+
+## Counters - multiplicative, not additive
+
+This is the single most interesting mechanical fact about AoE3 for a comparison article, and it
+is not a matter of degree: **AoE3 computes bonus damage differently from AoE2.**
+
+- AoE3 runs on the Bang! Engine, like Age of Mythology, so **bonus damage is determined by
+  multiplication rather than by additive bonuses**, and armor classes work through a **tag**
+  system. AoE2, by contrast, adds a flat bonus and stacks it across armor classes - see
+  `aoe2-facts.md`. Compared with AoM, AoE3 has many more unit categories and a greater variety of
+  multipliers. - source: https://ageofempires.fandom.com/wiki/Counter
+- How a multiplier reads: if a light infantry unit has a 5x multiplier against heavy infantry, its
+  base damage is multiplied by 5 against heavy infantry. **Multipliers below 1 exist and act as
+  dividers** - a 0.5 multiplier against Villagers means half damage.
+  - source: https://ageofempires.fandom.com/wiki/Counter
+- Counter summary as the wiki states it:
+  | Group | Counters |
+  | --- | --- |
+  | Heavy Infantry | Cavalry, Shock Infantry |
+  | Light Infantry | Heavy Infantry, Light Cavalry, Ranged Shock Infantry |
+  | Grenade Troopers | Infantry in groups, Buildings |
+  | Counter Skirmishers | Light Infantry |
+  | Heavy Cavalry | Light Infantry, Artillery |
+  | Light Cavalry | Heavy Cavalry, Hand Shock Infantry, Artillery |
+  | Hand Shock Infantry | Light Infantry, Artillery |
+  | Ranged Shock Infantry | Heavy Cavalry, Hand Shock Infantry, Artillery |
+  | Generic Artillery | Infantry, Buildings, Ships |
+  | Specialized Artillery | Artillery and/or Buildings, Ships |
+  - source: https://ageofempires.fandom.com/wiki/Counter
+- **Heavy infantry** fight in melee (Samurai) or with muskets and bayonets or swords
+  (Janissaries); they hard counter cavalry and light/ranged infantry in melee, but artillery or
+  light/ranged infantry at range beat them easily. **Light infantry** (the Skirmisher) have great
+  range plus multipliers against heavy infantry and light/ranged cavalry, and fall to heavy
+  cavalry, heavy infantry in melee, and artillery.
+  - source: https://ageofempires.fandom.com/wiki/Counter
+- **The roles map onto the older games**: "light infantry take the role of archers, light cavalry
+  take the role of camels and cavalry archers, and artillery take the role of siege weapons."
+  This is the wiki's own bridge sentence and it is the cleanest way to explain AoE3 to someone
+  who knows Đế chế 1 or 2. - source: https://ageofempires.fandom.com/wiki/Counter
+- **A multiplier is not the whole story.** The wiki is explicit that lacking a multiplier, or even
+  having one below 1, does not make a unit ineffective: heavy cavalry mostly lack multipliers yet
+  consistently beat light/ranged infantry and artillery through speed, hit points and high attack.
+  Do not write AoE3 counters as if the table were deterministic.
+  - source: https://ageofempires.fandom.com/wiki/Counter
+- Niche multipliers exist against workers, mercenaries and ships, "occasionally to levels of
+  crippling overspecialization" - the wiki's own phrase. Examples: the **Spy**, dealing just 5
+  damage but with very large multipliers against mercenaries and heroes; the **Culverin**,
+  artillery with spectacular range and big multipliers against ships and other artillery, weak at
+  everything else. - source: https://ageofempires.fandom.com/wiki/Counter
 
 ## Natives, mercenaries, trade
 
@@ -124,11 +169,10 @@ plain `curl` with a descriptive User-Agent on `?action=raw`. Script: `scripts/fe
 
 1. **Age naming.** Discovery/Colonial or Exploration/Commerce? Highest-value question in this
    file - it appears in the first paragraph of any AoE3 article.
-2. AoE3 counter system. One targeted fetch of the Fandom `Counter` page's AoE3 section fixes it.
-3. Vietnamese vocabulary for AoE3, if the VN scene has any. Not invented here on purpose.
-4. **Does "Đế chế 3" collide with "đời 3"?** The VN AoE1 meta is played in đời 3 (Bronze Age), so
+2. Vietnamese vocabulary for AoE3, if the VN scene has any. Not invented here on purpose.
+3. **Does "Đế chế 3" collide with "đời 3"?** The VN AoE1 meta is played in đời 3 (Bronze Age), so
    "Đế chế 3" in a headline may read as the age, not the game. Owner should rule on this before
    `aoe3-co-gi-hay` is written - it is a naming problem, not a facts problem, and CLAUDE.md's
    naming convention does not currently address it.
-5. Is AoE3 actually played in Vietnam in any numbers, or is this purely a search-traffic play?
+4. Is AoE3 actually played in Vietnam in any numbers, or is this purely a search-traffic play?
    Changes the framing of `aoe3-co-gi-hay` substantially.
