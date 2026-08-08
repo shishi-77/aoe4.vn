@@ -55,7 +55,8 @@ Soạn `docs/facts-review/<slug>.md`:
 
 - Guide có claim `[CẦN XÁC NHẬN]`: đặt status queue = `facts-pending`, DỪNG và mời owner
   duyệt file facts sheet (sửa/xác nhận trực tiếp trong file). Không có owner trong phiên ->
-  kết thúc tại đây, phiên sau chạy lại skill sẽ tiếp tục.
+  kết thúc tại đây; phiên sau chạy lại skill sẽ tiếp tục, NHƯNG chỉ đúng khi facts sheet còn
+  trên đĩa. Phiên headless không có chỗ đứng đó - xem "Facts sheet phải lên remote" cuối file.
 - Guide 100% claim `[ĐÃ CÓ TRONG KHO]`: bỏ qua cổng, ghi vào facts sheet dòng
   "Bỏ qua cổng owner: 100% facts từ kho đã xác minh". (Đây là cơ chế mở khóa giai đoạn 2.)
 - News: cổng nhanh - owner liếc bảng claim->nguồn và gật (hoặc tự bỏ claim thiếu nguồn).
@@ -115,8 +116,12 @@ Soạn `docs/facts-review/<slug>.md`:
 1. `npm run lint:check && npm run type-check && npm run test:run` - xanh hết mới đi tiếp.
 2. Status queue = `in-pr`.
 3. Lấy link share: `npx vite-node scripts/share-links.ts /guides/<slug>/` (hoặc `/news/...`).
-4. Mở PR (gh account collaborator: `gh auth switch --user shishi-77`, switch về sau khi xong)
-   với body gồm: tóm tắt bài, VERDICT PASS + điểm từ scorecard, danh sách claimsToVerify
+4. Mở PR bằng `gh pr create`. Chuyện account: máy owner có hai gh account nên phải
+   `gh auth switch --user shishi-77` trước và switch về sau khi xong. Phiên headless chạy
+   trong sandbox cloud CHỈ có một identity - KHÔNG chạy `gh auth switch` ở đó, lệnh sẽ fail
+   và kéo đổ luôn bước PR. Không chắc đang ở đâu thì `gh auth status` trước: thấy đúng một
+   account -> bỏ qua switch.
+   Body PR gồm: tóm tắt bài, VERDICT PASS + điểm từ scorecard, danh sách claimsToVerify
    (nếu có) để owner liếc, và 2 link share UTM (owner copy khi đăng FB/Discord).
 5. Owner merge -> phiên sau (hoặc ngay nếu owner còn đó) đổi status = `published`, gộp vào
    PR/branch queue kế tiếp.
@@ -133,3 +138,23 @@ Một queue item ĐỦ ĐIỀU KIỆN cho phiên chạy không có owner khi th�
 Item không đủ điều kiện -> phiên headless BỎ QUA (đặt/giữ `facts-pending` nếu vừa soạn facts
 sheet), thử item kế tiếp trong queue. Headless TUYỆT ĐỐI không merge PR - owner là người merge
 duy nhất, mọi trường hợp.
+
+### Facts sheet phải lên remote
+
+Phiên headless chạy trong sandbox cloud dùng một lần: hết phiên là mất sạch checkout. Không hề
+có "phiên sau chạy lại sẽ tiếp tục" như trên máy owner. Commit mà không push thì facts sheet
+chết theo sandbox, lần chạy sau soạn lại từ đầu, và kho facts không bao giờ lớn lên.
+
+Soạn xong facts sheet mà item KHÔNG đủ điều kiện (còn `[CẦN XÁC NHẬN]`):
+
+1. Chưa ở branch riêng thì `git checkout -b claude/facts-<slug>`.
+2. Commit facts sheet + status `facts-pending` trong queue. `docs/facts-review/` đã được
+   gỡ khỏi gitignore nên `git add` thường là đủ, không cần `-f`.
+3. `git push -u origin <branch>`, rồi `gh pr create --draft` tiêu đề
+   `chore(facts): facts sheet <slug> chờ owner duyệt`, body liệt kê ĐÚNG các claim
+   `[CẦN XÁC NHẬN]` kèm câu hỏi cụ thể cho owner - đó là thứ owner cần trả lời để mở khoá item.
+4. Xong mới thử item kế tiếp. Nhiều item facts-pending trong cùng một phiên thì gom chung
+   một branch và một PR draft, đừng mở mỗi item một PR.
+
+Owner trả lời rồi merge PR đó -> phiên sau item đã có facts sheet nằm sẵn trên `main` và đi
+thẳng vào Bước 3. Đây là cách kho facts lớn dần mà không cần owner ngồi cùng phiên.
