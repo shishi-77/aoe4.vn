@@ -1,6 +1,6 @@
 ---
 name: guide-evaluator
-description: Use when scoring or polishing a guide in src/data/guides or a news post in src/data/news before publish, or when running a write→score→fix loop. Grades one guide with a pinned strict rubric (SEO hygiene gate + structure/voice/conversion via median-of-3 judges + accuracy fact-checked against committed AoE facts files), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
+description: Use when scoring or polishing a guide in src/data/guides or a news post in src/data/news before publish, or when running a write→score→fix loop. Grades one guide with a pinned strict rubric (SEO hygiene gate + structure/voice/conversion via median-of-5 judges + accuracy fact-checked against committed AoE facts files), writes a scorecard with VERDICT PASS/FAIL and a concrete fix list. Judge only - does not write the guide.
 ---
 
 # Guide Evaluator (v3)
@@ -37,10 +37,19 @@ Chạy: `npx vite-node scripts/score-guide-seo.ts <slug>`
   "Cần sửa", đừng diễn giải lại.
 - Đọc `kind` (`'utility'` | `'strategy'`). Đây là loại bài, quyết định bộ sàn ở Bước 4.
 
-### Bước 2 - Chấm định tính bằng median-of-3 (structure / voice / conversion)
-Dispatch **3 subagent fresh-eyes ĐỘC LẬP**, mỗi cái chấm cùng một bài bằng ĐÚNG prompt ghim
-dưới đây. Điểm mỗi chiều = **TRUNG VỊ** của 3 lần (bỏ dao động ±1). Không tự nới tay: dùng
+### Bước 2 - Chấm định tính bằng median-of-5 (structure / voice / conversion)
+Dispatch **5 subagent fresh-eyes ĐỘC LẬP**, mỗi cái chấm cùng một bài bằng ĐÚNG prompt ghim
+dưới đây. Điểm mỗi chiều = **TRUNG VỊ** của 5 lần (bỏ dao động ±1). Không tự nới tay: dùng
 nguyên văn prompt, không thêm bớt giọng.
+
+Sở dĩ là 5 chứ không phải 3 (owner chốt 2026-08-08): khi sàn nâng lên 8, cổng nằm đúng trong
+dải nhiễu ±1 của judge. Ca thật ở `cung-r-ngua-chem-aoe4`: median-of-3 chấm cùng một văn bản
+ra voice 8 ở vòng 2 rồi voice 7 ở vòng 3, tức verdict lật mà bài không đổi. Với sàn 7 khoảng
+đệm còn đủ để 3 judge chịu được; với sàn 8 thì không.
+
+Kèm theo đó, ghi **cả 5 điểm thô** của từng chiều vào scorecard. Nếu một chiều có điểm thô
+trải từ dưới sàn lên trên sàn (vd 7/7/8/8/8), ghi thêm dòng "chiều <tên> nằm sát sàn, median
+có thể lật ở lần chạy sau" - đó là tín hiệu cho người duyệt, không phải lý do FAIL.
 
 PROMPT GHIM (dán y nguyên cho mỗi subagent, thay `<slug>`):
 ```
@@ -185,7 +194,7 @@ Ví dụ mâu thuẫn phải bắt (thêm 2026-08-07, cả hai kho đều có WR
 Ví dụ dìm phải bắt: "Bên Đế chế 1 các phe đánh na ná nhau, chọn phe gần như chỉ đổi màu" -> disparagement.
 
 ### Bước 4 - Verdict tất định
-Điểm cuối mỗi chiều = trung vị 3 lần ở Bước 2. Chọn sàn theo loại bài:
+Điểm cuối mỗi chiều = trung vị 5 lần ở Bước 2. Chọn sàn theo loại bài:
 `floorsForKind(kind)` từ `@/lib/guideVerdict` (kind từ Bước 1). Rồi tính:
 ```
 guideVerdict(
@@ -196,8 +205,15 @@ guideVerdict(
   {regressedVsPrevious},   // từ Bước 2.5
 )
 ```
-Sàn: `strategy` = structure/voice 7, conversion 6. `comparison` = y hệt `strategy`.
-`utility` = structure 7, voice 5, conversion 3 (nặng clarity, không ép hook/slang).
+Sàn (owner chốt 2026-08-08): `strategy` = structure 8, voice 7, conversion 7.
+`comparison` = y hệt `strategy`. `utility` = structure 8, voice 6, conversion 4
+(nặng clarity, không ép hook/slang).
+
+Structure và conversion đã nâng 1 điểm so với bộ cũ; voice giữ nguyên 7. Voice từng được nâng
+lên 8 trong cùng ngày rồi hạ lại: qua hai lần viết lại toàn bộ `cung-r-ngua-chem-aoe4` và tám
+vòng chấm, trung vị voice luôn hội tụ về 7 trong khi mỗi vòng judge lại chỉ ra lỗi khác nhau
+và đều có lý. Đó là dấu hiệu sàn nằm trên mức quy trình viết đạt được ổn định, không phải dấu
+hiệu một bài dở. Chỉ nâng lại khi corpus mỏ neo ~8 dày hơn (hiện chỉ có 3 câu).
 Không có ngưỡng tổng.
 PASS chỉ khi hàm trả `pass: true`. Mâu thuẫn sự thật VÀ dìm game RTS là cổng cứng - chỉ cần > 0
 là FAIL bất kể điểm. `claimsToVerify` KHÔNG chặn PASS - đây là danh sách advisory, người duyệt
@@ -211,11 +227,11 @@ Ghi ra `docs/reviews/<slug>-scorecard.md` theo mẫu:
 Loại bài (kind): utility/strategy/comparison
 SEO hygiene: PASS/FAIL (nếu FAIL: liệt kê failures)
 
-| Chiều | Điểm (median 3) | Sàn (<kind>) | Đạt |
+| Chiều | Điểm (median 5) | Sàn (<kind>) | Đạt |
 |-------|:---:|:---:|:---:|
-| structure  | X | 7 | ✅/❌ |
-| voice      | X | 7 hoặc 5 | ✅/❌ |
-| conversion | X | 6 hoặc 3 | ✅/❌ |
+| structure  | X | 8 | ✅/❌ |
+| voice      | X | 7 hoặc 6 | ✅/❌ |
+| conversion | X | 7 hoặc 4 | ✅/❌ |
 | TỔNG (thông tin, không phải gate) | XX/30 | - | - |
 
 Chống thụt lùi: <"không có bản trước để so" | "bản mới >= bản cũ (winner: new/tie)" | "THỤT LÙI: bản cũ đọc hay hơn (FAIL cứng)">
@@ -277,8 +293,8 @@ các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
    `unverifiableClaims`. JSON trả về thêm trường: {"unverifiableClaims":[...]}.
    `unverifiableClaims` KHÔNG chặn PASS ở giai đoạn 1 (advisory như claimsToVerify)
    nhưng là điều kiện chặn auto-merge ở giai đoạn 2 (xem skill write-article).
-5. **Bước 4**: dùng `floorsForArticleKind('news')` từ `@/lib/guideVerdict` (structure 7,
-   voice 5, conversion 3).
+5. **Bước 4**: dùng `floorsForArticleKind('news')` từ `@/lib/guideVerdict` (structure 8,
+   voice 6, conversion 4).
 6. **Bước 5**: scorecard ghi `Loại bài (kind): news` và thêm dòng
    `Truy vết nguồn: <"mọi claim xác minh trực tiếp từ nguồn" | "VI PHẠM: <claim bị
    nguồn nói ngược / thiếu nguồn>" | "CHƯA XÁC MINH ĐƯỢC (không chặn PASS giai đoạn 1):
@@ -290,7 +306,7 @@ Bài so sánh cầu nối (AoE4 vs AoE2/AoE3/StarCraft...) nằm trong `src/data
 thường. Chấm theo ĐÚNG giao thức guide với các thay đổi sau:
 
 1. **Bước 1**: `score-guide-seo.ts` trả `kind: 'comparison'` - sàn ở Bước 4 là
-   `floorsForKind('comparison')` (structure 7, voice 7, conversion 6 - như strategy).
+   `floorsForKind('comparison')` (structure 8, voice 8, conversion 7 - như strategy).
 2. **Bước 3 (fact-check phân tầng theo game)**: subagent đọc thêm facts sheet
    `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Không có facts sheet -> FAIL hygiene,
    ghi rõ lý do. Phân loại TỪNG claim theo game nó nói về:

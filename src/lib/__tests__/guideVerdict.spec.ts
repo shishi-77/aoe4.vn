@@ -12,7 +12,7 @@ import {
   floorsForArticleKind,
 } from '@/lib/guideVerdict'
 
-const strong = { structure: 8, voice: 8, conversion: 8 }
+const strong = { structure: 9, voice: 9, conversion: 9 }
 const clean = { contradictions: 0 }
 
 describe('guideVerdict', () => {
@@ -64,27 +64,27 @@ describe('guideVerdict', () => {
   })
 
   it('fail nếu voice dưới sàn riêng', () => {
-    const v = guideVerdict(true, { structure: 8, voice: 6, conversion: 8 }, clean)
+    const v = guideVerdict(true, { structure: 9, voice: 6, conversion: 9 }, clean)
     expect(v.pass).toBe(false)
     expect(v.reasons.some((r) => r.includes('voice'))).toBe(true)
   })
 
   it('pass đúng tại biên sàn riêng của từng chiều', () => {
-    const v = guideVerdict(true, { structure: 7, voice: 7, conversion: 6 }, clean)
+    const v = guideVerdict(true, { structure: 8, voice: 7, conversion: 7 }, clean)
     expect(v.pass).toBe(true)
     expect(v.reasons).toEqual([])
   })
 
   it('fail nếu conversion dưới sàn riêng', () => {
-    const v = guideVerdict(true, { structure: 8, voice: 8, conversion: 5 }, clean)
+    const v = guideVerdict(true, { structure: 9, voice: 9, conversion: 6 }, clean)
     expect(v.pass).toBe(false)
     expect(v.reasons.some((r) => r.includes('conversion'))).toBe(true)
   })
 
   it('hằng số sàn từng chiều đúng', () => {
-    expect(STRUCTURE_FLOOR).toBe(7)
+    expect(STRUCTURE_FLOOR).toBe(8)
     expect(VOICE_FLOOR).toBe(7)
-    expect(CONVERSION_FLOOR).toBe(6)
+    expect(CONVERSION_FLOOR).toBe(7)
   })
 
   it('floorsForKind: utility hạ sàn voice/conversion, giữ structure', () => {
@@ -97,7 +97,7 @@ describe('guideVerdict', () => {
   })
 
   it('bài utility pass với voice/conversion thấp mà bài strategy sẽ trượt', () => {
-    const scores = { structure: 8, voice: 5, conversion: 3 }
+    const scores = { structure: 9, voice: 6, conversion: 4 }
     expect(guideVerdict(true, scores, clean, STRATEGY_FLOORS).pass).toBe(false)
     expect(guideVerdict(true, scores, clean, UTILITY_FLOORS).pass).toBe(true)
   })
@@ -120,9 +120,9 @@ describe('guideVerdict', () => {
 })
 
 describe('floorsForArticleKind', () => {
-  it('news dùng sàn riêng: structure 7, voice 5, conversion 3', () => {
+  it('news dùng sàn riêng: structure 8, voice 6, conversion 4', () => {
     expect(floorsForArticleKind('news')).toEqual(NEWS_FLOORS)
-    expect(NEWS_FLOORS).toEqual({ structure: 7, voice: 5, conversion: 3 })
+    expect(NEWS_FLOORS).toEqual({ structure: 8, voice: 6, conversion: 4 })
   })
 
   it('guide kinds giữ nguyên hành vi cũ', () => {

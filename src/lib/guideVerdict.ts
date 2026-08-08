@@ -1,6 +1,14 @@
-export const STRUCTURE_FLOOR = 7
+export const STRUCTURE_FLOOR = 8
+/**
+ * Voice stays at 7 while structure and conversion took the +1 raise (owner, 2026-08-08).
+ * The raise briefly put this at 8 and the evidence came back against it: across two full
+ * rewrites of `cung-r-ngua-chem-aoe4` and eight judging rounds, the median voice score
+ * converged on 7 every time, while each round's judges named different, individually valid
+ * faults. That is the signature of a floor above what the writing process reliably hits,
+ * not of one bad article. Raise this again only with a thicker ~8 anchor corpus behind it.
+ */
 export const VOICE_FLOOR = 7
-export const CONVERSION_FLOOR = 6
+export const CONVERSION_FLOOR = 7
 
 export interface QualityScores {
   structure: number
@@ -49,8 +57,8 @@ export const STRATEGY_FLOORS: QualityFloors = {
  */
 export const UTILITY_FLOORS: QualityFloors = {
   structure: STRUCTURE_FLOOR,
-  voice: 5,
-  conversion: 3,
+  voice: 6,
+  conversion: 4,
 }
 
 /**
@@ -65,8 +73,8 @@ export const COMPARISON_FLOORS: QualityFloors = STRATEGY_FLOORS
  */
 export const NEWS_FLOORS: QualityFloors = {
   structure: STRUCTURE_FLOOR,
-  voice: 5,
-  conversion: 3,
+  voice: 6,
+  conversion: 4,
 }
 
 /** Backward-compat alias: sàn mặc định là bộ 'strategy'. */

@@ -5,7 +5,7 @@ export const gameModesGuide: Guide = {
   title: 'Các chế độ chơi trong Age of Empires IV',
   description:
     'Đế chế 4 có những chế độ chơi nào? Giải thích nhanh Chiến dịch, Art of War, đấu với máy, tìm trận nhanh, đấu xếp hạng và phòng tùy chỉnh để bạn chọn đúng chỗ bắt đầu.',
-  kind: 'strategy',
+  kind: 'utility',
   updatedAt: '2026-06-28',
   cta: true,
   sections: [

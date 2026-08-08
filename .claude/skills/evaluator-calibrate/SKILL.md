@@ -27,8 +27,10 @@ pipeline, không tự sửa prompt; owner đọc báo cáo và quyết.
    thấy tên là lộ đáp án. Judge thấy kỳ vọng là calibration vô nghĩa.
 
    - Kỳ vọng có `allDimsAtLeastFloor` / `voiceMax` / `conversionMax`: dispatch
-     3 subagent độc lập với prompt ghim Bước 2, dùng đường dẫn file tạm (chứa
-     chỉ nội dung bài, không header), lấy TRUNG VỊ từng chiều.
+     5 subagent độc lập với prompt ghim Bước 2, dùng đường dẫn file tạm (chứa
+     chỉ nội dung bài, không header), lấy TRUNG VỊ từng chiều. Số judge phải khớp
+     với giao thức thật của guide-evaluator (median-of-5 từ 2026-08-08), nếu không
+     thì calibration đo một cổng khác với cổng đang chạy.
    - Kỳ vọng có `contradictionsMin/Max` / `aoe1DisparagementMin/Max`: dispatch
      1 subagent fact-check theo prompt Bước 3 (đối chiếu facts corpus + quét dìm
      game/cộng đồng RTS nào), dùng đường dẫn file tạm. Ghi số lượng contradictions và

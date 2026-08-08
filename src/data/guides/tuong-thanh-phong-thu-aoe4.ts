@@ -12,8 +12,8 @@ export const wallsAndDefenseGuide: Guide = {
     {
       heading: 'Cả đời đánh "không thành", giờ vào game toàn thành',
       paragraphs: [
-        'Đối với dân Đế chế 1, kèo quen thuộc bao nhiêu năm vẫn là đời 3 không thành, vào bài chém sớm rồi so tay nhau ở đó. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Ở đây thành nằm sẵn trong game, không ai cấm, muốn xây là xây.',
-        'Sở dĩ Đế chế 4 dám để người chơi xây thành thoải mái mà trận đấu vẫn cân là bởi game đã tính sẵn cả một hệ đồ công thành để trị tường, còn vì sao game dám thả cửa như vậy thì anh em đọc thêm bài so sánh hai game theo đường dẫn bên dưới, ở đó có giải thích kỹ phần gốc rễ. Bài này chỉ tập trung vào phần thực chiến: đồ thủ có những gì, khi nào nên xây, và muốn phá thành người ta thì dùng gì.',
+        'Đối với dân Đế chế 1, luật quen thuộc bao nhiêu năm vẫn là đời 3 không thành, vào bài chém hay bài cung rồi so tay nhau ở đó. Vào trận Đế chế 4 đầu tiên, cảnh trước mắt lại ngược hẳn: tường chạy quanh làng, chòi canh mọc giữa map, lên đời 3 là thành to xuất hiện. Bên Đế chế 1, thành được gạt ra ngoài bằng luật chơi mà cộng đồng tự chốt với nhau; còn ở Đế chế 4, thành nằm sẵn trong game, cứ có gỗ có đá là dựng được.',
+        'Cái cân lại chuyện xây thành ở đây là cả một hệ đồ công thành để trị tường, nghĩa là mỗi lớp gạch anh em bỏ tiền ra dựng thì đối thủ đều có món để gỡ. Bài này đi vào phần thực chiến của chuyện đó: đồ thủ có những gì, khi nào nên xây, và muốn phá thành người ta thì dùng gì.',
       ],
       link: { slug: 'aoe4-khac-de-che-the-nao', label: 'Đọc lại: Đế chế 4 khác Đế chế 1 thế nào?' },
     },
@@ -52,7 +52,8 @@ export const wallsAndDefenseGuide: Guide = {
       paragraphs: [
         'Nếu thích xây thành thì Anh là lựa chọn hợp lý: lính đứng gần công trình phát hiện địch là đánh nhanh hơn, cả phe chơi quanh Keep với nhà chính nên rất lì đòn.',
         'Ngược lại, ai vẫn nhớ luật không thành thì có Mông Cổ, phe du mục không xây được tường luôn. Cả game không một viên đá bo nhà, sống bằng ngựa và những chuyến đi cướp, nên anh em quen đánh luật không thành bao năm cầm vào sẽ thấy hợp tay ngay.',
-        'Nói tóm lại, chơi thủ trong Đế chế 4 một thời gian anh em sẽ thấy xây nhiều hay ít không quan trọng bằng việc đọc được nhịp trận: thấy đáng thì bỏ gỗ ra bịt khe, thấy đối thủ co về thì buông tường mà đóng ram đi phá. Quen được nhịp đó rồi thì vào trận sẽ chủ động hơn hẳn, không còn cảnh đứng nhìn tường mà không biết nên làm gì. Cứ vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào, còn kẹt chỗ nào thì vào nhóm hỏi, anh em chỉ cho nhanh hơn tự mò nhiều.',
+        'Chơi thủ trong Đế chế 4 một thời gian, anh em sẽ tự thấy chuyện xây bao nhiêu tường thật ra phụ thuộc vào việc mình đọc trận tới đâu: khi thấy đối thủ hay đâm ngựa vào một hướng thì bỏ chút gỗ ra bịt khe đó lại, còn khi họ đã co hết về sau tường thì nên buông chuyện xây, dồn lính ra đóng ram mà đẩy vào. Quen được nhịp đó rồi thì vào trận sẽ chủ động hơn hẳn, không còn cảnh đứng nhìn tường mà không biết nên làm gì.',
+        'Cứ vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào, còn kẹt chỗ nào thì vào nhóm hỏi, anh em chỉ cho nhanh hơn tự mò nhiều.',
       ],
     },
   ],

@@ -162,6 +162,49 @@ similar things but is for learning voice, never for sourcing facts.
   two purely as history and mechanics. Do not infer a Vietnamese scene for them, not even
   obliquely ("game quán net một thời", "ký ức quán net").
 
+## Đánh đời 3: mở màn, bảng quân và nhịp trận (owner, 2026-08-08)
+
+Vòng này sinh ra từ việc owner đọc bản `cung-r-ngua-chem-aoe4` và bác cả luận điểm lẫn cách
+hành văn. Mọi dòng dưới đây là owner nói, cùng standing với các dòng `Confirmed by site owner`
+khác trong file. Đây là phần kho THIẾU hẳn trước đó, và chính chỗ thiếu ấy đẻ ra câu
+"quân nào cũng mở màn bằng con ngựa dò" - đúng chữ nhưng sai cảnh, dân chơi nghe là gợn ngay.
+
+- **Với luật "đời 3 không thành", trận bắt đầu ở đời 3, nên "mở màn" nghĩa là mở màn ĐẦU ĐỜI 3,
+  không phải mở màn từ đời 1.** Quân mở màn phụ thuộc bài đang chạy: **ngựa dò nếu đánh chém,
+  cung T (cung bộ) nếu đánh cung.** Confirmed by site owner 2026-08-08.
+  - **WRITING RULE**: không được viết ngựa dò như quân mở màn mặc định của mọi trận, mọi bài.
+    Câu kiểu "quân nào cũng mở màn bằng con ngựa dò" là `contradiction`, vì nó bỏ mất nửa
+    bài cung và ngầm mô tả một trận bắt đầu từ đời 1.
+  - **"cung T"** là cách cộng đồng gọi cung bộ mở màn của bài cung. Owner dùng đúng chữ này
+    (glossed "cung bộ/archer"). ⚠️ CẦN NGƯỜI DUYỆT cho ánh xạ sang tên đơn vị tiếng Anh
+    (Bowman hay Improved Bowman): CHƯA hỏi. Được viết "cung T" trong bài, KHÔNG được tự gán
+    tên tiếng Anh cho nó.
+- **Bảng quân của Đế chế 1 gọn, và ở đời 3 quân chủ lực gần như toàn kỵ: ngựa chém, cung R,
+  lạc đà, sọc đơn (chariot). Chính vì đội hình toàn quân cơ động như vậy mà nhịp trận thường
+  rất nhanh.** Confirmed by site owner 2026-08-08.
+  - Đây là nguồn hợp lệ DUY NHẤT để nói về nhịp nhanh của Đế chế 1: lập luận đi từ THÀNH PHẦN
+    QUÂN ở đời 3. Nó KHÔNG phải và không được trộn với bảng xếp hạng tốc độ giữa các đời game
+    trong `aoe4-facts.md` (bảng đó chỉ nói tốc độ di chuyển, xem WRITING RULE bên đó).
+  - **WRITING RULE**: nói bảng quân gọn thì phải nói kèm cái được của nó (ai chơi lâu đều thuộc
+    nằm lòng từng kèo quân). Viết trơ "Đế chế 1 có rất ít loại quân" theo giọng chê nghèo nàn là
+    `disparagement[]`.
+- **Đế chế 1 chỉ có 2 dòng kỵ cung: cung R (Chariot Archer) và horse đời 4 (Horse Archer). Tính
+  cả voi cung là 3, và voi cung cũng chỉ có ở đời 4.** Đế chế 4 đa dạng hơn hẳn ở cả kỵ cung lẫn
+  kỵ cận chiến. Confirmed by site owner 2026-08-08. Đây là điểm so sánh chuẩn giữa hai game:
+  bên này ít dòng nhưng thuộc lòng, bên kia trải rộng theo phe.
+- **Cung A trong Đế chế 1 thường được DÙNG để chống kỵ binh, đúng vai mà nỏ đảm nhiệm bên
+  Đế chế 4.** Confirmed by site owner 2026-08-08.
+  - **Đây là THÓI QUEN DÙNG QUÂN, không phải cơ chế bonus damage.** Dòng "cung A/cung R không
+    khắc chế class nào" ở trên vẫn đứng nguyên và không mâu thuẫn với dòng này. Bài được viết
+    "cung A thường dùng để chặn kỵ"; viết "cung A khắc kỵ" theo nghĩa cơ chế là `contradiction`.
+- **Lạc đà Pal có tốc độ cực kỳ cao, sát thương lớn, đủ sức xoay chuyển cục diện trận đấu, và
+  cầm rất phấn khích.** Confirmed by site owner 2026-08-08. Dòng Palmyran speed bonus (~+25%) ở
+  mục Camels là phần có nguồn web tương ứng.
+- **Hệ chém không phải một lối chơi mà là nhiều kiểu: chém bán máu, chém quấy, chém chủ lực cân
+  map. Tư duy điều quân giống nhau ở cả Đế chế 1 lẫn Đế chế 4.** Confirmed by site owner
+  2026-08-08. Đây là cầu nối mạnh nhất giữa hai game cho nhóm đọc này, mạnh hơn nhiều so với
+  việc liệt kê tên quân tương ứng.
+
 ---
 
 ## Open questions for the human reviewer

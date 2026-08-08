@@ -23,12 +23,26 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   source: https://aoe4world.com/explorer/civs/rus/units/horse-archer , https://ageofempires.fandom.com/wiki/Horse_Archer_(Age_of_Empires_IV)
 
 ### Japanese
-- Onna-Musha: **light ranged cavalry** (mounted horse-archer-type unit), NOT infantry. Unique to Japanese, added in "The Sultans Ascend" expansion.
-  - CONFIRMED via multiple independent sources (aoe4world explorer, fandom wiki summary, AoE forum discussion) all describing it consistently as "light ranged cavalry."
-  - Trained at the Archery Range starting in **Castle Age (Age III)**, effectively replacing/supplementing the Crossbowman slot for Japanese.
-  - Role: mounted anti-heavy unit, counters Knights, Men-at-Arms, War Elephants (not Tower Elephants). ~5.5 range.
-  source: https://aoe4world.com/explorer/civs/japanese/units/onna-musha , https://ageofempires.fandom.com/wiki/Onna-Musha_(Age_of_Empires_IV) , https://forums.ageofempires.com/t/onna-musha-horse-archer/260959
-  - VERDICT on calibration doubt: the judge's suspicion that Onna-Musha is infantry is **FALSE**. It is a ranged cavalry / horse-archer type unit, consistent with the guide's grouping of it alongside Mangudai and Horse Archer.
+- Onna-Musha: **cavalry, NOT infantry** - "Onna-Musha là kỵ binh", CONFIRMED BY SITE OWNER
+  2026-08-08. Unique to Japanese, added in "The Sultans Ascend" expansion.
+  - **Why this line now carries an owner stamp.** Across two rewrites of `cung-r-ngua-chem-aoe4`
+    on 2026-08-08, NINE independent judges read Onna-Musha as infantry and flagged it every
+    round. An audit of this entry found the original `CONFIRMED` was weak: it entered the file
+    in the first commit (2026-07-06), was never read back to the owner, cited a "fandom wiki
+    *summary*" at a time when fandom returned HTTP 402 to WebFetch, and leaned on a forum thread
+    whose slug already contained "horse-archer". The owner settled it directly: cavalry.
+  - **Sub-classification (ranged vs melee) is still WEB-SOURCED, not owner-confirmed.** The
+    owner was asked "bộ hay kỵ" and answered "kỵ binh". The sources below say specifically
+    *light ranged cavalry*, trained at the Archery Range from **Castle Age (Age III)**, ~5.5
+    range, filling the Crossbowman slot for Japanese, countering Knights / Men-at-Arms /
+    War Elephants (not Tower Elephants). An article MAY call it "kỵ cung" on that basis, but if
+    a future pass needs certainty on ranged-vs-melee, that is a separate question to the owner.
+  source: https://aoe4world.com/explorer/civs/japanese/units/onna-musha , https://ageofempires.fandom.com/wiki/Onna-Musha_(Age_of_Empires_IV) , https://forums.ageofempires.com/t/onna-musha-horse-archer/260959 , site owner 2026-08-08
+  - **VERDICT: the recurring judge suspicion that Onna-Musha is infantry is FALSE, on the
+    owner's word.** Do not re-raise it. Grouping it alongside Mangudai and Horse Archer stands.
+  - Separately CONFIRMED by owner 2026-07-07: it deals bonus damage vs heavy units, so
+    "xuyên giáp nặng" / "đánh vào giáp nặng thì đau hơn" is acceptable phrasing. That half never
+    depended on the class label.
 
 ### French
 - Royal Knight: **Heavy Cavalry**, unique to French. Available at the Stable starting in **Feudal Age (Age II)**, unlocked via the "Royal Stallions" landmark.
@@ -182,6 +196,15 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
 - Onna-Musha (Japanese) deals bonus damage vs heavy units; calling this "xuyên giáp nặng" is acceptable phrasing (it is bonus damage, not a literal armor-penetration mechanic).
 - Abbasid Dynasty has the STRONGEST economy of all AoE4 civs. So "Abbasid vốn mạnh kinh tế / boom kinh tế" is CORRECT.
   source: site owner (AoE1/AoE4 domain expert), 2026-07-07.
+- **Lạc đà Abbasid và lạc đà Pal (Đế chế 1) cùng là quân xoay chuyển cục diện, nhưng bằng hai
+  đường khác nhau (owner, 2026-08-08).** Pal là **hệ chém phũ**: tốc độ cực cao, sát thương lớn,
+  lao vào bẻ trận. Abbasid là **hệ chủ lực ôm bản đồ**: boom kinh tế trước rồi lấy thịt đè người.
+  Đây là cách so hai con lạc đà cho dân Đế chế 1, chuẩn hơn hẳn việc nói "Đế chế 4 trao vai lạc
+  đà Pal cho Abbasid" - hai phe làm cùng một việc theo hai phong cách trái ngược.
+- **Kỵ binh bên Đế chế 4 đắt, trong khi các dòng khắc nó là giáo và nỏ thì rẻ hơn hẳn, nên mọi
+  pha đổi quân bằng kỵ đều phải cân nhắc (owner, 2026-08-08).** Khớp với dòng counter đã có ở
+  trên (giáo + nỏ khắc kỵ nặng) và với ghi chú wiki rằng kỵ chủ yếu bị giữ chân bằng chi phí
+  chứ không bằng một khắc tinh cứng.
 
 ## Ranked ladder (added 2026-08-08, for `ranked-aoe4-vs-ladder-starcraft`)
 

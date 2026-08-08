@@ -35,8 +35,8 @@ describe('checkCalibration', () => {
     expect(verdicts[0].problems.some((p) => p.includes('voice'))).toBe(true)
   })
 
-  it('sàn tra theo kind: utility cho voice 5 qua, strategy thì không', () => {
-    const scores = { structure: 8, voice: 5, conversion: 4 }
+  it('sàn tra theo kind: utility cho voice 6 qua, strategy thì không', () => {
+    const scores = { structure: 8, voice: 6, conversion: 4 }
     const utility = checkCalibration(
       { 'case-a': exp({ kind: 'utility', expect: { allDimsAtLeastFloor: true } }) },
       [res({ scores })],
