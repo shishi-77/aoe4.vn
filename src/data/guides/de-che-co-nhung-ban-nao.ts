@@ -24,7 +24,7 @@ export const allTitlesGuide: Guide = {
     {
       heading: 'Nói "Đế chế" ở Việt Nam thường là nói đúng một bản',
       paragraphs: [
-        'Với phần lớn anh em ở nhà, câu rủ nhau "tối nay Đế chế không" chỉ mang đúng một nghĩa: bản năm 1997, kèo đời 3 không thành, mở bài 7 thực 3 vàng. Cách gọi đó hình thành từ thời quán net và nó đúng với trải nghiệm của cả một thế hệ. Tuy nhiên, nếu bây giờ gõ cái tên ấy lên một cửa hàng game, thứ hiện ra sẽ là một danh sách dài hơn nhiều: có bản đề số, có bản gắn thêm chữ Definitive Edition, lại có cả những cái tên nghe rất quen mà thật ra không nằm trong dòng.',
+        'Với phần lớn anh em ở nhà, câu rủ nhau "tối nay Đế chế không" chỉ mang đúng một nghĩa: bản năm 1997, kèo đời 3 không thành. Cách gọi đó hình thành từ thời quán net và nó đúng với trải nghiệm của cả một thế hệ. Tuy nhiên, nếu bây giờ gõ cái tên ấy lên một cửa hàng game, thứ hiện ra sẽ là một danh sách dài hơn nhiều: có bản đề số, có bản gắn thêm chữ Definitive Edition, lại có cả những cái tên nghe rất quen mà thật ra không nằm trong dòng.',
         'Bài này xếp lại cả kệ hàng đó cho gọn, đi lần lượt từng game một: Đế chế 1 rồi bản làm lại của nó, Đế chế 2 rồi bản làm lại, Đế chế 3 rồi bản làm lại, Đế chế 4, cuối cùng là hai cái tên hay bị xếp nhầm mâm là Age of Mythology và Empire Earth. Mỗi bản ra năm nào, ai làm, khác nhau ở chỗ nào, và bản nào tới giờ vẫn còn ra nội dung mới. Cuối bài là phần thiết thực nhất với người đọc ở Việt Nam: trong ngần ấy cái tên, chỗ nào tối bật máy lên là còn có người đánh cùng.',
       ],
     },

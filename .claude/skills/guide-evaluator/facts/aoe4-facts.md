@@ -74,6 +74,18 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   - ⚠️ CẦN NGƯỜI DUYỆT: while the Feudal-age resource cost is described as "standard across civilizations" by multiple sources, the civs with alternate age-up mechanics (Abbasid, Ayyubids, Knights Templar, Golden Horde) do NOT necessarily follow this exact cost/mechanic - the guide's "nền văn minh nào cũng áp dụng được" framing should be understood as "the default/most-civs case," not universally exception-free. Worth a caveat sentence in the guide, but not a factual error given it's presented as a beginner-default build.
   source: search synthesis (GamesRadar, Fandom Feudal Age page, GameNGuide).
 
+- **"7 thực 3 vàng" is an AoE4 convention, and this is its home.** Seven villagers on food and
+  three on gold is the basic Feudal opening - it sizes directly to the 400 food + 200 gold
+  age-up cost above. CONFIRMED by site owner 2026-08-08. `build-order-co-ban-aoe4.ts` already
+  teaches it correctly.
+  - **Recorded here because it was previously filed under the wrong game.** `aoe1-facts.md`
+    carried it as an AoE1 convention with a `CONFIRMED` stamp from 2026-07-06, re-affirmed
+    2026-08-07, and it reached a draft article before the owner caught it on 2026-08-08. That
+    entry is now retracted. Advancing an age in AoE1 costs no gold, so a food/gold villager
+    split cannot describe an AoE1 opening - the mechanics rule it out.
+  - Treat it the same way as any other build number: a convention that tracks the meta, not an
+    engine rule.
+
 ---
 
 ## Counters / counter triangle
