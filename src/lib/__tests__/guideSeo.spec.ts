@@ -7,6 +7,7 @@ const goodGuide: Guide = {
   title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4 (Đế chế 4)?',
   description:
     'Cung R, ngựa chém hay lạc đà của Đế chế sang Đế chế 4 là lính nào? Bản đồ lính cho dân Đế chế mê đánh nhanh, đủ dài để mô tả tốt.',
+  kind: 'strategy',
   updatedAt: '2026-07-03',
   cta: true,
   sections: [
@@ -19,6 +20,7 @@ const badGuide: Guide = {
   slug: 'Bad Slug',
   title: 'x',
   description: 'ngắn',
+  kind: 'strategy',
   updatedAt: '2026-07-03',
   cta: false,
   sections: [{ heading: 'H', paragraphs: ['p'] }],
@@ -103,6 +105,7 @@ describe('seoHygiene', () => {
     title: 'Cung R, ngựa chém, lạc đà: dân Đế chế mê tốc độ chơi lính gì ở AoE4?',
     description:
       'Bản đồ lính cho dân Đế chế mê đánh nhanh sang AoE4, đủ dài để mô tả cho tốt và rõ ràng.',
+    kind: 'strategy',
     updatedAt: '2026-07-03',
     cta: true,
     sections: [{ heading: 'H', paragraphs: ['p'], link: { slug: 'x', label: 'y' } }],
@@ -120,6 +123,7 @@ describe('seoHygiene', () => {
       slug: 'x',
       title: 'x',
       description: 'Mô tả dài hơn năm mươi ký tự để không dính lỗi độ dài mô tả nhé.',
+      kind: 'strategy',
       updatedAt: '2026-07-06',
       cta: false,
       sections: [{ heading: 'H', paragraphs: ['p'] }],

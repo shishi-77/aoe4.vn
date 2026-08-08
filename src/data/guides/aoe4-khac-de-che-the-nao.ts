@@ -5,6 +5,7 @@ export const aoe4VsAoe1Guide: Guide = {
   title: 'Đế chế 4 khác Đế chế 1 thế nào? Góc nhìn người chơi AoE1',
   description:
     'AoE4 khác Đế chế thế nào? Giải thích cho người chơi Đế chế: nhịp trận và cơ chế tự động, thành chòi, lên đời bằng landmark, khắc chế binh chủng, và những kỹ năng Đế chế mang thẳng sang được.',
+  kind: 'comparison',
   updatedAt: '2026-08-07',
   cta: true,
   sections: [

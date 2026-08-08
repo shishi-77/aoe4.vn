@@ -26,6 +26,9 @@ export interface GuideSection {
   link?: GuideLink
 }
 
+/** Article type. Picks the evaluator's quality floor and the group on /guides. */
+export type GuideKind = 'utility' | 'strategy' | 'comparison'
+
 export interface Guide {
   slug: string
   title: string
@@ -34,10 +37,10 @@ export interface Guide {
    * Loại bài, quyết định bộ sàn chất lượng khi chấm bằng guide-evaluator.
    * 'utility' (tra cứu/hướng dẫn thao tác: tải game, cấu hình, tìm người chơi) chấm
    * nặng về clarity, không ép hook/slang. 'strategy' (build order, phân tích, quan
-   * điểm) chấm chặt cả voice/conversion. Bỏ trống -> coi như 'strategy'.
+   * điểm) chấm chặt cả voice/conversion.
    * 'comparison' (bài so sánh cầu nối AoE4 vs AoE2/AoE3/StarCraft...) chấm sàn như 'strategy'.
    */
-  kind?: 'utility' | 'strategy' | 'comparison'
+  kind: GuideKind
   /**
    * URL nguồn chính thức cho bài comparison (wiki game, Liquipedia, patch notes...).
    * Chỉ để evaluator truy vết claim - không render lên UI.
@@ -70,4 +73,19 @@ export const guides: Guide[] = [
 
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug)
+}
+
+/**
+ * Render order of the groups on /guides. Declared here rather than derived from
+ * `guides`, so publishing an article can never reshuffle the page.
+ */
+export const GUIDE_GROUPS: Array<{ kind: GuideKind; heading: string }> = [
+  { kind: 'utility', heading: 'Tra cứu' },
+  { kind: 'strategy', heading: 'Chiến thuật' },
+  { kind: 'comparison', heading: 'So sánh' },
+]
+
+/** Guides in one group, in publication order. */
+export function guidesByKind(kind: GuideKind): Guide[] {
+  return guides.filter((g) => g.kind === kind)
 }

@@ -2,7 +2,7 @@
 import { useHead } from '@unhead/vue'
 import { RouterLink } from 'vue-router'
 import { site } from '@/data/site'
-import { guides } from '@/data/guides'
+import { guides, GUIDE_GROUPS, guidesByKind } from '@/data/guides'
 import { breadcrumbJsonLd, collectionPageJsonLd } from '@/lib/structuredData'
 
 const pageUrl = `${site.url}/guides/`
@@ -46,6 +46,12 @@ useHead({
     },
   ],
 })
+
+// Empty groups render no heading, so the page never shows a bare section title.
+const groups = GUIDE_GROUPS.map((group) => ({
+  heading: group.heading,
+  items: guidesByKind(group.kind),
+})).filter((g) => g.items.length > 0)
 </script>
 
 <template>
@@ -56,16 +62,21 @@ useHead({
       <div class="mx-auto mt-4 h-1 w-16 bg-gold"></div>
     </header>
 
-    <ul class="mt-12 space-y-4">
-      <li v-for="g in guides" :key="g.slug">
-        <RouterLink
-          :to="`/guides/${g.slug}/`"
-          class="block rounded-xl border border-gold-dim/20 bg-surface px-6 py-5 transition hover:border-gold"
-        >
-          <h2 class="text-xl font-bold text-gold">{{ g.title }}</h2>
-          <p class="mt-2 text-muted">{{ g.description }}</p>
-        </RouterLink>
-      </li>
-    </ul>
+    <div v-for="group in groups" :key="group.heading" class="mt-12">
+      <h2 class="text-sm font-bold uppercase tracking-[0.2em] text-gold-dim">
+        {{ group.heading }}
+      </h2>
+      <ul class="mt-4 space-y-4">
+        <li v-for="g in group.items" :key="g.slug">
+          <RouterLink
+            :to="`/guides/${g.slug}/`"
+            class="block rounded-xl border border-gold-dim/20 bg-surface px-6 py-5 transition hover:border-gold"
+          >
+            <h3 class="text-xl font-bold text-gold">{{ g.title }}</h3>
+            <p class="mt-2 text-muted">{{ g.description }}</p>
+          </RouterLink>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>

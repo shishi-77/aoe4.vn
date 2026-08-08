@@ -5,6 +5,7 @@ export const wallsAndDefenseGuide: Guide = {
   title: 'Tường thành và phòng thủ trong Đế chế 4 cho dân quen "không thành"',
   description:
     'Tường thành và phòng thủ trong AoE4 cho người chơi Đế chế quen luật không thành: tường gỗ, tường đá, chòi canh, Keep, khi nào nên xây tường và phá thành bằng xe ram, máy bắn đá, Trebuchet.',
+  kind: 'strategy',
   updatedAt: '2026-08-07',
   cta: true,
   sections: [

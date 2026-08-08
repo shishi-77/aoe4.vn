@@ -7,6 +7,7 @@ const guide = (slug: string, updatedAt: string): Guide => ({
   slug,
   title: 't',
   description: 'd',
+  kind: 'strategy',
   updatedAt,
   sections: [],
 })
