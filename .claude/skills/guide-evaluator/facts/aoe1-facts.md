@@ -2,6 +2,8 @@
 
 **Scope**: ORIGINAL Age of Empires (1997), including the Rise of Rome expansion (1998) mechanics/units where noted. This file does NOT cover Age of Empires: Definitive Edition (2018 rebalance, sometimes called "1a" by the community) or "Return of Rome" (the AoE2:DE game mode). Where original-game numbers differ from DE, the ORIGINAL value is what's recorded here.
 
+**Which version this file is really about**: in practice, Rise of Rome - **"Đế chế xanh"**. That is the version the Vietnamese scene still plays today (owner, 2026-08-08), so it is the version every article on this site is implicitly describing. See the colour names in the vocabulary map below.
+
 **Reviewed by**: domain expert (user), 2026-07-06 - core facts confirmed: "cung A" = Composite Bowman (foot archer), "cung R" = Chariot Archer (mounted archer) - two DIFFERENT units; neither hard-counters any class and Composite Bowman has no armor negation. The Slinger clause from this review has since been RETRACTED - see "Foot archers / Cung A". Minor patch/stat numbers still marked ⚠️ below.
 
 > ⚠️ **This file has been wrong before, twice, on lines carrying a `CONFIRMED` stamp.** The
@@ -16,8 +18,10 @@
 file (plus one in `aoe4-facts.md`) whose ONLY source was the owner's word was read back to the
 owner one line at a time and answered one line at a time. 17 lines went in; 14 stood unchanged,
 1 was retracted (the Slinger anti-archer restriction), 2 were re-worded (the Camel Rider
-availability line, and the series pacing ranking in `aoe4-facts.md`). The audit sheet with the
-per-line answers is `docs/facts-review/aoe1-confirmed-lines-audit.md`. This closes the blind spot
+availability line, and the series speed ranking in `aoe4-facts.md`). The round also ADDED a fact
+nobody had thought to ask for: the Đế chế đỏ / Đế chế xanh version names, which arrived only
+because the owner circled back to correct their own answer. The audit sheet with the per-line
+answers is `docs/facts-review/aoe1-confirmed-lines-audit.md`. This closes the blind spot
 that let "7 thực 3 vàng" survive five fact-check rounds: a wrong line inside this file matches
 itself, so no amount of checking drafts against it can catch it - only the owner re-reading the
 file can.
@@ -25,10 +29,11 @@ file can.
 **Re-reviewed**: domain expert (user), 2026-08-07 - the "23 dân" half of that build convention was OVERSTATED. Population at age-up is build-dependent and meta-dependent, not a fixed rule; only the "đời 3 không thành" house-rule half stands as a convention. See "Economy & Build Order" below for the corrected fact plus the writing rule that follows from it.
 
 **Vocabulary map** (Vietnamese community slang → game unit):
+- **"Đế chế đỏ" = the original 1997 base game. "Đế chế xanh" = the Rise of Rome expansion (1998), and it is the version Vietnamese players commonly play to this day.** - CONFIRMED by site owner 2026-08-08. This is community naming, and the owner is the only admissible source for it; no wiki records these names. It is also the clean way to state version differences to this audience: "lạc đà không có ở Đế chế đỏ, có từ Đế chế xanh" says in one breath both that the unit postdates the base game AND that everyone reading has it.
 - "cung A" = the foot-archer line: Bowman → Improved Bowman → Composite Bowman
 - "ngựa chém"/"ngựa" = melee cavalry line: Scout → Cavalry → Heavy Cavalry → Cataphract
 - "ngựa dò" = Scout (the starting exploration cavalry unit)
-- "lạc đà" = Camel Rider (Bronze Age, trained at Stable). NOT in the original 1997 release - the Rise of Rome expansion added it, along with the Slinger, Scythe Chariot, Armored Elephant and Fire Galley, and the Rome/Carthage/Palmyra/Macedonia civilizations. Every version people actually play today includes Rise of Rome, so "chỉ có ở Rise of Rome" is the wrong way to say this - the point is that the unit postdates the 1997 base game, not that some current version lacks it. - source: https://en.wikipedia.org/wiki/Age_of_Empires:_The_Rise_of_Rome (re-worded 2026-08-08 after the owner challenged the old phrasing)
+- "lạc đà" = Camel Rider (Bronze Age, trained at Stable). **Rise of Rome only** - not in the 1997 base game: **không có ở Đế chế đỏ, có từ Đế chế xanh.** Rise of Rome added it together with the Slinger, Scythe Chariot, Armored Elephant and Fire Galley, plus the Rome/Carthage/Palmyra/Macedonia civilizations. - source: https://en.wikipedia.org/wiki/Age_of_Empires:_The_Rise_of_Rome, confirmed by site owner 2026-08-08. Say it in the colour names when writing for this audience; "chỉ có ở Rise of Rome", written bare, invites the fair objection that every version anyone still plays is Rise of Rome.
 - "kỵ cung" = Horse Archer / Heavy Horse Archer, or more broadly any mounted archer (Chariot Archer, Elephant Archer are NOT cavalry-archer stat-wise but fill a similar "hit and run" niche)
 - "cung A" = Composite Bowman - a FOOT archer (confirmed by domain expert). NO armor negation, NO bonus-damage-vs-a-unit-class. Edge = cost + range only.
 - "cung R" = Chariot Archer - a MOUNTED archer / kỵ cung (confirmed by domain expert). Edge = mobility / hit-and-run. Like cung A, it does NOT hard-counter any unit class. The guide `cung-r-ngua-chem-aoe4` uses "cung R" = Chariot Archer CORRECTLY (no naming error). The factual error in that guide is only the implication that "cung R khắc tất" (hard-counters everything) - FALSE.
@@ -67,7 +72,7 @@ file can.
 - Cataphract still has cavalry-level (low) pierce armor, so massed archers remain a valid counter even against the fully upgraded unit. ⚠️ CẦN NGƯỜI DUYỆT (this specific framing came from an AoE2 Cataphract discussion thread, not a primary AoE1 source - the underlying pierce-armor-weakness logic likely carries over but needs a dedicated AoE1 source check)
 - "Ngựa chém sợ lạc đà" (melee cavalry fears the camel) is TRUE for the original game via the Camel Rider's dedicated anti-cavalry bonus (see Camel section below) - this is a real, sourced hard counter, unlike the archer case.
 
-## Camels / Lạc đà (added by Rise of Rome, so present in every version played today)
+## Camels / Lạc đà (Rise of Rome / Đế chế xanh only - not in Đế chế đỏ)
 
 - Camel Rider: Bronze Age, trained at the Stable, requires Town Center + Barracks + Stable. Cost 70 food + 60 gold, 125 HP, base attack 6, 0 armor, fast movement. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/camel-rider/
 - Camel Rider gets +8 attack vs cavalry/horse units and +4 attack vs chariot units - this is the real, sourced "camel hard-counters horse" mechanic the guides reference. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/camel-rider/, corroborated by https://ageofempires.fandom.com/wiki/Camel_Rider_(Age_of_Empires)

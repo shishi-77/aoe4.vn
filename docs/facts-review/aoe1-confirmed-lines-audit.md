@@ -37,7 +37,8 @@ xóm của nó. Danh sách dưới đây cố tình liệt kê từng dòng mộ
 ## Danh sách cần owner đọc lại - ĐÃ XONG 2026-08-08
 
 Owner trả lời từng dòng một, hỏi theo dạng lựa chọn. Kết quả: **14 giữ nguyên, 1 retract,
-2 sửa cách ghi**. Toàn bộ đã ghi vào kho.
+2 sửa cách ghi, và 1 dòng mới phát sinh ngoài danh sách** (B5: Đế chế đỏ / Đế chế xanh). Toàn bộ
+đã ghi vào kho.
 
 ### A. Từ phiên 2026-07-06 (phiên đã sinh ra hai lỗi trên)
 
@@ -57,7 +58,8 @@ Owner trả lời từng dòng một, hỏi theo dạng lựa chọn. Kết qu�
 | --- | --- | --- |
 | B1 | "ngựa chém" / "ngựa" = dòng kỵ binh cận chiến: Scout → Cavalry → Heavy Cavalry → Cataphract | ✅ Đúng, giữ nguyên |
 | B2 | "ngựa dò" = Scout, đơn vị kỵ khởi điểm dùng để đi dò | ✅ Đúng, giữ nguyên |
-| B3 | "lạc đà" = Camel Rider (chỉ có ở Rise of Rome, đời Bronze, ra từ Stable) | ⚠️ Sửa cách ghi. Owner vặn "chỉ có ở Rise of Rome là sao, bản nào chả có" - vặn đúng, vì từ RoR trở đi bản nào cũng có. Owner cho rằng lạc đà có từ bản đầu và RoR chỉ thêm Palmyran; Wikipedia ghi RoR thêm **cả năm** đơn vị (slinger, camel rider, scythe chariot, armored elephant, fire galley) lẫn bốn civ (Rome, Carthage, Palmyra, Macedonia). Owner chốt: ghi theo nguồn, kèm URL |
+| B3 | "lạc đà" = Camel Rider (chỉ có ở Rise of Rome, đời Bronze, ra từ Stable) | ⚠️ Nội dung ĐÚNG, chỉ sửa cách ghi. Diễn biến đáng lưu: owner vặn "chỉ có ở Rise of Rome là sao, bản nào chả có", rồi trả lời rằng lạc đà có từ bản đầu và RoR chỉ thêm civ Palmyran; Wikipedia ghi RoR thêm **cả năm** đơn vị (slinger, camel rider, scythe chariot, armored elephant, fire galley) lẫn bốn civ; sau đó **owner tự đính chính**: lạc đà đúng là chỉ có từ RoR. Kho giờ ghi theo cặp tên cộng đồng (xem B5) kèm URL |
+| B5 | *(dòng MỚI, không có trong bản rà gốc)* "Đế chế đỏ" = bản 1997, "Đế chế xanh" = Rise of Rome - và Đế chế xanh là bản dân Việt chơi phổ biến đến nay | ✅ Owner cung cấp 2026-08-08. Không wiki nào ghi cặp tên này, owner là nguồn duy nhất hợp lệ. Đây cũng là cách nói gọn nhất cho vế bản: "lạc đà không có ở Đế chế đỏ, có từ Đế chế xanh" vừa nói đúng lịch sử vừa cho người đọc biết máy mình có |
 | B4 | "kỵ cung" = Horse Archer / Heavy Horse Archer, hoặc rộng hơn là mọi archer cưỡi | ✅ Đúng, giữ nguyên |
 
 ### C. Từ phiên 2026-08-07
@@ -83,11 +85,16 @@ Owner trả lời từng dòng một, hỏi theo dạng lựa chọn. Kết qu�
    CỘNG ĐỒNG thì đúng hết 9/9. Đó là ranh giới đáng nhớ: owner là nguồn không thể thay thế cho
    tiếng lóng và cho chuyện cộng đồng Việt, nhưng với số liệu cơ chế thì lời owner cần nguồn
    chống lưng y như mọi dòng khác.
-2. **Hai lỗi lộ ra được là nhờ đối chiếu nguồn ngay trong lúc hỏi, không phải nhờ hỏi.** A5 owner
-   tự bác, nhưng B3 thì owner trả lời sai và chỉ vỡ ra khi tra Wikipedia giữa chừng. Nếu vòng rà
-   này chỉ ghi lại lời owner thì B3 đã thành một dòng sai mới, đúng kiểu "7 thực 3 vàng" tập hai.
-   Vòng rà sau phải giữ nguyên thói quen tra nguồn cho mọi claim cơ chế, kể cả khi owner khẳng
-   định chắc.
-3. **Dòng có nguồn vẫn có thể bị đắp thêm một vế không nguồn.** A5 là một câu sourced ("+2 vs
+2. **Tra nguồn ngay trong lúc hỏi là thứ giữ được vòng rà này.** A5 owner tự bác, nhưng B3 thì
+   owner trả lời sai giữa chừng và chỉ vỡ ra nhờ tra Wikipedia tại chỗ; nếu vòng rà chỉ ghi lại
+   lời owner thì B3 đã thành một dòng sai MỚI, đúng kiểu "7 thực 3 vàng" tập hai. Vòng rà sau
+   phải giữ nguyên thói quen đó cho mọi claim cơ chế, kể cả khi owner khẳng định chắc.
+3. **Nhưng đối đáp mới là thứ sinh ra fact tốt nhất trong ngày.** Chính vì bị hỏi đi hỏi lại vế
+   "bản nào có lạc đà", owner mới đưa ra cặp tên **Đế chế đỏ / Đế chế xanh** - thứ không có
+   trong bất cứ wiki nào, không nằm trong danh sách 17 dòng, và không vòng rà tự động nào nghĩ
+   ra để hỏi. Bài học: rà kho không chỉ là lọc cái sai ra, nó còn là dịp moi được cái đúng mà
+   chưa ai kịp ghi. Vòng sau nên chừa chỗ cho owner nói thêm chứ đừng đóng khung chỉ ba lựa chọn
+   đúng/sai/cần sửa.
+4. **Dòng có nguồn vẫn có thể bị đắp thêm một vế không nguồn.** A5 là một câu sourced ("+2 vs
    archers") bị nối thêm một mệnh đề owner-only thu hẹp phạm vi. Lần quét tới nên soi riêng loại
    này: câu có URL nhưng mang thêm vế mà URL đó không nói.
