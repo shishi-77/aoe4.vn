@@ -2,7 +2,7 @@
 
 **Scope**: ORIGINAL Age of Empires (1997), including the Rise of Rome expansion (1998) mechanics/units where noted. This file does NOT cover Age of Empires: Definitive Edition (2018 rebalance, sometimes called "1a" by the community) or "Return of Rome" (the AoE2:DE game mode). Where original-game numbers differ from DE, the ORIGINAL value is what's recorded here.
 
-**Reviewed by**: domain expert (user), 2026-07-06 - core facts confirmed: "cung A" = Composite Bowman (foot archer), "cung R" = Chariot Archer (mounted archer) - two DIFFERENT units; neither hard-counters any class and Composite Bowman has no armor negation; Slinger ("quẩy đá") gets no bonus vs mounted archers. Minor patch/stat numbers still marked ⚠️ below.
+**Reviewed by**: domain expert (user), 2026-07-06 - core facts confirmed: "cung A" = Composite Bowman (foot archer), "cung R" = Chariot Archer (mounted archer) - two DIFFERENT units; neither hard-counters any class and Composite Bowman has no armor negation. The Slinger clause from this review has since been RETRACTED - see "Foot archers / Cung A". Minor patch/stat numbers still marked ⚠️ below.
 
 > ⚠️ **This file has been wrong before, twice, on lines carrying a `CONFIRMED` stamp.** The
 > 2026-07-06 review recorded two build conventions as confirmed; BOTH later turned out to be
@@ -12,13 +12,23 @@
 > Treat the Vietnamese build/meta lines here as the weakest part of this file, not the
 > strongest.
 
+**Full re-read of the owner-only lines**: domain expert (user), 2026-08-08 - every claim in this
+file (plus one in `aoe4-facts.md`) whose ONLY source was the owner's word was read back to the
+owner one line at a time and answered one line at a time. 17 lines went in; 14 stood unchanged,
+1 was retracted (the Slinger anti-archer restriction), 2 were re-worded (the Camel Rider
+availability line, and the series pacing ranking in `aoe4-facts.md`). The audit sheet with the
+per-line answers is `docs/facts-review/aoe1-confirmed-lines-audit.md`. This closes the blind spot
+that let "7 thực 3 vàng" survive five fact-check rounds: a wrong line inside this file matches
+itself, so no amount of checking drafts against it can catch it - only the owner re-reading the
+file can.
+
 **Re-reviewed**: domain expert (user), 2026-08-07 - the "23 dân" half of that build convention was OVERSTATED. Population at age-up is build-dependent and meta-dependent, not a fixed rule; only the "đời 3 không thành" house-rule half stands as a convention. See "Economy & Build Order" below for the corrected fact plus the writing rule that follows from it.
 
 **Vocabulary map** (Vietnamese community slang → game unit):
 - "cung A" = the foot-archer line: Bowman → Improved Bowman → Composite Bowman
 - "ngựa chém"/"ngựa" = melee cavalry line: Scout → Cavalry → Heavy Cavalry → Cataphract
 - "ngựa dò" = Scout (the starting exploration cavalry unit)
-- "lạc đà" = Camel Rider (Rise of Rome only, Bronze Age, trained at Stable)
+- "lạc đà" = Camel Rider (Bronze Age, trained at Stable). NOT in the original 1997 release - the Rise of Rome expansion added it, along with the Slinger, Scythe Chariot, Armored Elephant and Fire Galley, and the Rome/Carthage/Palmyra/Macedonia civilizations. Every version people actually play today includes Rise of Rome, so "chỉ có ở Rise of Rome" is the wrong way to say this - the point is that the unit postdates the 1997 base game, not that some current version lacks it. - source: https://en.wikipedia.org/wiki/Age_of_Empires:_The_Rise_of_Rome (re-worded 2026-08-08 after the owner challenged the old phrasing)
 - "kỵ cung" = Horse Archer / Heavy Horse Archer, or more broadly any mounted archer (Chariot Archer, Elephant Archer are NOT cavalry-archer stat-wise but fill a similar "hit and run" niche)
 - "cung A" = Composite Bowman - a FOOT archer (confirmed by domain expert). NO armor negation, NO bonus-damage-vs-a-unit-class. Edge = cost + range only.
 - "cung R" = Chariot Archer - a MOUNTED archer / kỵ cung (confirmed by domain expert). Edge = mobility / hit-and-run. Like cung A, it does NOT hard-counter any unit class. The guide `cung-r-ngua-chem-aoe4` uses "cung R" = Chariot Archer CORRECTLY (no naming error). The factual error in that guide is only the implication that "cung R khắc tất" (hard-counters everything) - FALSE.
@@ -34,8 +44,16 @@
 - Archers as a whole are described as requiring infantry cover - they die quickly if caught in melee without protection. - source: https://artho.com/age/units1.html
 - **Cung R has NO hard-counter/bonus-damage vs any specific unit type.** Its strength is cost-effectiveness, range, and (for mounted variants) mobility for hit-and-run - not an attack bonus against a unit class the way Camel Rider has bonus attack vs cavalry, or Slinger has bonus attack vs archers. This is the key correction: a claim that "cung R hard-counters everything" is FALSE for the original game. It applies to BOTH cung A (Composite Bowman, foot) AND cung R (Chariot Archer, mounted) - neither hard-counters a unit class. - source: https://artho.com/age/units1.html + domain-expert confirmation (2026-07-06). NOTE: the armor-ignoring/pierce mechanic belongs to AoE2's Composite Bowman ONLY; the original AoE1 cung A does NOT ignore armor.
 - Archers (Composite Bowman explicitly) "die miserably against Stone Throwers/Catapults" - siege is a hard counter to foot archers. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/composite-bowman/
-- Slinger (Rise of Rome, Barracks, Tool Age) has a +3 attack bonus specifically against archers, plus 3 pierce armor - a dedicated anti-archer unit. - source: WebSearch of https://ageofempires.fandom.com/wiki/Slinger_(Age_of_Empires) and https://liquipedia.net/ageofempires/Slinger
-- Slinger ("quẩy đá") anti-archer bonus applies ONLY to foot archers, NOT to mounted/cavalry archers (Chariot Archer, Horse Archer, Elephant Archer). - CONFIRMED by domain expert (2026-07-06).
+- Slinger (Rise of Rome, Barracks, Tool Age) has a bonus attack specifically against archers, plus 3 pierce armor - a dedicated anti-archer unit. - source: WebSearch of https://ageofempires.fandom.com/wiki/Slinger_(Age_of_Empires) and https://liquipedia.net/ageofempires/Slinger ⚠️ CẦN NGƯỜI DUYỆT for the exact number: that search summary said +3, while https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/slinger/ says "+2 attack vs. archers". Do not print a number in an article until one primary stat table settles it.
+- ❌ **RETRACTED 2026-08-08: the Slinger's anti-archer bonus is NOT limited to foot archers.**
+  This file recorded "applies ONLY to foot archers, NOT to mounted/cavalry archers (Chariot
+  Archer, Horse Archer, Elephant Archer) - CONFIRMED by domain expert (2026-07-06)". The owner
+  rejected it on 2026-08-08: **"quẩy đá" khắc tất cả loại cung, kể cả kỵ cung.** The sources agree
+  with the correction and never supported the restriction - every one of them says the bonus is
+  "vs. archers" with no foot/mounted split, so the restrictive half was an owner-only addition
+  sitting on top of a sourced line. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/slinger/
+  - **Never restore the foot-archers-only wording.** A guide claiming kỵ cung is safe from
+    quẩy đá is a `contradiction`.
 - Priests are also a listed threat to "protected Archers" per artho.com's archer strategy note, implying massed conversion can also strip away archer-heavy armies. - source: https://artho.com/age/units1.html
 
 ## Cavalry / Ngựa chém
@@ -49,7 +67,7 @@
 - Cataphract still has cavalry-level (low) pierce armor, so massed archers remain a valid counter even against the fully upgraded unit. ⚠️ CẦN NGƯỜI DUYỆT (this specific framing came from an AoE2 Cataphract discussion thread, not a primary AoE1 source - the underlying pierce-armor-weakness logic likely carries over but needs a dedicated AoE1 source check)
 - "Ngựa chém sợ lạc đà" (melee cavalry fears the camel) is TRUE for the original game via the Camel Rider's dedicated anti-cavalry bonus (see Camel section below) - this is a real, sourced hard counter, unlike the archer case.
 
-## Camels / Lạc đà (Rise of Rome only)
+## Camels / Lạc đà (added by Rise of Rome, so present in every version played today)
 
 - Camel Rider: Bronze Age, trained at the Stable, requires Town Center + Barracks + Stable. Cost 70 food + 60 gold, 125 HP, base attack 6, 0 armor, fast movement. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/camel-rider/
 - Camel Rider gets +8 attack vs cavalry/horse units and +4 attack vs chariot units - this is the real, sourced "camel hard-counters horse" mechanic the guides reference. - source: https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/camel-rider/, corroborated by https://ageofempires.fandom.com/wiki/Camel_Rider_(Age_of_Empires)
@@ -145,7 +163,7 @@ similar things but is for learning voice, never for sourcing facts.
 
 1. RESOLVED (user, 2026-07-06): the original Composite Bowman ("cung A") does NOT ignore armor - the armor-ignore mechanic is AoE2-only. The statement "cung R has no bonus damage vs anything" stands.
 2. RESOLVED, BOTH HALVES WRONG (user, 2026-08-07 then 2026-08-08): of the two build conventions recorded on 2026-07-06, neither survived. "23 dân" does NOT stand as a universal convention - it is build-dependent (~23 chém / ~26 cung) and meta-dependent (2026-08-07). "7 thực 3 vàng" is NOT an AoE1 convention at all - it is the standard AoE4 Feudal opening and was attributed to the wrong game (2026-08-08). Only "đời 3 không thành" survives from that review. Note the 2026-08-07 pass explicitly re-affirmed "7 thực 3 vàng" while correcting the line right next to it, which is why the error lasted another month: a review that touches one line does not validate its neighbours.
-3. RESOLVED (user, 2026-07-06): Slingers ("quẩy đá") get no anti-archer bonus against mounted/cavalry archers - only against foot archers.
+3. ❌ WRONGLY RESOLVED, NOW RETRACTED (user, 2026-08-08): this entry used to read "RESOLVED (user, 2026-07-06): Slingers ('quẩy đá') get no anti-archer bonus against mounted/cavalry archers - only against foot archers." The owner rejected that on 2026-08-08 during the full re-read: quẩy đá khắc tất cả loại cung, kể cả kỵ cung. Note that a `RESOLVED` marker in this list carries exactly the same weakness as a `CONFIRMED` stamp in the body - it records that the question was asked once, not that the answer was ever re-checked.
 4. Exact Catapult/Heavy Catapult upgrade deltas (+10 damage, +2 range, etc.) should be checked against a primary stat table (e.g. artho.com's siege unit page, not yet fetched in this pass).
 5. Whether there is a real "-20%" or similar aura/damage-reduction effect for cavalry near Camel Riders in the original game, or whether that is an AoE4 mechanic the guide incorrectly implies existed in AoE1 too (the guide text itself only describes this for AoE4's Abbasid, so likely not an issue, but flagging in case a future guide conflates it).
 6. A single authoritative "counters overview" source (the Fandom "Counter" page returned HTTP 402) was not retrieved directly - worth fetching via an alternate method to confirm/replace the synthesized combat-model section.
