@@ -86,9 +86,11 @@ AoE1/AoE2/AoE3. StarCraft players are the intended readers of these articles. "S
   research and scattered Blue posts, so there might be errors and inaccuracies." Quote the league
   names and the top-200 cap with confidence; treat the points arithmetic as approximate.
   - source: https://liquipedia.net/starcraft2/Battle.net_Leagues
-- ⚠️ BLOCKER for `ranked-aoe4-vs-ladder-starcraft`: **AoE4's own ranked structure is not recorded
-  in `aoe4-facts.md`.** This file now has a well-sourced StarCraft half and there is still no
-  AoE4 half to compare it against. That item stays blocked on the AoE4 side, not this one.
+- The AoE4 half of this comparison now exists in `aoe4-facts.md` (six divisions of three tiers,
+  also 5 placement matches, Conqueror reached by Rank Point threshold rather than a headcount).
+  The sharpest contrast: **Grandmaster is 200 seats per region, Conqueror is a threshold anyone
+  can cross.** One open question remains on the AoE4 side - how its Elo relates to its Rank
+  Points, which is the direct analogue of the points-vs-MMR split recorded above.
 
 ## Macro, micro, APM
 
@@ -202,4 +204,6 @@ with AoE4 esports is drawn, the AoE4 half needs its own sourcing, which does not
    This is a strategy question for the owner, and it outranks every other item on this list.
 4. Brood War vs StarCraft II - the VN scene, if any, may sit on one and not the other. Nothing
    here distinguishes them.
-5. AoE4 ranked structure, for the ladder comparison. Belongs in `aoe4-facts.md`, not here.
+5. AoE4's Elo vs Rank Points mechanism, which is the missing half of the points-vs-MMR
+   comparison. Tracked in `aoe4-facts.md`, noted here because this file is where the SC2 side
+   lives.

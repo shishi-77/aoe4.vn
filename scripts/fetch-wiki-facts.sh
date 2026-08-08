@@ -88,4 +88,17 @@ liquipedia starcraft2 "ESL_Pro_Tour" sc2-ept
 # transclusion, so their wikitext is empty of numbers.
 liquipedia starcraft2 "Global_StarCraft_II_League/2026/Season_1" sc2-gsl-2026
 
+liquipedia ageofempires "Red_Bull_Wololo/Londinium/AoE4" aoe4-rbw
+
+# --- Ranked and esports sources (added 2026-08-08) ---
+# These are not wikis, so they are listed here as documentation rather than fetched above:
+#   AoE4 ranked FAQ (curl with a browser-ish UA; WebFetch gets 403):
+#     https://support.ageofempires.com/hc/en-us/articles/5776946601876-Age-Of-Empires-IV-Ranked-Season-FAQ
+#   AoE4 ranked divisions and tiers (WebFetch works):
+#     https://www.ageofempires.com/news/deep-dive-on-age-of-empires-iv-1v1v-ranked-seasons/
+#   ageofempires.com/stats/ageivseasons/ renders its season table via JS - useless to both tools.
+# Liquipedia per-event pages DO carry the prize pool in their infobox, unlike the tournament
+# index pages, which are pure template transclusion. Fetch events by name:
+#   the aoe4-rbw line above is the pattern - swap the event name for next year's flagship.
+
 log "DONE - read the files in $OUT, then update the fact stores by hand."

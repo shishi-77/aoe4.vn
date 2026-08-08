@@ -151,6 +151,72 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
 - Abbasid Dynasty has the STRONGEST economy of all AoE4 civs. So "Abbasid vốn mạnh kinh tế / boom kinh tế" is CORRECT.
   source: site owner (AoE1/AoE4 domain expert), 2026-07-07.
 
+## Ranked ladder (added 2026-08-08, for `ranked-aoe4-vs-ladder-starcraft`)
+
+- **Six rank divisions, each with three tiers**, lowest to highest: Bronze, Silver, Gold,
+  Platinum, Diamond, **Conqueror**. Tiers are written like "Silver II", giving 18 steps in all.
+  - source: https://www.ageofempires.com/news/deep-dive-on-age-of-empires-iv-1v1v-ranked-seasons/
+- **5 placement battles** at the start of each season; a rank is granted on completing the fifth.
+  - source: https://support.ageofempires.com/hc/en-us/articles/5776946601876-Age-Of-Empires-IV-Ranked-Season-FAQ
+- Winning ranked games earns **Rank Points** and losing them costs Rank Points. **Each division
+  and tier has a Rank Point requirement**, visible in the Rank List, and the Ranked tab shows
+  current Rank Points against what is needed to ascend.
+  - source: the FAQ above
+- **Ranked queue is disabled between seasons.** The Search Game button greys out and the game
+  shows "No Active Season". - source: the FAQ above
+- The leaderboard is **per season**, selectable from a dropdown, and stops updating once its
+  season ends. - source: the FAQ above
+- Rank is shown on the player profile, in loading screens and in game lobbies.
+  - source: the FAQ above
+- ⚠️ CẦN NGƯỜI DUYỆT - **season length.** The launch-era deep dive says "the first Ranked Season
+  will span 12 weeks". That is a statement about season one in 2021, not a standing rule, and
+  nothing found this pass confirms the current cadence. Do not write "mỗi mùa 12 tuần".
+- ⚠️ CẦN NGƯỜI DUYỆT - **Elo vs Rank Points.** AoE4 support has an article titled "What's the
+  difference between Elo and Rank Points?", so the game clearly tracks both and they are not the
+  same thing. That article was not readable this pass, so the mechanism is unknown. This matters
+  because StarCraft II has the same split (ladder points vs MMR, see `starcraft-facts.md`) and it
+  is the most interesting thing to compare - but comparing them requires actually knowing how
+  AoE4's works.
+
+**Structural contrasts with the StarCraft II ladder that ARE sourced on both sides:**
+
+| | AoE4 | StarCraft II |
+| --- | --- | --- |
+| Named steps | 6 divisions x 3 tiers = 18 | 7 leagues, subdivided into divisions of up to 100 players |
+| Placement | 5 matches | 5 matches |
+| Top rank | Conqueror, reached by Rank Point threshold | Grandmaster, a hard cap of the top 200 per region |
+| Between seasons | ranked queue disabled outright | not established this pass - do not claim |
+
+- The top-rank difference is the sharpest one: **Conqueror is a threshold anyone can cross,
+  Grandmaster is 200 seats per region.** Two different answers to what "top rank" should mean.
+  - source: the AoE4 FAQ above, https://liquipedia.net/starcraft2/Battle.net_Leagues
+
+## Esports (added 2026-08-08, for `esports-aoe4-vs-starcraft2`)
+
+- **Red Bull Wololo: Londinium, 1-6 April 2026**, is the flagship event. Official page: a
+  "$250,000 total prize pool" across **both Age of Empires II: Definitive Edition and Age of
+  Empires IV**, run over six days at three London venues - the Red Bull Gaming Sphere in
+  Shoreditch for the group stage, ODEON Luxe Leicester Square for playoffs, and the **Royal
+  Albert Hall** for the grand final, in front of more than 3,000 fans with a live 40-piece
+  orchestra. - source: https://www.ageofempires.com/red-bull-wololo-londinium/
+- **The AoE4 share of that is $40,000, not $250,000.** Liquipedia's AoE4 event page gives
+  `prizepoolusd=40000`, S-Tier, offline, 1v1 single elimination, 4-6 April 2026, semifinals at
+  ODEON Luxe and the final at the Royal Albert Hall. The $250,000 is the combined figure across
+  both titles. **Writing "Đế chế 4 có giải 250 nghìn đô" is a factual error.**
+  - source: https://liquipedia.net/ageofempires/Red_Bull_Wololo/Londinium/AoE4 (infobox)
+- **Neither AoE4 nor StarCraft II is in the 2026 Esports World Cup.** Wikipedia states that
+  excluding StarCraft II "meant that the 2026 EWC will not feature any real-time strategy games"
+  - which necessarily includes AoE4. The 2026 EWC runs 24 titles for a $75 million purse.
+  - source: https://en.wikipedia.org/wiki/2026_Esports_World_Cup
+  - **This is the fair frame for the comparison article**: the story is not one RTS beating
+    another, it is that the biggest event in esports carried no RTS at all in 2026, while both
+    games kept their own circuits running. AoE's flagship filled the Royal Albert Hall; SC2's GSL
+    ran a Tier 1 season on $15,000 (see `starcraft-facts.md`). Report both, rank neither.
+- ⚠️ CẦN NGƯỜI DUYỆT - AoE4's full 2026 calendar and total annual prize money were NOT gathered.
+  Liquipedia's `Age_of_Empires_IV/Tournaments` page is pure template transclusion, so its wikitext
+  holds no tournament data - same dead end as the StarCraft `Winnings/<year>` pages. Only Red Bull
+  Wololo is sourced here; do not imply it is the only AoE4 event of the year.
+
 ## Open questions for the human reviewer
 
 1. Confirm current-patch (mid-2026) exact costs for Mangudai/Camel Archer/Camel Rider/Horse Archer/Onna-Musha/Royal Knight - this file cites figures gathered from web sources of varying vintage and AoE4 has had multiple balance patches since 2021 launch.
