@@ -55,22 +55,22 @@ export const allTitlesGuide: Guide = {
       paragraphs: [
         'Bản làm lại đầu tiên ra ngày 20 tháng 2 năm 2018, do Forgotten Empires cùng Tantalus Media thực hiện và Microsoft Studios phát hành. Phần nâng cấp gồm đồ hoạ hỗ trợ độ phân giải 4K, nhạc nền thu lại, quân tìm đường tốt hơn và chơi mạng qua hệ thống Xbox Live. Ban đầu bản này độc quyền trên Windows Store, tới ngày 19 tháng 8 năm 2019 mới lên Steam kèm khả năng chơi chéo giữa hai nền tảng. Mô tả trên trang bán hàng nói rõ đây là bản gom toàn bộ nội dung đã phát hành chính thức của bản gốc, nên mua một lần là đủ.',
         'Giới phê bình đón nhận ở mức trung bình: Metacritic 69 trên 100, PC Gamer chấm 60, GameSpot cho 6 trên 10. Còn ở Việt Nam thì bản này không bắt được cộng đồng, dân Đế chế 1 phần lớn vẫn ở lại bản cũ và tới giờ vẫn vậy. Cho nên nếu bạn mua bản Definitive Edition với hy vọng vào đó gặp lại anh em quen mặt, nhiều khả năng sẽ hụt.',
-        'Có điều Đế chế 1 còn một đường sống thứ hai mà nhiều người bỏ sót. Ngày 16 tháng 5 năm 2023, bản mở rộng Return of Rome đưa nguyên trò chơi năm 1997 vào làm một chế độ nằm bên trong Đế chế 2 Definitive Edition, đủ 16 nền văn minh gốc. Hai bên tách bạch hẳn, phe của chế độ này không đánh chung được với phe của Đế chế 2, nên đừng hình dung đây là trộn hai game vào một.',
-        'Điểm đáng nói nhất với người đọc ở Việt Nam là chế độ đó có thêm một nền văn minh độc quyền chưa từng tồn tại trong bản 1997: Lạc Việt. Theo trang chủ của nhà phát hành, phe này có dân hái lượm nhanh hơn 20%, ra lính nhanh hơn 25%, quân ra từ trại bắn được cộng 2 giáp, còn thưởng đồng đội là nhà dân và ruộng xây nhanh hơn 50%. Phe này chỉ có trong chế độ Return of Rome, không có ở bản 1997 gốc, nên muốn cầm thì phải mua bản mở rộng đó.',
+        'Có điều Đế chế 1 còn một đường sống thứ hai mà nhiều người bỏ sót. Ngày 16 tháng 5 năm 2023, bản mở rộng Return of Rome đưa nguyên trò chơi năm 1997 vào làm một chế độ nằm bên trong Đế chế 2 Definitive Edition, đủ 16 nền văn minh (civ) gốc. Hai bên tách bạch hẳn, civ của chế độ này không đánh chung được với civ của Đế chế 2, nên đừng hình dung đây là trộn hai game vào một.',
+        'Điểm đáng nói nhất với người đọc ở Việt Nam là chế độ đó có thêm một nền văn minh độc quyền chưa từng tồn tại trong bản 1997: Lạc Việt. Theo trang chủ của nhà phát hành, civ này có dân hái lượm nhanh hơn 20%, ra lính nhanh hơn 25%, quân ra từ trại bắn được cộng 2 giáp, còn thưởng đồng đội là nhà dân và ruộng xây nhanh hơn 50%. Lạc Việt chỉ có trong chế độ Return of Rome, không có ở bản 1997 gốc, nên muốn cầm thì phải mua bản mở rộng đó.',
       ],
     },
     {
       heading: 'Đế chế 2 (1999) và The Conquerors',
       paragraphs: [
         'Đế chế 2, tên đầy đủ là The Age of Kings, ra ngày 30 tháng 9 năm 1999 và vẫn do Ensemble Studios làm. Bản gốc có 13 nền văn minh, kéo bối cảnh sang một nghìn năm Trung Cổ với bốn đời đi từ Dark Age qua Feudal, Castle rồi Imperial. Bản mở rộng The Conquerors ra ngày 24 tháng 8 năm 2000.',
-        'Về cơ chế, bản này giữ lại khá nhiều nếp cũ của Đế chế 1. Lên đời vẫn bằng nhà chính, và vẫn phải dựng đủ số công trình của đời đang chơi mới bấm được, y như bản 1997, tuy ở bản đang chơi hôm nay thì riêng phe Khmer được miễn điều kiện công trình đó. Tài nguyên cũng vẫn bốn loại, trong đó đá gánh riêng phần xây thủ vì tường, chòi lẫn lâu đài đều ăn đá. Bên cạnh đó, mỗi nền văn minh có một tới hai quân đặc trưng ra từ lâu đài, kèm công nghệ riêng của phe đó.',
+        'Về cơ chế, bản này giữ lại khá nhiều nếp cũ của Đế chế 1. Lên đời vẫn bằng nhà chính, và vẫn phải dựng đủ số công trình của đời đang chơi mới bấm được, y như bản 1997, tuy ở bản đang chơi hôm nay thì riêng Khmer được miễn điều kiện công trình đó. Tài nguyên cũng vẫn bốn loại, trong đó đá gánh riêng phần xây thủ vì tường, chòi lẫn lâu đài đều ăn đá. Bên cạnh đó, mỗi nền văn minh có một tới hai quân đặc trưng ra từ lâu đài, kèm công nghệ riêng của civ đó.',
       ],
     },
     {
       heading: 'Đế chế 2 Definitive Edition (2019), bản gần như năm nào cũng có mở rộng',
       paragraphs: [
         'Bản này ra ngày 14 tháng 11 năm 2019 trên Windows, sau đó lần lượt sang Xbox ngày 31 tháng 1 năm 2023, PlayStation 5 ngày 6 tháng 5 năm 2025 và macOS ngày 28 tháng 5 năm 2026. Điểm số thuộc hàng cao nhất trong các bản làm lại: Metacritic 84 trên 100 và 92% giới phê bình trên OpenCritic khuyên chơi, kèm khả năng chơi chéo giữa PC, Xbox và PlayStation.',
-        'Tuy nhiên, cái khiến bản này đứng riêng thì lại nằm ở nhịp ra nội dung chứ điểm số mới chỉ là một nửa câu chuyện. Từ năm 2021 tới nay gần như năm nào cũng có bản mở rộng, gần nhất là The Last Chieftains ngày 17 tháng 2 năm 2026, và The Viking Sagas đã công bố cho năm nay nhưng tới đầu tháng 8 vẫn chưa phát hành. Số nền văn minh vì thế cứ dài thêm mãi. Sở dĩ bài này không chốt một con số cụ thể là bởi ba nguồn đọc trong cùng một ngày đã cho ba con số khác nhau, nên bạn cứ tạm hình dung là hàng chục phe và danh sách vẫn còn dài thêm sau mỗi bản mở rộng.',
+        'Tuy nhiên, cái khiến bản này đứng riêng thì lại nằm ở nhịp ra nội dung chứ điểm số mới chỉ là một nửa câu chuyện. Từ năm 2021 tới nay gần như năm nào cũng có bản mở rộng, gần nhất là The Last Chieftains ngày 17 tháng 2 năm 2026, và The Viking Sagas đã công bố cho năm nay nhưng tới đầu tháng 8 vẫn chưa phát hành. Số nền văn minh vì thế cứ dài thêm mãi. Sở dĩ bài này không chốt một con số cụ thể là bởi ba nguồn đọc trong cùng một ngày đã cho ba con số khác nhau, nên bạn cứ tạm hình dung là hàng chục civ và danh sách vẫn còn dài thêm sau mỗi bản mở rộng.',
       ],
       link: {
         slug: 'aoe4-vs-aoe2-khac-biet-cot-loi',
@@ -82,30 +82,30 @@ export const allTitlesGuide: Guide = {
       paragraphs: [
         'Đế chế 3 ra ngày 18 tháng 10 năm 2005, tiếp nối đúng chỗ Đế chế 2 dừng lại: bối cảnh khoảng từ năm 1500 tới 1900, thời người châu Âu sang Tân Thế giới. Hai bản mở rộng lần lượt là The WarChiefs ngày 17 tháng 10 năm 2006 và The Asian Dynasties ngày 23 tháng 10 năm 2007.',
         'Về cơ chế thì đây là bản đi xa khỏi công thức chung nhất. Game có năm đời thay vì bốn, và chỉ ba tài nguyên là thực, gỗ cùng coin - không hề có đá. Đặc biệt nhất là Home City, một thành phố mẹ nằm ngoài trận đấu và không ai đánh được, nơi bạn rút thẻ bài gửi tiếp tế về cho quân mình. Một bộ bài gồm 20 thẻ, đánh càng nhiều thì tích điểm kinh nghiệm càng mở thêm thẻ mới. Nói cách khác, đây là bản duy nhất trong cả series có phần tiến triển giữ lại được giữa các trận.',
-        'Bản mở rộng The Asian Dynasties còn để lại một di sản mà nhiều người không biết là của Đế chế 3. Ba phe châu Á thêm vào lần đó không lên đời ở nhà chính như các phe khác, mà phải dựng một Wonder chọn từ một danh sách, mỗi cái cho một phần thưởng khác nhau. Đó chính là ý tưởng mà Đế chế 4 sẽ lấy lại và áp cho gần như toàn bộ các phe, dưới cái tên Landmark.',
+        'Bản mở rộng The Asian Dynasties còn để lại một di sản mà nhiều người không biết là của Đế chế 3. Ba civ châu Á thêm vào lần đó không lên đời ở nhà chính như phần còn lại của bảng, mà phải dựng một Wonder chọn từ một danh sách, mỗi cái cho một phần thưởng khác nhau. Đó chính là ý tưởng mà Đế chế 4 sẽ lấy lại và áp cho gần như toàn bộ bảng civ, dưới cái tên Landmark.',
         'Còn nếu xếp cả series theo tốc độ game, tức là dân đi nhanh hay chậm, quân xông lên nhanh hay chậm khi đã đẩy thiết lập tốc độ lên mức cao nhất, thì Đế chế 3 nhanh nhất, trên cả Đế chế 1, sau đó mới tới Đế chế 4, còn chậm nhất là Đế chế 2.',
       ],
     },
     {
       heading: 'Đế chế 3 Definitive Edition (2020) và chuyện bản cũ đã bị gỡ',
       paragraphs: [
-        'Bản làm lại ra ngày 15 tháng 10 năm 2020, gộp sẵn cả hai bản mở rộng cũ và thêm hai phe mới là Inca cùng Thuỵ Điển.',
+        'Bản làm lại ra ngày 15 tháng 10 năm 2020, gộp sẵn cả hai bản mở rộng cũ và thêm hai nền văn minh mới là Inca cùng Thuỵ Điển.',
         'Có một điều phải nói rõ vì nó ảnh hưởng thẳng tới chuyện mua bán: bản không phải Definitive đã bị gỡ khỏi Steam ngày 8 tháng 10 năm 2024, và dịch vụ chơi mạng của nó ngừng hẳn ngày 30 tháng 10 cùng năm. Do đó, bây giờ nói chơi Đế chế 3 thì chỉ còn đúng một nghĩa là chơi bản Definitive Edition, không còn lựa chọn nào khác.',
-        'Bù lại, nội dung vẫn đang ra. Bản The Baltic Powers mang hai phe Danes và Poles hẹn ngày 10 tháng 9 năm 2026, tức là còn khoảng một tháng nữa tính từ lúc bài này cập nhật.',
+        'Bù lại, nội dung vẫn đang ra. Bản The Baltic Powers mang hai civ Danes và Poles hẹn ngày 10 tháng 9 năm 2026, tức là còn khoảng một tháng nữa tính từ lúc bài này cập nhật.',
       ],
     },
     {
       heading: 'Đế chế 4 (2021), bản mới nhất của series',
       paragraphs: [
         "Đế chế 4 (tên chính thức Age of Empires IV, viết tắt AoE4) ra ngày 28 tháng 10 năm 2021 trên Windows, lên Xbox ngày 22 tháng 8 năm 2023 và PlayStation 5 ngày 4 tháng 11 năm 2025. Lần này người làm không còn là Ensemble nữa mà là Relic Entertainment cùng World's Edge, do Xbox Game Studios phát hành. Game ra mắt với 8 nền văn minh, đạt Metacritic 81 trên 100 và 82% khuyên chơi trên OpenCritic, hiện có mặt trên cả Steam lẫn Game Pass.",
-        'Cơ chế đáng chú ý nhất là cách lên đời. Với hầu hết các phe, muốn lên đời bạn phải chọn dựng một trong hai công trình biểu tượng gọi là Landmark, mỗi cái mở ra một hướng chơi khác nhau, tuy vẫn có phe lên đời ngay tại nhà chính hoặc ở một công trình phụ. Như đã nói ở mục Đế chế 3, đây không phải phát minh của Đế chế 4: bản The Asian Dynasties đã cho các phe châu Á lên đời bằng Wonder chọn từ danh sách theo đúng lối đó, Đế chế 4 chỉ lấy ý tưởng ấy làm cơ chế chung cho gần như cả bảng phe.',
+        'Cơ chế đáng chú ý nhất là cách lên đời. Với hầu hết các civ, muốn lên đời bạn phải chọn dựng một trong hai công trình biểu tượng gọi là Landmark, mỗi cái mở ra một hướng chơi khác nhau, tuy vẫn có civ lên đời ngay tại nhà chính hoặc ở một công trình phụ. Như đã nói ở mục Đế chế 3, đây không phải phát minh của Đế chế 4: bản The Asian Dynasties đã cho ba nền văn minh châu Á lên đời bằng Wonder chọn từ danh sách theo đúng lối đó, Đế chế 4 chỉ lấy ý tưởng ấy làm cơ chế chung cho gần như cả bảng civ.',
         'Khắc chế thì đi theo một vòng khá chặt: giáo khắc kỵ, kỵ khắc cung, cung khắc giáo. Ai quen lối đánh cũ mà ra quân lệch bài sẽ thấy hậu quả rất nhanh.',
-        "Dòng nội dung ra đều tay: bản cập nhật kỷ niệm ngày 25 tháng 10 năm 2022 tặng miễn phí hai phe Ottomans và Malians, The Sultans Ascend ngày 14 tháng 11 năm 2023, Knights of Cross and Rose ngày 8 tháng 4 năm 2025, Dynasties of the East ngày 4 tháng 11 năm 2025, Yue Fei's Legacy ngày 7 tháng 5 năm 2026. Sắp tới còn Raiders of the North hẹn mùa thu năm nay, mang Vikings cùng Scots vào game, tính tới đầu tháng 8 thì bản này vẫn chưa phát hành.",
+        "Dòng nội dung ra đều tay: bản cập nhật kỷ niệm ngày 25 tháng 10 năm 2022 tặng miễn phí hai civ Ottomans và Malians, The Sultans Ascend ngày 14 tháng 11 năm 2023, Knights of Cross and Rose ngày 8 tháng 4 năm 2025, Dynasties of the East ngày 4 tháng 11 năm 2025, Yue Fei's Legacy ngày 7 tháng 5 năm 2026. Sắp tới còn Raiders of the North hẹn mùa thu năm nay, mang Vikings cùng Scots vào game, tính tới đầu tháng 8 thì bản này vẫn chưa phát hành.",
         'Game cũng có bảng xếp hạng chia theo mùa, sáu bậc mỗi bậc ba hạng, cao nhất là Conqueror, với 5 trận xếp hạng đầu mùa để hệ thống định vị trí cho bạn. Nói ngay để khỏi hiểu nhầm: xếp hạng không phải thứ riêng của Đế chế 4, bản nào trong series cũng có bảng xếp hạng của nó. Phần trên chỉ là mô tả cách Đế chế 4 chia bậc, không phải một điểm cộng so với các bản khác.',
       ],
       link: {
         slug: 'cac-nen-van-minh-aoe4',
-        label: 'Xem 8 nền văn minh và các phe thêm sau này',
+        label: 'Xem 8 nền văn minh và các civ thêm sau này',
       },
     },
     {
