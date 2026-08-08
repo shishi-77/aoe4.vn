@@ -24,7 +24,7 @@ const failures = [...seo.failures, ...gameNamingFailures(guideProse(guide))]
 console.log(
   JSON.stringify(
     {
-      kind: guide.kind ?? 'strategy',
+      kind: guide.kind,
       ...scoreGuideSeo(guide),
       hygiene: { pass: failures.length === 0, failures },
     },

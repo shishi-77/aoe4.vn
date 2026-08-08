@@ -15,6 +15,11 @@ describe('tools collection', () => {
     expect(new Set(urls).size).toBe(urls.length)
   })
 
+  it('mọi tên công cụ không trùng nhau (GA4 tool_click gộp theo name)', () => {
+    const names = tools.map((t) => t.name)
+    expect(new Set(names).size).toBe(names.length)
+  })
+
   it('mọi công cụ có tên, mô tả đủ dài và ít nhất một game', () => {
     for (const t of tools) {
       expect(t.name.trim()).toBeTruthy()
@@ -43,11 +48,12 @@ describe('tools collection', () => {
   })
 
   /*
-   * Only `description` is reader-facing prose. `name` is the tool's proper name and
-   * carries abbreviations on purpose (AoE4 World), so it must never reach this gate.
+   * `description` and `games` are reader-facing prose (ToolsView.vue renders both), so
+   * both are gated. `name` is the tool's proper name and carries abbreviations on
+   * purpose (AoE4 World), so it must never reach this gate.
    */
-  it('mô tả tuân thủ quy ước đặt tên game', () => {
-    expect(gameNamingFailures(tools.map((t) => t.description))).toEqual([])
+  it('mô tả và danh sách game tuân thủ quy ước đặt tên game', () => {
+    expect(gameNamingFailures(tools.flatMap((t) => [t.description, ...t.games]))).toEqual([])
   })
 
   it('toolsByCategory lọc đúng và trả mảng rỗng khi không có gì', () => {

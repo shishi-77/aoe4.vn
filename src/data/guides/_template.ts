@@ -4,6 +4,7 @@ export const templateGuide: Guide = {
   slug: 'doi-slug-khong-dau',
   title: 'Tiêu đề bài hướng dẫn',
   description: 'Mô tả 1-2 câu cho SEO, trên 20 ký tự.',
+  // 'utility' (tra cứu/thao tác), 'strategy' (build order/phân tích), 'comparison' (so sánh) - change this.
   kind: 'strategy',
   updatedAt: '2026-01-01',
   cta: true,

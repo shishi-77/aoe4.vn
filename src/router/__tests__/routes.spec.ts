@@ -11,6 +11,7 @@ describe('routes', () => {
         'tournament-detail',
         'news',
         'news-post',
+        'tools',
         'not-found',
       ]),
     )
@@ -32,6 +33,11 @@ describe('routes', () => {
     expect(r.name).toBe('guides')
   })
 
+  it('resolve được /tools', () => {
+    const r = router.resolve('/tools')
+    expect(r.name).toBe('tools')
+  })
+
   it('resolve được /guides/cach-tai-aoe4', () => {
     const r = router.resolve('/guides/cach-tai-aoe4')
     expect(r.name).toBe('guide-detail')
@@ -44,6 +50,10 @@ describe('routes', () => {
 
   it('resolve được /guides/ có trailing slash', () => {
     expect(router.resolve('/guides/').name).toBe('guides')
+  })
+
+  it('resolve được /tools/ có trailing slash', () => {
+    expect(router.resolve('/tools/').name).toBe('tools')
   })
 
   it('resolve được /guides/cach-tai-aoe4/ có trailing slash', () => {
