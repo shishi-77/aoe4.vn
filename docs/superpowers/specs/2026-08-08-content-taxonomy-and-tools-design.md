@@ -58,20 +58,32 @@ export interface Tool {
 }
 ```
 
-`ToolCategory` là union đóng: `'Tra cứu' | 'Nháp chiến thuật' | 'Tính toán'`.
+`ToolCategory` là union đóng: `'Tra cứu' | 'Nháp chiến thuật' | 'Tính toán' | 'Luyện tập'`.
 
 ### Nội dung khởi tạo
 
 | Công cụ | URL | Nhóm | Game |
 |---|---|---|---|
 | AoE4 World | `https://aoe4world.com/` | Tra cứu | Đế chế 4 |
-| AoE2 Captains Mode | `https://aoe2cm.net/` | Nháp chiến thuật | Đế chế 2 |
-| Aegis | `https://aoe-aegis.vercel.app/` | Tính toán | Đế chế 4 |
+| AoE2 Captains Mode | `https://aoe2cm.net/` | Nháp chiến thuật | Đế chế 2, Đế chế 3, Đế chế 4 |
+| Aegis | `https://aoe-aegis.vercel.app/` | Luyện tập | Đế chế 4 |
 | AoE4 Production Calculator | `https://www.aoe4-production-calculator.com/` | Tính toán | Đế chế 4 |
 
-Trường `games` tồn tại chính vì `aoe2cm.net` là công cụ của **Đế chế 2**, không phải Đế chế 4. Trang phải nói rõ điều đó, nếu không người đọc mở ra sẽ tưởng bị lạc.
+**Nguồn kiểm chứng (ngày 2026-08-08).** Ba trong bốn trang là SPA nên chỉ trả về vỏ HTML rỗng; nội dung được truy về nguồn tĩnh thay thế:
 
-Mô tả phải theo quy ước đặt tên game của CLAUDE.md: văn xuôi dùng `Đế chế 4`, viết tắt chỉ được xuất hiện trong `name` (là tên riêng của công cụ) và trong `title`/`description` của `useHead`.
+- `aoe4world.com` - đọc trực tiếp trang chủ. Bao phủ duy nhất Đế chế 4.
+- `aoe2cm.net` - README của `github.com/SiegeEngineers/aoe2cm2`. Công cụ dùng asset của cả Đế chế 2, Đế chế 3 và Đế chế 4 qua hệ thống preset, có vai host/guest/spectator, và ba hành động pick/ban/snipe.
+- `aoe-aegis.vercel.app` và `aoe4-production-calculator.com` - trang `aoe4world.com/tools`, nơi chính AoE4 World liệt kê hai công cụ cộng đồng này. Aegis là *"a practice game focused on improving building hotkey proficiency"* - **không phải máy tính**. Production Calculator *"determines the quantity of villagers needed per resource for sustained military unit manufacturing"*.
+
+Nhóm `Luyện tập` tồn tại chính vì Aegis: xếp nó vào `Tính toán` là mô tả sai công cụ.
+
+Trường `games` giữ lại vì Captains Mode phủ nhiều đời trong dòng Đế chế còn ba công cụ kia chỉ phục vụ Đế chế 4 - người đọc cần biết trước khi bấm.
+
+### Quy ước đặt tên trong dữ liệu công cụ
+
+`description` là văn xuôi người đọc thấy, nên phải qua `gameNamingFailures`. `name` là **tên riêng** của công cụ (`AoE4 World`, `AoE2 Captains Mode`) nên chứa viết tắt và **sẽ trượt** cổng đó.
+
+Đã kiểm chứng bằng thực nghiệm ngày 2026-08-08: bốn mô tả ở Task 1 của plan cho `gameNamingFailures` trả về mảng rỗng, còn ba `name` nói trên trả về lỗi. Vì vậy test đặt tên chỉ được quét `description`, tuyệt đối không quét `name`.
 
 ### Trang `/tools`
 
@@ -80,7 +92,15 @@ Mô tả phải theo quy ước đặt tên game của CLAUDE.md: văn xuôi dù
 - `useHead` với `title`, `description`, canonical `https://aoe4.vn/tools/` (có dấu `/` cuối), OG, và `collectionPageJsonLd` + `breadcrumbJsonLd` từ `@/lib/structuredData`.
 - Nhóm theo `category`, mỗi nhóm một `<h2>`, mỗi công cụ một thẻ.
 - Link ra ngoài: `target="_blank"` kèm `rel="noopener noreferrer"`, và văn bản link phải tự mô tả được - không dùng "tại đây".
-- Đo lường: gọi `trackOutboundClick` từ `@/lib/analytics` với `placement: 'tools'`. Union `placement` ở `src/lib/analytics.ts:13` hiện đóng ở `'header' | 'article_footer' | 'homepage'`, nên bắt buộc phải nới thêm `'tools'`.
+- Đo lường: **event riêng**, không dùng lại `trackOutboundClick`. Xem dưới.
+
+### Vì sao không dùng lại `trackOutboundClick`
+
+`trackOutboundClick` ở `src/lib/analytics.ts:34` bắn event GA4 tên `join_community_click`, và `OutboundClickEvent.channel` là union đóng `'discord' | 'facebook'`. Đó là thước đo chuyển đổi người đọc về cộng đồng.
+
+Click sang một công cụ bên thứ ba **không phải** chuyển đổi cộng đồng. Nhét nó vào cùng event sẽ thổi phồng `join_community_click` bằng lưu lượng không liên quan, làm hỏng đúng chỉ số mà spec 2026-08-02 dựng lên để đo.
+
+Vì vậy thêm hàm riêng `trackToolClick` bắn event `tool_click`, với kiểu riêng `ToolClickEvent { tool: string; path: string }`. Union `placement` và `channel` của CTA cộng đồng giữ nguyên, không đụng tới.
 
 ## 5. `/guides` - nhóm theo `kind`
 
@@ -147,7 +167,7 @@ Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có,
 - `src/views/GuidesView.vue` - nhóm theo `kind`
 - `src/lib/sitemap.ts` - thêm `{ loc: '/tools/' }` vào mảng `entries`
 - `src/__tests__/accessibility.spec.ts` - thêm `{ name: 'công cụ', path: '/tools' }` vào `PAGES`
-- `src/lib/analytics.ts` - thêm `'tools'` vào union `placement`
+- `src/lib/analytics.ts` - thêm `ToolClickEvent` và `trackToolClick`
 
 **Ghi chú về CLAUDE.md.** Mục "Routes & SEO" đang hướng dẫn thêm URL vào "mảng `urls` trong `vite.config.ts`". Mảng đó không còn tồn tại - sitemap thực tế được dựng bởi `buildSitemapXml` trong `src/lib/sitemap.ts`, với danh sách route tĩnh hardcode ngay trong hàm. Sửa lại câu đó trong CLAUDE.md như một phần của PR này.
 
@@ -155,7 +175,7 @@ Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có,
 
 ## 8. Kiểm thử
 
-- `src/data/tools/__tests__/index.spec.ts`: mọi `url` là HTTPS tuyệt đối, `name` và `description` không rỗng, không trùng `url`, `category` nằm trong union, `games` không rỗng.
+- `src/data/tools/__tests__/index.spec.ts`: mọi `url` là HTTPS tuyệt đối, `name` và `description` không rỗng, không trùng `url`, `category` nằm trong union, `games` không rỗng, không có em-dash, và `gameNamingFailures` sạch trên **`description`** (không quét `name`).
 - `src/views/__tests__/GuidesView.spec.ts` (file mới): khẳng định trang render đủ 3 heading nhóm và mọi guide xuất hiện đúng một lần, không rơi rớt bài nào.
 - `src/components/__tests__/AppNavbar.spec.ts`: bổ sung khẳng định header có link `/tools/` và **không còn** link blog.
 - `src/components/__tests__/AppFooter.spec.ts`: khẳng định footer có link blog kèm `rel="noopener noreferrer"`. Tạo file nếu chưa có.
