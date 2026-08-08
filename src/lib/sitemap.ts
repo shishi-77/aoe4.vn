@@ -21,6 +21,7 @@ export function buildSitemapXml(base: string, guides: Guide[], news: NewsPost[])
   const entries: SitemapEntry[] = [
     { loc: '/' },
     { loc: '/faq/' },
+    { loc: '/tools/' },
     { loc: '/tournaments/' },
     { loc: '/tournaments/lac-hong/' },
     { loc: '/tournaments/ha-noi-open-1/' },

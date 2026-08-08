@@ -52,6 +52,11 @@ describe('buildSitemapXml', () => {
     expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>')).toBe(true)
     expect(xml).toContain('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
   })
+
+  it('liệt kê trang công cụ', () => {
+    const xml = buildSitemapXml('https://aoe4.vn', [], [])
+    expect(xml).toContain('<loc>https://aoe4.vn/tools/</loc>')
+  })
 })
 
 describe('buildSitemapXml - news', () => {
