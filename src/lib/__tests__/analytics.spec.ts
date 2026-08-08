@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-import { initAnalytics, trackOutboundClick } from '@/lib/analytics'
+import { initAnalytics, trackOutboundClick, trackToolClick } from '@/lib/analytics'
 
 beforeEach(() => {
   delete window.gtag
@@ -45,5 +45,34 @@ describe('trackOutboundClick', () => {
       placement: 'article_footer',
       page_path: '/guides/cach-tai-aoe4/',
     })
+  })
+})
+
+describe('trackToolClick', () => {
+  it('bắn event tool_click kèm tên công cụ và đường dẫn', () => {
+    const gtag = vi.fn()
+    window.gtag = gtag
+
+    trackToolClick({ tool: 'AoE4 World', path: '/tools/' })
+
+    expect(gtag).toHaveBeenCalledWith('event', 'tool_click', {
+      tool: 'AoE4 World',
+      page_path: '/tools/',
+    })
+  })
+
+  it('không bắn event join_community_click', () => {
+    const gtag = vi.fn()
+    window.gtag = gtag
+
+    trackToolClick({ tool: 'Aegis', path: '/tools/' })
+
+    const events = gtag.mock.calls.map((c) => c[1])
+    expect(events).not.toContain('join_community_click')
+  })
+
+  it('im lặng khi analytics tắt', () => {
+    window.gtag = undefined
+    expect(() => trackToolClick({ tool: 'Aegis', path: '/tools/' })).not.toThrow()
   })
 })

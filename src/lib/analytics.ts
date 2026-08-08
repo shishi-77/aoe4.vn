@@ -38,3 +38,23 @@ export function trackOutboundClick(event: OutboundClickEvent): void {
     page_path: event.path,
   })
 }
+
+/**
+ * A click through to a third-party tool. Deliberately separate from
+ * OutboundClickEvent: that one feeds join_community_click, which measures
+ * conversion into the Discord/Facebook community and must not be diluted.
+ */
+export interface ToolClickEvent {
+  /** Tool name as shown on /tools. */
+  tool: string
+  /** Route path where the click happened, e.g. /tools/ */
+  path: string
+}
+
+/** Report a click through to a third-party tool. Safe no-op when analytics is off. */
+export function trackToolClick(event: ToolClickEvent): void {
+  window.gtag?.('event', 'tool_click', {
+    tool: event.tool,
+    page_path: event.path,
+  })
+}
