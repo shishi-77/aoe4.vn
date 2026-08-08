@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a `/tools` link directory as the site's fifth top-level section, group `/guides` by its existing `kind` field, and keep the header at six items by moving `Blog ↗` to the footer.
+**Goal:** Add a `/tools` link directory as the site's fifth top-level section and group `/guides` by its existing `kind` field, without moving a single published URL.
 
 **Architecture:** `/tools` is a new static route backed by a new flat data module (`src/data/tools/`) whose shape is deliberately unlike `Guide` - no sections, no slug, no detail page. `/guides` keeps every published URL untouched; only its listing page and the `kind` field's optionality change. Analytics gets a `tool_click` event of its own so third-party outbound clicks never contaminate the community-conversion metric.
 
@@ -568,19 +568,19 @@ git commit -m "feat(tools): add the /tools directory page"
 
 ---
 
-### Task 4: Header gains `Công cụ`, footer takes `Blog ↗`
+### Task 4: Header gains `Công cụ`
 
 **Files:**
 - Modify: `src/components/AppNavbar.vue`
-- Modify: `src/components/AppFooter.vue`
 - Test: `src/components/__tests__/AppNavbar.spec.ts` (extend)
-- Test: `src/components/__tests__/AppFooter.spec.ts` (extend)
 
 **Interfaces:**
-- Consumes: the `/tools` route from Task 3; `site.links.blog` from `@/data/site`.
+- Consumes: the `/tools` route from Task 3.
 - Produces: nothing later tasks depend on.
 
-The header must end up at six items: `Hỏi đáp`, `Giải đấu`, `Hướng dẫn`, `Công cụ`, `Tin tức`, and the Facebook CTA. That cap comes from the approved spec `2026-08-03-header-menu-trim-design.md`; `Blog ↗` moves out rather than the cap moving up.
+The header ends up at seven items: `Hỏi đáp`, `Giải đấu`, `Hướng dẫn`, `Công cụ`, `Tin tức`, `Blog ↗`, and the Facebook CTA. The owner considered moving `Blog ↗` to the footer to hold the six-item cap from `2026-08-03-header-menu-trim-design.md` and decided against it.
+
+`AppFooter.vue` is **not** touched by this task.
 
 - [ ] **Step 1: Write the failing navbar test**
 
@@ -599,22 +599,22 @@ Then add these cases inside the `describe('AppNavbar')` block:
     expect(link.text()).toContain('Công cụ')
   })
 
-  it('không còn link Blog trong header, nó đã chuyển xuống footer', async () => {
+  it('giữ link Blog trong header', async () => {
     const { wrapper } = await mountNavbar()
     const hrefs = wrapper.findAll('a').map((a) => a.attributes('href'))
-    expect(hrefs).not.toContain(site.links.blog)
+    expect(hrefs).toContain(site.links.blog)
   })
 
-  it('giữ đúng 6 mục trong menu', async () => {
+  it('có đúng 7 mục trong menu', async () => {
     const { wrapper } = await mountNavbar()
-    expect(wrapper.findAll('nav > div a')).toHaveLength(6)
+    expect(wrapper.findAll('nav > div a')).toHaveLength(7)
   })
 ```
 
 - [ ] **Step 2: Run it and watch it fail**
 
 Run: `npx vitest run src/components/__tests__/AppNavbar.spec.ts`
-Expected: FAIL - no `/tools/` link, blog link still present, count is 6 only after the swap.
+Expected: FAIL - no `/tools/` link, and the menu holds 6 anchors rather than 7. The blog case passes already; it is there to pin the decision so a future edit cannot quietly drop the link.
 
 - [ ] **Step 3: Edit the navbar**
 
@@ -624,70 +624,25 @@ In `src/components/AppNavbar.vue`, insert after the `Hướng dẫn` link:
         <RouterLink to="/tools/" :class="MENU_LINK_CLASS"> Công cụ </RouterLink>
 ```
 
-Then delete the whole `Blog ↗` anchor block - the `<a>` with `:href="site.links.blog"` and its five lines of attributes. Leave the Facebook CTA anchor untouched.
-
-`site` stays imported: the Facebook CTA still reads `site.links.facebook`.
+That is the only change. Leave the `Blog ↗` anchor and the Facebook CTA exactly as they are.
 
 - [ ] **Step 4: Run the navbar test**
 
 Run: `npx vitest run src/components/__tests__/AppNavbar.spec.ts`
 Expected: PASS, existing cases plus the 3 new ones.
 
-- [ ] **Step 5: Write the failing footer test**
+- [ ] **Step 5: Run the accessibility gate**
 
-Read `src/components/__tests__/AppFooter.spec.ts` and follow its existing mount setup. Add:
-
-```ts
-  it('có link Blog mở tab mới với rel an toàn', () => {
-    const wrapper = mount(AppFooter)
-    const link = wrapper.get(`a[href="${site.links.blog}"]`)
-    expect(link.text()).toContain('Blog')
-    expect(link.attributes('target')).toBe('_blank')
-    expect(link.attributes('rel')).toBe('noopener noreferrer')
-  })
-```
-
-Make sure `site` is imported from `@/data/site` at the top of that spec.
-
-- [ ] **Step 6: Run it and watch it fail**
-
-Run: `npx vitest run src/components/__tests__/AppFooter.spec.ts`
-Expected: FAIL - no blog link in the footer.
-
-- [ ] **Step 7: Add the blog link to the footer**
-
-In `src/components/AppFooter.vue`, add a paragraph between the copyright `<p>` and the GitHub `<p>`, reusing the GitHub link's classes:
-
-```html
-      <p class="mt-2 text-xs text-muted">
-        <a
-          :href="site.links.blog"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex min-h-11 items-center gap-1 text-gold hover:underline"
-        >
-          Blog Đế chế 4 ↗
-        </a>
-      </p>
-```
-
-- [ ] **Step 8: Run the footer test**
-
-Run: `npx vitest run src/components/__tests__/AppFooter.spec.ts`
-Expected: PASS.
-
-- [ ] **Step 9: Run the accessibility gate**
-
-The navbar and footer render on every page, so this touches all of them.
+The navbar renders on every page, so this touches all of them.
 
 Run: `npx vitest run src/__tests__/accessibility.spec.ts`
 Expected: PASS.
 
-- [ ] **Step 10: Commit**
+- [ ] **Step 6: Commit**
 
 ```bash
-git add src/components/AppNavbar.vue src/components/AppFooter.vue src/components/__tests__/AppNavbar.spec.ts src/components/__tests__/AppFooter.spec.ts
-git commit -m "feat(nav): swap Blog out of the header for Cong cu"
+git add src/components/AppNavbar.vue src/components/__tests__/AppNavbar.spec.ts
+git commit -m "feat(nav): add Cong cu to the header menu"
 ```
 
 ---
@@ -921,7 +876,11 @@ Expected: `1`.
 
 - [ ] **Step 4: Manual accessibility sweep**
 
-This branch adds an interactive widget (the tool cards) and changes the `/guides` layout, and jsdom cannot see colour, spacing, or tap targets. Walk the browser checklist in `ACCESSIBILITY.md` against `/tools` and `/guides`, checking at minimum: contrast of `text-gold-dim` group headings on `bg-ink`, the focus ring on tool cards, and 44x44 tap targets on the new footer link.
+This branch adds an interactive widget (the tool cards), changes the `/guides` layout, and puts a seventh item in the header, and jsdom cannot see colour, spacing, or tap targets. Walk the browser checklist in `ACCESSIBILITY.md` against `/tools` and `/guides`, checking at minimum:
+
+- contrast of the `text-gold-dim` group headings on `bg-ink`;
+- the focus ring on tool cards, reached by keyboard rather than mouse;
+- the header at narrow `lg` widths, 1024-1180px. That is where the seven links, the brand, and the Facebook CTA share one horizontal row, so it is the width most likely to overflow or crowd tap targets. Below `lg` the menu is a stacked panel and is not at risk.
 
 - [ ] **Step 5: Push and open the PR**
 
@@ -931,13 +890,13 @@ git push -u origin claude/content-taxonomy-tools
 
 PR title: `feat: add the /tools directory and group guides by kind`
 
-The description should state that no published slug moved, that the header is still six items because `Blog ↗` moved to the footer, and that `aoe4-khac-de-che-the-nao` is now labelled `comparison` without `sources[]` with the backfill tracked separately.
+The description should state that no published slug moved, that the header deliberately goes to seven items with `Blog ↗` staying put (reversing the six-item cap from `2026-08-03-header-menu-trim-design.md`), and that `aoe4-khac-de-che-the-nao` is now labelled `comparison` without `sources[]` with the backfill tracked separately.
 
 ---
 
 ## Self-Review
 
-**Spec coverage.** Spec section 3 (five sections) → Tasks 3 and 4. Section 4 (`/tools` shape, data, page, analytics) → Tasks 1, 2, 3. Section 5 (`kind` required, grouping) → Task 5. Section 6 (navbar at six, blog to footer) → Task 4. Section 7 (file list) → covered across Tasks 1-5; `vite.config.ts` is explicitly excluded with a reason in Task 3. Section 8 (testing) → each task's own steps plus Task 6. Section 10 risks → the deferred `sources[]` is called out in Task 5 Step 3 and in the PR description.
+**Spec coverage.** Spec section 3 (five sections) → Tasks 3 and 4. Section 4 (`/tools` shape, data, page, analytics) → Tasks 1, 2, 3. Section 5 (`kind` required, grouping) → Task 5. Section 6 (navbar at seven, blog stays) → Task 4. Section 7 (file list) → covered across Tasks 1-5; `vite.config.ts` is explicitly excluded with a reason in Task 3. Section 8 (testing) → each task's own steps plus Task 6. Section 10 risks → the deferred `sources[]` is called out in Task 5 Step 3 and in the PR description.
 
 **Deviation from the spec, recorded here.** Spec section 4 says `/tools` emits `collectionPageJsonLd` alongside `breadcrumbJsonLd`. Task 3 emits breadcrumb only: `collectionPageJsonLd` rewrites every item path through `absoluteUrl(site.url, path)`, which would turn the tools' third-party URLs into non-existent `aoe4.vn` addresses. Widening that shared helper would touch the guide and news indexes for no benefit.
 

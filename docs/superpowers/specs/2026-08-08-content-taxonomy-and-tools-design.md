@@ -132,21 +132,23 @@ Nhóm rỗng thì không render heading. Thứ tự nhóm là hằng số trong 
 
 ## 6. Navbar
 
-Thêm `Công cụ` → `/tools/`, **đồng thời chuyển `Blog ↗` xuống footer** để header giữ đúng 6 mục. Thứ tự cuối cùng:
+Thêm `Công cụ` → `/tools/`. `Blog ↗` **ở nguyên header**. Thứ tự cuối cùng, 7 mục:
 
 ```
-Hỏi đáp | Giải đấu | Hướng dẫn | Công cụ | Tin tức | [Facebook]
+Hỏi đáp | Giải đấu | Hướng dẫn | Công cụ | Tin tức | Blog ↗ | [Facebook]
 ```
 
 `Công cụ` đặt ngay sau `Hướng dẫn` vì công cụ là thứ người đọc tìm tới sau khi đọc hướng dẫn.
 
+`AppFooter.vue` **không đổi**.
+
 ### Quan hệ với spec 2026-08-03
 
-Spec `2026-08-03-header-menu-trim-design.md` cố ý rút header xuống **đúng 6 mục** vì "too dense". Spec này **giữ nguyên mốc đó**: `Công cụ` vào, `Blog ↗` ra.
+Spec `2026-08-03-header-menu-trim-design.md` cố ý rút header xuống **đúng 6 mục** vì "too dense". Spec này nâng lên 7.
 
-`Blog ↗` là ứng viên hy sinh đúng vì nó là link ra ngoài site, không phải chuyên mục nội dung - sau khi chuyển, cả 5 chuyên mục và đúng một CTA chiếm trọn header, không còn ngoại lệ nào.
+Owner đã cân nhắc lối thoát giữ mốc 6 - chuyển `Blog ↗` xuống footer - và **từ chối**: giữ Blog trên header, chấp nhận 7 mục.
 
-Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có, dùng lại đúng lớp style của link đó (`inline-flex min-h-11 items-center gap-1 text-gold hover:underline`) kèm `target="_blank"` và `rel="noopener noreferrer"`. Footer hiện chỉ có dòng bản quyền và một link, nên thêm một link nữa không làm nó dày lên đáng kể.
+Đây là quyết định thay thế, giới hạn ở đúng một mục thêm vào. Mốc "gọn" của spec 2026-08-03 vẫn là ý định gốc; lần tới muốn thêm mục thứ 8 thì phải mở lại cuộc thảo luận đó chứ không nới tiếp theo tiền lệ này.
 
 ## 7. Danh sách file phải sửa
 
@@ -160,8 +162,7 @@ Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có,
 **Sửa**
 
 - `src/router/index.ts` - route `/tools` tên `tools`
-- `src/components/AppNavbar.vue` - thêm link `Công cụ`, bỏ link `Blog ↗`
-- `src/components/AppFooter.vue` - nhận link `Blog ↗`
+- `src/components/AppNavbar.vue` - thêm link `Công cụ`
 - `src/data/guides/index.ts` - `kind` thành bắt buộc
 - 7 file guide thiếu `kind` - khai tường minh
 - `src/views/GuidesView.vue` - nhóm theo `kind`
@@ -177,8 +178,7 @@ Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có,
 
 - `src/data/tools/__tests__/index.spec.ts`: mọi `url` là HTTPS tuyệt đối, `name` và `description` không rỗng, không trùng `url`, `category` nằm trong union, `games` không rỗng, không có em-dash, và `gameNamingFailures` sạch trên **`description`** (không quét `name`).
 - `src/views/__tests__/GuidesView.spec.ts` (file mới): khẳng định trang render đủ 3 heading nhóm và mọi guide xuất hiện đúng một lần, không rơi rớt bài nào.
-- `src/components/__tests__/AppNavbar.spec.ts`: bổ sung khẳng định header có link `/tools/` và **không còn** link blog.
-- `src/components/__tests__/AppFooter.spec.ts`: khẳng định footer có link blog kèm `rel="noopener noreferrer"`. Tạo file nếu chưa có.
+- `src/components/__tests__/AppNavbar.spec.ts`: bổ sung khẳng định header có link `/tools/` và tổng số mục menu là 7.
 - Accessibility: `/tools` được `PAGES` quét tự động sau khi thêm dòng. Trang có link ra ngoài nên phải tự kiểm tra bằng mắt phần văn bản link - axe xác nhận có tên khả truy cập chứ không xác nhận tên đó **đúng**.
 - Cổng trước PR: `npm run lint:check && npm run type-check && npm run test:run`.
 - Sweep thủ công theo ACCESSIBILITY.md: PR này thêm một widget mới (thẻ công cụ) và đổi bố cục trang `/guides`, nên cổng jsdom không phủ hết phần màu sắc, khoảng cách và tap target.
@@ -203,4 +203,4 @@ Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có,
 
 **Link công cụ bên thứ ba có thể chết.** `aoe-aegis.vercel.app` nằm trên tên miền miễn phí, rủi ro cao nhất trong bốn. Không tự động hóa việc kiểm tra ở bản này; ghi nhận là việc cần rà tay khi chạy `seo-audit` hàng tháng.
 
-**Header dày lên 7 mục.** Xem mục 6.
+**Header dày lên 7 mục.** Owner đã cân nhắc và chấp nhận, xem mục 6. Điểm cần canh: trên mobile menu là panel dọc nên 7 mục không chen nhau, nhưng ở breakpoint `lg` cả 7 nằm ngang cùng brand và nút Facebook. Sweep thủ công phải kiểm tra riêng khoảng `lg` hẹp (1024-1180px), nơi hàng ngang dễ tràn nhất.
