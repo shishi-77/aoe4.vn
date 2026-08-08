@@ -135,7 +135,13 @@ Bài này không cần nhắc giải đấu, nhưng ghi vào đây để khỏi 
 Retold rồi đặt câu ngay sau đoạn nói về bản 2002, thành ra khẳng định bản 2002 có sẵn Atlantis.
 Cùng lỗi đó với cơ chế thời gian hồi của phép thần. Bài học cho các bài sau: **trang của bản
 làm lại mô tả bản làm lại, không mô tả bản gốc** - claim về bản gốc phải lấy từ trang bản gốc.
-| 51 | DLC Immortal Pillars (hệ Trung Hoa) ra 04/03/2025; Heavenly Spear (hệ Nhật Bản) ra 30/09/2025 | [CÓ NGUỒN] | cùng nguồn |
+| 51 | **BA** gói mở rộng hệ thần: Immortal Pillars (Trung Hoa) 04/03/2025, Heavenly Spear (Nhật Bản) 30/09/2025, **Obsidian Mirror (Aztec) 21/04/2026** với ba thần chính Quetzalcoatl, Tezcatlipoca, Huitzilopochtli - nhà phát hành gọi đây là gói cuối của Expansion Pass | [NGUỒN SƠ CẤP - SỬA VÒNG 6] | https://www.ageofempires.com/news/age-of-mythology-retold-obsidian-mirror-available-now-and-update-19-10195/ + https://store.steampowered.com/app/1934680/Age_of_Mythology_Retold/ |
+| 51b | Trang chủ liệt kê **bảy** hệ thần chơi được: Hy Lạp, Ai Cập, Bắc Âu, Atlantis, Trung Hoa, Nhật Bản, Aztec | [NGUỒN SƠ CẤP - THÊM VÒNG 6] | https://www.ageofempires.com/games/age-of-mythology-retold/ |
+
+**LỖI NGUỒN THỨ CẤP, BẮT ĐƯỢC VÒNG 6 (owner chất vấn 2026-08-08)**: nháp trước ghi Retold chỉ có
+HAI gói hệ thần, lấy từ trang Wikipedia của Retold. Wikipedia chưa cập nhật Obsidian Mirror
+(ra 21/04/2026). Trang chủ nhà phát hành và trang Steam đều có. **Đây là ví dụ mẫu cho lý do
+phải hỏi nhà phát hành trước khi hỏi wiki: nội dung càng mới thì nguồn thứ cấp càng trễ.**
 | 52 | Retold: Metacritic PC 83/100, Xbox Series X 79/100; OpenCritic 86% khuyên chơi | [CÓ NGUỒN] | cùng nguồn |
 
 ### Empire Earth

@@ -6,17 +6,27 @@ export const allTitlesGuide: Guide = {
   description:
     'Đế chế có những bản nào? Điểm danh đủ AoE1, AoE1 DE, AoE2, AoE2 DE, AoE3, AoE3 DE, AoE4, kèm Age of Mythology và Empire Earth: ngày ra mắt, ai làm, bản nào còn cập nhật, và ở Việt Nam nên chơi bản nào.',
   kind: 'utility',
+  // Nguồn xếp theo thứ hạng: nhà phát hành / chủ sở hữu quyền trước, rồi tới gian hàng chính
+  // thức (ngày phát hành là metadata do nhà phát hành khai), Wikipedia cuối cùng và CHỈ cho
+  // các bản 1997-2007 mà nguồn sơ cấp không còn sống trên mạng.
   sources: [
-    'https://en.wikipedia.org/wiki/Age_of_Empires',
-    'https://en.wikipedia.org/wiki/Age_of_Empires:_Definitive_Edition',
-    'https://store.steampowered.com/app/1017900/Age_of_Empires_Definitive_Edition/',
+    // Nhà phát hành / chủ sở hữu quyền
+    'https://www.ageofempires.com/games/aoe/',
     'https://www.ageofempires.com/news/return-of-rome-everything-you-need-to-know/',
-    'https://en.wikipedia.org/wiki/Age_of_Empires_IV',
-    'https://en.wikipedia.org/wiki/Age_of_Mythology',
-    'https://en.wikipedia.org/wiki/Age_of_Mythology:_Retold',
-    'https://en.wikipedia.org/wiki/Empire_Earth',
+    'https://www.ageofempires.com/games/age-of-mythology-retold/',
+    'https://www.ageofempires.com/news/age-of-mythology-retold-obsidian-mirror-available-now-and-update-19-10195/',
     'https://rebellion.com/empire-earth-classic-strategy-series-is-now-available-on-steam/',
+    // Gian hàng chính thức: ngày phát hành, studio, danh sách DLC kèm trạng thái "Coming Soon"
+    'https://store.steampowered.com/app/1017900/Age_of_Empires_Definitive_Edition/',
+    'https://store.steampowered.com/app/813780/Age_of_Empires_II_Definitive_Edition/',
+    'https://store.steampowered.com/app/933110/Age_of_Empires_III_Definitive_Edition/',
+    'https://store.steampowered.com/app/1466860/Age_of_Empires_IV_Anniversary_Edition/',
+    'https://store.steampowered.com/app/1934680/Age_of_Mythology_Retold/',
     'https://www.gog.com/en/game/empire_earth_gold_edition',
+    // Thứ cấp, chỉ dùng cho các bản gốc 1997-2007 và điểm đánh giá tổng hợp
+    'https://en.wikipedia.org/wiki/Age_of_Empires',
+    'https://en.wikipedia.org/wiki/Age_of_Mythology',
+    'https://en.wikipedia.org/wiki/Empire_Earth',
   ],
   updatedAt: '2026-08-08',
   cta: true,
@@ -101,7 +111,8 @@ export const allTitlesGuide: Guide = {
       paragraphs: [
         'Age of Mythology ra mắt cuối tháng 10 năm 2002, cũng do Ensemble Studios làm, nên tuy không mang số hiệu của dòng chính thì nó vẫn là ruột thịt. Bản mở rộng The Titans ra ngày 30 tháng 9 năm 2003.',
         'Khác biệt cốt lõi nằm ở chỗ bạn không chọn một nước mà chọn một vị thần. Bản năm 2002 mở màn với ba hệ thần là Hy Lạp, Ai Cập và Bắc Âu, phải tới bản mở rộng The Titans mới có thêm hệ Atlantis. Bên cạnh tài nguyên thường, game có riêng một loại gọi là favor, và có hẳn một lớp quân thần thoại đứng cạnh lính thường: Nhân mã, Troll, Cyclops. Chính vì vậy, bài vở ở đây không chỉ xoay quanh chuyện ra quân gì cho đúng khắc chế mà còn quanh chuyện để dành phép thần tới lúc nào.',
-        'Bản làm lại tên Age of Mythology: Retold ra ngày 4 tháng 9 năm 2024 trên Windows và Xbox Series X/S, sang PlayStation 5 ngày 4 tháng 3 năm 2025, do World\'s Edge, Forgotten Empires, Tantalus Media cùng vài studio khác thực hiện. Bản này cũng chỉnh lại chính cơ chế phép thần: phép giờ dùng được nhiều lần theo thời gian hồi, và mỗi lần dùng lại thì tốn favor. Sau khi ra mắt, game có thêm hai gói mở rộng hệ thần là Immortal Pillars mang hệ Trung Hoa ngày 4 tháng 3 năm 2025 và Heavenly Spear mang hệ Nhật Bản ngày 30 tháng 9 năm 2025. Điểm số khá tốt, Metacritic 83 trên 100 ở bản PC và 79 ở bản Xbox Series X, cùng 86% khuyên chơi trên OpenCritic.',
+        'Bản làm lại tên Age of Mythology: Retold ra ngày 4 tháng 9 năm 2024 trên Windows và Xbox Series X/S, sang PlayStation 5 ngày 4 tháng 3 năm 2025, do World\'s Edge cùng Forgotten Empires làm chính, kèm Tantalus Media, CaptureAge và Virtuos Games. Bản này cũng chỉnh lại chính cơ chế phép thần: phép giờ dùng được nhiều lần theo thời gian hồi, và mỗi lần dùng lại thì tốn favor. Điểm số khá tốt, Metacritic 83 trên 100 ở bản PC và 79 ở bản Xbox Series X, cùng 86% khuyên chơi trên OpenCritic.',
+        'Sau khi ra mắt, Retold có thêm ba gói mở rộng, mỗi gói một hệ thần mới: Immortal Pillars mang hệ Trung Hoa ngày 4 tháng 3 năm 2025, Heavenly Spear mang hệ Nhật Bản ngày 30 tháng 9 năm 2025, và Obsidian Mirror mang hệ Aztec ngày 21 tháng 4 năm 2026 với ba vị thần chính là Quetzalcoatl, Tezcatlipoca và Huitzilopochtli. Nhà phát hành gọi Obsidian Mirror là gói cuối của Expansion Pass, nên tính tới lúc này trang chủ liệt kê bảy hệ thần chơi được: Hy Lạp, Ai Cập, Bắc Âu, Atlantis, Trung Hoa, Nhật Bản và Aztec.',
       ],
     },
     {

@@ -2,6 +2,45 @@
 #
 # Refresh source material for the fact stores in .claude/skills/guide-evaluator/facts/.
 #
+# ---------------------------------------------------------------------------------------------
+# SOURCE RANKING - read this before reaching for any page below.
+#
+# Everything this script fetches is a SECONDARY source. Fandom and Liquipedia are community
+# wikis; they are worth fetching because their stat infoboxes sit close to the game data, not
+# because they are authoritative. Reach for them only after the ranking below is exhausted.
+#
+#   1. Publisher / rights holder - the primary source for what a game IS and what shipped:
+#        https://www.ageofempires.com/games/aoe/                  (AoE1 DE)
+#        https://www.ageofempires.com/games/aoeiide/              (AoE2 DE)
+#        https://www.ageofempires.com/games/aoeiiide/             (AoE3 DE)
+#        https://www.ageofempires.com/games/age-of-empires-iv/    (AoE4)
+#        https://www.ageofempires.com/games/age-of-mythology-retold/
+#        https://www.ageofempires.com/news/                       (per-DLC announcements, dated)
+#        https://rebellion.com/                                   (Empire Earth rights holder)
+#      All of these answer WebFetch directly - no curl needed. NOTE the product pages are
+#      marketing pages: they carry pantheon/civ/DLC LISTS but usually no release dates.
+#
+#   2. Official storefront - the primary source for DATES, studios and DLC status. The release
+#      date field is publisher-supplied metadata, and DLC marked "Coming Soon" is the cleanest
+#      proof that something has NOT shipped yet:
+#        store.steampowered.com/app/1017900/  AoE1 DE      store.steampowered.com/app/813780/   AoE2 DE
+#        store.steampowered.com/app/933110/   AoE3 DE      store.steampowered.com/app/1466860/  AoE4
+#        store.steampowered.com/app/1934680/  AoM Retold   gog.com/en/game/empire_earth_gold_edition
+#      Caveat: a Steam date is the STEAM release, which can differ from the game's first
+#      release (AoE1 DE launched on the Windows Store 2018-02-20 and reached Steam 2019-08-19).
+#
+#   3. Community wikis - what this script fetches. Gameplay mechanics, unit stats, counter
+#      tables: things the publisher does not document. Also the fallback for the 1997-2007
+#      original releases, whose primary pages no longer exist anywhere online.
+#
+# WHY THIS RANKING IS WRITTEN DOWN (owner, 2026-08-08): the `de-che-co-nhung-ban-nao` draft
+# sourced 5 of its 10 claims-bearing URLs from Wikipedia and stated that Age of Mythology:
+# Retold had two pantheon expansions. It has three - Obsidian Mirror shipped 2026-04-21 and
+# Wikipedia had not caught up. The publisher's own page and the Steam page both listed it.
+# The newer the content, the further behind the secondary sources are; for anything shipped in
+# the last year or two, a wiki is the WORST place to look, not merely a weaker one.
+# ---------------------------------------------------------------------------------------------
+#
 # Why this exists: the agent's WebFetch tool gets HTTP 402 from ageofempires.fandom.com and
 # HTTP 403 from liquipedia.net, so an agent that only knows WebFetch concludes the sources are
 # unreachable. They are not. Both answer plain curl given the right request:
