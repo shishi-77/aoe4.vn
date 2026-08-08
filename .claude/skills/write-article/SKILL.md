@@ -65,7 +65,9 @@ Soạn `docs/facts-review/<slug>.md`:
 
 - Guide có claim `[CẦN XÁC NHẬN]`: đặt status queue = `facts-pending`, DỪNG và mời owner
   duyệt file facts sheet (sửa/xác nhận trực tiếp trong file). Không có owner trong phiên ->
-  kết thúc tại đây, phiên sau chạy lại skill sẽ tiếp tục.
+  kết thúc tại đây; phiên sau chạy lại skill sẽ tiếp tục, NHƯNG chỉ đúng khi facts sheet còn
+  trên đĩa. Phiên headless không có chỗ đứng đó - xem "Facts sheet phải sống sót qua phiên"
+  cuối file.
 - Guide 100% claim `[ĐÃ CÓ TRONG KHO]`: bỏ qua cổng, ghi vào facts sheet dòng
   "Bỏ qua cổng owner: 100% facts từ kho đã xác minh". (Đây là cơ chế mở khóa giai đoạn 2.)
 - News: cổng nhanh - owner liếc bảng claim->nguồn và gật (hoặc tự bỏ claim thiếu nguồn).
@@ -147,3 +149,32 @@ Một queue item ĐỦ ĐIỀU KIỆN cho phiên chạy không có owner khi th�
 Item không đủ điều kiện -> phiên headless BỎ QUA (đặt/giữ `facts-pending` nếu vừa soạn facts
 sheet), thử item kế tiếp trong queue. Headless TUYỆT ĐỐI không merge PR - owner là người merge
 duy nhất, mọi trường hợp.
+
+### Facts sheet phải sống sót qua phiên
+
+Phiên headless chạy trong sandbox cloud dùng một lần: hết phiên là mất sạch checkout. Không hề
+có "phiên sau chạy lại sẽ tiếp tục" như trên máy owner. Commit mà không đưa được ra ngoài thì
+facts sheet chết theo sandbox, lần chạy sau soạn lại từ đầu, và kho facts không bao giờ lớn lên.
+
+Soạn xong facts sheet mà item KHÔNG đủ điều kiện (còn `[CẦN XÁC NHẬN]`):
+
+1. Chưa ở branch riêng thì `git checkout -b claude/facts-<slug>`.
+2. Commit facts sheet + status `facts-pending` trong queue. `docs/facts-review/` đã được gỡ
+   khỏi gitignore nên `git add` thường là đủ, không cần `-f`.
+3. Thử `git push -u origin <branch>`.
+   - **Push được** -> `gh pr create --draft` tiêu đề `chore(facts): facts sheet <slug> chờ
+     owner duyệt`, body liệt kê ĐÚNG các claim `[CẦN XÁC NHẬN]` kèm câu hỏi cụ thể cho owner.
+   - **Push trả 403** -> đó là phiên chỉ có quyền đọc, KHÔNG phải lỗi cần thử lại. Chạy
+     `git format-patch origin/main --stdout` và DÁN NGUYÊN PATCH vào tin nhắn cuối của phiên,
+     kèm một dòng nói rõ áp bằng `git am` lên `main` mới nhất. Tin nhắn cuối là nơi duy nhất
+     còn ra được khỏi container, nên nó là bản lưu cuối cùng chứ không phải chỗ báo lỗi.
+4. Xong mới thử item kế tiếp. Nhiều item facts-pending trong cùng một phiên thì gom chung một
+   branch, một patch hoặc một PR draft, đừng tách mỗi item một cái.
+
+Owner merge (hoặc `git am`) xong -> phiên sau item đã có facts sheet nằm sẵn trên `main` và đi
+thẳng vào Bước 3. Đây là cách kho facts lớn dần mà không cần owner ngồi cùng phiên.
+
+**Luật này áp dụng cho MỌI thứ phiên headless tạo ra, không riêng facts sheet.** Bài viết đã
+PASS, scorecard, queue status - hết phiên là mất, nên nhánh 403 ở trên là đường lui chung.
+Ca thật ngày 2026-08-07: phiên viết xong bài `dan-aoe2-chuyen-sang-aoe4`, chấm 3 vòng, rồi mất
+trắng vì push 403 và skill lúc đó không nói phải làm gì tiếp.
