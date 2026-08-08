@@ -83,6 +83,49 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   source: https://aoedb.net/aoe4/counters/ , https://ageofempires.fandom.com/wiki/Spearman_(Age_of_Empires_IV) , https://ageofempires.fandom.com/wiki/Counter
 - Additional/secondary counters mentioned in sources (not asserted by the guides, included for context only): Men-at-Arms counter both Spearmen and Archers; Mangonels/siege counter all three infantry-tier unit types.
 
+### Counter structure in depth (added 2026-08-08, for the AoE2/AoE3 comparison articles)
+
+Fetched from the series wiki's cross-title `Counter` page, which covers AoE1/AoE2/AoE3/AoE4 side
+by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempires.fandom.com/wiki/Counter
+
+- AoE4 has **hard counters** (large bonuses against a unit type) and **soft counters** (an
+  advantage that can be mitigated). Several **counter triangles** exist, not one.
+- **The primary triangle is between the Feudal Age 'trash' units**: Horsemen beat Archers, Archers
+  beat Spearmen, Spearmen beat Horsemen. Each is a hard counter that reliably wins a 1v1.
+  Note the wiki calls these "trash" units in AoE4 too, but `aoe2-facts.md` records AoE2's precise
+  definition (costs no gold and no stone) - **the two uses are not the same concept**, so do not
+  carry the AoE2 definition across into an AoE4 sentence.
+- **Heavy units** arrive mainly in the Castle Age and are meant to beat multiple units of that
+  first triangle - hence the 'fast castle' strategy existing to reach them early. Lancers and
+  other heavy melee cavalry beat Archers and Horsemen; Men-at-Arms and other heavy melee infantry
+  beat all three. Heavy units are answered by **anti-heavy** units, the Crossbowman being the
+  primary example, and anti-heavy units are in turn answered by trash units - **a second
+  triangle**.
+- When a heavy unit does appear in the Feudal Age it has reduced stats: Early Men-at-Arms have
+  less pierce armor and deal less damage, so Archers and Horsemen beat them cost-effectively
+  without winning a straight equal-numbers fight. The wiki names this as its example of a soft
+  counter.
+- **Ships have their own hard triangle**: archer ships beat incendiary ships beat springald ships
+  beat archer ships. Warships soft counter springald ships and can replace them in the Imperial
+  Age.
+- **Mass breaks counters.** Once a unit type reaches sufficient numbers it handles its supposed
+  counter, especially ranged units, which is why Mangonels exist for massed ranged and Springalds
+  and Ribauldequins for massed melee.
+- **Ranged cavalry and heavy cavalry have very few hard counters.** Ranged cavalry combine range
+  with hit-and-run mobility that avoids the melee units meant to beat them; heavy cavalry can beat
+  almost anything 1v1 including Spearmen and Crossbowmen. Both are held in check mainly by cost -
+  they lose to an equal-*resources* number of counters, not an equal-*unit* number - which stops
+  working in a late game with a developed economy. The wiki's stated answer there is combined
+  arms.
+- Camel Riders "defeat all cavalry" but are more susceptible to (not hard countered by) Archers
+  and heavy infantry.
+- **WRITING NOTE for comparison articles**: AoE4's counters really are triangles, and AoE2's
+  really are not - `aoe2-facts.md` records 27 armor classes and stacking flat bonuses that the
+  wiki says "more often than not subvert" the rock-paper-scissors reading. That contrast is
+  sourced on both sides and is the strongest single mechanical comparison available. Do not
+  overstate it into "AoE4 is simpler": the same page spends a long paragraph on how AoE4 counters
+  fail to describe real unit interactions.
+
 ---
 
 ## Cross-title speed ranking (AoE1/2/3/4)
