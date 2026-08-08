@@ -270,5 +270,20 @@
     "notes": "Owner đặt bài trực tiếp trong phiên 2026-08-08, không đi qua propose-topics. Bài điểm danh 9 mục owner chốt: Đế chế 1 + Rise of Rome, Đế chế 1 DE, Đế chế 2 + The Conquerors, Đế chế 2 DE, Đế chế 3 + 2 bản mở rộng, Đế chế 3 DE, Đế chế 4, Age of Mythology + Retold, Empire Earth. Đặt kind=utility trong file guide (KHÔNG phải comparison) vì luật 2026-08-07 buộc bài comparison chỉ so đúng hai game trong tiêu đề, bài điểm danh 9 mục không sống được dưới luật đó. Facts sheet docs/facts-review/de-che-co-nhung-ban-nao.md: 64 claim, 0 claim CẦN XÁC NHẬN sau cổng owner. Năm claim owner xác nhận mới (#15, #60-63) đã append vào aoe1-facts.md và aoe4-facts.md. Ba khoảng trống kho phải fetch web trong phiên: Đế chế 1 DE, Age of Mythology, Empire Earth. | Evaluator: PASS (structure 8, voice 6, conversion 8; sàn utility 7/5/3), 0 mâu thuẫn, 0 dìm game, sau 5 vòng fact-check. Scorecard docs/reviews/de-che-co-nhung-ban-nao-scorecard.md có nhật ký từng vòng + 3 bài học rút ra. | Merged 2026-08-08 qua PR #66 (squash). Owner review bắt 5 lỗi trong lúc mở PR, tất cả đã ghi vào kho facts kèm lý do - xem docs/facts-review/aoe1-confirmed-lines-audit.md cho 17 claim AoE1 còn chờ owner rà lại.",
     "createdAt": "2026-08-08",
     "updatedAt": "2026-08-08"
+  },
+  {
+    "slug": "aoe4-khac-de-che-the-nao",
+    "targetKeyword": "aoe4 khác đế chế thế nào",
+    "kind": "comparison",
+    "evidence": {
+      "query": "aoe4 khác đế chế thế nào",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "published",
+    "notes": "NỢ FACTS SHEET - không phải item chờ viết. Bài đã publish từ lâu; item này tồn tại chỉ để món nợ không trôi mất. Nhánh claude/content-taxonomy-tools (2026-08-08) siết Guide.kind thành bắt buộc và phát hiện bài này lâu nay rơi vào mặc định 'strategy' dù nội dung so sánh Đế chế 4 với Đế chế 1, nên đã đổi sang kind='comparison'. Hệ quả: theo guide-evaluator/SKILL.md mục 294-296, bài comparison không có docs/facts-review/<slug>.md là hygiene FAIL chứ không phải cảnh báo - và bài này chưa có sheet, cũng chưa có sources[]. Hai bài comparison còn lại đều đã có sheet. Không có gì trong test:run, build hay seo-audit đọc ràng buộc này nên CI vẫn xanh; FAIL chỉ nổ khi ai đó chấm lại slug này. VIỆC CẦN LÀM: soạn facts sheet cho bài, rồi thêm sources[] vào src/data/guides/aoe4-khac-de-che-the-nao.ts. Owner đã chủ động hoãn phần này khi duyệt spec 2026-08-08-content-taxonomy-and-tools-design.md - tuyệt đối không bịa nguồn để dập cảnh báo. Giữ status='published' là có chủ đích: write-article chỉ nhận proposed/facts-pending/facts-approved, đặt facts-pending ở đây sẽ khiến máy viết đè lên một bài đang sống.",
+    "createdAt": "2026-08-08",
+    "updatedAt": "2026-08-08"
   }
 ]
