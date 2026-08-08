@@ -18,6 +18,13 @@ lại bài "Đọc Timeline" - bài này đã có ở mẫu 13 và 22 nên khôn
 Riêng ba bài luật thi đấu (mẫu 35-36) phần lớn là bảng cấu hình và gạch đầu dòng; chỉ
 trích những câu văn xuôi, các phần liệt kê không lấy làm mẫu giọng.
 
+Mẫu 40-62: trích 8 bài aoe.vn owner gửi thêm ngày 2026-08-08 (đợt 2 trong ngày), phủ
+tiếp các dạng bài mảng tin - bình luận mà hai đợt trước còn mỏng: bài bênh vực một quyết
+định đang bị cộng đồng chê, bài nhận định về một tựa game đang chết, bài mổ chiến thuật
+từ thể lệ mới, tin kết quả chung kết, thông báo giải chính thức, bài hé lộ một chi tiết
+của giải, bài đón trận, và tin tổng kết một giải phong trào. Dấu ngoặc kép cong trong
+bản gốc được đổi thành ngoặc thẳng, ngoài ra giữ nguyên văn.
+
 ## Mẫu 1
 - Nguồn: sách 100 cuộc chiến lẫy lừng
 - Thích vì: mở màn bằng khung cảnh yên tĩnh giả tạo rồi thả cú lừa (ngựa gỗ Troy)
@@ -255,3 +262,141 @@ trích những câu văn xuôi, các phần liệt kê không lấy làm mẫu g
 - Thích vì: tin khởi tranh mở bằng khi - ở đâu - ai ngay câu đầu, rồi định giá đúng tầm giải: nói thẳng chuyên môn không bằng giải chuyên nghiệp mà vẫn chỉ ra giá trị thật của nó
 
 > Sáng nay (5/10), giải đấu AoE Mõm Vương lần thứ 4 - Giải đấu dành cho các bình luận viên AoE - sẽ chính thức khởi tranh tại Cybergame AoE Kinh Bắc. [...] Thực tế, yếu tố tiền thưởng hay bản quyền hình ảnh cũng chỉ mang tính chất "động viên tinh thần", giúp các team tăng thêm tính cạnh tranh mà thôi. Về bản chất, giải đấu được tạo ra để tăng thêm sự gắn kết, đoàn kết giữa các bình luận viên. [...] Nhưng trước đó, chắc chắn sẽ là những trận đấu rất nảy lửa, dù chuyên môn trận đấu sẽ không cao bằng các trận đấu chuyên nghiệp, nhưng quyết tâm mỗi team tham gia vẫn là vô cùng lớn.
+
+## Mẫu 40
+- Nguồn: aoe.vn - Tại sao AoE Việt Trung 2024 - Cup Thiên Khôi cần nhiều bình luận viên đến vậy?
+- Thích vì: dẫn nguyên lời mỉa mai của cộng đồng vào ngay sapo rồi bác lại bằng đúng một câu, tự đặt bài vào thế phải chứng minh phần còn lại
+
+> Sau khi ban tổ chức giải đấu AoE Việt Trung 2024 - Cup Thiên Khôi công bố danh sách 10 bình luận viên, một số khán giả đã mỉa mai giải đấu khi cho rằng số bình luận viên còn áp đảo cả số lượng game thủ. Nhưng thực tế là giải đấu rất cần số lượng bình luận viên đông đảo như đã nói trên.
+
+## Mẫu 41
+- Nguồn: aoe.vn - Tại sao AoE Việt Trung 2024 - Cup Thiên Khôi cần nhiều bình luận viên đến vậy?
+- Thích vì: chứng minh vai trò của một bên bằng phép thử ngược - thử bỏ họ ra khỏi trận đấu thì người xem còn lại gì
+
+> Dĩ nhiên, bên cạnh những game thủ AoE được rất nhiều khán giả yêu thích và luôn mong ngóng để được theo dõi các trận đấu, thì bình luận viên cũng đóng vai trò không nhỏ để thu hút khán giả. Đây là điều không cần phải bàn cãi, bởi dù game thủ có thi đấu xuất sắc đến mấy mà không có bình luận viên, hoặc bình luận viên "tệ" thì chắc chắn người xem cũng khó lòng cảm nhận được cái hay của trận đấu hoặc của game thủ.
+
+## Mẫu 42
+- Nguồn: aoe.vn - Tại sao AoE Việt Trung 2024 - Cup Thiên Khôi cần nhiều bình luận viên đến vậy?
+- Thích vì: lập luận lợi ích hai chiều rồi chốt bằng "không có lý do gì mà không"; dấu ba chấm giữa câu là chỗ duy nhất cho phép đùa một nhịp
+
+> Vì vậy nếu như ban tổ chức chỉ sử dụng người trong đơn vị, các bình luận viên của các đơn vị khác sẽ... thất nghiệp trong 2 tuần diễn ra giải đấu. Trong khi thực tế là nếu mời các bình luận viên của các clan khác về bình luận, họ vừa có thêm thu nhập và giải đấu cũng sẽ được hỗ trợ về mặt truyền thông. Đây là cách làm vẹn cả đôi bên, vì vậy không có lý do gì mà Thiên Khôi Esports không thực hiện phương án này cả.
+
+## Mẫu 43
+- Nguồn: aoe.vn - Tại sao AoE Việt Trung 2024 - Cup Thiên Khôi cần nhiều bình luận viên đến vậy?
+- Thích vì: đoán ý người khác thì tự dán nhãn "chưa được kiểm chứng" ngay tại chỗ, rồi nói thẳng vì sao vẫn chọn tin; sau đó bênh một nghề bằng chuyện thu nhập chứ không bằng mỹ từ
+
+> Có thể việc anh mời nhiều bình luận viên tham dự giải đấu cũng là một cách thể hiện sự tôn trọng hoặc tri ân đến những người đồng nghiệp trong nghề. Tất nhiên, điều này có thể chưa được kiểm chứng, nhưng khi nó là một điều tích cực, chúng ta chẳng ngại gì mà không tin. [...] So với game thủ, chắc chắn thu nhập của các bình luận viên thấp hơn nhiều, song không ít người vẫn quyết định gắn bó với nghề. Người hâm mộ chúng ta nên thật sự trân trọng điều đó.
+
+## Mẫu 44
+- Nguồn: aoe.vn - Tại sao AoE Việt Trung 2024 - Cup Thiên Khôi cần nhiều bình luận viên đến vậy?
+- Thích vì: chốt bài tách bạch cái đáng ghi nhận với cái còn tranh cãi, rồi hoãn phần tranh cãi lại chứ không đứng ra phân xử
+
+> Chưa cần biết dàn 10 bình luận viên trên có giúp giải đấu kéo được nhiều views hay không, nhưng thực sự chúng ta cần ghi nhận những nỗ lực mà Thiên Khôi Esports đã làm được cho đến thời điểm này. [...] Hãy cứ tận hưởng những gì họ mang lại ở giải đấu này, còn vấn đề giữa nội bộ AoE Việt Nam với nhau, có lẽ sẽ chờ đợi thêm những diễn biến sau giải đấu.
+
+## Mẫu 45
+- Nguồn: aoe.vn - Cộng đồng AoE DE tổ chức giải 4vs4 khuấy động phong trào
+- Thích vì: dám gọi thẳng một tựa game là thất bại, chỉ đúng lỗi của nhà phát hành, rồi lập tức giảm khinh cho họ bằng một lý do có thật - chê mà vẫn công bằng
+
+> Với thất bại của AoE DE, chính nhà phát hành Microsoft có lỗi lớn nhất khi họ bỏ bê trò chơi này quá lâu, gần như không có cập nhật hay sửa đổi để phù hợp với thị hiếu người chơi. Bên cạnh đó, thể thức tự do tiêu tốn khá nhiều thời gian nên không thu hút được các fan AoE 1 tại Việt Nam, khiến nó không được ưa chuộng bởi đại đa số. Dù vậy, cũng khó trách tập đoàn công nghệ lớn nhất thế giới khi nhiệm vụ chính của họ không nằm ở AoE DE. Thực tế là tựa game này được ra đời nhằm kỷ niệm 20 năm phiên bản AoE đầu tiên, chứ không mang nặng tính chất thương mại hóa.
+
+## Mẫu 46
+- Nguồn: aoe.vn - Cộng đồng AoE DE tổ chức giải 4vs4 khuấy động phong trào
+- Thích vì: sau khi khai tử một tựa game vẫn trả lại cho nó một câu công bằng, rồi chốt bằng lời chúc dành cho những người còn ở lại
+
+> Tuy là "Dead game", nhưng công bằng mà nói AoE DE cũng có một số điểm khá hấp dẫn và cuốn hút người chơi. Vì vậy mà cho đến tận thời điểm này vẫn còn có những người đang gắn bó và cố gắng duy trì cộng đồng trò chơi này. Chúc cho giải đấu 4vs4 Random sắp tới sẽ diễn ra thành công tốt đẹp và giúp cộng đồng AoE DE Việt Nam trở nên gắn kết hơn.
+
+## Mẫu 47
+- Nguồn: aoe.vn - Những chiến thuật độc lạ nào có thể sử dụng ở giải Ông Vua Đời 4?
+- Thích vì: rút cả một bộ luật về đúng một "cột mốc", rồi lấy cột mốc đó bắc cầu sang danh sách chiến thuật - bài phân tích nào cũng cần một câu bản lề như vậy
+
+> Như vậy, có thể coi việc một người (trong số 6 game thủ trên bản đồ) lên xong đời 4 chính là cột mốc cho việc giao tranh. Do đó có thể xuất hiện một số kiểu chiến thuật điển hình ở thể thức này.
+
+## Mẫu 48
+- Nguồn: aoe.vn - Những chiến thuật độc lạ nào có thể sử dụng ở giải Ông Vua Đời 4?
+- Thích vì: mỗi chiến thuật nêu ra đều kèm luôn cái lỗ nó tự mở, và chiến thuật khắc chế nhắm đúng vào cái lỗ đó chứ không phải một mẹo chung chung
+
+> Đây là chiến thuật mà team B sẽ không đua đời 4 với team A như đã đề cập ở trên. Thay vào đó, tất cả các game thủ của team B đều tập trung ép quân ở đời 3 và sẵn sàng "rình rập", chỉ chờ team A có người lên 4 là sẽ lao vào ốp ngay lập tức. Đây được xem là một cách khắc chế hiệu quả bởi người chơi chủ động lên 4 ở team A thường sẽ không xóc quân thủ nhà ở đời 3.
+
+## Mẫu 49
+- Nguồn: aoe.vn - Những chiến thuật độc lạ nào có thể sử dụng ở giải Ông Vua Đời 4?
+- Thích vì: kéo chuỗi bài - bắt bài - phế bài đến tận nước cuối rồi mới dừng, và dừng bằng cách trả lại cho người đọc quyền tự thử
+
+> Theo luật của BTC, một team sẽ bị xử thua nếu bản đồ chưa có người lên 4 mà đã có chỉ số kill. Do đó, nếu như team B chủ động xóc toàn quân ở đời 3 và không có ý định lên 4, team A cũng có thể bắt bài ngược lại bằng cách đưa dân lên để đối thủ kill và được xử thắng luôn. Tuy nhiên nếu như team B khôn ngoan, họ hoàn toàn có thể phế luôn chiến thuật này bằng cách chọn "Đồng minh" với toàn bộ team A trước khi giao chiến. Tất nhiên nếu team B chủ quan thì chiến thuật này cũng rất đáng để thử.
+
+## Mẫu 50
+- Nguồn: aoe.vn - Những chiến thuật độc lạ nào có thể sử dụng ở giải Ông Vua Đời 4?
+- Thích vì: chốt một bài phân tích cái chưa từng diễn ra bằng cách thừa nhận ai cũng sẽ bỡ ngỡ, rồi mở ra cái được nếu nó chạy tốt
+
+> Ngoài các chiến thuật trên, các team cũng có thể linh hoạt và sáng tạo ra chiến thuật của riêng mình dựa trên thể thức của giải đấu. Do đây là lần đầu tiên giải đấu áp dụng thể thức này nên chắc chắn cách vận hành các chiến thuật sẽ còn nhiều bỡ ngỡ. Thế nhưng nếu như giải đấu lần này diễn ra thành công và mang lại nhiều sự mới mẻ thì không loại trừ khả năng thể thức này sẽ được áp dụng ở các giải chuyên nghiệp.
+
+## Mẫu 51
+- Nguồn: aoe.vn - Bảo vệ thành công chức vô địch 2vs2 Assyrian, Chim Sẻ Đi Nắng tạo kỷ lục ấn tượng
+- Thích vì: dựng sẵn lý do để tin đội cửa dưới có cửa, nên lúc họ thua người đọc hiểu vì sao chứ không thấy trận chung kết vô nghĩa
+
+> Bộ đôi game thủ đến từ clan AoE phủi MAXR đem đến những hy vọng, bởi trong nhiều kèo giao hữu, họ thậm chí thi đấu ngang tay với các game thủ Shenlong, Tiễn Như Vũ của Trung Quốc. Tuy nhiên khi phải đối đầu với Chim Sẻ Đi Nắng ở chung kết, mọi chuyện không còn đơn giản như khi thi đấu giao hữu nữa. Dù đã cố gắng hết sức song hai game thủ MAXR chỉ có được chạm 2.
+
+## Mẫu 52
+- Nguồn: aoe.vn - Bảo vệ thành công chức vô địch 2vs2 Assyrian, Chim Sẻ Đi Nắng tạo kỷ lục ấn tượng
+- Thích vì: khen kỷ lục xong là chiết khấu ngay bằng chất lượng đối thủ - thành tích được đặt đúng bối cảnh chứ không thổi lên
+
+> Đáng nói hơn, chức vô địch lần này đã đánh dấu thành tích 4 lần vô địch sau 6 lần vào chung kết của Chim Sẻ Đi Nắng ở hai giải đấu Cup Đại Soái đã được tổ chức. Đây là một thành tích hoàn toàn áp đảo phần còn lại, cũng giống như trình độ của Chim Sẻ Đi Nắng ở thời điểm hiện tại. Cũng phải thừa nhận rằng, lúc này nhánh Tiểu Thủy Ngư cùng với các game thủ Việt Nam đã sa sút rất nhiều về phong độ thi đấu cung R. Nếu như giải đấu có góp mặt của Shenlong, có lẽ tính cạnh tranh sẽ cao hơn nhưng rất tiếc điều đó không xảy ra.
+
+## Mẫu 53
+- Nguồn: aoe.vn - Thông báo chính thức về giải AoE Miền Bắc lần thứ 11
+- Thích vì: thông báo giải mở bằng mục đích dài hơi rồi mới đến tên giải, sau đó định vị giải bằng tuổi đời và một hình ảnh ai cũng hiểu ("World Cup", "màu cờ sắc áo")
+
+> Tiếp tục hành trình tìm lại và khôi phục bản sắc vốn có của AoE Việt, cùng với đó là tạo ra tiền đề để cộng đồng AoE nước nhà được phát triển một cách lành mạnh, bền vững, EGO Media cùng với EGO Play chính thức khởi động lại hệ thống giải đấu AoE Miền Bắc. AoE Miền Bắc được lần đầu tổ chức vào năm 2007, nguyên là giải đấu lâu đời nhất của AoE VN và được ví như "World Cup" của cộng đồng game Đế Chế. Đây là sân chơi mang đậm chất quê hương, nơi mà các team sẽ thi đấu vì tinh thần màu cờ sắc áo.
+
+## Mẫu 54
+- Nguồn: aoe.vn - Thông báo chính thức về giải AoE Miền Bắc lần thứ 11
+- Thích vì: hết phần văn là cắt hẳn sang khối nhãn - giá trị, mỗi dòng một thông tin, người đọc quét mắt là thấy thứ cần; không chèn lời bình vào giữa
+
+> Sau đây là những thông tin chi tiết về giải đấu: Tên giải đấu: AoE Miền Bắc lần thứ 11. Đơn vị tổ chức: EGO Media - EGO Play. Thời gian: Từ 10/8 đến 30/8/2023. Địa điểm: Vòng bảng đến tứ kết: Thi đấu online trên EGOPlay. Bán kết và chung kết: Thi đấu offline tại Hà Nội. Tổng giá trị giải đấu: 150,000,000 VND. Nội dung thi đấu: 4vs4 Random.
+
+## Mẫu 55
+- Nguồn: aoe.vn - Hé lộ hình ảnh chiếc cúp cực kỳ đặc biệt của giải AoE Miền Bắc lần thứ 11
+- Thích vì: lấy một chữ hai nghĩa làm luôn dàn bài - nghĩa đen đo bằng cân nặng và tiền, nghĩa bóng đo bằng ai sẽ đến tranh nó
+
+> Với mong muốn phát triển phong trào AoE một cách rộng rãi trong cộng đồng, đồng thời để giải Miền Bắc xứng danh "World Cup" của AoE, ban tổ chức đã quyết định làm một điều hết sức đặc biệt. Đó là tạo nên một chiếc cúp "danh giá nhất" theo cả nghĩa bóng và đen. Trước tiên, theo nghĩa đen, chiếc cúp năm nay sẽ rất danh giá bởi chỉ riêng chi phí tạo ra nó đã lên đến khoảng 10 triệu VND. [...] Chiếc cúp sẽ nặng khoảng hơn 2kg, được làm bằng pha lê, phần đế là đá hoa cương.
+
+## Mẫu 56
+- Nguồn: aoe.vn - Hé lộ hình ảnh chiếc cúp cực kỳ đặc biệt của giải AoE Miền Bắc lần thứ 11
+- Thích vì: đang tôn vinh vẫn nhắc "chẳng thiếu những scandal" - lịch sử kể đủ mặt nên lời khen mới có sức nặng
+
+> Về nghĩa bóng, sẽ chẳng có gì phải bàn cãi về giá trị của chiếc cúp khi đây là giải đấu AoE Miền Bắc, nơi sẽ quy tụ hầu như tất cả những team AoE mạnh nhất khu vực miền Bắc và cả một số tỉnh miền Trung. Những giải đấu Miền Bắc trong quá khứ lúc nào cũng nóng bỏng, giàu tính cạnh tranh và chẳng thiếu những scandal khi các team luôn khát khao mạnh mẽ cho chức vô địch, còn đằng sau họ là hàng nghìn người hâm mộ từ các tỉnh thành khác nhau luôn trông chờ và đặt niềm tin.
+
+## Mẫu 57
+- Nguồn: aoe.vn - Chờ đợi gì từ trận tái đấu Thủy Ngư và Thần Long sau hơn 2 năm?
+- Thích vì: bài đón trận neo vào lần gặp gần nhất có đủ ngày tháng, vòng đấu và tỉ số, chứ không nói chung chung "đã lâu không gặp"
+
+> Cuộc đối đầu vào tối nay đánh dấu lần tái đấu của Shenlong và Tiểu Thủy Ngư kể từ lần cuối họ gặp nhau ở giải Hà Nội Open 10. Cụ thể là vào ngày 20/12/2021, khi đó tại vòng tứ kết Solo Assy, Shenlong đã khiến Tiểu Thủy Ngư nhận thất bại muối mặt 1-6. Sau đó, Shenlong tiếp tục hành trình bằng trận thắng ngược dòng đầy ngoạn mục trước Hồng Anh, trước khi bại dưới tay Chim Sẻ Đi Nắng ở trận đấu tranh chức vô địch.
+
+## Mẫu 58
+- Nguồn: aoe.vn - Chờ đợi gì từ trận tái đấu Thủy Ngư và Thần Long sau hơn 2 năm?
+- Thích vì: nêu đủ lý do nghiêng về một bên rồi vẫn từ chối chốt kèo; thay vì phán, trả lại cho người hâm mộ quyền chờ đợi
+
+> Thời gian trôi qua cũng khá lâu và phong độ các game thủ thay đổi liên tục, vì vậy khó nói rằng Shenlong là người vượt trội hoàn toàn trước cuộc tái đấu này. Ngoài ra thì về mặt trình độ, kinh nghiệm, cả hai game thủ cũng được đánh giá tương đương và có thời điểm Cá Nhỏ khá "kỵ rơ" Rồng Béo. [...] Tất nhiên sẽ chưa thể nói trước điều gì, nhưng người hâm mộ có quyền chờ đợi vào một cuộc đối đầu thực sự hấp dẫn.
+
+## Mẫu 59
+- Nguồn: aoe.vn - Chờ đợi gì từ trận tái đấu Thủy Ngư và Thần Long sau hơn 2 năm?
+- Thích vì: dựng ân oán bằng sự kiện và số tiền có thật, gọi người bằng quê quán ("game thủ người Hồ Bắc"), kể cả hai chiều mà không phán ai đúng ai sai
+
+> Ai cũng biết rằng kể từ khi Shenlong rời khỏi Hiệp hội, bà Thanh Thanh cũng như các ông bầu và người hâm mộ của nhánh này tỏ ra chẳng ưa gì game thủ người Hồ Bắc cả. [...] Còn nhớ mới đây tại AoE Việt Trung 2024, thậm chí cặp đôi Đại Trù - Tiểu Hòa Ca còn được thưởng hàng tỷ đồng khi loại được Shenlong - Tiễn Như Vũ khỏi tứ kết 2vs2 Assyrian. Ở chiều ngược lại, các ông bầu ủng hộ Shenlong cũng sẵn sàng vung tiền thưởng Shenlong để tuyên chiến với nhánh Hiệp hội La Mã.
+
+## Mẫu 60
+- Nguồn: aoe.vn - Chờ đợi gì từ trận tái đấu Thủy Ngư và Thần Long sau hơn 2 năm?
+- Thích vì: nói thẳng trận này không ảnh hưởng cuộc đua vô địch mà vẫn chỉ ra được thứ đáng xem - không giả vờ trận nào cũng quan trọng
+
+> Khi đó, các game thủ chắc chắn sẽ quyết tâm hơn, nhưng đồng thời cũng sẽ hồi hộp và gặp áp lực tâm lý lớn hơn. Đó là lúc mà người bản lĩnh hơn sẽ giành chiến thắng, còn fan hâm mộ chắc chắn được chứng kiến một cuộc đối đầu thực sự xứng đáng với hai chữ "kinh điển", dù cho về tính chất thì trận đấu trên chưa có ảnh hưởng gì đến cuộc đua vô địch giữa cả hai.
+
+## Mẫu 61
+- Nguồn: aoe.vn - Team ChipBoy và các Miss vô địch giải đấu Miss AoE 2024
+- Thích vì: thừa nhận cái cớ tò mò ban đầu rồi lập tức chuyển trọng tâm sang chuyên môn - lý do "đáng xem" phải là lý do đứng vững được
+
+> Không phải là một giải đấu chuyên nghiệp với những ngôi sao nổi tiếng, tuy nhiên Miss AoE 2024 vẫn tạo nên một sức nóng rất lớn trong cộng đồng AoE Việt Nam. Nguyên nhân một phần là bởi sự xuất hiện của các nữ game thủ xinh đẹp, duyên dáng thường sẽ gây tò mò cho người hâm mộ cộng đồng game. Nhưng quan trọng hơn hết là chất lượng chuyên môn của giải đấu vẫn rất cao, với sự quyết tâm đến đáng nể từ phía các Miss.
+
+## Mẫu 62
+- Nguồn: aoe.vn - Team ChipBoy và các Miss vô địch giải đấu Miss AoE 2024
+- Thích vì: khen tập thể thì mỗi người một việc cụ thể, và người bị coi là yếu nhất được khen bằng đúng cái vai họ đã làm tốt
+
+> Nói về con người, phải dành lời khen lớn cho Miss Phạm Hằng, người thi đấu cực chắc tay và ổn định trong hầu hết các game đấu. Miss Nhím nổi lên như một hiện tượng của giải với thao tác đẹp mắt và khả năng cầm chém cực rát, luôn gây ra sát thương lớn cho team đối phương. [...] Điều đáng nói ở đây là, ngay cả Miss Diệu Mai, người được cho là yếu nhất team nhưng không hề tỏ ra "phế" một chút nào. Cô luôn đóng vai trò hậu cần khi chủ động chạy dân để bơm đồ cho đồng đội thi đấu.
