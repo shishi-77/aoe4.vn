@@ -64,6 +64,17 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   ⚠️ CẦN NGƯỜI DUYỆT: the exact civ → mechanism mapping is NOT recorded here. Documented non-Landmark civs so far are Abbasid Dynasty, Ayyubids, Knights Templar and Golden Horde (recorded below as tech-research age-ups). Do NOT assert which specific civ uses the Town Center path or the secondary-building path without a fresh check - name the paths generically instead.
 - Exceptions already documented: Abbasid Dynasty, Ayyubids, Knights Templar, and Golden Horde age up via unique tech-research mechanics rather than picking landmarks in the standard way.
 - **WRITING RULE (owner, 2026-08-07): never write the Landmark age-up as an absolute.** Say "hầu hết các phe" and add that some civs age up at the Town Center or at a secondary building. An article that says every civ must build a Landmark to age up is a `contradiction`, not a style note.
+- **The Landmark age-up is NOT an AoE4 invention - it comes from AoE3 (owner, 2026-08-08).** In
+  Age of Empires III: The Asian Dynasties (2007), the three Asian civilizations advance ages by
+  building a Wonder chosen from a selection, each granting a different bonus, "instead of
+  advancing from the Town Center". AoE4 took that idea and made it the default for nearly the
+  whole roster. The series wiki's own Landmark page draws the same line, calling landmarks
+  similar to Wonders in The Asian Dynasties.
+  - source: https://en.wikipedia.org/wiki/Age_of_Empires_III:_The_Asian_Dynasties ,
+    https://ageofempires.fandom.com/wiki/Landmark , owner confirmation 2026-08-08
+  - Worth writing whenever an article frames Landmarks as what makes AoE4 different: the choose-
+    your-age-up idea is a series inheritance, and presenting it as new is the kind of error a
+    long-time player spots at once.
 
 ---
 
@@ -73,6 +84,18 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   - VERDICT: guide's "đủ 400 thực và 200 vàng thì lên Đời II" is **CONFIRMED as the standard, near-universal cost** for most civs.
   - ⚠️ CẦN NGƯỜI DUYỆT: while the Feudal-age resource cost is described as "standard across civilizations" by multiple sources, the civs with alternate age-up mechanics (Abbasid, Ayyubids, Knights Templar, Golden Horde) do NOT necessarily follow this exact cost/mechanic - the guide's "nền văn minh nào cũng áp dụng được" framing should be understood as "the default/most-civs case," not universally exception-free. Worth a caveat sentence in the guide, but not a factual error given it's presented as a beginner-default build.
   source: search synthesis (GamesRadar, Fandom Feudal Age page, GameNGuide).
+
+- **"7 thực 3 vàng" is an AoE4 convention, and this is its home.** Seven villagers on food and
+  three on gold is the basic Feudal opening - it sizes directly to the 400 food + 200 gold
+  age-up cost above. CONFIRMED by site owner 2026-08-08. `build-order-co-ban-aoe4.ts` already
+  teaches it correctly.
+  - **Recorded here because it was previously filed under the wrong game.** `aoe1-facts.md`
+    carried it as an AoE1 convention with a `CONFIRMED` stamp from 2026-07-06, re-affirmed
+    2026-08-07, and it reached a draft article before the owner caught it on 2026-08-08. That
+    entry is now retracted. Advancing an age in AoE1 costs no gold, so a food/gold villager
+    split cannot describe an AoE1 opening - the mechanics rule it out.
+  - Treat it the same way as any other build number: a convention that tracks the meta, not an
+    engine rule.
 
 ---
 
@@ -131,6 +154,15 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
 ## Cross-title speed ranking (AoE1/2/3/4)
 
 - The guide's claim "AoE3 > AoE1 > AoE4 > AoE2" (relative pacing/speed ranking across the series) is CONFIRMED accurate by the domain expert (user, 2026-07-06) as the accepted community ranking. It is not an official benchmarked metric, but it is treated as true for this audience and must NOT be flagged as a factual error.
+- **WHAT THE RANKING ACTUALLY MEASURES (owner, 2026-08-08): raw game speed, not "match pacing".**
+  It is how fast things MOVE - villager movement, cavalry movement - with the game's speed
+  setting pushed to maximum. It is NOT a statement about how long a match lasts, how much
+  thinking time you get per phase, or how frantic the APM is.
+  - **WRITING RULE**: describe it in those concrete terms ("dân đi nhanh hay chậm, quân xông lên
+    nhanh hay chậm khi đẩy thiết lập tốc độ lên mức cao nhất"). Do NOT translate it into
+    "nhịp trận", "thêm thời gian ở mỗi pha", "đỡ phải bấm gấp" or any other claim about pacing
+    or reaction time - the owner corrected exactly that rewording on 2026-08-08. The ranking
+    licenses a statement about unit speed and nothing beyond it.
 
 ---
 
@@ -152,6 +184,12 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
   source: site owner (AoE1/AoE4 domain expert), 2026-07-07.
 
 ## Ranked ladder (added 2026-08-08, for `ranked-aoe4-vs-ladder-starcraft`)
+
+> ⚠️ **A ranked ladder is NOT an AoE4 differentiator (owner, 2026-08-08). Every title in the
+> series has one.** Everything below describes how AoE4 divides its ranks; none of it is a
+> reason to prefer AoE4 over AoE2, AoE3 or AoE1 DE. An article that lists "has a seasonal
+> ranked ladder" among AoE4's advantages is making a false comparison, and the owner corrected
+> exactly that on 2026-08-08.
 
 - **Six rank divisions, each with three tiers**, lowest to highest: Bronze, Silver, Gold,
   Platinum, Diamond, **Conqueror**. Tiers are written like "Silver II", giving 18 steps in all.
@@ -216,6 +254,38 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
   Liquipedia's `Age_of_Empires_IV/Tournaments` page is pure template transclusion, so its wikitext
   holds no tournament data - same dead end as the StarCraft `Winnings/<year>` pages. Only Red Bull
   Wololo is sourced here; do not imply it is the only AoE4 event of the year.
+
+## Where AoE4 stands in Vietnam (added 2026-08-08, for `de-che-co-nhung-ban-nao`)
+
+Site owner speaking about their own community, 2026-08-08. Same standing as the other
+`Confirmed by site owner` lines here. See `aoe1-facts.md` for the AoE1 half of the picture.
+
+- **AoE2 and AoE4 are currently level in Vietnam, and both are small next to AoE1.** Confirmed
+  by site owner 2026-08-08.
+- **On the current trend AoE4 is the one that will pull ahead of those two.** Confirmed by site
+  owner 2026-08-08.
+  - **WRITING RULE (owner, 2026-08-08)**: this is the owner's READ of a trend, not a measurement.
+    Present it as a judgement ("theo đà hiện nay"). Dressing it up as data - a number, a player
+    count, a survey - is a `contradiction`, because no such measurement exists in this store.
+
+- **⚠️ CORRECTED SAME DAY - most of the "grounds" first written here were NOT differentiators.**
+  The first version of this rule invited an article to justify the read with a list: newest
+  title, steadiest content cadence, on PC/console/Game Pass, seasonal ranked ladder. The owner
+  struck three of the four on 2026-08-08, because AoE2 matches AoE4 on every one of them:
+  | Proposed ground | Verdict |
+  | --- | --- |
+  | Ra nội dung đều tay hơn | ❌ **Both AoE2 and AoE4 are updated heavily right now.** Cannot separate them. |
+  | Có bảng xếp hạng theo mùa | ❌ Every title in the series has a ranked ladder. See the warning in "Ranked ladder". |
+  | Có trên PC, console và Game Pass | ❌ AoE2 DE is on Xbox, PlayStation and Game Pass too. |
+  | Là bản mới nhất của series | ✅ The only one that actually holds - AoE4 has the longest content life still ahead of it. |
+  So an article may offer exactly one sourced ground (newest title) plus the owner's read of
+  where new Vietnamese players are heading. **Manufacturing a longer list is a false comparison,
+  and listing update cadence in particular is the trap** - it looks like the strongest argument
+  and is in fact a tie.
+- These claims must not be turned into disparagement of AoE2 or AoE1. The sourced material in
+  `aoe2-facts.md` (seven years of continuous expansion, Metacritic 84, cross-platform) is the
+  reason AoE2 is level rather than behind, and it belongs in any article that makes this
+  comparison.
 
 ## Open questions for the human reviewer
 

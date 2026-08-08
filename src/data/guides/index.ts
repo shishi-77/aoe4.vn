@@ -10,6 +10,7 @@ import { wallsAndDefenseGuide } from './tuong-thanh-phong-thu-aoe4'
 import { mobilityUnitsGuide } from './cung-r-ngua-chem-aoe4'
 import { aoe4VsAoe2Guide } from './aoe4-vs-aoe2-khac-biet-cot-loi'
 import { rtsStarter2026Guide } from './game-rts-nao-de-bat-dau-2026'
+import { allTitlesGuide } from './de-che-co-nhung-ban-nao'
 
 export interface GuideLink {
   /** Slug of the target guide under /guides/:slug. */
@@ -64,6 +65,7 @@ export const guides: Guide[] = [
   mobilityUnitsGuide,
   aoe4VsAoe2Guide,
   rtsStarter2026Guide,
+  allTitlesGuide,
 ]
 
 export function getGuideBySlug(slug: string): Guide | undefined {

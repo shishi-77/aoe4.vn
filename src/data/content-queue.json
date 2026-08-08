@@ -3,7 +3,12 @@
     "slug": "aoe4-vs-aoe2-khac-biet-cot-loi",
     "targetKeyword": "aoe4 vs aoe2",
     "kind": "comparison",
-    "evidence": { "query": "aoe4 vs aoe2", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "aoe4 vs aoe2",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "published",
     "notes": "Dry run Task 10: PASS (structure 8, voice 7, conversion 7, 0 mâu thuẫn, 0 dìm game). Merged 2026-08-06 qua PR #48; gap cổng chống thụt lùi phát hiện từ dry run này đã vá ở PR #49.",
     "createdAt": "2026-08-06",
@@ -55,7 +60,12 @@
     "slug": "aoe4-vs-aoe3-khac-nhau-the-nao",
     "targetKeyword": "aoe4 vs aoe3",
     "kind": "comparison",
-    "evidence": { "query": "aoe4 vs aoe3", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "aoe4 vs aoe3",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -120,7 +130,12 @@
     "slug": "ranked-aoe4-vs-ladder-starcraft",
     "targetKeyword": "rank aoe4",
     "kind": "comparison",
-    "evidence": { "query": "rank aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "rank aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -129,7 +144,12 @@
     "slug": "aoe3-co-gi-hay",
     "targetKeyword": "aoe3 có gì hay",
     "kind": "comparison",
-    "evidence": { "query": "aoe3 có gì hay", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "aoe3 có gì hay",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -153,7 +173,12 @@
     "slug": "esports-aoe4-vs-starcraft2",
     "targetKeyword": "giải đấu aoe4",
     "kind": "comparison",
-    "evidence": { "query": "giải đấu aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "giải đấu aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -162,7 +187,12 @@
     "slug": "micro-aoe4-vs-starcraft",
     "targetKeyword": "micro aoe4",
     "kind": "comparison",
-    "evidence": { "query": "micro aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "micro aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -171,7 +201,12 @@
     "slug": "aoe2-dinh-cao-vi-sao-van-nen-thu-aoe4",
     "targetKeyword": "aoe2 hay aoe4",
     "kind": "comparison",
-    "evidence": { "query": "aoe2 hay aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "aoe2 hay aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
@@ -180,7 +215,12 @@
     "slug": "len-doi-aoe4-can-gi",
     "targetKeyword": "lên đời aoe4",
     "kind": "guide",
-    "evidence": { "query": "lên đời aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "lên đời aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "notes": "Seed 2026-08-08 để phiên headless có item kind=guide chạy được. Bối cảnh: queue trước đó 100% comparison. PR #62 đã gỡ chặn comparison bằng kho aoe2/aoe3/starcraft-facts, nhưng guide vẫn là đường không cần mạng chút nào, nên vẫn đáng có trong queue. Kho phủ: aoe4-facts.md mục \"Ages & unlocks\" (4 đời, đường Landmark là mặc định chứ không tuyệt đối) + mục \"Economy / Age-up costs\" (400 thực 200 vàng). LƯU Ý khi soạn facts sheet: cả hai mục đều có cờ CẦN NGƯỜI DUYỆT về độ chính xác con số và bản đồ phe -> đời, nên viết theo WRITING RULE ngày 2026-08-07 (nói \"hầu hết các phe\", không neo tuyệt đối, không tự đặt tên phe nào đi đường nào). Gap thật: build-order-co-ban-aoe4 dạy một build lên Đời II, chưa bài nào giải thích hệ thống lên đời.",
     "createdAt": "2026-08-08",
@@ -205,9 +245,29 @@
     "slug": "lac-da-abbasid-aoe4",
     "targetKeyword": "lạc đà aoe4",
     "kind": "guide",
-    "evidence": { "query": "lạc đà aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "evidence": {
+      "query": "lạc đà aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
     "status": "proposed",
     "notes": "Seed 2026-08-08. Kho phủ: aoe4-facts.md mục \"Abbasid Dynasty\" (Camel Archer kỵ bắn xa nhẹ Đời II, Camel Rider kỵ cận chiến nhẹ Đời III) + mục \"Camel anti-cavalry aura\" (Camel Unease giảm 20% sát thương gốc của kỵ ngựa địch trong ~5 ô) + Abbasid kinh tế mạnh nhất. Đây là item RỦI RO TRÙNG cao nhất trong ba cái seed: cung-r-ngua-chem-aoe4 đã nhắc lạc đà. Owner thấy thừa thì bỏ item này trước. Con số 20% và bán kính aura có cờ CẦN NGƯỜI DUYỆT (đổi theo patch) - viết như cơ chế, đừng neo như hằng số.",
+    "createdAt": "2026-08-08",
+    "updatedAt": "2026-08-08"
+  },
+  {
+    "slug": "de-che-co-nhung-ban-nao",
+    "targetKeyword": "đế chế có những bản nào",
+    "kind": "guide",
+    "evidence": {
+      "query": "đế chế có những bản nào",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "in-pr",
+    "notes": "Owner đặt bài trực tiếp trong phiên 2026-08-08, không đi qua propose-topics. Bài điểm danh 9 mục owner chốt: Đế chế 1 + Rise of Rome, Đế chế 1 DE, Đế chế 2 + The Conquerors, Đế chế 2 DE, Đế chế 3 + 2 bản mở rộng, Đế chế 3 DE, Đế chế 4, Age of Mythology + Retold, Empire Earth. Đặt kind=utility trong file guide (KHÔNG phải comparison) vì luật 2026-08-07 buộc bài comparison chỉ so đúng hai game trong tiêu đề, bài điểm danh 9 mục không sống được dưới luật đó. Facts sheet docs/facts-review/de-che-co-nhung-ban-nao.md: 64 claim, 0 claim CẦN XÁC NHẬN sau cổng owner. Năm claim owner xác nhận mới (#15, #60-63) đã append vào aoe1-facts.md và aoe4-facts.md. Ba khoảng trống kho phải fetch web trong phiên: Đế chế 1 DE, Age of Mythology, Empire Earth. | Evaluator: PASS (structure 8, voice 6, conversion 8; sàn utility 7/5/3), 0 mâu thuẫn, 0 dìm game, sau 5 vòng fact-check. Scorecard docs/reviews/de-che-co-nhung-ban-nao-scorecard.md có nhật ký từng vòng + 3 bài học rút ra.",
     "createdAt": "2026-08-08",
     "updatedAt": "2026-08-08"
   }
