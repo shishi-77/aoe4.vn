@@ -34,47 +34,67 @@ Thêm một chi tiết về cách lỗi sống sót: phiên 2026-08-07 sửa "23
 định "7 thực 3 vàng" ngay dòng bên cạnh**. Bài học: rà một dòng không có nghĩa là đã rà hàng
 xóm của nó. Danh sách dưới đây cố tình liệt kê từng dòng một để tránh lặp lại đúng chuyện đó.
 
-## Danh sách cần owner đọc lại
+## Danh sách cần owner đọc lại - ĐÃ XONG 2026-08-08
+
+Owner trả lời từng dòng một, hỏi theo dạng lựa chọn. Kết quả: **14 giữ nguyên, 1 retract,
+2 sửa cách ghi, và 1 dòng mới phát sinh ngoài danh sách** (B5: Đế chế đỏ / Đế chế xanh). Toàn bộ
+đã ghi vào kho.
 
 ### A. Từ phiên 2026-07-06 (phiên đã sinh ra hai lỗi trên)
 
 | # | Claim đang ghi trong kho | Đúng / Sai / Cần sửa |
 | --- | --- | --- |
-| A1 | "cung A" = Composite Bowman, là archer ĐI BỘ | |
-| A2 | "cung R" = Chariot Archer, là archer CƯỠI (kỵ cung) - khác hẳn cung A | |
-| A3 | Cung A KHÔNG có xuyên giáp, KHÔNG có bonus damage vs class nào; lợi thế chỉ là giá và tầm | |
-| A4 | Cung R KHÔNG khắc chế class nào; lợi thế là cơ động, đánh rồi rút | |
-| A5 | Slinger ("quẩy đá") có bonus vs archer, nhưng CHỈ vs archer đi bộ, KHÔNG vs kỵ cung | |
-| A6 | "Đời 3 không thành" là luật nhà có thật của cộng đồng Việt (đánh từ đời 3, bỏ thành và chòi) | |
-| A7 | Xếp hạng nhịp trận cả dòng: AoE3 > AoE1 > AoE4 > AoE2 (dòng này nằm ở `aoe4-facts.md` nhưng cùng phiên duyệt) | |
+| A1 | "cung A" = Composite Bowman, là archer ĐI BỘ | ✅ Đúng, giữ nguyên |
+| A2 | "cung R" = Chariot Archer, là archer CƯỠI (kỵ cung) - khác hẳn cung A | ✅ Đúng, giữ nguyên |
+| A3 | Cung A KHÔNG có xuyên giáp, KHÔNG có bonus damage vs class nào; lợi thế chỉ là giá và tầm | ✅ Đúng, giữ nguyên |
+| A4 | Cung R KHÔNG khắc chế class nào; lợi thế là cơ động, đánh rồi rút | ✅ Đúng, giữ nguyên |
+| A5 | Slinger ("quẩy đá") có bonus vs archer, nhưng CHỈ vs archer đi bộ, KHÔNG vs kỵ cung | ❌ **SAI - quẩy đá khắc tất cả loại cung, kể cả kỵ cung.** Đã retract có để vết. Nguồn heavengames chỉ ghi "+2 attack vs. archers", không hề tách cung bộ với kỵ cung - tức vế giới hạn là phần owner-only đắp thêm lên một dòng vốn có nguồn |
+| A6 | "Đời 3 không thành" là luật nhà có thật của cộng đồng Việt (đánh từ đời 3, bỏ thành và chòi) | ✅ Đúng, giữ nguyên |
+| A7 | Xếp hạng nhịp trận cả dòng: AoE3 > AoE1 > AoE4 > AoE2 (dòng này nằm ở `aoe4-facts.md` nhưng cùng phiên duyệt) | ⚠️ Thứ tự đúng, nhưng gọi là **tốc độ (speed setting)** chứ không phải "nhịp trận". Trùng đúng chỗ owner đã sửa sáng cùng ngày, nay chốt lại cả ở câu mở đầu mục |
 
 ### B. Bản đồ từ lóng (đầu file, không ghi ngày duyệt riêng)
 
 | # | Claim đang ghi trong kho | Đúng / Sai / Cần sửa |
 | --- | --- | --- |
-| B1 | "ngựa chém" / "ngựa" = dòng kỵ binh cận chiến: Scout → Cavalry → Heavy Cavalry → Cataphract | |
-| B2 | "ngựa dò" = Scout, đơn vị kỵ khởi điểm dùng để đi dò | |
-| B3 | "lạc đà" = Camel Rider (chỉ có ở Rise of Rome, đời Bronze, ra từ Stable) | |
-| B4 | "kỵ cung" = Horse Archer / Heavy Horse Archer, hoặc rộng hơn là mọi archer cưỡi | |
+| B1 | "ngựa chém" / "ngựa" = dòng kỵ binh cận chiến: Scout → Cavalry → Heavy Cavalry → Cataphract | ✅ Đúng, giữ nguyên |
+| B2 | "ngựa dò" = Scout, đơn vị kỵ khởi điểm dùng để đi dò | ✅ Đúng, giữ nguyên |
+| B3 | "lạc đà" = Camel Rider (chỉ có ở Rise of Rome, đời Bronze, ra từ Stable) | ⚠️ Nội dung ĐÚNG, chỉ sửa cách ghi. Diễn biến đáng lưu: owner vặn "chỉ có ở Rise of Rome là sao, bản nào chả có", rồi trả lời rằng lạc đà có từ bản đầu và RoR chỉ thêm civ Palmyran; Wikipedia ghi RoR thêm **cả năm** đơn vị (slinger, camel rider, scythe chariot, armored elephant, fire galley) lẫn bốn civ; sau đó **owner tự đính chính**: lạc đà đúng là chỉ có từ RoR. Kho giờ ghi theo cặp tên cộng đồng (xem B5) kèm URL |
+| B5 | *(dòng MỚI, không có trong bản rà gốc)* "Đế chế đỏ" = bản 1997, "Đế chế xanh" = Rise of Rome - và Đế chế xanh là bản dân Việt chơi phổ biến đến nay | ✅ Owner cung cấp 2026-08-08. Không wiki nào ghi cặp tên này, owner là nguồn duy nhất hợp lệ. Đây cũng là cách nói gọn nhất cho vế bản: "lạc đà không có ở Đế chế đỏ, có từ Đế chế xanh" vừa nói đúng lịch sử vừa cho người đọc biết máy mình có |
+| B4 | "kỵ cung" = Horse Archer / Heavy Horse Archer, hoặc rộng hơn là mọi archer cưỡi | ✅ Đúng, giữ nguyên |
 
 ### C. Từ phiên 2026-08-07
 
 | # | Claim đang ghi trong kho | Đúng / Sai / Cần sửa |
 | --- | --- | --- |
-| C1 | Số dân lúc lên đời KHÔNG cố định: quanh 23 dân với bài chém, quanh 26 dân với bài cung, và trôi theo meta | |
+| C1 | Số dân lúc lên đời KHÔNG cố định: quanh 23 dân với bài chém, quanh 26 dân với bài cung, và trôi theo meta | ✅ Đúng, giữ nguyên |
 
 ### D. Từ phiên 2026-08-08 (hôm nay, chưa qua vòng đọc lại nào)
 
 | # | Claim đang ghi trong kho | Đúng / Sai / Cần sửa |
 | --- | --- | --- |
-| D1 | Đế chế 1 có cộng đồng lớn nhất và lâu đời nhất Việt Nam trong cả dòng | |
-| D2 | Cộng đồng đó đang đi xuống vì thiếu lớp kế cận, không phải vì game | |
-| D3 | Đế chế 1 DE (2018) không bắt được cộng đồng Việt, dân Việt ở lại bản cũ | |
-| D4 | Đế chế 2 và Đế chế 4 ở Việt Nam hiện ngang nhau, cả hai đều nhỏ hơn Đế chế 1 | |
-| D5 | Theo đà hiện nay, Đế chế 4 là bản sẽ bứt lên trong hai cái tên đó | |
+| D1 | Đế chế 1 có cộng đồng lớn nhất và lâu đời nhất Việt Nam trong cả dòng | ✅ Đúng, giữ nguyên |
+| D2 | Cộng đồng đó đang đi xuống vì thiếu lớp kế cận, không phải vì game | ✅ Đúng, giữ nguyên |
+| D3 | Đế chế 1 DE (2018) không bắt được cộng đồng Việt, dân Việt ở lại bản cũ | ✅ Đúng, giữ nguyên |
+| D4 | Đế chế 2 và Đế chế 4 ở Việt Nam hiện ngang nhau, cả hai đều nhỏ hơn Đế chế 1 | ✅ Đúng, giữ nguyên |
+| D5 | Theo đà hiện nay, Đế chế 4 là bản sẽ bứt lên trong hai cái tên đó | ✅ Đúng, giữ nguyên |
 
-## Cách dùng file này
+## Bài học rút ra từ chính vòng rà này
 
-Owner điền cột cuối rồi báo lại; tôi sẽ ghi thẳng vào kho, dòng nào sai thì retract theo đúng
-kiểu đã làm với "7 thực 3 vàng" (giữ lại vết, ghi rõ vì sao sai, cấm khôi phục) chứ không xóa
-lặng lẽ - để lần sau có ai đọc kho còn biết dòng đó từng tồn tại và đã hỏng thế nào.
+1. **Tỉ lệ hỏng thật của phiên 2026-07-06 là 3/7**, không phải 2/2 như phần đầu file dự đoán -
+   thêm A5. Cả ba lỗi đều là claim về CƠ CHẾ (build, bonus damage), còn claim về TỪ LÓNG và về
+   CỘNG ĐỒNG thì đúng hết 9/9. Đó là ranh giới đáng nhớ: owner là nguồn không thể thay thế cho
+   tiếng lóng và cho chuyện cộng đồng Việt, nhưng với số liệu cơ chế thì lời owner cần nguồn
+   chống lưng y như mọi dòng khác.
+2. **Tra nguồn ngay trong lúc hỏi là thứ giữ được vòng rà này.** A5 owner tự bác, nhưng B3 thì
+   owner trả lời sai giữa chừng và chỉ vỡ ra nhờ tra Wikipedia tại chỗ; nếu vòng rà chỉ ghi lại
+   lời owner thì B3 đã thành một dòng sai MỚI, đúng kiểu "7 thực 3 vàng" tập hai. Vòng rà sau
+   phải giữ nguyên thói quen đó cho mọi claim cơ chế, kể cả khi owner khẳng định chắc.
+3. **Nhưng đối đáp mới là thứ sinh ra fact tốt nhất trong ngày.** Chính vì bị hỏi đi hỏi lại vế
+   "bản nào có lạc đà", owner mới đưa ra cặp tên **Đế chế đỏ / Đế chế xanh** - thứ không có
+   trong bất cứ wiki nào, không nằm trong danh sách 17 dòng, và không vòng rà tự động nào nghĩ
+   ra để hỏi. Bài học: rà kho không chỉ là lọc cái sai ra, nó còn là dịp moi được cái đúng mà
+   chưa ai kịp ghi. Vòng sau nên chừa chỗ cho owner nói thêm chứ đừng đóng khung chỉ ba lựa chọn
+   đúng/sai/cần sửa.
+4. **Dòng có nguồn vẫn có thể bị đắp thêm một vế không nguồn.** A5 là một câu sourced ("+2 vs
+   archers") bị nối thêm một mệnh đề owner-only thu hẹp phạm vi. Lần quét tới nên soi riêng loại
+   này: câu có URL nhưng mang thêm vế mà URL đó không nói.

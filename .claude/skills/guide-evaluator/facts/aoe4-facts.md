@@ -153,7 +153,7 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
 
 ## Cross-title speed ranking (AoE1/2/3/4)
 
-- The guide's claim "AoE3 > AoE1 > AoE4 > AoE2" (relative pacing/speed ranking across the series) is CONFIRMED accurate by the domain expert (user, 2026-07-06) as the accepted community ranking. It is not an official benchmarked metric, but it is treated as true for this audience and must NOT be flagged as a factual error.
+- The guide's claim "AoE3 > AoE1 > AoE4 > AoE2" (relative game-speed ranking across the series) is CONFIRMED accurate by the domain expert (user, 2026-07-06) and re-confirmed in the 2026-08-08 full re-read of the owner-only lines. It is not an official benchmarked metric, but it is treated as true for this audience and must NOT be flagged as a factual error. On both passes the owner asked for the word "nhịp trận" to be dropped in favour of tốc độ / speed setting - see the next entry, which is the binding definition.
 - **WHAT THE RANKING ACTUALLY MEASURES (owner, 2026-08-08): raw game speed, not "match pacing".**
   It is how fast things MOVE - villager movement, cavalry movement - with the game's speed
   setting pushed to maximum. It is NOT a statement about how long a match lasts, how much
