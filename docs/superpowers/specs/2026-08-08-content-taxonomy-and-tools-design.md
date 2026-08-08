@@ -112,21 +112,21 @@ Nhóm rỗng thì không render heading. Thứ tự nhóm là hằng số trong 
 
 ## 6. Navbar
 
-Thêm `Công cụ` → `/tools/`. Thứ tự cuối cùng:
+Thêm `Công cụ` → `/tools/`, **đồng thời chuyển `Blog ↗` xuống footer** để header giữ đúng 6 mục. Thứ tự cuối cùng:
 
 ```
-Hỏi đáp | Giải đấu | Hướng dẫn | Công cụ | Tin tức | Blog ↗ | [Facebook]
+Hỏi đáp | Giải đấu | Hướng dẫn | Công cụ | Tin tức | [Facebook]
 ```
 
 `Công cụ` đặt ngay sau `Hướng dẫn` vì công cụ là thứ người đọc tìm tới sau khi đọc hướng dẫn.
 
-### Xung đột đã biết với spec 2026-08-03
+### Quan hệ với spec 2026-08-03
 
-Spec `2026-08-03-header-menu-trim-design.md` cố ý rút header xuống **đúng 6 mục** vì "too dense", và đã được owner duyệt. Thêm `Công cụ` đưa con số lên 7, tức là đi ngược một phần quyết định đó.
+Spec `2026-08-03-header-menu-trim-design.md` cố ý rút header xuống **đúng 6 mục** vì "too dense". Spec này **giữ nguyên mốc đó**: `Công cụ` vào, `Blog ↗` ra.
 
-Owner đã xác nhận vẫn muốn `Công cụ` trên navbar. Spec này ghi nhận điều đó là quyết định thay thế, giới hạn ở đúng một mục.
+`Blog ↗` là ứng viên hy sinh đúng vì nó là link ra ngoài site, không phải chuyên mục nội dung - sau khi chuyển, cả 5 chuyên mục và đúng một CTA chiếm trọn header, không còn ngoại lệ nào.
 
-**Lối thoát nếu muốn giữ mốc 6 mục:** chuyển `Blog ↗` xuống footer. Đó là link ra ngoài site, không phải chuyên mục nội dung, nên nó là ứng viên hy sinh hợp lý hơn bất kỳ mục nào trong 5 chuyên mục. Đây là quyết định để mở, mặc định là **giữ 7 mục**.
+Vị trí mới của `Blog ↗`: `AppFooter.vue`, cạnh link GitHub đang có, dùng lại đúng lớp style của link đó (`inline-flex min-h-11 items-center gap-1 text-gold hover:underline`) kèm `target="_blank"` và `rel="noopener noreferrer"`. Footer hiện chỉ có dòng bản quyền và một link, nên thêm một link nữa không làm nó dày lên đáng kể.
 
 ## 7. Danh sách file phải sửa
 
@@ -140,7 +140,8 @@ Owner đã xác nhận vẫn muốn `Công cụ` trên navbar. Spec này ghi nh�
 **Sửa**
 
 - `src/router/index.ts` - route `/tools` tên `tools`
-- `src/components/AppNavbar.vue` - thêm link `Công cụ`
+- `src/components/AppNavbar.vue` - thêm link `Công cụ`, bỏ link `Blog ↗`
+- `src/components/AppFooter.vue` - nhận link `Blog ↗`
 - `src/data/guides/index.ts` - `kind` thành bắt buộc
 - 7 file guide thiếu `kind` - khai tường minh
 - `src/views/GuidesView.vue` - nhóm theo `kind`
@@ -156,7 +157,8 @@ Owner đã xác nhận vẫn muốn `Công cụ` trên navbar. Spec này ghi nh�
 
 - `src/data/tools/__tests__/index.spec.ts`: mọi `url` là HTTPS tuyệt đối, `name` và `description` không rỗng, không trùng `url`, `category` nằm trong union, `games` không rỗng.
 - `src/views/__tests__/GuidesView.spec.ts` (file mới): khẳng định trang render đủ 3 heading nhóm và mọi guide xuất hiện đúng một lần, không rơi rớt bài nào.
-- `src/components/__tests__/AppNavbar.spec.ts`: bổ sung khẳng định có link `/tools/`.
+- `src/components/__tests__/AppNavbar.spec.ts`: bổ sung khẳng định header có link `/tools/` và **không còn** link blog.
+- `src/components/__tests__/AppFooter.spec.ts`: khẳng định footer có link blog kèm `rel="noopener noreferrer"`. Tạo file nếu chưa có.
 - Accessibility: `/tools` được `PAGES` quét tự động sau khi thêm dòng. Trang có link ra ngoài nên phải tự kiểm tra bằng mắt phần văn bản link - axe xác nhận có tên khả truy cập chứ không xác nhận tên đó **đúng**.
 - Cổng trước PR: `npm run lint:check && npm run type-check && npm run test:run`.
 - Sweep thủ công theo ACCESSIBILITY.md: PR này thêm một widget mới (thẻ công cụ) và đổi bố cục trang `/guides`, nên cổng jsdom không phủ hết phần màu sắc, khoảng cách và tap target.
@@ -169,12 +171,15 @@ Owner đã xác nhận vẫn muốn `Công cụ` trên navbar. Spec này ghi nh�
 - Ảnh chụp màn hình hoặc logo của công cụ.
 - Đổi `content-queue.json` hay bất kỳ skill nào trong `.claude/skills/`.
 - Đưa `tools` vào `llms.txt`. Cân nhắc riêng sau, vì `LlmsInput` trong `src/lib/llmsTxt.ts` là hợp đồng có kiểm thử riêng.
+- Bổ sung `sources[]` cho `aoe4-khac-de-che-the-nao`. Xem mục 10.
 
 ## 10. Rủi ro
 
 **Bài so sánh vẫn nằm dưới nhãn "Hướng dẫn".** Đây là cái giá đã chấp nhận để không đụng URL. Giảm nhẹ bằng heading nhóm rõ ràng trên trang. Nếu lượng bài so sánh sau này áp đảo, mở lại quyết định ở mục 3.
 
-**Đổi `kind` của `aoe4-khac-de-che-the-nao` sang `comparison`.** Sàn điểm không đổi - comment ở `src/data/guides/index.ts` ghi rõ comparison chấm sàn như strategy. Nhưng guide-evaluator kỳ vọng bài `comparison` có `sources[]` để truy vết claim, mà bài này chưa có. Cần bổ sung nguồn cho bài đó, hoặc chấp nhận evaluator cảnh báo cho tới khi bổ sung.
+**Đổi `kind` của `aoe4-khac-de-che-the-nao` sang `comparison`.** Sàn điểm không đổi - comment ở `src/data/guides/index.ts` ghi rõ comparison chấm sàn như strategy. Nhưng guide-evaluator kỳ vọng bài `comparison` có `sources[]` để truy vết claim, mà bài này chưa có.
+
+**Quyết định của owner: bổ sung `sources[]` sau, ngoài phạm vi PR này.** Chấp nhận evaluator cảnh báo cho bài đó cho tới lúc bổ sung. Nhãn đúng ngay bây giờ đáng giá hơn là hoãn cả PR để chờ truy nguồn. Đây là việc còn nợ, cần theo dõi để không rơi.
 
 **Link công cụ bên thứ ba có thể chết.** `aoe-aegis.vercel.app` nằm trên tên miền miễn phí, rủi ro cao nhất trong bốn. Không tự động hóa việc kiểm tra ở bản này; ghi nhận là việc cần rà tay khi chạy `seo-audit` hàng tháng.
 
