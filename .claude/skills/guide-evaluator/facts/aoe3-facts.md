@@ -138,6 +138,18 @@ is not a matter of degree: **AoE3 computes bonus damage differently from AoE2.**
 - Original PC release **18 October 2005**. Expansions: **The WarChiefs** (17 Oct 2006, three
   Native American civilizations) and **The Asian Dynasties** (23 Oct 2007, three Asian
   civilizations). - source: https://ageofempires.fandom.com/wiki/Age_of_Empires_III
+
+- **The Asian Dynasties invented the age-up mechanic AoE4 now runs on (owner, 2026-08-08).** Its
+  three Asian civilizations "must build a Wonder to advance from age to age, instead of
+  advancing from the Town Center", and "players can choose from a selection of wonders, each
+  having benefits unique to their civilization", with the bonus growing by age. That is exactly
+  AoE4's Landmark: pick one of several age-up buildings, each opening a different path. The
+  series wiki's Landmark page makes the same comparison.
+  - source: https://en.wikipedia.org/wiki/Age_of_Empires_III:_The_Asian_Dynasties ,
+    https://ageofempires.fandom.com/wiki/Landmark , owner confirmation 2026-08-08
+  - This is the single most useful thing AoE3 contributes to an AoE4 article, and it cuts
+    against the common framing that Landmarks are what makes AoE4 new. See `aoe4-facts.md`
+    "Ages & unlocks".
 - **Definitive Edition released 15 October 2020**, bundling both expansions plus two new
   civilizations (Incas, Swedes), with 4K graphics, rebuilt assets, new modes (Art of War,
   Historical Battles, Diplomacy, Tycoon), an "extreme" AI, spectator mode and mod support.

@@ -81,6 +81,13 @@
   - **Never restore this line to this file.** If a future pass finds "7 thực 3 vàng" attributed
     to AoE1 anywhere, that is this same error resurfacing.
 - "Đời 3 không thành" (play the match out from Age 3, plus the competitive "no towers/castle" house-rule) is a CORRECT, accepted convention in the Vietnamese AoE1 scene. - CONFIRMED by domain expert (2026-07-06). It is a competitive house-rule, not engine-enforced, but accurate as community practice.
+- **"Luật" and "kèo" are two different things and must not be swapped (owner, 2026-08-08).**
+  - **Luật** = the rules of play the scene agreed on, e.g. **"đời 3 không thành"**.
+  - **Kèo** = the format of the match the two sides settle before starting, e.g. **"chạm 3"**,
+    **"solo random"**.
+  Writing `kèo "đời 3 không thành"` is wrong on both counts: it mislabels a rule as a format,
+  and it is the exact slip the owner caught in the `de-che-co-nhung-ban-nao` draft. Anyone who
+  plays would notice immediately, which makes it a credibility error rather than a word choice.
 - **The population number at age-up is NOT fixed at 23.** It follows the build being run: around 23 dân is typical of an early-melee opening ("bài chém"), around 26 dân of an archer opening ("bài cung"). Numbers like these track the meta and drift with it. - CONFIRMED by domain expert (2026-08-07). The older "23 dân, đời 3 không thành" entry stated the 23 as if it were the single default, which is wrong.
 - **WRITING RULE (owner, 2026-08-07): never print a population number as "the" AoE1 convention in an article.** The meta keeps moving, so a hard number both dates the article and reads as plainly wrong to anyone running a different build. To evoke the AoE1 opening, describe the SHAPE of the build instead: "bài chém sớm", "bài chủ lực khoẻ". A number is acceptable only when the sentence marks it as one example ("ví dụ bài chém hay lên đời quanh 23 dân"), never as a rule. An article asserting a fixed pop number as the convention is a `contradiction`, not a style note.
 - Scout is the standard unit to find sheep/forage and scout the map at the start of a game (matches "ngựa dò" usage in the guides). - source: WebSearch summary of https://aoe.heavengames.com/theacademy/unitsboatsandbuildings/scout/
