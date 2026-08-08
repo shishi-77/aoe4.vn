@@ -44,6 +44,7 @@ const EXPECTED_GRAPH = [
   'src/data/guides/cach-tai-aoe4.ts',
   'src/data/guides/cau-hinh-may-aoe4.ts',
   'src/data/guides/cung-r-ngua-chem-aoe4.ts',
+  'src/data/guides/game-rts-nao-de-bat-dau-2026.ts',
   'src/data/guides/huong-dan-aoe4-nguoi-moi.ts',
   'src/data/guides/index.ts',
   'src/data/guides/tim-nguoi-viet-choi-aoe4.ts',
