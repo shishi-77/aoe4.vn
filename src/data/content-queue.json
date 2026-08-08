@@ -175,5 +175,40 @@
     "status": "proposed",
     "createdAt": "2026-08-06",
     "updatedAt": "2026-08-06"
+  },
+  {
+    "slug": "len-doi-aoe4-can-gi",
+    "targetKeyword": "lên đời aoe4",
+    "kind": "guide",
+    "evidence": { "query": "lên đời aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "notes": "Seed 2026-08-08 để phiên headless có item kind=guide chạy được. Bối cảnh: queue trước đó 100% comparison. PR #62 đã gỡ chặn comparison bằng kho aoe2/aoe3/starcraft-facts, nhưng guide vẫn là đường không cần mạng chút nào, nên vẫn đáng có trong queue. Kho phủ: aoe4-facts.md mục \"Ages & unlocks\" (4 đời, đường Landmark là mặc định chứ không tuyệt đối) + mục \"Economy / Age-up costs\" (400 thực 200 vàng). LƯU Ý khi soạn facts sheet: cả hai mục đều có cờ CẦN NGƯỜI DUYỆT về độ chính xác con số và bản đồ phe -> đời, nên viết theo WRITING RULE ngày 2026-08-07 (nói \"hầu hết các phe\", không neo tuyệt đối, không tự đặt tên phe nào đi đường nào). Gap thật: build-order-co-ban-aoe4 dạy một build lên Đời II, chưa bài nào giải thích hệ thống lên đời.",
+    "createdAt": "2026-08-08",
+    "updatedAt": "2026-08-08"
+  },
+  {
+    "slug": "quan-khac-che-nhau-aoe4",
+    "targetKeyword": "khắc chế quân aoe4",
+    "kind": "guide",
+    "evidence": {
+      "query": "khắc chế quân aoe4",
+      "impressions": 0,
+      "position": 0,
+      "source": "manual"
+    },
+    "status": "proposed",
+    "notes": "Seed 2026-08-08, cùng lý do với len-doi-aoe4-can-gi (guide không phụ thuộc mạng). Kho phủ dày: aoe4-facts.md mục \"Counters / counter triangle\" (giáo khắc kỵ, kỵ khắc cung, cung khắc giáo - đã CONFIRMED) và mục \"Counters & civ economy\" insider 2026-07-07 (kỵ nhẹ khắc mọi quân bắn xa, giáo cộng nỏ khắc kỵ nặng). Khác cung-r-ngua-chem-aoe4: bài kia là bản đồ lính cho dân mê tốc độ, bài này là tra cứu khắc chế thuần Đế chế 4. Kiểm tra trùng lặp lúc soạn dàn ý, thấy giẫm chân thì báo owner thay vì viết đè.",
+    "createdAt": "2026-08-08",
+    "updatedAt": "2026-08-08"
+  },
+  {
+    "slug": "lac-da-abbasid-aoe4",
+    "targetKeyword": "lạc đà aoe4",
+    "kind": "guide",
+    "evidence": { "query": "lạc đà aoe4", "impressions": 0, "position": 0, "source": "manual" },
+    "status": "proposed",
+    "notes": "Seed 2026-08-08. Kho phủ: aoe4-facts.md mục \"Abbasid Dynasty\" (Camel Archer kỵ bắn xa nhẹ Đời II, Camel Rider kỵ cận chiến nhẹ Đời III) + mục \"Camel anti-cavalry aura\" (Camel Unease giảm 20% sát thương gốc của kỵ ngựa địch trong ~5 ô) + Abbasid kinh tế mạnh nhất. Đây là item RỦI RO TRÙNG cao nhất trong ba cái seed: cung-r-ngua-chem-aoe4 đã nhắc lạc đà. Owner thấy thừa thì bỏ item này trước. Con số 20% và bán kính aura có cờ CẦN NGƯỜI DUYỆT (đổi theo patch) - viết như cơ chế, đừng neo như hằng số.",
+    "createdAt": "2026-08-08",
+    "updatedAt": "2026-08-08"
   }
 ]
