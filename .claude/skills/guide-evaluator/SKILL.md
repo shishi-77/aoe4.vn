@@ -156,6 +156,9 @@ Chạy bước này SAU Bước 3 để có sẵn danh sách `contradictions` m�
 Dispatch 1 subagent đọc:
 - `.claude/skills/guide-evaluator/facts/aoe1-facts.md`
 - `.claude/skills/guide-evaluator/facts/aoe4-facts.md`
+- `.claude/skills/guide-evaluator/facts/aoe2-facts.md`
+- `.claude/skills/guide-evaluator/facts/aoe3-facts.md`
+- `.claude/skills/guide-evaluator/facts/starcraft-facts.md`
 Nhiệm vụ 1 - trích MỌI claim sự thật trong bài, rồi phân loại theo facts file:
 - Claim MÂU THUẪN facts -> `contradictions[]` (mỗi cái: câu trích + fact bị vi phạm).
 - Claim facts XÁC NHẬN đúng -> bỏ qua.
@@ -296,11 +299,16 @@ thường. Chấm theo ĐÚNG giao thức guide với các thay đổi sau:
    - **AoE4**: đối chiếu kho `facts/aoe4-facts.md` TRƯỚC; claim ngoài kho nhưng có URL nguồn
      trong facts sheet -> xác minh trực tiếp như news (WebFetch); không kho không nguồn ->
      `claimsToVerify[]`.
-   - **AoE2 / AoE3 / StarCraft**: BẮT BUỘC có URL nguồn chính thức trong facts sheet (wiki
-     game, Liquipedia, patch notes...). WebFetch từng URL đối chiếu như chế độ news: nguồn
-     xác nhận -> qua; nguồn nói ngược -> `contradictions[]`; không xác minh được (URL chết,
-     nguồn không nhắc) -> `unverifiableClaims[]`; claim KHÔNG có dòng nguồn nào ->
-     `contradictions[]` (luật cứng của kind này).
+   - **AoE2 / AoE3 / StarCraft**: đối chiếu kho `facts/aoe2-facts.md` / `aoe3-facts.md` /
+     `starcraft-facts.md` TRƯỚC. Kho xác nhận -> qua; kho nói ngược -> `contradictions[]`.
+     Claim ngoài kho thì BẮT BUỘC có URL nguồn chính thức trong facts sheet (wiki game,
+     Liquipedia, patch notes...), WebFetch từng URL đối chiếu như chế độ news: nguồn xác nhận
+     -> qua; nguồn nói ngược -> `contradictions[]`; không xác minh được (URL chết, nguồn không
+     nhắc) -> `unverifiableClaims[]`; claim KHÔNG kho KHÔNG nguồn -> `contradictions[]` (luật
+     cứng của kind này).
+     Dòng kho mang cờ `⚠️ CẦN NGƯỜI DUYỆT` KHÔNG được tính là kho xác nhận - claim dựa vào nó
+     rơi về `unverifiableClaims[]`. Ba kho này chưa qua vòng duyệt domain-expert như
+     `aoe1-facts.md`/`aoe4-facts.md`, cờ đó là thứ duy nhất giữ ranh giới.
    WebFetch lỗi không làm sập vòng chấm - claim rơi về `unverifiableClaims`.
 3. **Bước 4**: `floorsForKind('comparison')`. `unverifiableClaims` không chặn PASS trong
    phiên có owner nhưng CHẶN điều kiện headless (xem skill write-article).

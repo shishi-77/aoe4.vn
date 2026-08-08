@@ -47,7 +47,17 @@ Soạn `docs/facts-review/<slug>.md`:
      | --- | --- |
      | AoE1 / meta VN | Trong kho `aoe1-facts.md` -> `[ĐÃ CÓ TRONG KHO]`; ngoài kho -> `[CẦN XÁC NHẬN]` (câu hỏi cho owner) |
      | AoE4 | Kho `aoe4-facts.md` -> `[ĐÃ CÓ TRONG KHO]`; hoặc URL nguồn chính thức (WebFetch trích đúng) |
-     | AoE2 / AoE3 / StarCraft | BẮT BUỘC URL nguồn chính thức (wiki game, Liquipedia, patch notes); không tìm được nguồn -> `[KHÔNG CÓ NGUỒN - SẼ BỎ KHỎI BÀI]` |
+     | AoE2 / AoE3 / StarCraft | Kho `aoe2-facts.md` / `aoe3-facts.md` / `starcraft-facts.md` TRƯỚC -> `[ĐÃ CÓ TRONG KHO]` kèm trích dòng fact VÀ URL nguồn đi kèm dòng đó; ngoài kho thì BẮT BUỘC URL nguồn chính thức (wiki game, Liquipedia, patch notes); không kho không nguồn -> `[KHÔNG CÓ NGUỒN - SẼ BỎ KHỎI BÀI]` |
+
+   Ba kho AoE2/AoE3/StarCraft là bản cache của thao tác fetch, dựng ngày 2026-08-08 vì phiên
+   headless không ra được internet (network policy chỉ mở GitHub/npm). Mỗi dòng fact mang theo
+   URL nó lấy từ đâu, nên dùng kho vẫn thỏa luật "claim phải truy vết được về nguồn".
+   HAI NGOẠI LỆ CỨNG:
+   - Dòng nào trong kho có cờ `⚠️ CẦN NGƯỜI DUYỆT` thì KHÔNG tính là `[ĐÃ CÓ TRONG KHO]`. Nó là
+     `[CẦN XÁC NHẬN]`, tức item rớt điều kiện headless. Cờ đó có mặt chính là để chặn chỗ này.
+   - Ba kho này CHƯA qua vòng duyệt của owner như `aoe1-facts.md`/`aoe4-facts.md`. Mục "Open
+     questions" cuối mỗi file liệt kê đúng những chỗ còn hổng; claim rơi vào vùng đó thì đừng
+     viết, dù có vẻ hiển nhiên.
 3. Mẫu bảng:
    | # | Claim | Trạng thái | Nguồn / fact đối chiếu |
 
