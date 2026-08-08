@@ -125,8 +125,12 @@ Soạn `docs/facts-review/<slug>.md`:
 1. `npm run lint:check && npm run type-check && npm run test:run` - xanh hết mới đi tiếp.
 2. Status queue = `in-pr`.
 3. Lấy link share: `npx vite-node scripts/share-links.ts /guides/<slug>/` (hoặc `/news/...`).
-4. Mở PR (gh account collaborator: `gh auth switch --user shishi-77`, switch về sau khi xong)
-   với body gồm: tóm tắt bài, VERDICT PASS + điểm từ scorecard, danh sách claimsToVerify
+4. Mở PR bằng `gh pr create`. Chuyện account: máy owner có hai gh account nên phải
+   `gh auth switch --user shishi-77` trước và switch về sau khi xong. Phiên headless chạy
+   trong sandbox cloud CHỈ có một identity - KHÔNG chạy `gh auth switch` ở đó, lệnh sẽ fail
+   và kéo đổ luôn bước PR. Không chắc đang ở đâu thì `gh auth status` trước: thấy đúng một
+   account -> bỏ qua switch.
+   Body PR gồm: tóm tắt bài, VERDICT PASS + điểm từ scorecard, danh sách claimsToVerify
    (nếu có) để owner liếc, và 2 link share UTM (owner copy khi đăng FB/Discord).
 5. Owner merge -> phiên sau (hoặc ngay nếu owner còn đó) đổi status = `published`, gộp vào
    PR/branch queue kế tiếp.

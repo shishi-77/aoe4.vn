@@ -33,4 +33,7 @@ coverage
 .superpowers/
 
 # Local docs / planning artifacts
-docs/
+docs/*
+# Facts sheets are pipeline state, not local scratch: a headless run must be able to push one
+# so the next run picks up where it left off.
+!docs/facts-review/
