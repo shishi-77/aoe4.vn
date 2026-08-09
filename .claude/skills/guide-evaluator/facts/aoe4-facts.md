@@ -31,12 +31,14 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
     in the first commit (2026-07-06), was never read back to the owner, cited a "fandom wiki
     *summary*" at a time when fandom returned HTTP 402 to WebFetch, and leaned on a forum thread
     whose slug already contained "horse-archer". The owner settled it directly: cavalry.
-  - **Sub-classification (ranged vs melee) is still WEB-SOURCED, not owner-confirmed.** The
-    owner was asked "bộ hay kỵ" and answered "kỵ binh". The sources below say specifically
-    *light ranged cavalry*, trained at the Archery Range from **Castle Age (Age III)**, ~5.5
-    range, filling the Crossbowman slot for Japanese, countering Knights / Men-at-Arms /
-    War Elephants (not Tower Elephants). An article MAY call it "kỵ cung" on that basis, but if
-    a future pass needs certainty on ranged-vs-melee, that is a separate question to the owner.
+  - **Sub-classification CLOSED 2026-08-09: it is kỵ cung, i.e. ranged cavalry.** Asked directly
+    whether Onna-Musha is kỵ cung or kỵ cận chiến, the owner answered **kỵ cung**. That settles
+    the last open half of this entry: both the class (cavalry, 2026-08-08) and the sub-class
+    (ranged, 2026-08-09) now carry an owner stamp, not just web sources. Grouping it beside
+    Mangudai and Horse Archer is correct.
+  - Web sources add the details the owner was not asked for: trained at the Archery Range from
+    **Castle Age (Age III)**, ~5.5 range, filling the Crossbowman slot for Japanese, countering
+    Knights / Men-at-Arms / War Elephants (not Tower Elephants).
   source: https://aoe4world.com/explorer/civs/japanese/units/onna-musha , https://ageofempires.fandom.com/wiki/Onna-Musha_(Age_of_Empires_IV) , https://forums.ageofempires.com/t/onna-musha-horse-archer/260959 , site owner 2026-08-08
   - **VERDICT: the recurring judge suspicion that Onna-Musha is infantry is FALSE, on the
     owner's word.** Do not re-raise it. Grouping it alongside Mangudai and Horse Archer stands.
@@ -89,6 +91,23 @@ Note on patch-sensitivity: unit costs, ages, and aura values in AoE4 have been r
   - Worth writing whenever an article frames Landmarks as what makes AoE4 different: the choose-
     your-age-up idea is a series inheritance, and presenting it as new is the kind of error a
     long-time player spots at once.
+
+---
+
+## Resources (added 2026-08-09, to close a store-internal conflict)
+
+- **Đế chế 4 HAS stone as a gathered resource.** "Cả AoE2 lẫn AoE4 đều có tài nguyên đá" -
+  CONFIRMED by site owner 2026-08-09.
+- `tuong-thanh-phong-thu-aoe4` uses it for stone walls, secondary Town Centers, Keeps and
+  landmarks; that usage is the article's, not separately owner-confirmed line by line, but the
+  resource itself exists.
+- **Why this section exists.** `aoe2-facts.md` used to assert "AoE4 has no stone" as a throwaway
+  clause on an AoE2-sourced line, while this same file documented AoE4 Stone Walls, and
+  `aoe2-facts.md` itself referred to "AoE4 stone walls" sixty lines further down. One file
+  contradicted itself and no amount of checking drafts against the store could catch it - the
+  same blind spot that let "7 thực 3 vàng" survive five fact-check rounds. It took a fact-check
+  agent noticing the two files disagreed, and then the owner ruling. See the retraction note in
+  `aoe2-facts.md`.
 
 ---
 
@@ -180,12 +199,56 @@ by side - the same page that supplies `aoe2-facts.md`. source: https://ageofempi
 
 ---
 
-## Fortifications (context for "tuong-thanh-phong-thu-aoe4" guide, spot-checked, not deeply researched this pass)
+## Fortifications (context for "tuong-thanh-phong-thu-aoe4" guide - age tiers OWNER-CONFIRMED 2026-08-09)
 
 - Stone Walls in AoE4 cannot be destroyed by melee units' torches - they can only be damaged by dedicated siege weapons. This is a well-documented AoE4 mechanic (distinct from AoE2 where towers/walls have HP damageable by most unit types with reduced effectiveness).
 - Outpost (chòi canh) in AoE4 does NOT shoot arrows by default - it must be upgraded (Arrow Slits) before it can fire. Confirmed by the site owner (insider), 2026-07-07. So the guide claim "muốn nó bắn tên phải nâng cấp thêm" is CORRECT. (Town Center, by contrast, fires arrows by default and fires more when garrisoned.)
   source: site owner confirmation 2026-07-07.
-  ⚠️ CẦN NGƯỜI DUYỆT: age tiers of walls/Keep/ram/Mangonel/Trebuchet/bombard and "torch damage strongest on cavalry" are still not independently verified this pass.
+
+### Age tiers - CONFIRMED by site owner 2026-08-09
+
+The ⚠️ that used to sit here is resolved. Every tier below was read back to the owner one line
+at a time and answered one line at a time; the answer sheet is `docs/facts-review/aoe4-open-questions.md`.
+
+| Thing | Age | Notes |
+| --- | --- | --- |
+| Tường gỗ (palisade) | đời 1 | |
+| Chòi canh (Outpost) | đời 1 | needs Arrow Slits to shoot (owner 2026-07-07) |
+| Tường đá | đời 2 | |
+| Xe ram | đời 2 | **two exceptions below** |
+| Keep | đời 3 | |
+| Máy bắn đá (Mangonel) | đời 3 | **role caveat below** |
+| Trebuchet | đời 3 | outranges a Keep and can shell it from outside - CONFIRMED |
+| Pháo (bombard) | đời 4 | |
+
+### Three owner corrections that articles keep getting wrong
+
+These are the "đúng, nhưng..." answers. The bare fact passed; the sentence built on top of it did not.
+
+- **Xe ram: melee units really do build one in the field with no siege workshop, BUT it takes a
+  technology upgrade first. Abbasid is the exception twice over: it can build rams from đời 1 and
+  needs no upgrade.** - owner 2026-08-09.
+  - **WRITING RULE**: do not write "cứ vài anh lính ngồi đóng ram" as an unconditional move. It is
+    gated behind a tech for every civ except Abbasid. An article that presents it as always
+    available is a `contradiction`.
+- **Cavalry does carry the strongest torch, BUT in practice demolition work is given to infantry
+  and siege, not to cavalry.** - owner 2026-08-09.
+  - **WRITING RULE**: the stat is fine to state; the inference is not. Do not write "chính vì vậy
+    đám ngựa hay được thả ra sau lưng để đốt phá kinh tế" as if the torch stat explains raiding
+    practice. Raiding cavalry is about hitting villagers, and the burning is done by whoever is
+    actually assigned to it.
+- **Archers can stand on stone walls and shoot down, BUT the Mangonel is not primarily a
+  wall-clearing tool - its job is countering massed infantry. Clearing troops off a wall happens,
+  just rarely.** - owner 2026-08-09.
+  - **WRITING RULE**: "Mangonel chuyên dọn đám lính đứng trên mặt tường" overstates it. Write the
+    Mangonel as an anti-infantry siege weapon that can also sweep a wall.
+
+### English (added 2026-08-09)
+
+- **The English defensive bonus applies to DEFENSIVE BUILDINGS AND THE TOWN CENTER, not to every
+  building.** Units near those structures attack faster when an enemy is spotted. - owner
+  2026-08-09, answering whether the guide's bare "công trình" was too wide. It was.
+  - **WRITING RULE**: never widen this to "lính đứng gần công trình" without qualification.
 
 ---
 

@@ -20,7 +20,7 @@ export const wallsAndDefenseGuide: Guide = {
     {
       heading: 'Lính nào cũng đốt được nhà, trừ tường đá',
       paragraphs: [
-        'Trong Đế chế 4, lính cận chiến đánh công trình bằng đuốc chứ không phải bằng vũ khí trên tay: hễ áp sát nhà là cả tốp tự rút đuốc ra đốt. Trong các loại lính thì kỵ cầm đuốc khỏe tay nhất, chính vì vậy đám ngựa hay được thả vòng ra sau lưng để đốt phá kinh tế.',
+        'Trong Đế chế 4, lính cận chiến đánh công trình bằng đuốc chứ không phải bằng vũ khí trên tay: hễ áp sát nhà là cả tốp tự rút đuốc ra đốt. Trong các loại lính thì kỵ cầm đuốc khỏe tay nhất, tuy nhiên việc phá nhà trên thực tế vẫn hay được giao cho bộ binh và đồ cơ giới; đám ngựa thả vòng ra sau lưng chủ yếu là để săn dân, còn đốt phá chỉ là tiện tay.',
         'Riêng tường đá là ngoại lệ: đuốc không đốt được, vũ khí thường cũng không chém được, muốn phá bắt buộc phải có đồ công thành. Do đó, nếu đối thủ kéo quân tới mà trong tay không mang theo món công thành nào, lớp tường đá của anh em gần như vẫn nguyên vẹn.',
       ],
     },
@@ -42,15 +42,15 @@ export const wallsAndDefenseGuide: Guide = {
     {
       heading: 'Phá thành bằng gì',
       paragraphs: [
-        'Xe ram có từ đời 2, và hay ở chỗ lính cận chiến tự đóng được xe ram ngay giữa trận, không cần nhà xưởng nào cả. Do đó, khi thấy đối thủ co về sau tường, đừng để lính đứng đốt cho tốn thời gian, cứ vài anh lính ngồi đóng xe ram là tường nào rồi cũng sập.',
-        'Lên đời 3 có thêm máy bắn đá (Mangonel) chuyên dọn đám lính đứng trên mặt tường, cùng Trebuchet đứng ngoài tầm bắn của Keep mà nã vào. Tới đời 4 thì có pháo, phá thành nhanh gọn hẳn. Cũng nên nhớ rằng càng về cuối trận thì đồ công càng lấn lướt đồ thủ, một khi pháo với Trebuchet đã ra đủ thì tường dày mấy cũng nát. Chính vì vậy, hãy coi lớp tường là khoảng thời gian câu được để kinh tế vượt lên rồi chủ động đánh ra, chứ đừng tính chuyện rùa sau tường tới hết game.',
+        'Xe ram có từ đời 2, và hay ở chỗ lính cận chiến tự đóng được ngay giữa trận, không cần nhà xưởng nào cả. Có điều muốn làm vậy thì phải nghiên cứu xong công nghệ tương ứng đã, riêng Abbasid vừa khỏi cần nâng cấp vừa đóng được ram ngay từ đời 1. Do đó, khi thấy đối thủ co về sau tường, đừng để lính đứng đốt cho tốn thời gian, cứ mở công nghệ rồi cho vài anh ngồi đóng xe ram là tường nào cũng sập.',
+        'Lên đời 3 có thêm máy bắn đá (Mangonel), vốn sinh ra để dọn bộ binh dàn đông chứ không phải để phá tường, tuy nhiên nó cũng quét được đám lính đang đứng trên mặt tường. Cùng đời đó có Trebuchet, đứng ngoài tầm bắn của Keep mà nã vào. Tới đời 4 thì có pháo, phá thành nhanh gọn hẳn. Cũng nên nhớ rằng càng về cuối trận thì đồ công càng lấn lướt đồ thủ, một khi pháo với Trebuchet đã ra đủ thì tường dày mấy cũng nát. Chính vì vậy, hãy coi lớp tường là khoảng thời gian câu được để kinh tế vượt lên rồi chủ động đánh ra, chứ đừng tính chuyện rùa sau tường tới hết game.',
         'Có điều đồ công thành vừa đắt vừa giòn, đi tới đâu cũng phải có quân kèm bảo kê. Phải nhắc kỹ khoản này vì mất một chiếc xe ram giữa đường chẳng khác nào đem tài nguyên đi biếu đối thủ.',
       ],
     },
     {
       heading: 'Thích rùa hay thích "không thành" đều có phe để chơi',
       paragraphs: [
-        'Nếu thích xây thành thì Anh là lựa chọn hợp lý: lính đứng gần công trình phát hiện địch là đánh nhanh hơn, cả phe chơi quanh Keep với nhà chính nên rất lì đòn.',
+        'Nếu thích xây thành thì Anh là lựa chọn hợp lý: lính đứng gần công trình phòng thủ hay nhà chính, hễ phát hiện địch là đánh nhanh hơn hẳn, nên cả phe chơi quanh Keep với nhà chính rất lì đòn.',
         'Ngược lại, ai vẫn nhớ luật không thành thì có Mông Cổ, phe du mục không xây được tường luôn. Cả game không một viên đá bo nhà, sống bằng ngựa và những chuyến đi cướp, nên anh em quen đánh luật không thành bao năm cầm vào sẽ thấy hợp tay ngay.',
         'Chơi thủ trong Đế chế 4 một thời gian, anh em sẽ tự thấy chuyện xây bao nhiêu tường thật ra phụ thuộc vào việc mình đọc trận tới đâu: khi thấy đối thủ hay đâm ngựa vào một hướng thì bỏ chút gỗ ra bịt khe đó lại, còn khi họ đã co hết về sau tường thì nên buông chuyện xây, dồn lính ra đóng ram mà đẩy vào. Quen được nhịp đó rồi thì vào trận sẽ chủ động hơn hẳn, không còn cảnh đứng nhìn tường mà không biết nên làm gì.',
         'Cứ vào một trận với máy, bo tường một góc xem cảm giác "được xây thành" nó thế nào, còn kẹt chỗ nào thì vào nhóm hỏi, anh em chỉ cho nhanh hơn tự mò nhiều.',

@@ -1,5 +1,23 @@
 # Câu hỏi chờ owner duyệt - Đế chế 4 (lập 2026-08-09)
 
+> ## ✅ ĐÃ XỬ LÝ XONG 2026-08-09 - file này giờ là biên bản, không phải việc cần làm
+>
+> Owner đã trả lời cả 14 câu. Đã nạp vào kho:
+> - `aoe4-facts.md`: bảng mốc đời có dấu owner, gỡ dấu ⚠️ ở mục Fortifications; thêm mục
+>   "Three owner corrections that articles keep getting wrong" (3 WRITING RULE mới); thêm mục
+>   English; thêm mục Resources; đóng nốt nửa còn treo của Onna-Musha (kỵ cung).
+> - `aoe2-facts.md`: retract dòng "AoE4 has no stone", ghi rõ vì sao nó sống sót được.
+> - `tuong-thanh-phong-thu-aoe4.ts`: sửa 4 chỗ theo bốn chữ "nhưng" của owner.
+>
+> **Bốn câu "đúng, nhưng..." mới là phần đáng giá nhất.** Sáu câu trả lời "đúng" trơn chỉ xác
+> nhận thứ bài đã viết. Bốn câu còn lại (A5, A6, A10, A11) và B1 đều bắt lỗi trong bài **đã xuất
+> bản** - lỗi mà không vòng chấm nào bắt được, vì kho im lặng thì fact-check chỉ ghi "chờ duyệt"
+> chứ không phán sai. Nếu chỉ hỏi kiểu có/không thì cả bốn đã trôi qua.
+>
+> Kết quả chấm lại `tuong-thanh-phong-thu-aoe4`: **8/8/8**, 5/5 judge nhất trí, fact-check sạch,
+> cổng thụt lùi chọn bản mới. Danh sách claim chờ duyệt rút từ 13 xuống 5, và 5 câu còn lại đều
+> là chuyện khác (giá/độ giòn đồ công thành, stat của Keep, bốn thứ đá dùng để xây).
+
 Cách dùng: trả lời ngắn nhất có thể. Nếu chỗ "Bài đang viết" đúng thì ghi **đúng** là xong. Nếu
 sai thì ghi lại cho đúng. Nếu không chắc thì ghi **chưa chắc** - thà để trống còn hơn đoán, vì
 mọi thứ ở đây sẽ được nạp thẳng vào kho facts và trở thành chuẩn để chấm mọi bài sau.
@@ -26,53 +44,53 @@ mọi bài sau đụng tới tường/thành/công thành đều có kho đỡ.
 
 ### A1. Tường gỗ (palisade) mở từ đời mấy?
 Bài đang viết: **đời 1**.
-Trả lời:
+Trả lời: đúng
 
 ### A2. Tường đá mở từ đời mấy?
 Bài đang viết: **đời 2**.
-Trả lời:
+Trả lời: đúng
 
 ### A3. Chòi canh (Outpost) dựng được từ đời mấy?
 Bài đang viết: **đời 1**. (Phần "phải nâng cấp Arrow Slits mới bắn tên" bạn đã xác nhận
 2026-07-07 rồi, không cần trả lời lại.)
-Trả lời:
+Trả lời: đúng
 
 ### A4. Keep mở từ đời mấy?
 Bài đang viết: **đời 3**.
-Trả lời:
+Trả lời: đúng
 
 ### A5. Xe ram mở từ đời mấy?
 Bài đang viết: **đời 2**.
-Trả lời:
+Trả lời: đúng. Nhưng riêng Abbasid có thể đóng ram từ đời 1
 
 ### A6. Lính cận chiến có tự đóng được xe ram ngay giữa trận, không cần nhà xưởng nào không?
 Bài đang viết: **có**. Đây là claim cơ chế mạnh nhất trong bài, vì cả lời khuyên "thấy đối thủ co
 về sau tường thì cứ vài anh lính ngồi đóng ram" dựa vào nó.
-Trả lời:
+Trả lời: đúng. Cần nâng cấp công nghệ. Abbasid không cần
 
 ### A7. Máy bắn đá (Mangonel) mở từ đời mấy?
 Bài đang viết: **đời 3**.
-Trả lời:
+Trả lời: đúng
 
 ### A8. Trebuchet mở từ đời mấy, và nó có đứng ngoài tầm bắn của Keep mà nã vào được không?
 Bài đang viết: **đời 3**, và **có** đứng ngoài tầm Keep được.
-Trả lời (đời):
-Trả lời (ngoài tầm Keep):
+Trả lời (đời): đời 3
+Trả lời (ngoài tầm Keep): đúng
 
 ### A9. Pháo (bombard) mở từ đời mấy?
 Bài đang viết: **đời 4**.
-Trả lời:
+Trả lời: đúng
 
 ### A10. Trong các loại lính, kỵ có phải là loại cầm đuốc đốt công trình khỏe tay nhất không?
 Bài đang viết: **có**, và lấy đó làm lý do "đám ngựa hay được thả vòng ra sau lưng để đốt phá
 kinh tế".
-Trả lời:
+Trả lời: có. Nhưng việc phá nhà thường được giao cho bộ binh và cơ giới
 
 ### A11. Cung thủ có leo lên mặt tường đá đứng bắn xuống được không?
 Bài đang viết: **có**. Claim này đỡ hai đoạn ở hai mục khác nhau - mục đồ thủ ("tường vừa chặn
 đường vừa là chỗ dàn trận") và mục phá thành ("Mangonel chuyên dọn đám lính đứng trên mặt
 tường"). Sai là đổ cả hai.
-Trả lời:
+Trả lời: có. Nhưng mục đích của bắn đá là để counter bộ binh. Việc dọn lính trên tường thành có xảy ra nhưng ít
 
 ---
 
@@ -83,7 +101,7 @@ Bài đang viết: **có**, và mô tả cả phe là "chơi quanh Keep với nh
 Kho hiện **không có mục nào về phe Anh**, nên đây là claim treo hoàn toàn.
 Nếu đúng, cho hỏi thêm: buff áp cho **mọi công trình** hay chỉ **công trình phòng thủ + nhà
 chính**? Bài đang viết trơn là "công trình", tức đang nới rộng hơn nếu thực tế hẹp hơn.
-Trả lời:
+Trả lời: công trình phòng thủ + nhà chính
 
 ### B2. Onna-Musha là kỵ cung (bắn tên) hay kỵ cận chiến?
 Bạn đã chốt 2026-08-08 rằng nó là **kỵ binh, không phải bộ binh** - câu đó đã đóng, chín judge
@@ -91,7 +109,7 @@ nghi sai đã bị bác. Phần còn treo là nhánh nhỏ hơn: **có bắn tê
 Kho hiện ghi "light ranged cavalry, tập ở Archery Range từ đời 3, tầm ~5.5" nhưng **chỉ có nguồn
 web**, chưa qua bạn. Bài `cung-r-ngua-chem-aoe4` đang xếp nó vào mục kỵ cung, cạnh Mangudai và
 Horse Archer - nếu nó là kỵ cận chiến thì câu đó đặt sai mục.
-Trả lời:
+Trả lời: kỵ cung
 
 ---
 
@@ -114,7 +132,7 @@ thuẫn với chính nó**:
 Một file không thể vừa nói Đế chế 4 không có đá vừa nói tường đá Đế chế 4. Nên dòng 64 gần như
 chắc chắn phải sửa bất kể bạn trả lời thế nào - câu hỏi chỉ là sửa thành gì.
 
-Trả lời:
+Trả lời: cả AoE2 lẫn AoE4 đều có tài nguyên đá
 
 ---
 
