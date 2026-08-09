@@ -1,0 +1,13 @@
+[
+  { "case": "bad-ai-voice", "scores": { "structure": 3, "voice": 1, "conversion": 1 } },
+  { "case": "bad-forced-slang", "scores": { "structure": 3, "voice": 2, "conversion": 2 } },
+  { "case": "bad-empty-hook", "scores": { "structure": 3, "voice": 2, "conversion": 1 } },
+  { "case": "bad-aoe1-disparagement", "contradictions": 0, "aoe1Disparagement": 2 },
+  { "case": "bad-wrong-facts", "contradictions": 2, "aoe1Disparagement": 0 },
+  { "case": "regression-pair", "winner": "old" },
+  { "case": "frozen-good-build-order-co-ban-aoe4", "scores": { "structure": 8, "voice": 8, "conversion": 8 }, "contradictions": 0, "aoe1Disparagement": 0 },
+  { "case": "frozen-good-cau-hinh-may-aoe4", "scores": { "structure": 8, "voice": 7, "conversion": 8 }, "contradictions": 0, "aoe1Disparagement": 0 },
+  { "case": "frozen-bad-voice-cung-r-ngua-chem-aoe4", "scores": { "structure": 8, "voice": 5, "conversion": 7 } },
+  { "case": "frozen-bad-voice-tuong-thanh-phong-thu-aoe4", "scores": { "structure": 8, "voice": 5, "conversion": 8 } },
+  { "case": "frozen-bad-voice-aoe4-khac-de-che-the-nao", "scores": { "structure": 8, "voice": 2, "conversion": 8 } }
+]

@@ -61,8 +61,21 @@ table available without owning the game files.
 - Population capacity is configurable **between 25 and 200 in steps of 25**.
   - source: https://en.wikipedia.org/wiki/Age_of_Empires_II:_The_Age_of_Kings
 - **Stone is a separate resource and it is what gates defensive building** - towers and Castles
-  cost stone, walls cost stone. AoE4 has no stone. This is one of the cleanest structural
-  differences to write about. - source: the building infoboxes below
+  cost stone, walls cost stone. - source: the building infoboxes below
+- ❌ **RETRACTED 2026-08-09: "AoE4 has no stone" was FALSE, and "one of the cleanest structural
+  differences to write about" was exactly backwards.** The owner confirmed on 2026-08-09 that
+  **cả AoE2 lẫn AoE4 đều có tài nguyên đá**. Stone is therefore NOT a structural difference
+  between the two games; do not write it as one.
+  - **How it survived.** The false clause was tacked onto a line whose source is the AoE2 building
+    infoboxes below - so the AoE4 half never had a source at all, it just inherited the citation
+    of the sentence it was glued to. Worse, this same file refers to "AoE4 stone walls" about
+    sixty lines further down, so the file contradicted itself and still read as consistent to
+    anyone checking a draft against it.
+  - **This is the third instance of the same failure mode in this store** (after "7 thực 3 vàng"
+    and the Onna-Musha class line): a wrong line inside the store matches itself, so grading
+    articles against the store can never catch it. Only a cross-file comparison or the owner
+    re-reading can. See `aoe4-facts.md` "Resources".
+  - **Never restore the "AoE4 has no stone" wording.**
 
 ## Counters - a web of bonus damage, not a triangle
 

@@ -1,8 +1,9 @@
 import { guides } from '@/data/guides'
 import { newsPosts } from '@/data/news'
 import { auditContent } from '@/lib/seoAudit'
+import { hasFactsSheet } from './facts-sheet-fs'
 
-const findings = auditContent(guides, newsPosts)
+const findings = auditContent(guides, newsPosts, hasFactsSheet)
 
 console.log(
   JSON.stringify(
