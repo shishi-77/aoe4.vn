@@ -37,3 +37,8 @@ docs/*
 # Facts sheets are pipeline state, not local scratch: a headless run must be able to push one
 # so the next run picks up where it left off.
 !docs/facts-review/
+# Scorecards and calibration reports are the same kind of state, and 15 of the 20 files in here
+# were already tracked before this line existed - the ignore rule had stopped matching reality.
+# A scorecard is how the next run knows what a page last scored and why; a calibration report is
+# how drift gets spotted. Both are worthless if they only exist on one machine.
+!docs/reviews/
