@@ -1,9 +1,21 @@
+import { existsSync } from 'node:fs'
 import { describe, it, expect } from 'vitest'
 import { auditContent } from '@/lib/seoAudit'
+import { factsSheetPath } from '@/lib/factsSheet'
 import { guides, type Guide } from '@/data/guides'
 import { newsPosts, type NewsPost } from '@/data/news'
 
 const EM_DASH = '\u2014'
+
+/** Fixture articles are all `strategy`, so the facts-sheet rule never fires for them. */
+const noSheets = () => false
+
+/**
+ * The real-content sweep must hit the real filesystem. Stubbing it here would turn
+ * the facts-sheet gate back into a rule nobody enforces, which is exactly what
+ * putting it in the audit was meant to stop.
+ */
+const hasFactsSheetOnDisk = (slug: string) => existsSync(factsSheetPath(slug))
 
 const goodGuide: Guide = {
   slug: 'bai-chuan-vi-du',
@@ -17,12 +29,12 @@ const goodGuide: Guide = {
 
 describe('auditContent', () => {
   it('nội dung chuẩn -> không có finding', () => {
-    expect(auditContent([goodGuide], [])).toEqual([])
+    expect(auditContent([goodGuide], [], noSheets)).toEqual([])
   })
 
   it('guide hỏng hygiene -> finding kèm path /guides/<slug>/', () => {
     const bad: Guide = { ...goodGuide, cta: undefined, sections: [{ heading: 'M', paragraphs: ['P'] }] }
-    const findings = auditContent([bad], [])
+    const findings = auditContent([bad], [], noSheets)
     expect(findings).toHaveLength(1)
     expect(findings[0].path).toBe('/guides/bai-chuan-vi-du/')
     expect(findings[0].failures.length).toBeGreaterThan(0)
@@ -33,7 +45,7 @@ describe('auditContent', () => {
       ...goodGuide,
       sections: [{ heading: 'M', paragraphs: [`Đoạn có ${EM_DASH} gạch dài.`], link: { slug: 'x', label: 'x' } }],
     }
-    const findings = auditContent([bad], [])
+    const findings = auditContent([bad], [], noSheets)
     expect(findings[0].failures.some((f) => f.includes('em-dash'))).toBe(true)
   })
 
@@ -47,11 +59,21 @@ describe('auditContent', () => {
       sources: [],
       sections: [{ heading: 'M', paragraphs: ['P'] }],
     }
-    const findings = auditContent([], [badNews])
+    const findings = auditContent([], [badNews], noSheets)
     expect(findings[0].path).toBe('/news/tin-vi-du/')
   })
 
+  it('bài comparison thiếu facts sheet -> finding', () => {
+    const comparison: Guide = { ...goodGuide, kind: 'comparison' }
+    const findings = auditContent([comparison], [], noSheets)
+    expect(findings[0].failures.some((f) => f.includes('missing facts sheet'))).toBe(true)
+  })
+
+  it('bài strategy không bị đòi facts sheet', () => {
+    expect(auditContent([goodGuide], [], noSheets)).toEqual([])
+  })
+
   it('nội dung thật trên site hiện không có finding nào', () => {
-    expect(auditContent(guides, newsPosts)).toEqual([])
+    expect(auditContent(guides, newsPosts, hasFactsSheetOnDisk)).toEqual([])
   })
 })

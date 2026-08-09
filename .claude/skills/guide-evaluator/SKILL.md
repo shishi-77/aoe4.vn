@@ -35,6 +35,10 @@ Chạy: `npx vite-node scripts/score-guide-seo.ts <slug>`
   thân bài gọi `Đế chế 1/2/3/4`; `Đế chế` trơ chỉ dành cho cả dòng). Đây là luật tất định,
   không phải chuyện gu - thấy nó trong `failures` thì ghi FAIL và trả nguyên câu lỗi vào
   "Cần sửa", đừng diễn giải lại.
+- `hygiene.failures` cũng gộp luôn CỔNG FACTS SHEET (từ 2026-08-09): bài `comparison` và bài
+  `news` thiếu `docs/facts-review/<slug>.md` là FAIL ngay ở bước này. Trước đó luật này chỉ nằm
+  trong văn bản skill nên nó chỉ có hiệu lực khi người chấm nhớ ra, và đã có bài lọt qua thật
+  (`aoe4-khac-de-che-the-nao` xuất bản mà không có sheet). Giờ script tự chặn, không cần nhớ.
 - Đọc `kind` (`'utility'` | `'strategy'`). Đây là loại bài, quyết định bộ sàn ở Bước 4.
 
 ### Bước 2 - Chấm định tính bằng median-of-5 (structure / voice / conversion)
@@ -278,8 +282,8 @@ các thay đổi sau - mọi thứ không nhắc tới thì giữ nguyên:
 4. **Bước 3 (fact-check news)**: ngoài 2 nhiệm vụ cũ (đối chiếu facts corpus + quét dìm
    game/cộng đồng RTS nào),
    subagent làm thêm nhiệm vụ XÁC MINH NGUỒN TRỰC TIẾP:
-   a) Đọc facts sheet `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Không có
-      facts sheet -> FAIL hygiene luôn, ghi rõ lý do.
+   a) Đọc facts sheet `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Thiếu sheet thì
+      Bước 1 đã chặn rồi (script tự kiểm từ 2026-08-09), nên tới được đây nghĩa là sheet có sẵn.
    b) WebFetch TỪNG URL trong `sources[]` của bài, đối chiếu TỪNG claim sự kiện/số liệu
       với nội dung nguồn thật (không tin facts sheet mù quáng). Mỗi claim ra đúng một
       trong ba kết cục:
@@ -308,8 +312,8 @@ thường. Chấm theo ĐÚNG giao thức guide với các thay đổi sau:
 1. **Bước 1**: `score-guide-seo.ts` trả `kind: 'comparison'` - sàn ở Bước 4 là
    `floorsForKind('comparison')` (structure 8, voice 8, conversion 7 - như strategy).
 2. **Bước 3 (fact-check phân tầng theo game)**: subagent đọc thêm facts sheet
-   `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Không có facts sheet -> FAIL hygiene,
-   ghi rõ lý do. Phân loại TỪNG claim theo game nó nói về:
+   `docs/facts-review/<slug>.md` (bảng claim -> nguồn). Thiếu sheet thì Bước 1 đã chặn rồi
+   (script tự kiểm từ 2026-08-09), nên tới được đây nghĩa là sheet có sẵn. Phân loại TỪNG claim theo game nó nói về:
    - **AoE1 / meta VN**: chỉ đối chiếu kho `facts/aoe1-facts.md`. Mâu thuẫn kho ->
      `contradictions[]`; ngoài kho -> `claimsToVerify[]` (KHÔNG tự phán đúng sai).
    - **AoE4**: đối chiếu kho `facts/aoe4-facts.md` TRƯỚC; claim ngoài kho nhưng có URL nguồn
