@@ -8,9 +8,10 @@ describe('shared data integrity', () => {
     expect(dlc.steamUrl).toMatch(/^https:\/\/store\.steampowered\.com/)
   })
 
-  it('dlc có ngày dự đoán hợp lệ (ISO +07:00)', () => {
-    expect(dlc.predictedReleaseDate).toBe('2026-11-10T00:00:00+07:00')
-    expect(Number.isNaN(Date.parse(dlc.predictedReleaseDate ?? ''))).toBe(false)
+  it('dlc có ngày phát hành chính thức hợp lệ (ISO +07:00)', () => {
+    expect(dlc.releaseDate).toBe('2026-10-30T00:00:00+07:00')
+    expect(dlc.predictedReleaseDate).toBeNull()
+    expect(Number.isNaN(Date.parse(dlc.releaseDate ?? ''))).toBe(false)
   })
 
   it('site có link discord, blog, ahaslides', () => {
