@@ -13,6 +13,9 @@ const isPredicted = computed(() => !props.dlc.releaseDate && !!props.dlc.predict
 // showTimer chặn khi không có ngày, nên useCountdown không bao giờ render với chuỗi rỗng/NaN.
 const { days, hours, minutes, seconds, isLive } = useCountdown(targetDate.value ?? '')
 const showTimer = computed(() => !!targetDate.value && !isLive.value)
+const isReleased = computed(
+  () => !!props.dlc.releaseDate && new Date(props.dlc.releaseDate).getTime() <= Date.now(),
+)
 
 const units = computed(() => [
   { value: days.value, label: 'Ngày' },
@@ -35,7 +38,9 @@ const { el: heroEl } = useParallax()
   >
     <HeroBackdrop />
 
-    <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-gold">DLC sắp ra mắt</p>
+    <p class="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-gold">
+      {{ isReleased ? 'Đã ra mắt' : 'DLC sắp ra mắt' }}
+    </p>
     <h1
       class="max-w-[15ch] break-words text-3xl font-black uppercase leading-tight text-cream drop-shadow-lg sm:max-w-none sm:text-6xl"
     >
@@ -81,7 +86,7 @@ const { el: heroEl } = useParallax()
       v-if="!showTimer"
       class="mt-8 inline-block rounded border border-gold px-6 py-2 text-2xl font-black text-gold"
     >
-      Dự kiến {{ dlc.releaseLabel }}
+      {{ isReleased ? `Ra mắt ${dlc.releaseLabel}` : `Dự kiến ${dlc.releaseLabel}` }}
     </p>
 
     <ul class="mt-8 flex max-w-full flex-wrap items-center justify-center gap-3">

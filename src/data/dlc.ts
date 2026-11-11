@@ -1,11 +1,10 @@
 export const dlc = {
   name: 'Raiders of the North',
   fullName: 'Age of Empires IV: Raiders of the North',
-  /** null = chưa có ngày chính xác; điền ISO +07:00 khi Microsoft công bố để bật đếm ngược. */
-  releaseDate: null as string | null,
-  /** Ngày dự đoán để bật countdown trước khi Microsoft công bố ngày chính thức. */
-  predictedReleaseDate: '2026-11-10T00:00:00+07:00' as string | null,
-  releaseLabel: 'Q4 2026',
+  /** Ngày phát hành chính thức (29/10/2026). */
+  releaseDate: '2026-10-29T00:00:00+07:00' as string | null,
+  predictedReleaseDate: null as string | null,
+  releaseLabel: '29/10/2026',
   civs: ['Vikings', 'Scots'],
   highlights: [
     'Hai civ mới: Vikings và Scots',
